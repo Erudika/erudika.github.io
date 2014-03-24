@@ -22,7 +22,7 @@ vendor
 _gh_pages
 _gh-pages
 *.sublime-*
-nbproject/private/
+nbproject
 build/
 nbbuild/
 dist/
