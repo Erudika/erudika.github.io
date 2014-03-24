@@ -1,0 +1,245 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: Bolt - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/* OVERALL ASPECT */
+
+body {
+  background-color: white;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #555555;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	color: #333333;
+}
+
+
+/* Paragraph & Typographic */
+p {
+	line-height: 28px;
+	margin-bottom: 25px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.mt {
+	margin-top: 40px;
+}
+
+/* Links */
+a {
+	color: #3399cc;
+	word-wrap: break-word;
+
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+	color: inherit;
+	text-decoration: underline;
+	outline: 0;
+}
+
+a:before,
+a:after {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/* Bootstrap Modifications */
+
+.navbar {
+	font-weight: 800;
+	font-size: 14px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #ffffff;
+	border: none;
+	margin: 0;
+}
+
+.navbar-nav {
+	margin: 10px 0 0 0;
+	font-size: 1.6em;
+}
+
+.navbar-brand {
+	font-size: 60px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+}
+
+.lead {
+	letter-spacing: 1px;
+}
+
+/* WRAP SECTIONS */
+
+.img-mac {
+	background: url('../img/sprite.png') no-repeat 0 -2px;
+	background-size: 100%;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.img-para {
+	background: url('../img/sprite.png') no-repeat 0 -310px;
+	background-size: 100%;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.img-1menu {
+	background: url('../img/sprite.png') no-repeat 0 -664px;
+	background-size: 100%;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.img-scoold {
+	background: url('../img/sprite.png') no-repeat 0 -1016px;
+	background-size: 100%;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+/* hello */
+#hello {
+	width: 100%;
+	padding: 100px 0 100px 0;
+	background: url(../img/bg.jpg) no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#hello h1 {
+	font-size: 90px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: #3399cc;
+	text-shadow: -1px -2px 0px white;
+}
+
+#hello h2 {
+	color: #555555;
+	font-weight: 400;
+}
+
+/* Blue */
+#blue {
+	background-color: #3399cc;
+	padding-top: 50px;
+	margin-bottom: 0px;
+}
+
+#blue h3 {
+	color: white;
+	font-weight: 400;
+	margin-bottom: 35px;
+}
+
+#blue p {
+	color: white;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+/* Skills */
+#skills {
+	background-color: #4e4e4e;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 50px;
+}
+
+#skills * {
+	color: white;
+}
+
+#skills p {
+	font-weight: 400;
+}
+
+/* Social Links */
+#social {
+	width: 100%;
+	padding: 100px 0 100px 0;
+	background-color: #222222;
+}
+
+#social i {
+	font-size: 50px;
+	color: #3399cc;
+}
+
+#social .col-md-3:hover {
+	background-color: #f5f5f5;
+}
+
+#social .col-md-3 {
+	padding:30px;
+}
+
+#contact {
+	padding: 0 0 100px 0;
+	background-color: #222222;
+	font-size: 1.2em;
+}
+
+#map {
+	background-position: 50% 50%;	
+}
+
+#map img {
+	max-width: 100%;
+	/*max-height: 100%;*/
+	/*opacity: 0;*/
+}
+
+#phone {
+	margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+	padding: 20px 0 20px 0;
+	background-color: #3399cc;
+}
+
+footer * {
+	color: white;
+}
