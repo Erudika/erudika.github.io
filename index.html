@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en-us" class="nojs">
+<html lang="en-us" class="nojs"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,7 +28,10 @@
   </head>
 
   <body>
-		<!-- Fixed navbar -->
+		<!--[if lt IE 7]>
+			<h1 class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</h1>
+		<![endif]-->
+		
 		<div class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
@@ -48,10 +51,10 @@
 					<div class="col-lg-8 col-lg-offset-2 centered">
 						<h1>Hi, we're open!</h1>
 						<h2>Open for business and software.</h2>
-					</div><!-- /col-lg-8 -->
-				</div><!-- /row -->
-			</div> <!-- /container -->
-		</div><!-- /hello -->
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="blue">
 			<div class="container">
@@ -115,9 +118,9 @@
 						<p>DevOps in the cloud</p>
 						<br>
 					</div>
-				</div><!-- /row -->
-			</div><!-- /container -->
-		</section><!-- /skills -->
+				</div>
+			</div>
+		</section>
 
 		<section id="social">
 			<div class="container">
@@ -137,7 +140,7 @@
 						</div>
 					</div>
 				</div>
-			</div><!-- /container -->
+			</div>
 		</section>
 
 		<section id="contact">
@@ -202,6 +205,7 @@
 				});
 			})();
 		</script>
+		
     <!-- Google Analytics	 -->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
