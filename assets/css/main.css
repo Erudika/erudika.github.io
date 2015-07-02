@@ -150,8 +150,8 @@ a:after {
 	font-size: 90px;
 	font-weight: 700;
 	letter-spacing: 3px;
-	color: #3399cc;
-	text-shadow: -1px -2px 0px white;
+	color: white;
+	text-shadow: -1px 2px 0px black;
 }
 
 #hello h2 {
