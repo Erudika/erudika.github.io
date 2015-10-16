@@ -34,5 +34,4 @@ nb-configuration.xml
 Thumbs.db
 db.json
 *.log
-blog/
 .deploy*/
