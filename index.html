@@ -8,10 +8,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Erudika is a small and open software company based in Sofia, Bulgaria.">
+    <meta name="description" content="Erudika is a tiny software company based in Sofia, Bulgaria.">
     <meta name="author" content="erudika.com">
 		<meta property="fb:app_id" content="119564591416126" />
-		
+
     <title>Erudika</title>
 
     <!-- Bootstrap core CSS -->
@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,9 +36,10 @@
 		<div class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/"><img src="assets/img/erudika.png" width="256" height="66" alt="logo"/></a>
+					<a class="navbar-brand" href="/"><img src="/assets/img/erudika.png" width="256" height="66" alt="logo"/></a>
 				</div>
 				<ul class="nav navbar-nav navbar-right hidden-xs">
+					<li class=""><a href="/blog"><span style="color: #3399CC;">Blog</span></a></li>
 					<li class=""><a href="#projects">Projects</a></li>
 					<li class=""><a href="#skills">Skills</a></li>
 					<li class=""><a href="#contact">Contact</a></li>
@@ -60,8 +61,11 @@
 		<div id="blue">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5 centered">
-						<div class="img-mac"></div>
+					<div class="col-md-5 centered hidden-xs hidden-sm">
+						<span class="fa-stack fa-lg img-cloud hidden-xs hidden-sm">
+							<i class="fa fa-cloud fa-stack-2x cloud1"></i>
+							<i class="fa fa-code fa-stack-1x cloud2"></i>
+						</span>
 					</div>
 
 					<div class="col-md-7 centered">
@@ -69,6 +73,7 @@
 						<p>We are a company of full-stack developers based in Sofia, Bulgaria.
 							We specialize in web application development and have experience building scalable software that runs in the cloud.</p>
 						<p>And yes, we do support open source software!</p>
+						<p><a class="btn btn-default btn-lg" href="/blog">Read our blog</a></p>
 					</div>
 				</div>
 			</div>
@@ -188,7 +193,7 @@
 		</footer>
 
     <!-- Bootstrap core JavaScript -->
-		<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script>

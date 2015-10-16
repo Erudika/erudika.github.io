@@ -1,0 +1,15 @@
+<aside id="sidebar" <% if (theme.sidebar === 'bottom'){ %> class="outer"<% } %>>
+  <% theme.widgets.forEach(function(widget){ %>
+    <%- partial('_widget/' + widget) %>
+  <% }) %>
+
+	<div>
+		<div id="search-form-wrap">
+			<%- search_form({button: '&#xF002;'}) %>
+		</div>
+	</div>
+	<br><br>
+	<div class="text-center">
+		<small><i class="fa fa-cc"></i> Images taken from <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.</small>
+	</div>
+</aside>

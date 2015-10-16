@@ -29,3 +29,10 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+
+.DS_Store
+Thumbs.db
+db.json
+*.log
+blog/
+.deploy*/
