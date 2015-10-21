@@ -24,9 +24,12 @@
     </div>
     <div class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
-      <% if (post.comments){ %>
-        <a href="<%- post.permalink %>#comments" class="article-comment-link">Comments</a>
+      <% if (post.author){ %>
+				<a href="https://twitter.com/albogdano">
+					<img class="img-circle" src="<%- gravatar(post.author, 60) %>" width="30" height="30" alt="author"/>&nbsp; Alex B.
+				</a>
       <% } %>
+
       <%- partial('post/tag') %>
     </div>
   </div>

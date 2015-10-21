@@ -3,6 +3,7 @@ tags: general
 comments: true
 img: img1.jpg
 date: 2015-10-16
+author: alex@erudika.com
 ---
 
 Hey there! We are Erudika and this is our blog. Here, we'll share information about our current projects and developments. You can follow us on Twitter as well - [@erudika](https://twitter.com/erudika), or fork us on [GitHub](https://github.com/erudika).
