@@ -12,22 +12,22 @@
     <meta name="author" content="erudika.com">
     
 		<title>Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat | Erudika Blog</title>
-		<meta name="description" content="Lets have a look at some modern open source backend frameworks that ar available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iter">
+		<meta name="description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and it">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
 <meta property="og:url" content="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description" content="Lets have a look at some modern open source backend frameworks that ar available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iter">
+<meta property="og:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and it">
 <meta property="og:image" content="http://www.erudika.com/blog/assets/img/usergrid.png">
 <meta property="og:image" content="http://www.erudika.com/blog/assets/img/loopback.png">
 <meta property="og:image" content="http://www.erudika.com/blog/assets/img/paraio.png">
 <meta property="og:image" content="http://www.erudika.com/blog/assets/img/baasbox.png">
 <meta property="og:image" content="http://www.erudika.com/blog/assets/img/deployd.png">
 <meta property="og:image" content="http://www.erudika.com/blog/assets/img/telepat.png">
-<meta property="og:updated_time" content="2015-10-21T14:20:25.751Z">
+<meta property="og:updated_time" content="2015-10-22T23:00:51.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
-<meta name="twitter:description" content="Lets have a look at some modern open source backend frameworks that ar available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iter">
+<meta name="twitter:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and it">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
@@ -103,13 +103,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Lets have a look at some modern open source backend frameworks that ar available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).</p>
+        <p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).</p>
 <p>The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented and part of the REST API documentation.</p>
 <p>So why use a backend framework instead of writing my own? The main good reason is that these frameworks are packaged as reusable components and are tried and tested by many developers. So instead of maintaining another piece of code - the one you wrote yourself - you can use a package that’s already out there and maintained for you.</p>
 <p>Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building anything from websites to desktop software or games. The ones that target mobile apps usually have features like realtime push, notifications support and client libraries for Android and iOS. We’ll cover both types of frameworks here.</p>
 <a id="more"></a>
 <h2 id="UserGrid"><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/usergrid.png"><br><strong>Multitenant:</strong> yes<br><strong>Language:</strong> Java<br><strong>Database:</strong> Cassandra<br><strong>Documentation:</strong> 9/10<br><strong>Client libraries:</strong> Android, iOS, JavaScript, Ruby, Java, .NET, PHP</p>
-<p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively developed and maintained. The new version 2.0 is yet to be relased and will require both Cassandra and Elasticsearch in addition to a queue system like AWS SQS.</p>
+<p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch in addition to a queue system like AWS SQS.</p>
 <p>The project is very well documented but getting started involves quite a few steps. First you need to install Cassandra and a servlet container like Tomcat. Then you deploy the WAR file to Tomcat and call a special URL to create a superuser account which gives you access to the web-based console.</p>
 <p>The API allows you to create and run multiple apps, which is a good thing because you might want to have a couple of apps sharing the same backend and this also makes deployment easier. You also get all the basic CRUD functionality for working with collections and entities (JSON objects). There are several built-in entity types like <code>user</code>, <code>group</code> and <code>application</code>, for example. They all have <code>type</code> and <code>uuid</code> properties and the latter is an actual UUID string. Basic entity relationships are also supported. Usergrid has good support for user and file management and has a simple data model.</p>
 <p>Authentication is implemented through OAuth 2.0 and it makes a distinction between user and app roles. Social login is supported but it appears that only Facebook login works out-of-the-box. Other extra features include geolocation queries and push notifications (in v2.0).</p>

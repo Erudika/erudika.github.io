@@ -7,7 +7,7 @@ comments: true
 img: img2.jpg
 ---
 
-Lets have a look at some modern open source backend frameworks that ar available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the "fun" part - the frontend (client-side).
+Let's have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the "fun" part - the frontend (client-side).
 
 The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented and part of the REST API documentation.
 
@@ -25,7 +25,7 @@ Some BaaS frameworks are designed with focus on mobile app development (mBaaS) a
 **Documentation:** 9/10
 **Client libraries:** Android, iOS, JavaScript, Ruby, Java, .NET, PHP
 
-Usergrid is an Apache backend-as-a-service project built with Java. It's been around since 2011 and is actively developed and maintained. The new version 2.0 is yet to be relased and will require both Cassandra and Elasticsearch in addition to a queue system like AWS SQS.
+Usergrid is an Apache backend-as-a-service project built with Java. It's been around since 2011 and is actively developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch in addition to a queue system like AWS SQS.
 
 The project is very well documented but getting started involves quite a few steps. First you need to install Cassandra and a servlet container like Tomcat. Then you deploy the WAR file to Tomcat and call a special URL to create a superuser account which gives you access to the web-based console.
 
