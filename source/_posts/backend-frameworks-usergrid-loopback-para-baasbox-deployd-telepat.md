@@ -74,7 +74,7 @@ This will give you the keys needed for making authenticated requests to the serv
 
 The core API consists of three main interfaces for searching, storing and caching object. Implement those and you have your own custom server. The data model is simple and all classes implement the `ParaObject` interface. This gives them some basic properties like `id`, `type` and `name`. Entities can link to other entities by forming one-to-one, one-to-many and many-to-many relationships. Basic constraint checkers, such as `required`, `min`, `max`, `regexp`, can be used to validate object properties. Full-text search is enabled by default for all objects.
 
-Authentication is intentionally not based on OAuth, instead it implements the simple and robust AWS Signature 4 algorithm for signed requests. Better user management and support for JSON Web Tokens will be available in the next version 1.17, soon. Para has built-in support for third-party authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.
+Authentication between clients and the server is not based on OAuth, [intentionally](http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/). Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. Better user management and support for JSON Web Tokens will be available in the next version 1.17, soon. Para has built-in support for third-party authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.
 
 Para is a good choice if you are building a cloud-based web service or website and is great for rapid prototyping. It's an easy-to-use and flexible platform that scales well. A backend for busy developers.
 
