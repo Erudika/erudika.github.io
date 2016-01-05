@@ -21,7 +21,7 @@ deployed on ParaIO.com, our hosted backend service.">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on ParaIO.com, our hosted backend service.">
-<meta property="og:updated_time" content="2016-01-05T20:02:32.636Z">
+<meta property="og:updated_time" content="2016-01-05T21:03:23.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Para v1.17 released">
 <meta name="twitter:description" content="We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
@@ -136,7 +136,8 @@ our JavaScript client library to call <code>signIn()</code> to the Para backend 
 running native Android code. The app’s code, even though compiled, is not trusted and thus must not contain any
 API access credentials like a <code>secret_key</code> for Para. In this case JWT is ideal because it gives that app (untrusted client)
 temporary access to the API. Para access tokens are valid for one week, by default.</p>
-<p>Special thanks to the guys at Connect2ID for their excellent JWT library for Java.</p>
+<p>Special thanks to the guys at <a href="http://connect2id.com/products/nimbus-jose-jwt" target="_blank" rel="external">Connect2ID</a> for their excellent JWT
+library for Java which we use in Para.</p>
 <h2 id="Resource_permissions">Resource permissions</h2><p>Soon after we decided to add JWT support, we realized that once a user has been authenticated with an app we need to
 specify what that user can do, so we implemented basic resource permissions. By default users are not trusted and every
 new app has zero permissions - the default policy is <code>deny all</code>. This is in contrast to the normal API access using a

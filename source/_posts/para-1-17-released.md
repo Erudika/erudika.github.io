@@ -74,7 +74,8 @@ running native Android code. The app's code, even though compiled, is not truste
 API access credentials like a `secret_key` for Para. In this case JWT is ideal because it gives that app (untrusted client)
 temporary access to the API. Para access tokens are valid for one week, by default.
 
-Special thanks to the guys at Connect2ID for their excellent JWT library for Java.
+Special thanks to the guys at [Connect2ID](http://connect2id.com/products/nimbus-jose-jwt) for their excellent JWT
+library for Java which we use in Para.
 
 ## Resource permissions
 
