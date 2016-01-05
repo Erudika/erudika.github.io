@@ -27,6 +27,8 @@ Updated design & added features to web console
 
 ## JSON Web Tokens (JWT) support
 
+![](/assets/img/blogpost_media2.png)
+
 [JSON Web Tokens](http://jwt.io/) are a new standard for signing and authenticating clients and users. Think of them as
 Cookies 2.0. They are simply a signed JSON object containing some data about the authenticated user. The cool thing about
 JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely

@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-01-05T21:03:23.719Z</updated>
+  <updated>2016-01-05T21:09:13.363Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>http://www.erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-01-05T21:03:23.719Z</updated>
+    <updated>2016-01-05T21:09:13.363Z</updated>
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
 <a id="more"></a>
@@ -33,7 +33,8 @@ Fixed Maven's JAR and WAR assembly - there's a single 'fat' executable WAR now
 Updated Elasticsearch to v2.1.1
 Updated design & added features to web console
 -->
-<h2 id="JSON_Web_Tokens_(JWT)_support">JSON Web Tokens (JWT) support</h2><p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for signing and authenticating clients and users. Think of them as
+<h2 id="JSON_Web_Tokens_(JWT)_support">JSON Web Tokens (JWT) support</h2><p><img src="/assets/img/blogpost_media2.png" alt=""></p>
+<p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for signing and authenticating clients and users. Think of them as
 Cookies 2.0. They are simply a signed JSON object containing some data about the authenticated user. The cool thing about
 JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
 store information and claims about the user and that information is signed and cannot be tampered with.</p>
