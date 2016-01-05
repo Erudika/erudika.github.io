@@ -19,13 +19,13 @@
 <meta property="og:url" content="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and it">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/usergrid.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/loopback.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/paraio.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/baasbox.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/deployd.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/telepat.png">
-<meta property="og:updated_time" content="2016-01-05T16:24:22.116Z">
+<meta property="og:image" content="http://www.erudika.com/assets/img/usergrid.png">
+<meta property="og:image" content="http://www.erudika.com/assets/img/loopback.png">
+<meta property="og:image" content="http://www.erudika.com/assets/img/paraio.png">
+<meta property="og:image" content="http://www.erudika.com/assets/img/baasbox.png">
+<meta property="og:image" content="http://www.erudika.com/assets/img/deployd.png">
+<meta property="og:image" content="http://www.erudika.com/assets/img/telepat.png">
+<meta property="og:updated_time" content="2016-01-05T21:20:46.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
 <meta name="twitter:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and it">
@@ -112,7 +112,7 @@
 <p>The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented and part of the REST API documentation.</p>
 <p>So why use a backend framework instead of writing my own? The main good reason is that these frameworks are packaged as reusable components and are tried and tested by many developers. So instead of maintaining another piece of code - the one you wrote yourself - you can use a package that’s already out there and maintained for you.</p>
 <p>Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building anything from websites to desktop software or games. The ones that target mobile apps usually have features like realtime push, notifications support and client libraries for Android and iOS. We’ll cover both types of frameworks here.</p>
-<h2 id="UserGrid"><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/usergrid.png">
+<h2 id="UserGrid"><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/usergrid.png">
 <strong>Multitenant:</strong> yes
 <strong>Language:</strong> Java
 <strong>Database:</strong> Cassandra
@@ -123,7 +123,7 @@
 <p>The API allows you to create and run multiple apps, which is a good thing because you might want to have a couple of apps sharing the same backend and this also makes deployment easier. You also get all the basic CRUD functionality for working with collections and entities (JSON objects). There are several built-in entity types like <code>user</code>, <code>group</code> and <code>application</code>, for example. They all have <code>type</code> and <code>uuid</code> properties and the latter is an actual UUID string. Basic entity relationships are also supported. Usergrid has good support for user and file management and has a simple data model.</p>
 <p>Authentication is implemented through OAuth 2.0 and it makes a distinction between user and app roles. Social login is supported but it appears that only Facebook login works out-of-the-box. Other extra features include geolocation queries and push notifications (in v2.0).</p>
 <p>Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in your organization. It is used in production by quite a few companies.</p>
-<h2 id="LoopBack"><a href="http://loopback.io" target="_blank" rel="external">LoopBack</a> <a href="https://github.com/strongloop/loopback" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/loopback.png">
+<h2 id="LoopBack"><a href="http://loopback.io" target="_blank" rel="external">LoopBack</a> <a href="https://github.com/strongloop/loopback" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/loopback.png">
 <strong>Multitenant:</strong> no
 <strong>Language:</strong> JavaScript
 <strong>Database:</strong> agnostic
@@ -134,7 +134,7 @@
 <p>The flexibility of JavaScript is great for quickly developing apps with less boilerplate code. LoopBack helps with that further by providing a handy model generator for building your classes quickly. These can be validated with the built-in validation methods. Entity relationships are very well supported. The security model is complex with user roles, principals and ACLs.</p>
 <p>Basic user authentication is part of the core and third-party login support can be implemented using Passport modules. There’s also a module for OAuth. Geolocation, push and file services are built-in. For anything else there’s <code>npm</code> and tons of modules on GitHub.</p>
 <p>LoopBack is great for REST API service generation and very rapid prototyping. Developers can get up and running in minutes by building a custom API using the given CLI tool. LoopBack is a very good fit for all projects written in JavaScript.</p>
-<h2 id="Para"><a href="https://paraio.org" target="_blank" rel="external">Para</a> <a href="https://github.com/Erudika/para" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/paraio.png" style="border: 1px solid #CCCCCC">
+<h2 id="Para"><a href="https://paraio.org" target="_blank" rel="external">Para</a> <a href="https://github.com/Erudika/para" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/paraio.png" style="border: 1px solid #CCCCCC">
 <strong>Multitenant:</strong> yes
 <strong>Language:</strong> Java
 <strong>Database:</strong> agnostic
@@ -148,7 +148,7 @@
 <p>The core API consists of three main interfaces for searching, storing and caching object. Implement those and you have your own custom server. The data model is simple and all classes implement the <code>ParaObject</code> interface. This gives them some basic properties like <code>id</code>, <code>type</code> and <code>name</code>. Entities can link to other entities by forming one-to-one, one-to-many and many-to-many relationships. Basic constraint checkers, such as <code>required</code>, <code>min</code>, <code>max</code>, <code>regexp</code>, can be used to validate object properties. Full-text search is enabled by default for all objects.</p>
 <p>Authentication between clients and the server is not based on OAuth, <a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/" target="_blank" rel="external">intentionally</a>. Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. Better user management and support for JSON Web Tokens will be available in the next version 1.17, soon. Para has built-in support for third-party authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.</p>
 <p>Para is a good choice if you are building a cloud-based web service or website and is great for rapid prototyping. It’s an easy-to-use and flexible platform that scales well. A backend for busy developers.</p>
-<h2 id="BaasBox"><a href="http://www.baasbox.com" target="_blank" rel="external">BaasBox</a> <a href="https://github.com/baasbox/baasbox" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/baasbox.png">
+<h2 id="BaasBox"><a href="http://www.baasbox.com" target="_blank" rel="external">BaasBox</a> <a href="https://github.com/baasbox/baasbox" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/baasbox.png">
 <strong>Multitenant:</strong> yes, <a href="http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend" target="_blank" rel="external">since v0.8.4</a>
 <strong>Language:</strong> Java
 <strong>Database:</strong> OrientDB
@@ -158,7 +158,7 @@
 <p>The docs are very nice and detailed, very easy to navigate. Getting started is very easy - unzip the file and run the Bash/bat script and you open up the console on <code>localhost:9000/console</code>.  The server is running on top of OrientDB which is sort of a hybrid database and has a lot of cool features.</p>
 <p>BaasBox is easy to learn and has a nice REST API that speaks JSON. It’s got full support for CRUD operations on objects and collections of objects and also allows you to link them in one-to-many or many-to-many relationships. Social features are excellent - you have social login, friendship/followers API and user management. Other features include files and assets API, push notifications and a plugin system.</p>
 <p>BaasBox is a good choice as a mBaaS for building mobile backend services. If you are a mobile app developer definitely consider BaasBox for your backend.</p>
-<h2 id="Deployd"><a href="http://deployd.com" target="_blank" rel="external">Deployd</a> <a href="https://github.com/deployd/deployd" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
+<h2 id="Deployd"><a href="http://deployd.com" target="_blank" rel="external">Deployd</a> <a href="https://github.com/deployd/deployd" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
 <strong>Multitenant:</strong> no
 <strong>Language:</strong> JavaScript
 <strong>Database:</strong> MongoDB
@@ -168,7 +168,7 @@
 <p>The project is well documented and has plenty of examples and code. They have dedicated installers for Windows and Mac that will help you get started. To create a new project you run <code>$ dpd create my-app</code> and then start the server with <code>dpd -d</code>. That’s it.</p>
 <p>Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.js. It has great support for collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is built-in. Other functionality like social login support is provided by third-party modules.</p>
 <p>Deployd is good for those who like a nice web admin UI and build JavaScript apps with Node.js. If you like MongoDB and Node.js, you’ll love Deployd!</p>
-<h2 id="Telepat"><a href="http://telepat.io" target="_blank" rel="external">Telepat</a> <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/telepat.png">
+<h2 id="Telepat"><a href="http://telepat.io" target="_blank" rel="external">Telepat</a> <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/telepat.png">
 <strong>Multitenant:</strong> yes
 <strong>Language:</strong> JavaScript
 <strong>Database:</strong> agnostic

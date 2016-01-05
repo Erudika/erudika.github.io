@@ -25,9 +25,9 @@ Updated Elasticsearch to v2.1.1
 Updated design & added features to web console
 -->
 
-## JSON Web Tokens (JWT) support
+## JSON Web Tokens support
 
-![](/assets/img/blogpost_media2.png)
+![](http://www.erudika.com/assets/img/blogpost_media2.png)
 
 [JSON Web Tokens](http://jwt.io/) are a new standard for signing and authenticating clients and users. Think of them as
 Cookies 2.0. They are simply a signed JSON object containing some data about the authenticated user. The cool thing about
