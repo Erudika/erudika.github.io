@@ -1,56 +1,105 @@
-<%- partial('_partial/head') %>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-				<div class="navbar navbar-default">
-					<div class="container">
-						<div class="navbar-header">
-							<a class="navbar-brand" href="/">
-								<img src="/assets/img/erudika.png" width="256" height="66" alt="logo"/>
-							</a>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-us" class="nojs"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erudika is a tiny software company based in Sofia, Bulgaria.">
+    <meta name="author" content="erudika.com">
+    <%
+		var title = page.title;
+
+		if (is_archive()){
+		title = 'Archives';
+
+		if (is_month()){
+		title += ': ' + page.year + '/' + page.month;
+		} else if (is_year()){
+		title += ': ' + page.year;
+		}
+		} else if (is_category()){
+		title = 'Category: ' + page.category;
+		} else if (is_tag()){
+		title = 'Tag: ' + page.tag;
+		}
+		%>
+		<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+		<%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+		<% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+		<% } %>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	<body>
+		<div id="container">
+			<div id="wrap">
+				<header id="header">
+					<div class="navbar navbar-default">
+						<div class="container">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="/">
+									<img src="/assets/img/erudika.svg" width="256" height="66" alt="logo" class="erudika-logo"/>
+								</a>
+							</div>
+							<ul class="nav navbar-nav navbar-right hidden-xs">
+								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class=""><a href="/#projects">Projects</a></li>
+								<li class=""><a href="/#skills">Skills</a></li>
+								<li class=""><a href="/#contact">Contact</a></li>
+							</ul>
 						</div>
-						<ul class="nav navbar-nav navbar-right hidden-xs">
-							<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
-							<li class=""><a href="/#projects">Projects</a></li>
-							<li class=""><a href="/#skills">Skills</a></li>
-							<li class=""><a href="/#contact">Contact</a></li>
-						</ul>
 					</div>
-				</div>
-				<% if(page.img) { %>
-				<div id="banner" style="background: url('/assets/img/<%= page.img %>') center #000;
-				 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
-				<% } else { %>
-				<div id="banner" style="background: url('/assets/img/banner.jpg') center #000;
-				 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
-				<% } %>
-				<div id="header-outer" class="outer">
-					<div id="header-title" class="inner">
-						<h1 id="logo-wrap">
-							<span id="logo">Blog</span>
-						</h1>
-						<% if (theme.subtitle){ %>
-						<h2 id="subtitle-wrap">
-							<a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle %></a>
-						</h2>
-						<% } %>
+					<% if(page.img) { %>
+					<div id="banner" style="background: url('/assets/img/<%= page.img %>') center #000;
+					 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+					<% } else { %>
+					<div id="banner" style="background: url('/assets/img/banner.jpg') center #000;
+					 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+					<% } %>
+					<div id="header-outer" class="outer">
+						<div id="header-title" class="inner">
+							<h1 id="logo-wrap">
+								<span id="logo">Blog</span>
+							</h1>
+							<% if (theme.subtitle){ %>
+							<h2 id="subtitle-wrap">
+								<a href="<%- url_for() %>" id="subtitle"><%= theme.subtitle %></a>
+							</h2>
+							<% } %>
+						</div>
 					</div>
+				</header>
+
+				<div class="outer">
+					<section id="main"><%- body %></section>
+					<% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+						<%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+					<% } %>
 				</div>
-			</header>
+				<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+			</div>
+			<%- partial('_partial/after-footer') %>
+		</div>
 
-      <div class="outer">
-        <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-        <% } %>
-      </div>
-      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
-    </div>
-    <%- partial('_partial/after-footer') %>
-  </div>
-
-	<!-- Google Analytics	 -->
-	<%- partial('_partial/google-analytics') %>
-</body>
+		<!-- Google Analytics	 -->
+		<%- partial('_partial/google-analytics') %>
+	</body>
 </html>

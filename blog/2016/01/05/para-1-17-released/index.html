@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-us" class="nojs"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erudika is a tiny software company based in Sofia, Bulgaria.">
+    <meta name="author" content="erudika.com">
+    
+		<title>Para v1.17 released | Erudika Blog</title>
+		<meta name="description" content="We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
+deployed on ParaIO.com, our hosted backend service.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Para v1.17 released">
+<meta property="og:url" content="http://www.erudika.com/blog/2016/01/05/para-1-17-released/index.html">
+<meta property="og:site_name" content="Erudika Blog">
+<meta property="og:description" content="We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
+deployed on ParaIO.com, our hosted backend service.">
+<meta property="og:updated_time" content="2016-01-05T20:02:32.636Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Para v1.17 released">
+<meta name="twitter:description" content="We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
+deployed on ParaIO.com, our hosted backend service.">
+<meta name="twitter:creator" content="@para_io">
+<meta property="fb:app_id" content="119564591416126">
+		
+    <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
+		
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	<body>
+		<div id="container">
+			<div id="wrap">
+				<header id="header">
+					<div class="navbar navbar-default">
+						<div class="container">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="/">
+									<img src="/assets/img/erudika.svg" width="256" height="66" alt="logo" class="erudika-logo"/>
+								</a>
+							</div>
+							<ul class="nav navbar-nav navbar-right hidden-xs">
+								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class=""><a href="/#projects">Projects</a></li>
+								<li class=""><a href="/#skills">Skills</a></li>
+								<li class=""><a href="/#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="banner" style="background: url('/assets/img/img3.jpg') center #000;
+					 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+					
+					<div id="header-outer" class="outer">
+						<div id="header-title" class="inner">
+							<h1 id="logo-wrap">
+								<span id="logo">Blog</span>
+							</h1>
+							
+						</div>
+					</div>
+				</header>
+
+				<div class="outer">
+					<section id="main"><article id="post-para-1-17-released" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/01/05/para-1-17-released/" class="article-date">
+  <time datetime="2016-01-05T16:20:27.000Z" itemprop="datePublished">05 Jan 2016</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+		
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Para v1.17 released
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
+deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
+<a id="more"></a>
+<p>We’ve worked hard during the holidays to bring you several new features that will enable you to integrate Para in
+projects that are client-side only like static web pages or mobile applications.</p>
+<p>Here are all the new features in Para v1.17:</p>
+<!--
+Added JSON Web Tokens support
+Added methods to grant and revoke permissions for users
+Fixed Maven's JAR and WAR assembly - there's a single 'fat' executable WAR now
+Updated Elasticsearch to v2.1.1
+Updated design & added features to web console
+-->
+<h2 id="JSON_Web_Tokens_(JWT)_support">JSON Web Tokens (JWT) support</h2><p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for signing and authenticating clients and users. Think of them as
+Cookies 2.0. They are simply a signed JSON object containing some data about the authenticated user. The cool thing about
+JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
+store information and claims about the user and that information is signed and cannot be tampered with.</p>
+<p>Originally, Para supported only cookies and allowed users to sign in only to the server running Para.
+This was quite limiting. Now with JWTs users can be authenticated and created per app
+(see <a href="http://www.paraio.org/docs/#011-apps" target="_blank" rel="external">the docs for apps</a>) through the API.
+Cookies are still supported but using web tokens is recommended. For example, to sign in a user with
+Facebook you have to make a request like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">POST /v1/jwt_auth</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"appid"</span>: <span class="string">"app:myapp"</span>,</span><br><span class="line">  <span class="string">"provider"</span>: <span class="string">"facebook"</span>,</span><br><span class="line">  <span class="string">"token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eWIiO..."</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The token above is a Facebook access token which is exchanged for a Para access token in the form of JWT.
+If that request succeeds, the access token for Para is returned and that user is now authenticated with <code>app:myapp</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"jwt"</span>: &#123;</span><br><span class="line">    <span class="string">"access_token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eyJ..."</span>,</span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">1450137214490</span>,</span><br><span class="line">    <span class="string">"refresh"</span>: <span class="number">1450137216490</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"user"</span>: &#123;</span><br><span class="line">    <span class="string">"id"</span>:<span class="string">"user1"</span>,</span><br><span class="line">    <span class="string">"timestamp"</span>: <span class="number">1399721289987</span>,</span><br><span class="line">    <span class="string">"type"</span>:<span class="string">"user"</span>,</span><br><span class="line">    <span class="string">"appid"</span>:<span class="string">"myapp"</span>,</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>That’s it - there’s no need to register the user. And this request can come from any client not just the backend.
+An good use case would be an AngularJS app running on its own as a static single page app. The frontend code would use
+our JavaScript client library to call <code>signIn()</code> to the Para backend server. Another use case could be a mobile app
+running native Android code. The app’s code, even though compiled, is not trusted and thus must not contain any
+API access credentials like a <code>secret_key</code> for Para. In this case JWT is ideal because it gives that app (untrusted client)
+temporary access to the API. Para access tokens are valid for one week, by default.</p>
+<p>Special thanks to the guys at Connect2ID for their excellent JWT library for Java.</p>
+<h2 id="Resource_permissions">Resource permissions</h2><p>Soon after we decided to add JWT support, we realized that once a user has been authenticated with an app we need to
+specify what that user can do, so we implemented basic resource permissions. By default users are not trusted and every
+new app has zero permissions - the default policy is <code>deny all</code>. This is in contrast to the normal API access using a
+<code>secret_key</code> for apps, in which case apps have full permissions and privileged access.</p>
+<p>Resource permissions affect only users with JWT tokens and are stored in each app object. A permission has three parts -
+a <code>subject_id</code>, a <code>resource_name</code> and a list of <code>methods</code>. It looks like this:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"user2"</span>: &#123;</span><br><span class="line">    <span class="string">"posts"</span>: [<span class="string">"GET"</span>, <span class="string">"POST"</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This gives a subject with id <code>user2</code> permissions to access resource <code>posts</code> using HTTP methods <code>GET</code> and <code>POST</code> only.
+The <code>posts</code> resource is just an example an is part of the API and is located at <code>/v1/posts</code>. Wildcards <code>*</code> are also
+supported. So the following permission would give everyone full access to all resources for a given app:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"*"</span>: &#123;</span><br><span class="line">    <span class="string">"*"</span>: [<span class="string">"*"</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Permissions can be granted and revoked through the API. There’s also a method for checking permissions:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/_permissions/&#123;subjectid&#125;/&#123;resource&#125;/&#123;method&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Support_for_Elasticsearch_2-x">Support for Elasticsearch 2.x</h2><p>Elasticseach is a key component of the Para backend server and we use it since version 0.13. With version 2.0 come many
+new features and changes. We’ve modified and tested the code to be compatible with the new version.</p>
+<p>You can <a href="https://github.com/Erudika/para/releases/download/v1.17.1/para-war-1.17.1.war" target="_blank" rel="external">download the latest WAR file from GitHub</a>.
+To run it just type <code>java -jar para-war.war</code> and it will start.</p>
+<p><strong> We hope you will like the new features and feel free to try Para online at <a href="https://paraio.com" target="_blank" rel="external">paraio.com</a>.
+No need to install anything and it’s free.</strong></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <a data-url="http://www.erudika.com/blog/2016/01/05/para-1-17-released/" data-id="cij1tq6rl0003ox4s33gzqvbe" class="article-share-link">Share</a>
+      
+				<a href="https://twitter.com/albogdano">
+					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+				</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/backend/">backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/para/">para</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/release/">release</a></li></ul>
+
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/01/05/para-1-17-released/" data-numposts="5"></div>
+</section>
+</section>
+					
+						<aside id="sidebar" >
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents
+			
+				<a href="/blog/atom.xml" title="RSS Feed" class="right"><i class="fa fa-rss"></i></a>
+			
+		</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2016/01/05/para-1-17-released/">Para v1.17 released</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/">Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2015/10/16/hello-world/">Hello World!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 20px;">backend</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/release/" style="font-size: 10px;">release</a>
+    </div>
+  </div>
+
+  
+
+	<div>
+		<div id="search-form-wrap">
+			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.erudika.com/blog"></form>
+		</div>
+	</div>
+	<br><br>
+	<div class="text-center">
+		<small><i class="fa fa-cc"></i> Images taken from <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.</small>
+	</div>
+</aside>
+					
+				</div>
+				<footer>
+	
+	<div class="container">
+		<div class="row">
+			<div class=" columns">
+				<div class="col-xs-6">
+					Hosted on <a href="https://github.com/Erudika/erudika.github.io"><i class="fa fa-github fa-lg"></i> GitHub</a>
+				</div>
+				<div class="col-xs-6 text-right">
+					Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+			</div>
+			
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=119564591416126";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- End Facebook SDK -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
+</script>
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/blog/js/script.js" type="text/javascript"></script>
+
+		</div>
+
+		<!-- Google Analytics	 -->
+		
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-648525-7', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+	</body>
+</html>

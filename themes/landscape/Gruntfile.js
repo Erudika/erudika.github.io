@@ -5,7 +5,7 @@ module.exports = function(grunt){
         options: {
           repository: 'https://github.com/FortAwesome/Font-Awesome.git',
           directory: 'tmp/fontawesome'
-        },
+        }
       },
       fancybox: {
         options: {

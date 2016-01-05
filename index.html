@@ -15,11 +15,11 @@
     <title>Erudika</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,7 +36,9 @@
 		<div class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/"><img src="/assets/img/erudika.png" width="256" height="66" alt="logo"/></a>
+					<a href="/">
+						<img src="assets/img/erudika.svg" width="256" height="66" class="erudika-logo" alt="logo"/>
+					</a>
 				</div>
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li class=""><a href="/blog"><span style="color: #3399CC;">Blog</span></a></li>
@@ -153,8 +155,8 @@
 			<div class="container">
 				<div class="row">
 					<div id="map" class="col-md-8">
-						<a href="//goo.gl/maps/QGRjd" class="extlink">
-							<img src="//maps.googleapis.com/maps/api/staticmap?center=42.67354,23.28034&amp;markers=color:blue%7C42.67354,23.28034&amp;scale=2&amp;zoom=15&amp;language=en&amp;style=saturation:-100&amp;size=800x320&amp;key=AIzaSyBNJCAd4ZVeSOmZHGpRG7gdK2SUpflTBzc" alt="map"/>
+						<a href="https://goo.gl/maps/QGRjd" class="extlink">
+							<img src="https://maps.googleapis.com/maps/api/staticmap?center=42.67354,23.28034&amp;markers=color:blue%7C42.67354,23.28034&amp;scale=2&amp;zoom=15&amp;language=en&amp;style=saturation:-100&amp;size=800x320&amp;key=AIzaSyBNJCAd4ZVeSOmZHGpRG7gdK2SUpflTBzc" alt="map"/>
 						</a>
 					</div>
 					<div class="col-md-4 text-muted text-center">
@@ -193,10 +195,12 @@
 		</footer>
 
     <!-- Bootstrap core JavaScript -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
+			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "assets/img/erudika.png"); }
 			(function() {
 				var blue = "#3399cc";
 				var grey = "#cccccc";
@@ -217,7 +221,7 @@
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 			ga('create', 'UA-648525-7', 'erudika.com');
 			ga('send', 'pageview');
 		</script>

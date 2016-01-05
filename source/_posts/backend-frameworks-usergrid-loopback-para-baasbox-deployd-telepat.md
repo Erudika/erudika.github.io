@@ -9,13 +9,13 @@ img: img2.jpg
 
 Let's have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the "fun" part - the frontend (client-side).
 
+<!-- more -->
+
 The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented and part of the REST API documentation.
 
 So why use a backend framework instead of writing my own? The main good reason is that these frameworks are packaged as reusable components and are tried and tested by many developers. So instead of maintaining another piece of code - the one you wrote yourself - you can use a package that's already out there and maintained for you.
 
 Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building anything from websites to desktop software or games. The ones that target mobile apps usually have features like realtime push, notifications support and client libraries for Android and iOS. We'll cover both types of frameworks here.
-
-<!-- more -->
 
 ## [UserGrid](http://usergrid.apache.org) [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
 <img src="/assets/img/usergrid.png">

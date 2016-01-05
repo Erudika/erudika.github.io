@@ -258,6 +258,14 @@ footer * {
 
 /*-------- BLOG --------*/
 
+.post-thumbnail {
+	height: 100px;
+}
+.post-thumbnail img {
+	/*vertical-align: middle;*/
+	width: 100%;
+	height: auto;
+}
 .outer {
   max-width: 1220px;
   margin: 0 auto;
@@ -637,14 +645,6 @@ a.article-title:hover {
 .article-entry table {
   line-height: 1.6em;
   margin: 1.6em 0;
-}
-.article-entry h1,
-.article-entry h2,
-.article-entry h3,
-.article-entry h4,
-.article-entry h5,
-.article-entry h6 {
-  font-weight: bold;
 }
 .article-entry h1,
 .article-entry h2,
@@ -1043,7 +1043,7 @@ a.article-title:hover {
   break-inside: avoid-column;
 }
 .archive-article-inner {
-  padding: 10px;
+  /*padding: 10px;*/
   margin-bottom: 15px;
 }
 .archive-article-title {
@@ -1355,8 +1355,7 @@ pre .javascript .function {
 }
 .widget ul,
 .widget ol {
-  list-style: none;
-  margin-left: -40px;
+  margin-left: -20px;
 }
 .widget ul ul,
 .widget ol ul,
