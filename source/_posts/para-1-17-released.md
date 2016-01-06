@@ -120,7 +120,7 @@ GET /v1/_permissions/{subjectid}/{resource}/{method}
 Elasticseach is a key component of the Para backend server and we use it since version 0.13. With version 2.0 come many
 new features and changes. We've modified and tested the code to be compatible with the new version.
 
-You can [download the latest WAR file from GitHub](https://github.com/Erudika/para/releases/download/v1.17.1/para-war-1.17.1.war).
+You can [download the latest WAR file from GitHub](https://github.com/Erudika/para/releases/).
 To run it just type `java -jar para-war.war` and it will start.
 
 ** We hope you will like the new features and feel free to try Para online at [paraio.com](https://paraio.com).

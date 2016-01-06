@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-01-05T21:19:24.187Z</updated>
+  <updated>2016-01-06T16:54:32.279Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>http://www.erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-01-05T21:19:24.187Z</updated>
+    <updated>2016-01-06T16:54:32.279Z</updated>
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
 <a id="more"></a>
@@ -70,7 +70,7 @@ supported. So the following permission would give everyone full access to all re
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/_permissions/&#123;subjectid&#125;/&#123;resource&#125;/&#123;method&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Support_for_Elasticsearch_2-x">Support for Elasticsearch 2.x</h2><p>Elasticseach is a key component of the Para backend server and we use it since version 0.13. With version 2.0 come many
 new features and changes. We’ve modified and tested the code to be compatible with the new version.</p>
-<p>You can <a href="https://github.com/Erudika/para/releases/download/v1.17.1/para-war-1.17.1.war" target="_blank" rel="external">download the latest WAR file from GitHub</a>.
+<p>You can <a href="https://github.com/Erudika/para/releases/" target="_blank" rel="external">download the latest WAR file from GitHub</a>.
 To run it just type <code>java -jar para-war.war</code> and it will start.</p>
 <p><strong> We hope you will like the new features and feel free to try Para online at <a href="https://paraio.com" target="_blank" rel="external">paraio.com</a>.
 No need to install anything and it’s free.</strong></p>
