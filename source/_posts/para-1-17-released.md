@@ -29,9 +29,9 @@ Updated design & added features to web console
 
 ![](http://www.erudika.com/assets/img/blogpost_media2.png)
 
-[JSON Web Tokens](http://jwt.io/) are a new standard for signing and authenticating clients and users. Think of them as
-Cookies 2.0. They are simply a signed JSON object containing some data about the authenticated user. The cool thing about
-JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
+[JSON Web Tokens](http://jwt.io/) are a new standard for authenticating clients and users. Think of them as
+'Cookies 2.0'. They are simply a signed JSON object containing some data about the authenticated user. The cool thing
+about JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
 store information and claims about the user and that information is signed and cannot be tampered with.
 
 Originally, Para supported only cookies and allowed users to sign in only to the server running Para.
@@ -70,8 +70,8 @@ If that request succeeds, the access token for Para is returned and that user is
 ```
 
 That's it - there's no need to register the user. And this request can come from any client not just the backend.
-An good use case would be an AngularJS app running on its own as a static single page app. The frontend code would use
-our JavaScript client library to call `signIn()` to the Para backend server. Another use case could be a mobile app
+An good use case would be an AngularJS app running on its own as a static single page app (SPA). The frontend code would
+use our JavaScript client library to call `signIn()` to the Para backend server. Another use case could be a mobile app
 running native Android code. The app's code, even though compiled, is not trusted and thus must not contain any
 API access credentials like a `secret_key` for Para. In this case JWT is ideal because it gives that app (untrusted client)
 temporary access to the API. Para access tokens are valid for one week, by default.

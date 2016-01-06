@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-01-06T16:54:32.279Z</updated>
+  <updated>2016-01-06T17:05:55.539Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>http://www.erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-01-06T16:54:32.279Z</updated>
+    <updated>2016-01-06T17:05:55.539Z</updated>
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
 <a id="more"></a>
@@ -34,9 +34,9 @@ Updated Elasticsearch to v2.1.1
 Updated design & added features to web console
 -->
 <h2 id="JSON_Web_Tokens_support">JSON Web Tokens support</h2><p><img src="http://www.erudika.com/assets/img/blogpost_media2.png" alt=""></p>
-<p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for signing and authenticating clients and users. Think of them as
-Cookies 2.0. They are simply a signed JSON object containing some data about the authenticated user. The cool thing about
-JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
+<p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for authenticating clients and users. Think of them as
+‘Cookies 2.0’. They are simply a signed JSON object containing some data about the authenticated user. The cool thing
+about JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
 store information and claims about the user and that information is signed and cannot be tampered with.</p>
 <p>Originally, Para supported only cookies and allowed users to sign in only to the server running Para.
 This was quite limiting. Now with JWTs users can be authenticated and created per app
@@ -48,8 +48,8 @@ Facebook you have to make a request like this:</p>
 If that request succeeds, the access token for Para is returned and that user is now authenticated with <code>app:myapp</code>.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"jwt"</span>: &#123;</span><br><span class="line">    <span class="string">"access_token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eyJ..."</span>,</span><br><span class="line">    <span class="string">"expires"</span>: <span class="number">1450137214490</span>,</span><br><span class="line">    <span class="string">"refresh"</span>: <span class="number">1450137216490</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"user"</span>: &#123;</span><br><span class="line">    <span class="string">"id"</span>:<span class="string">"user1"</span>,</span><br><span class="line">    <span class="string">"timestamp"</span>: <span class="number">1399721289987</span>,</span><br><span class="line">    <span class="string">"type"</span>:<span class="string">"user"</span>,</span><br><span class="line">    <span class="string">"appid"</span>:<span class="string">"myapp"</span>,</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>That’s it - there’s no need to register the user. And this request can come from any client not just the backend.
-An good use case would be an AngularJS app running on its own as a static single page app. The frontend code would use
-our JavaScript client library to call <code>signIn()</code> to the Para backend server. Another use case could be a mobile app
+An good use case would be an AngularJS app running on its own as a static single page app (SPA). The frontend code would
+use our JavaScript client library to call <code>signIn()</code> to the Para backend server. Another use case could be a mobile app
 running native Android code. The app’s code, even though compiled, is not trusted and thus must not contain any
 API access credentials like a <code>secret_key</code> for Para. In this case JWT is ideal because it gives that app (untrusted client)
 temporary access to the API. Para access tokens are valid for one week, by default.</p>
