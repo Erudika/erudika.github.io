@@ -123,30 +123,6 @@ a:after {
 	color: #3399cc;
 }
 
-.img-para {
-	background: url('../img/sprite.png') no-repeat 0 -310px;
-	background-size: 100%;
-	width: 300px;
-	height: 300px;
-	margin: 0 auto;
-}
-
-.img-paraio {
-	background: url('../img/sprite.png') no-repeat 0 -664px;
-	background-size: 100%;
-	width: 300px;
-	height: 300px;
-	margin: 0 auto;
-}
-
-.img-scoold {
-	background: url('../img/sprite.png') no-repeat 0 -1016px;
-	background-size: 100%;
-	width: 300px;
-	height: 300px;
-	margin: 0 auto;
-}
-
 /* hello */
 #hello {
 	width: 100%;
