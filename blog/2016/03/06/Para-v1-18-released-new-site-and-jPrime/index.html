@@ -12,16 +12,24 @@
     <meta name="description" content="Erudika is a tiny software company based in Sofia, Bulgaria.">
     <meta name="author" content="erudika.com">
     
-		<title>Erudika Blog</title>
-		<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Erudika Blog">
-<meta property="og:url" content="http://www.erudika.com/blog/index.html">
+		<title>Para v1.18 released, new site and jPrime | Erudika Blog</title>
+		<meta name="description" content="This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, 
+fixed many bugs and released the Android client for Para and a new 
+plugin for Mon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Para v1.18 released, new site and jPrime">
+<meta property="og:url" content="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description">
+<meta property="og:description" content="This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, 
+fixed many bugs and released the Android client for Para and a new 
+plugin for Mon">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/blogpost_media3.png">
+<meta property="og:updated_time" content="2016-03-07T00:39:46.223Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Erudika Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Para v1.18 released, new site and jPrime">
+<meta name="twitter:description" content="This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, 
+fixed many bugs and released the Android client for Para and a new 
+plugin for Mon">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
@@ -62,7 +70,7 @@
 						</div>
 					</div>
 					
-					<div id="banner" style="background: url('/assets/img/banner.jpg') center #000;
+					<div id="banner" style="background: url('/assets/img/img4.jpg') center #000;
 					 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
 					
 					<div id="header-outer" class="outer">
@@ -76,9 +84,7 @@
 				</header>
 
 				<div class="outer">
-					<section id="main">
-  
-    <article id="post-Para-v1-18-released-new-site-and-jPrime" class="article article-type-post" itemscope itemprop="blogPost">
+					<section id="main"><article id="post-Para-v1-18-released-new-site-and-jPrime" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" class="article-date">
   <time datetime="2016-03-06T21:46:35.000Z" itemprop="datePublished">06 Mar 2016</time>
@@ -88,16 +94,13 @@
   <div class="article-inner">
     
 		
-<div style="background: url('/assets/img/img4.jpg') center transparent;
-		 background-size: cover;height: 250px;">&nbsp;</div>
-
 
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/">Para v1.18 released, new site and jPrime</a>
+    <h1 class="article-title" itemprop="name">
+      Para v1.18 released, new site and jPrime
     </h1>
   
 
@@ -106,15 +109,49 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, 
-fixed many bugs and released the <a href="https://github.com/Erudika/para-client-android">Android client for Para</a> and a new 
+fixed many bugs and released the <a href="https://github.com/Erudika/para-client-android" target="_blank" rel="external">Android client for Para</a> and a new 
 plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We’ve also updated 
 the documentation of our open source backend framework on and redesigned the landing page on 
-<a href="http://www.paraio.org">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>
-        
-          <p class="article-more-link">
-            <a href="/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/#more">Read More</a>
-          </p>
-        
+<a href="http://www.paraio.org" target="_blank" rel="external">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>
+<a id="more"></a>
+<p><img src="/assets/img/blogpost_media3.png" alt=""></p>
+<p>Para <strong>v1.18</strong> supports plugins for the three main components in our framework - <code>DAO</code>, <code>Search</code> and <code>Cache</code>. These 
+three interfaces are the foundation and their implementations define how objects are stored in a database, indexed by
+ a search engine or cached in memory. Now you can create your own plugins that implement the <code>DAO</code>, for example, 
+ like we did for MongoDB. To create a plugin, you simply create a new Java project and import <code>para-core</code> using Maven. 
+ Then you implement one of the three interfaces above. Finally put the compiled plugin inside a <code>lib</code> folder relative 
+ to the <code>para-server.war</code>. For more information about plugins, 
+ <a href="http://www.paraio.org/docs/#008-plugins" target="_blank" rel="external">refer to the documentation</a>.</p>
+<p>Our <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">para-dao-mongodb</a> plugin is the first official plugin for Para and 
+it adds support for MongoDB. It was written by <a href="https://github.com/lucav" target="_blank" rel="external">Luca Venturella</a> and works with the latest 
+Mongo server v3.2. We plan to add more plugins like this for Cassandra, PostgreSQL and others. By writing your own 
+plugins you can extend and modify the core functionality of Para and make it work for your scenario and the technologies 
+you use. Here are some of the different possible integrations that can work great as plugins:</p>
+<ul>
+<li><strong>databases</strong> (<code>DAO</code>): Cassandra, PostgreSQL, CouchDB, OrientDB</li>
+<li><strong>search systems</strong> (<code>Search</code>): CloudSearch, Solr, Algolia</li>
+<li><strong>caches</strong> (<code>Cache</code>): Memcached, Redis, Ehcache, Infinispan</li>
+</ul>
+<p>In <strong>v1.18</strong> we also improved the permissions API by allowing developers to add permissions on specific objects by <code>id</code>. 
+The following code, for example, allows a user with id of <code>user1</code> to delete a specific <code>Post</code> object:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paraClient.grantResourcePermission(<span class="string">"user1"</span>, <span class="string">"posts/123"</span>, AllowedMethods.DELETE);</span><br></pre></td></tr></table></figure>
+<p>In addition to this, we added special flags to every <code>ParaObject</code> that control persistence, indexing and caching operations. 
+These flags are in the form of boolean properties and give you a fine-grained control over every object. You can now 
+create transient objects that only live in memory  (<code>stored: false</code>, <code>indexed: false</code>, <code>cached: true</code>), or objects that 
+will never be cached (<code>stored: true</code>, <code>indexed: true</code>, <code>cached: false</code>).</p>
+<p>The plan for the next few weeks is to add more integrations and a basic web UI, as requested by some of our fellow 
+developers. We’ll be focusing on making Para work with <a href="https://github.com/marmelab/ng-admin" target="_blank" rel="external">ng-admin</a> and 
+<a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>, as well as, <strong>iOS</strong>.
+And even though we regret the recent news of <a href="http://blog.parse.com/announcements/moving-on/" target="_blank" rel="external">Parse shutting down</a>, we hope 
+that more web and mobile developers will find <a href="https://paraio.com" target="_blank" rel="external">Para</a> useful and a good alternative to the Parse service.</p>
+<h2 id="Meet_us_at_the_jPrime_conference">Meet us at the jPrime conference</h2><p>We’ll be sponsoring <a href="http://jprime.io/" target="_blank" rel="external">jPrime</a> - a local conference with talks on Java, the JVM, mobile, web and best 
+practices, which will be held on <strong>May 26-27th, 2016</strong> in Sofia, Bulgaria. It’s run by the 
+<a href="https://jug.bg/en/" target="_blank" rel="external">Bulgarian Java User Group</a> and backed by the biggest software companies in the city. If you’re in 
+the area and into Java, you should definitely come to jPrime. Send us an email and we’ll arrange for you some Para 
+stickers on the day of the conference. </p>
+<p><em>You can now chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
+<p><small style="color: #aaa;">Mongo, MongoDB, and the MongoDB leaf logo are registered trademarks of MongoDB, Inc.</small></p>
+
       
     </div>
     <div class="article-footer">
@@ -131,177 +168,24 @@ the documentation of our open source backend framework on and redesigned the lan
     </div>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-para-1-17-released" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2016/01/05/para-1-17-released/" class="article-date">
-  <time datetime="2016-01-05T16:20:27.000Z" itemprop="datePublished">05 Jan 2016</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-		
-<div style="background: url('/assets/img/img3.jpg') center transparent;
-		 background-size: cover;height: 250px;">&nbsp;</div>
-
-
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/01/05/para-1-17-released/">Para v1.17 released</a>
-    </h1>
+    <a href="/blog/2016/01/05/para-1-17-released/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Para v1.17 released</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
-deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend service.</p>
-        
-          <p class="article-more-link">
-            <a href="/blog/2016/01/05/para-1-17-released/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2016/01/05/para-1-17-released/" data-id="cilh9gisk0003ft4s6w56b83l" class="article-share-link">Share</a>
-      
-				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
-				</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/backend/">backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/para/">para</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/release/">release</a></li></ul>
-
-    </div>
-  </div>
   
 </article>
 
 
-  
-    <article id="post-backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" class="article-date">
-  <time datetime="2015-10-21T11:17:19.000Z" itemprop="datePublished">21 Oct 2015</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-		
-<div style="background: url('/assets/img/img2.jpg') center transparent;
-		 background-size: cover;height: 250px;">&nbsp;</div>
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/">Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
-server-side component of your website or app. Developers use them to build and iterate on products faster than ever
-before by focusing on the “fun” part - the frontend (client-side).</p>
-        
-          <p class="article-more-link">
-            <a href="/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" data-id="cilh9giso000cft4sq9cfu8dc" class="article-share-link">Share</a>
-      
-				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
-				</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/API/">API</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/baas/">baas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/backend/">backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/frameworks/">frameworks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/para/">para</a></li></ul>
-
-    </div>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2015/10/16/hello-world/" class="article-date">
-  <time datetime="2015-10-15T21:00:00.000Z" itemprop="datePublished">16 Oct 2015</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-		
-<div style="background: url('/assets/img/img1.jpg') center transparent;
-		 background-size: cover;height: 250px;">&nbsp;</div>
-
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/10/16/hello-world/">Hello World!</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Hey there! We are Erudika and this is our blog. Here, we’ll share information about our current projects and
-developments. You can follow us on Twitter as well - <a href="https://twitter.com/erudika">@erudika</a>, or fork us on
-<a href="https://github.com/erudika">GitHub</a>.</p>
-<p>We’re busy developing and running our own SaaS called Para (<a href="https://paraio.com">https://paraio.com</a>). If you are a developer
-looking for a simple and scalable backend service, make sure you follow us and try our developer plans. They’re free!
-        
-          <p class="article-more-link">
-            <a href="/blog/2015/10/16/hello-world/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2015/10/16/hello-world/" data-id="cilh9gism000aft4ss9uthfro" class="article-share-link">Share</a>
-      
-				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
-				</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/general/">general</a></li></ul>
-
-    </div>
-  </div>
-  
-</article>
-
-
-  
-  
+<section id="comments">
+	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-numposts="5"></div>
+</section>
 </section>
 					
 						<aside id="sidebar" >

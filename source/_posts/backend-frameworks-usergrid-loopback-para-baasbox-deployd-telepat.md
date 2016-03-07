@@ -26,7 +26,7 @@ anything from websites to desktop software or games. The ones that target mobile
 realtime push, notifications support and client libraries for Android and iOS. We'll cover both types of frameworks here.
 
 ## [UserGrid](http://usergrid.apache.org) [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
-<img src="http://www.erudika.com/assets/img/usergrid.png">
+<img src="/assets/img/usergrid.png">
 
 **Multitenant:** yes <br>
 **Language:** Java <br>
@@ -57,7 +57,7 @@ Usergrid is an excellent choice if you are building a mobile application or an e
 your organization. It is used in production by quite a few companies.
 
 ## [LoopBack](http://loopback.io) [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
-<img src="http://www.erudika.com/assets/img/loopback.png">
+<img src="/assets/img/loopback.png">
 
 **Multitenant:** no <br>
 **Language:** JavaScript <br>
@@ -88,26 +88,26 @@ JavaScript.
 
 
 ## [Para](https://paraio.org) [<i class="fa fa-github-square"></i>](https://github.com/Erudika/para)
-<img src="http://www.erudika.com/assets/img/paraio.png" style="border: 1px solid #CCCCCC">
+<img src="/assets/img/paraio.png" style="border: 1px solid #CCCCCC">
 
 **Multitenant:** yes <br>
 **Language:** Java <br>
 **Database:** agnostic <br>
 **Documentation:** 9/10 <br>
-**Client libraries:** Java, JavaScript, .NET, PHP <br>
+**Client libraries:** Java, JavaScript, .NET, PHP, Android <br>
 
 Para is our own little backend framework. It is powered by Java and was released in early 2014. Para integrates well
 with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults. The design is
 flexible enough so that anyone can implement the provided interfaces for search, persistence and caching functionality.
-We have plans to include connectors for MongoDB and Cassandra soon.
+We have plans to include connectors for [MongoDB](https://github.com/Erudika/para-dao-mongodb) (done!) and Cassandra soon.
 
 Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
 it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
-we created a general-purpose BaaS. Already there are plenty of mobile-centric platforms out there (Parse, Pusher, etc.)
-that provide realtime and push services.
+we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while 
+others use it as an alternative to Parse for their mobile development.
 
-The documentation is great, contained in a single webpage for easy navigation and API methods are described clearly.
-Getting started is pretty easy - download one JAR file and execute it. Then run the initial setup:
+The [documentation](www.paraio.org/docs) is great, contained in a single webpage for easy navigation and API methods 
+are described clearly. Getting started is pretty easy - download one JAR file and execute it. Then run the initial setup:
 ```bash
 $ curl localhost:8080/v1/_setup
 ```
@@ -122,15 +122,15 @@ one-to-many and many-to-many relationships. Basic constraint checkers, such as `
 can be used to validate object properties. Full-text search is enabled by default for all objects.
 
 Authentication between clients and the server is not based on OAuth, [intentionally](http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/).
-Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. Better user management and
-support for JSON Web Tokens will be available in the next version 1.17, soon. Para has built-in support for third-party
+Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained 
+permissions and support for JSON Web Tokens are available since version 1.17. Para also has built-in support for third-party
 authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.
 
-Para is a good choice if you are building a cloud-based web service or website and is great for rapid prototyping.
+Para is a good choice if you are building a cloud-based web service and it's great for rapid prototyping.
 It's an easy-to-use and flexible platform that scales well. A backend for busy developers.
 
 ## [BaasBox](http://www.baasbox.com) [<i class="fa fa-github-square"></i>](https://github.com/baasbox/baasbox)
-<img src="http://www.erudika.com/assets/img/baasbox.png">
+<img src="/assets/img/baasbox.png">
 
 **Multitenant:** yes, [since v0.8.4](http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend) <br>
 **Language:** Java <br>
@@ -155,7 +155,7 @@ BaasBox is a good choice as a mBaaS for building mobile backend services. If you
 definitely consider BaasBox for your backend.
 
 ## [Deployd](http://deployd.com) [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
-<img src="http://www.erudika.com/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
+<img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
 
 **Multitenant:** no <br>
 **Language:** JavaScript <br>
@@ -180,7 +180,7 @@ Deployd is good for those who like a nice web admin UI and build JavaScript apps
 MongoDB and Node.js, you'll love Deployd!
 
 ## [Telepat](http://telepat.io) [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
-<img src="http://www.erudika.com/assets/img/telepat.png">
+<img src="/assets/img/telepat.png">
 
 **Multitenant:** yes <br>
 **Language:** JavaScript <br>

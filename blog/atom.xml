@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-01-06T17:05:55.539Z</updated>
+  <updated>2016-03-07T00:39:46.223Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -15,11 +15,80 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Para v1.18 released, new site and jPrime]]></title>
+    <link href="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/"/>
+    <id>http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</id>
+    <published>2016-03-06T21:46:35.000Z</published>
+    <updated>2016-03-07T00:39:46.223Z</updated>
+    <content type="html"><![CDATA[<p>This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, 
+fixed many bugs and released the <a href="https://github.com/Erudika/para-client-android" target="_blank" rel="external">Android client for Para</a> and a new 
+plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We’ve also updated 
+the documentation of our open source backend framework on and redesigned the landing page on 
+<a href="http://www.paraio.org" target="_blank" rel="external">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>
+<a id="more"></a>
+<p><img src="/assets/img/blogpost_media3.png" alt=""></p>
+<p>Para <strong>v1.18</strong> supports plugins for the three main components in our framework - <code>DAO</code>, <code>Search</code> and <code>Cache</code>. These 
+three interfaces are the foundation and their implementations define how objects are stored in a database, indexed by
+ a search engine or cached in memory. Now you can create your own plugins that implement the <code>DAO</code>, for example, 
+ like we did for MongoDB. To create a plugin, you simply create a new Java project and import <code>para-core</code> using Maven. 
+ Then you implement one of the three interfaces above. Finally put the compiled plugin inside a <code>lib</code> folder relative 
+ to the <code>para-server.war</code>. For more information about plugins, 
+ <a href="http://www.paraio.org/docs/#008-plugins" target="_blank" rel="external">refer to the documentation</a>.</p>
+<p>Our <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">para-dao-mongodb</a> plugin is the first official plugin for Para and 
+it adds support for MongoDB. It was written by <a href="https://github.com/lucav" target="_blank" rel="external">Luca Venturella</a> and works with the latest 
+Mongo server v3.2. We plan to add more plugins like this for Cassandra, PostgreSQL and others. By writing your own 
+plugins you can extend and modify the core functionality of Para and make it work for your scenario and the technologies 
+you use. Here are some of the different possible integrations that can work great as plugins:</p>
+<ul>
+<li><strong>databases</strong> (<code>DAO</code>): Cassandra, PostgreSQL, CouchDB, OrientDB</li>
+<li><strong>search systems</strong> (<code>Search</code>): CloudSearch, Solr, Algolia</li>
+<li><strong>caches</strong> (<code>Cache</code>): Memcached, Redis, Ehcache, Infinispan</li>
+</ul>
+<p>In <strong>v1.18</strong> we also improved the permissions API by allowing developers to add permissions on specific objects by <code>id</code>. 
+The following code, for example, allows a user with id of <code>user1</code> to delete a specific <code>Post</code> object:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paraClient.grantResourcePermission(<span class="string">"user1"</span>, <span class="string">"posts/123"</span>, AllowedMethods.DELETE);</span><br></pre></td></tr></table></figure>
+<p>In addition to this, we added special flags to every <code>ParaObject</code> that control persistence, indexing and caching operations. 
+These flags are in the form of boolean properties and give you a fine-grained control over every object. You can now 
+create transient objects that only live in memory  (<code>stored: false</code>, <code>indexed: false</code>, <code>cached: true</code>), or objects that 
+will never be cached (<code>stored: true</code>, <code>indexed: true</code>, <code>cached: false</code>).</p>
+<p>The plan for the next few weeks is to add more integrations and a basic web UI, as requested by some of our fellow 
+developers. We’ll be focusing on making Para work with <a href="https://github.com/marmelab/ng-admin" target="_blank" rel="external">ng-admin</a> and 
+<a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>, as well as, <strong>iOS</strong>.
+And even though we regret the recent news of <a href="http://blog.parse.com/announcements/moving-on/" target="_blank" rel="external">Parse shutting down</a>, we hope 
+that more web and mobile developers will find <a href="https://paraio.com" target="_blank" rel="external">Para</a> useful and a good alternative to the Parse service.</p>
+<h2 id="Meet_us_at_the_jPrime_conference">Meet us at the jPrime conference</h2><p>We’ll be sponsoring <a href="http://jprime.io/" target="_blank" rel="external">jPrime</a> - a local conference with talks on Java, the JVM, mobile, web and best 
+practices, which will be held on <strong>May 26-27th, 2016</strong> in Sofia, Bulgaria. It’s run by the 
+<a href="https://jug.bg/en/" target="_blank" rel="external">Bulgarian Java User Group</a> and backed by the biggest software companies in the city. If you’re in 
+the area and into Java, you should definitely come to jPrime. Send us an email and we’ll arrange for you some Para 
+stickers on the day of the conference. </p>
+<p><em>You can now chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
+<p><small style="color: #aaa;">Mongo, MongoDB, and the MongoDB leaf logo are registered trademarks of MongoDB, Inc.</small></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, 
+fixed many bugs and released the <a href="https://github.com/Erudika/para-client-android">Android client for Para</a> and a new 
+plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We’ve also updated 
+the documentation of our open source backend framework on and redesigned the landing page on 
+<a href="http://www.paraio.org">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>]]>
+    
+    </summary>
+    
+      <category term="jprime" scheme="http://www.erudika.com/blog/tags/jprime/"/>
+    
+      <category term="mongodb" scheme="http://www.erudika.com/blog/tags/mongodb/"/>
+    
+      <category term="para" scheme="http://www.erudika.com/blog/tags/para/"/>
+    
+      <category term="release" scheme="http://www.erudika.com/blog/tags/release/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Para v1.17 released]]></title>
     <link href="http://www.erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>http://www.erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-01-06T17:05:55.539Z</updated>
+    <updated>2016-03-07T00:33:26.039Z</updated>
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
 <a id="more"></a>
@@ -33,7 +102,7 @@ Fixed Maven's JAR and WAR assembly - there's a single 'fat' executable WAR now
 Updated Elasticsearch to v2.1.1
 Updated design & added features to web console
 -->
-<h2 id="JSON_Web_Tokens_support">JSON Web Tokens support</h2><p><img src="http://www.erudika.com/assets/img/blogpost_media2.png" alt=""></p>
+<h2 id="JSON_Web_Tokens_support">JSON Web Tokens support</h2><p><img src="/assets/img/blogpost_media2.png" alt=""></p>
 <p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for authenticating clients and users. Think of them as
 ‘Cookies 2.0’. They are simply a signed JSON object containing some data about the authenticated user. The cool thing
 about JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
@@ -94,84 +163,162 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
     <link href="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
     <id>http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
-    <updated>2016-01-05T21:20:46.891Z</updated>
-    <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).</p>
+    <updated>2016-03-07T00:35:52.287Z</updated>
+    <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
+server-side component of your website or app. Developers use them to build and iterate on products faster than ever
+before by focusing on the “fun” part - the frontend (client-side).</p>
 <a id="more"></a>
-<p>The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented and part of the REST API documentation.</p>
-<p>So why use a backend framework instead of writing my own? The main good reason is that these frameworks are packaged as reusable components and are tried and tested by many developers. So instead of maintaining another piece of code - the one you wrote yourself - you can use a package that’s already out there and maintained for you.</p>
-<p>Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building anything from websites to desktop software or games. The ones that target mobile apps usually have features like realtime push, notifications support and client libraries for Android and iOS. We’ll cover both types of frameworks here.</p>
-<h2 id="UserGrid"><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/usergrid.png">
-<strong>Multitenant:</strong> yes
-<strong>Language:</strong> Java
-<strong>Database:</strong> Cassandra
-<strong>Documentation:</strong> 9/10
+<p>The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually
+in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented
+and part of the REST API documentation.</p>
+<p>So why use a backend framework instead of writing my own? The main good reason is that these frameworks are packaged
+as reusable components and are tried and tested by many developers. So instead of maintaining another piece of code -
+the one you wrote yourself - you can use a package that’s already out there and maintained for you.</p>
+<p>Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building
+anything from websites to desktop software or games. The ones that target mobile apps usually have features like
+realtime push, notifications support and client libraries for Android and iOS. We’ll cover both types of frameworks here.</p>
+<h2 id="UserGrid"><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/usergrid.png"></p>
+<p><strong>Multitenant:</strong> yes <br>
+<strong>Language:</strong> Java <br>
+<strong>Database:</strong> Cassandra <br>
+<strong>Documentation:</strong> 9/10 <br>
 <strong>Client libraries:</strong> Android, iOS, JavaScript, Ruby, Java, .NET, PHP</p>
-<p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch in addition to a queue system like AWS SQS.</p>
-<p>The project is very well documented but getting started involves quite a few steps. First you need to install Cassandra and a servlet container like Tomcat. Then you deploy the WAR file to Tomcat and call a special URL to create a superuser account which gives you access to the web-based console.</p>
-<p>The API allows you to create and run multiple apps, which is a good thing because you might want to have a couple of apps sharing the same backend and this also makes deployment easier. You also get all the basic CRUD functionality for working with collections and entities (JSON objects). There are several built-in entity types like <code>user</code>, <code>group</code> and <code>application</code>, for example. They all have <code>type</code> and <code>uuid</code> properties and the latter is an actual UUID string. Basic entity relationships are also supported. Usergrid has good support for user and file management and has a simple data model.</p>
-<p>Authentication is implemented through OAuth 2.0 and it makes a distinction between user and app roles. Social login is supported but it appears that only Facebook login works out-of-the-box. Other extra features include geolocation queries and push notifications (in v2.0).</p>
-<p>Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in your organization. It is used in production by quite a few companies.</p>
-<h2 id="LoopBack"><a href="http://loopback.io" target="_blank" rel="external">LoopBack</a> <a href="https://github.com/strongloop/loopback" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/loopback.png">
-<strong>Multitenant:</strong> no
-<strong>Language:</strong> JavaScript
-<strong>Database:</strong> agnostic
-<strong>Documentation:</strong> 9/10
-<strong>Client libraries:</strong> Android/Java, iOS, JavaScript</p>
-<p>LoopBack is a Node.js API framework by StrongLoop, part of IBM. It’s been around since 2013 and is actively developed and has great commercial support. It is focused on REST API development and provides a visual editor for editing and deploying apps. Mobile app developers will love the Android and iOS SDKs and the push system.</p>
-<p>The developer docs are extensive and clear but sometimes slow to navigate. Getting started is easy and there’s a Yeaoman-based scaffolding tool for generating new project skeletons. Developers have a great choice of database connectors for all major SQL databases and MongoDB. For development you can also use an in-memory db.</p>
-<p>The flexibility of JavaScript is great for quickly developing apps with less boilerplate code. LoopBack helps with that further by providing a handy model generator for building your classes quickly. These can be validated with the built-in validation methods. Entity relationships are very well supported. The security model is complex with user roles, principals and ACLs.</p>
-<p>Basic user authentication is part of the core and third-party login support can be implemented using Passport modules. There’s also a module for OAuth. Geolocation, push and file services are built-in. For anything else there’s <code>npm</code> and tons of modules on GitHub.</p>
-<p>LoopBack is great for REST API service generation and very rapid prototyping. Developers can get up and running in minutes by building a custom API using the given CLI tool. LoopBack is a very good fit for all projects written in JavaScript.</p>
-<h2 id="Para"><a href="https://paraio.org" target="_blank" rel="external">Para</a> <a href="https://github.com/Erudika/para" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/paraio.png" style="border: 1px solid #CCCCCC">
-<strong>Multitenant:</strong> yes
-<strong>Language:</strong> Java
-<strong>Database:</strong> agnostic
-<strong>Documentation:</strong> 9/10
-<strong>Client libraries:</strong> Java, JavaScript, .NET, PHP</p>
-<p>Para is our own little backend framework. It is powered by Java and was released in early 2014. Para integrates well with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults. The design is flexible enough so that anyone can implement the provided interfaces for search, persistence and caching functionality. We have plans to include connectors for MongoDB and Cassandra soon.</p>
-<p>Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus we created a general-purpose BaaS. Already there are plenty of mobile-centric platforms out there (Parse, Pusher, etc.) that provide realtime and push services.</p>
-<p>The documentation is great, contained in a single webpage for easy navigation and API methods are described clearly. Getting started is pretty easy - download one JAR file and execute it. Then run the initial setup:
+<p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively
+developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
+in addition to a queue system like AWS SQS.</p>
+<p>The project is very well documented but getting started involves quite a few steps. First you need to install Cassandra
+and a servlet container like Tomcat. Then you deploy the WAR file to Tomcat and call a special URL to create a superuser
+account which gives you access to the web-based console.</p>
+<p>The API allows you to create and run multiple apps, which is a good thing because you might want to have a couple of
+apps sharing the same backend and this also makes deployment easier. You also get all the basic CRUD functionality for
+working with collections and entities (JSON objects). There are several built-in entity types like <code>user</code>, <code>group</code> and
+<code>application</code>, for example. They all have <code>type</code> and <code>uuid</code> properties and the latter is an actual UUID string. Basic
+entity relationships are also supported. Usergrid has good support for user and file management and has a simple
+data model.</p>
+<p>Authentication is implemented through OAuth 2.0 and it makes a distinction between user and app roles. Social login
+is supported but it appears that only Facebook login works out-of-the-box. Other extra features include geolocation
+queries and push notifications (in v2.0).</p>
+<p>Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
+your organization. It is used in production by quite a few companies.</p>
+<h2 id="LoopBack"><a href="http://loopback.io" target="_blank" rel="external">LoopBack</a> <a href="https://github.com/strongloop/loopback" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/loopback.png"></p>
+<p><strong>Multitenant:</strong> no <br>
+<strong>Language:</strong> JavaScript <br>
+<strong>Database:</strong> agnostic <br>
+<strong>Documentation:</strong> 9/10 <br>
+<strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br></p>
+<p>LoopBack is a Node.js API framework by StrongLoop, part of IBM. It’s been around since 2013 and is actively developed
+and has great commercial support. It is focused on REST API development and provides a visual editor for editing and
+deploying apps. Mobile app developers will love the Android and iOS SDKs and the push system.</p>
+<p>The developer docs are extensive and clear but sometimes slow to navigate. Getting started is easy and there’s a
+Yeaoman-based scaffolding tool for generating new project skeletons. Developers have a great choice of database
+connectors for all major SQL databases and MongoDB. For development you can also use an in-memory db.</p>
+<p>The flexibility of JavaScript is great for quickly developing apps with less boilerplate code. LoopBack helps
+with that further by providing a handy model generator for building your classes quickly. These can be validated
+with the built-in validation methods. Entity relationships are very well supported. The security model is complex
+with user roles, principals and ACLs.</p>
+<p>Basic user authentication is part of the core and third-party login support can be implemented using Passport
+modules. There’s also a module for OAuth. Geolocation, push and file services are built-in. For anything else
+there’s <code>npm</code> and tons of modules on GitHub.</p>
+<p>LoopBack is great for REST API service generation and very rapid prototyping. Developers can get up and running in
+minutes by building a custom API using the given CLI tool. LoopBack is a very good fit for all projects written in
+JavaScript.</p>
+<h2 id="Para"><a href="https://paraio.org" target="_blank" rel="external">Para</a> <a href="https://github.com/Erudika/para" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/paraio.png" style="border: 1px solid #CCCCCC"></p>
+<p><strong>Multitenant:</strong> yes <br>
+<strong>Language:</strong> Java <br>
+<strong>Database:</strong> agnostic <br>
+<strong>Documentation:</strong> 9/10 <br>
+<strong>Client libraries:</strong> Java, JavaScript, .NET, PHP, Android <br></p>
+<p>Para is our own little backend framework. It is powered by Java and was released in early 2014. Para integrates well
+with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults. The design is
+flexible enough so that anyone can implement the provided interfaces for search, persistence and caching functionality.
+We have plans to include connectors for <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">MongoDB</a> (done!) and Cassandra soon.</p>
+<p>Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
+it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
+we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while 
+others use it as an alternative to Parse for their mobile development.</p>
+<p>The <a href="www.paraio.org/docs">documentation</a> is great, contained in a single webpage for easy navigation and API methods 
+are described clearly. Getting started is pretty easy - download one JAR file and execute it. Then run the initial setup:
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl localhost:<span class="number">8080</span>/v1/_setup</span><br></pre></td></tr></table></figure></p>
-<p>This will give you the keys needed for making authenticated requests to the server using any of our API clients. If you wish to integrate Para with your own code, there’s a package on Maven central - just search for <code>para-server</code>. A WAR file is also available for those who need to run Para inside a container.</p>
-<p>The core API consists of three main interfaces for searching, storing and caching object. Implement those and you have your own custom server. The data model is simple and all classes implement the <code>ParaObject</code> interface. This gives them some basic properties like <code>id</code>, <code>type</code> and <code>name</code>. Entities can link to other entities by forming one-to-one, one-to-many and many-to-many relationships. Basic constraint checkers, such as <code>required</code>, <code>min</code>, <code>max</code>, <code>regexp</code>, can be used to validate object properties. Full-text search is enabled by default for all objects.</p>
-<p>Authentication between clients and the server is not based on OAuth, <a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/" target="_blank" rel="external">intentionally</a>. Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. Better user management and support for JSON Web Tokens will be available in the next version 1.17, soon. Para has built-in support for third-party authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.</p>
-<p>Para is a good choice if you are building a cloud-based web service or website and is great for rapid prototyping. It’s an easy-to-use and flexible platform that scales well. A backend for busy developers.</p>
-<h2 id="BaasBox"><a href="http://www.baasbox.com" target="_blank" rel="external">BaasBox</a> <a href="https://github.com/baasbox/baasbox" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/baasbox.png">
-<strong>Multitenant:</strong> yes, <a href="http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend" target="_blank" rel="external">since v0.8.4</a>
-<strong>Language:</strong> Java
-<strong>Database:</strong> OrientDB
-<strong>Documentation:</strong> 9/10
-<strong>Client libraries:</strong> Android/Java, iOS, JavaScript</p>
-<p>BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would need to run a backend server. It’s been around since early 2013. It provides good support for Android and iOS clients and JavaScript.</p>
-<p>The docs are very nice and detailed, very easy to navigate. Getting started is very easy - unzip the file and run the Bash/bat script and you open up the console on <code>localhost:9000/console</code>.  The server is running on top of OrientDB which is sort of a hybrid database and has a lot of cool features.</p>
-<p>BaasBox is easy to learn and has a nice REST API that speaks JSON. It’s got full support for CRUD operations on objects and collections of objects and also allows you to link them in one-to-many or many-to-many relationships. Social features are excellent - you have social login, friendship/followers API and user management. Other features include files and assets API, push notifications and a plugin system.</p>
-<p>BaasBox is a good choice as a mBaaS for building mobile backend services. If you are a mobile app developer definitely consider BaasBox for your backend.</p>
-<h2 id="Deployd"><a href="http://deployd.com" target="_blank" rel="external">Deployd</a> <a href="https://github.com/deployd/deployd" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
-<strong>Multitenant:</strong> no
-<strong>Language:</strong> JavaScript
-<strong>Database:</strong> MongoDB
-<strong>Documentation:</strong> 7/10
-<strong>Client libraries:</strong> none</p>
-<p>Deployd is an API building platform for Node.js and runs on top of MongoDB. It’s been around since 2012. The cool thing about it is its web dashboard and the CLI tool called <code>dpd</code>. The framework, it seems, was designed to be used as part of your project only, i.e. not as a standalone external API server, and has no client libraries available (tell me if I’m wrong!).</p>
-<p>The project is well documented and has plenty of examples and code. They have dedicated installers for Windows and Mac that will help you get started. To create a new project you run <code>$ dpd create my-app</code> and then start the server with <code>dpd -d</code>. That’s it.</p>
-<p>Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.js. It has great support for collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is built-in. Other functionality like social login support is provided by third-party modules.</p>
-<p>Deployd is good for those who like a nice web admin UI and build JavaScript apps with Node.js. If you like MongoDB and Node.js, you’ll love Deployd!</p>
-<h2 id="Telepat"><a href="http://telepat.io" target="_blank" rel="external">Telepat</a> <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="http://www.erudika.com/assets/img/telepat.png">
-<strong>Multitenant:</strong> yes
-<strong>Language:</strong> JavaScript
-<strong>Database:</strong> agnostic
-<strong>Documentation:</strong>  6/10
-<strong>Client libraries:</strong> Android, iOS, JavaScript</p>
-<p>Telepat is the youngest framework of the bunch. It’s a realtime data sync solution for mobile and other applications. It’s fairly new -  first released in 2015. The framework is focused on realtime push and flexibility. It’s database agnostic but seems to be designed to work with NoSQL databases like Couchbase. Search is implemented on top of Elasticsearch.</p>
-<p>The documentation is a work in progress but looks great. The early stage of the project means that we should expect some changes to the API. Getting started requires you to launch Elasticsearch, Redis and Kafka servers first but they provide a nice Docker package that will help you with that.</p>
-<p>The API is simple with CRUD methods for users and applications. User management is supported and authentication is implemented with passwords and tokens.</p>
-<p>Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished like push notifications. It’s well worth checking out especially if you’re building realtime apps.</p>
-<h2 id="Summary">Summary</h2><p>We’ve shown how developers can leverage open source backend frameworks to accelerate time-to-market and enhance their products’ security and scalability. While some frameworks cater to mobile developers and make very specific choices in terms of technology stack, other try to have broader use cases and be database-agnostic.</p>
-<p>In order to decide which BaaS package is best for your project, start by defining its scope and platform - is it going to be a mobile app or a website, for example. Then choose the framework that has the best documentation and client library for your specific platform and language - C#, Java, Javascript, etc. Finally get the code and run it locally on your development machine and give it a try.</p>
+<p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.
+If you wish to integrate Para with your own code, there’s a package on Maven central - just search for <code>para-server</code>.
+A WAR file is also available for those who need to run Para inside a container.</p>
+<p>The core API consists of three main interfaces for searching, storing and caching object. Implement those and you
+have your own custom server. The data model is simple and all classes implement the <code>ParaObject</code> interface. This gives
+them some basic properties like <code>id</code>, <code>type</code> and <code>name</code>. Entities can link to other entities by forming one-to-one,
+one-to-many and many-to-many relationships. Basic constraint checkers, such as <code>required</code>, <code>min</code>, <code>max</code>, <code>regexp</code>,
+can be used to validate object properties. Full-text search is enabled by default for all objects.</p>
+<p>Authentication between clients and the server is not based on OAuth, <a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/" target="_blank" rel="external">intentionally</a>.
+Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained 
+permissions and support for JSON Web Tokens are available since version 1.17. Para also has built-in support for third-party
+authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.</p>
+<p>Para is a good choice if you are building a cloud-based web service and it’s great for rapid prototyping.
+It’s an easy-to-use and flexible platform that scales well. A backend for busy developers.</p>
+<h2 id="BaasBox"><a href="http://www.baasbox.com" target="_blank" rel="external">BaasBox</a> <a href="https://github.com/baasbox/baasbox" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/baasbox.png"></p>
+<p><strong>Multitenant:</strong> yes, <a href="http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend" target="_blank" rel="external">since v0.8.4</a> <br>
+<strong>Language:</strong> Java <br>
+<strong>Database:</strong> OrientDB <br>
+<strong>Documentation:</strong> 9/10 <br>
+<strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br></p>
+<p>BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would
+need to run a backend server. It’s been around since early 2013. It provides good support for Android and iOS
+clients and JavaScript.</p>
+<p>The docs are very nice and detailed, very easy to navigate. Getting started is very easy - unzip the file and run
+the Bash/bat script and you open up the console on <code>localhost:9000/console</code>.  The server is running on top of OrientDB
+which is sort of a hybrid database and has a lot of cool features.</p>
+<p>BaasBox is easy to learn and has a nice REST API that speaks JSON. It’s got full support for CRUD operations on objects
+and collections of objects and also allows you to link them in one-to-many or many-to-many relationships. Social
+features are excellent - you have social login, friendship/followers API and user management. Other features include
+files and assets API, push notifications and a plugin system.</p>
+<p>BaasBox is a good choice as a mBaaS for building mobile backend services. If you are a mobile app developer
+definitely consider BaasBox for your backend.</p>
+<h2 id="Deployd"><a href="http://deployd.com" target="_blank" rel="external">Deployd</a> <a href="https://github.com/deployd/deployd" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC"></p>
+<p><strong>Multitenant:</strong> no <br>
+<strong>Language:</strong> JavaScript <br>
+<strong>Database:</strong> MongoDB <br>
+<strong>Documentation:</strong> 7/10 <br>
+<strong>Client libraries:</strong> none <br></p>
+<p>Deployd is an API building platform for Node.js and runs on top of MongoDB. It’s been around since 2012. The cool
+thing about it is its web dashboard and the CLI tool called <code>dpd</code>. The framework, it seems, was designed to be used
+as part of your project only, i.e. not as a standalone external API server, and has no client libraries available
+(tell me if I’m wrong!).</p>
+<p>The project is well documented and has plenty of examples and code. They have dedicated installers for Windows and Mac
+that will help you get started. To create a new project you run <code>$ dpd create my-app</code> and then start the server
+with <code>dpd -d</code>. That’s it.</p>
+<p>Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.js. It has great support for
+collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
+built-in. Other functionality like social login support is provided by third-party modules.</p>
+<p>Deployd is good for those who like a nice web admin UI and build JavaScript apps with Node.js. If you like
+MongoDB and Node.js, you’ll love Deployd!</p>
+<h2 id="Telepat"><a href="http://telepat.io" target="_blank" rel="external">Telepat</a> <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/telepat.png"></p>
+<p><strong>Multitenant:</strong> yes <br>
+<strong>Language:</strong> JavaScript <br>
+<strong>Database:</strong> agnostic <br>
+<strong>Documentation:</strong>  6/10 <br>
+<strong>Client libraries:</strong> Android, iOS, JavaScript <br></p>
+<p>Telepat is the youngest framework of the bunch. It’s a realtime data sync solution for mobile and other applications.
+It’s fairly new -  first released in 2015. The framework is focused on realtime push and flexibility. It’s database
+agnostic but seems to be designed to work with NoSQL databases like Couchbase. Search is
+implemented on top of Elasticsearch.</p>
+<p>The documentation is a work in progress but looks great. The early stage of the project means that we should
+expect some changes to the API. Getting started requires you to launch Elasticsearch, Redis and Kafka servers
+first but they provide a nice Docker package that will help you with that.</p>
+<p>The API is simple with CRUD methods for users and applications. User management is supported and authentication is
+implemented with passwords and tokens.</p>
+<p>Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
+like push notifications. It’s well worth checking out especially if you’re building realtime apps.</p>
+<h2 id="Summary">Summary</h2><p>We’ve shown how developers can leverage open source backend frameworks to accelerate time-to-market and enhance
+their products’ security and scalability. While some frameworks cater to mobile developers and make very specific
+choices in terms of technology stack, other try to have broader use cases and be database-agnostic.</p>
+<p>In order to decide which BaaS package is best for your project, start by defining its scope and platform - is it
+going to be a mobile app or a website, for example. Then choose the framework that has the best documentation and
+client library for your specific platform and language - C#, Java, Javascript, etc. Finally get the code and run it
+locally on your development machine and give it a try.</p>
 <p>Happy coding!</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your server-side component of your website or app. Developers use them to build and iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).</p>]]>
+    <![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
+server-side component of your website or app. Developers use them to build and iterate on products faster than ever
+before by focusing on the “fun” part - the frontend (client-side).</p>]]>
     
     </summary>
     
