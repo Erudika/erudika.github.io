@@ -163,7 +163,7 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
     <link href="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
     <id>http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
-    <updated>2016-03-07T00:35:52.287Z</updated>
+    <updated>2016-03-13T18:40:21.883Z</updated>
     <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
 server-side component of your website or app. Developers use them to build and iterate on products faster than ever
 before by focusing on the “fun” part - the frontend (client-side).</p>
@@ -234,21 +234,21 @@ flexible enough so that anyone can implement the provided interfaces for search,
 We have plans to include connectors for <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">MongoDB</a> (done!) and Cassandra soon.</p>
 <p>Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
 it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
-we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while 
+we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
 others use it as an alternative to Parse for their mobile development.</p>
-<p>The <a href="www.paraio.org/docs">documentation</a> is great, contained in a single webpage for easy navigation and API methods 
-are described clearly. Getting started is pretty easy - download one JAR file and execute it. Then run the initial setup:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl localhost:<span class="number">8080</span>/v1/_setup</span><br></pre></td></tr></table></figure></p>
+<p>The <a href="www.paraio.org/docs">documentation</a> is great, contained in a single webpage for easy navigation and API methods
+are described clearly. Getting started is pretty easy - download the executable WAR package and run it:
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar para-x.y.z.war</span><br><span class="line">$ curl localhost:<span class="number">8080</span>/v1/_setup</span><br></pre></td></tr></table></figure></p>
 <p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.
 If you wish to integrate Para with your own code, there’s a package on Maven central - just search for <code>para-server</code>.
-A WAR file is also available for those who need to run Para inside a container.</p>
+The WAR file can also be deployed to inside a servlet container like Tomcat.</p>
 <p>The core API consists of three main interfaces for searching, storing and caching object. Implement those and you
 have your own custom server. The data model is simple and all classes implement the <code>ParaObject</code> interface. This gives
 them some basic properties like <code>id</code>, <code>type</code> and <code>name</code>. Entities can link to other entities by forming one-to-one,
 one-to-many and many-to-many relationships. Basic constraint checkers, such as <code>required</code>, <code>min</code>, <code>max</code>, <code>regexp</code>,
 can be used to validate object properties. Full-text search is enabled by default for all objects.</p>
 <p>Authentication between clients and the server is not based on OAuth, <a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/" target="_blank" rel="external">intentionally</a>.
-Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained 
+Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained
 permissions and support for JSON Web Tokens are available since version 1.17. Para also has built-in support for third-party
 authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.</p>
 <p>Para is a good choice if you are building a cloud-based web service and it’s great for rapid prototyping.

@@ -103,17 +103,18 @@ We have plans to include connectors for [MongoDB](https://github.com/Erudika/par
 
 Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
 it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
-we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while 
+we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
 others use it as an alternative to Parse for their mobile development.
 
-The [documentation](www.paraio.org/docs) is great, contained in a single webpage for easy navigation and API methods 
-are described clearly. Getting started is pretty easy - download one JAR file and execute it. Then run the initial setup:
+The [documentation](www.paraio.org/docs) is great, contained in a single webpage for easy navigation and API methods
+are described clearly. Getting started is pretty easy - download the executable WAR package and run it:
 ```bash
+$ java -jar para-x.y.z.war
 $ curl localhost:8080/v1/_setup
 ```
 This will give you the keys needed for making authenticated requests to the server using any of our API clients.
 If you wish to integrate Para with your own code, there's a package on Maven central - just search for `para-server`.
-A WAR file is also available for those who need to run Para inside a container.
+The WAR file can also be deployed to inside a servlet container like Tomcat.
 
 The core API consists of three main interfaces for searching, storing and caching object. Implement those and you
 have your own custom server. The data model is simple and all classes implement the `ParaObject` interface. This gives
@@ -122,7 +123,7 @@ one-to-many and many-to-many relationships. Basic constraint checkers, such as `
 can be used to validate object properties. Full-text search is enabled by default for all objects.
 
 Authentication between clients and the server is not based on OAuth, [intentionally](http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/).
-Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained 
+Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained
 permissions and support for JSON Web Tokens are available since version 1.17. Para also has built-in support for third-party
 authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.
 
