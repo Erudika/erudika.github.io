@@ -8,7 +8,7 @@
  */
 
 /* FONTS */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 /* OVERALL ASPECT */
 
@@ -27,7 +27,7 @@ body {
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Open Sans", sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	color: #333333;
 }
 
@@ -171,7 +171,6 @@ a:after {
 	background-color: #4e4e4e;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	margin-top: 50px;
 }
 
 #skills * {
@@ -230,6 +229,39 @@ footer {
 
 footer * {
 	color: white;
+}
+
+b, strong {
+	font-weight: 400;
+}
+
+.browser-mockup {
+  border-top: 2em solid rgba(230, 230, 230, 0.7);
+  /*box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);*/
+  position: relative;
+  border-radius: 3px 3px 0 0;
+	border-right: 1px solid #EDEDED;
+	border-left: 1px solid #EDEDED;
+  margin: 1em 1em 0 1em;
+  flex: 1;
+}
+
+.browser-mockup:before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -1.25em;
+  left: 1em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #f44;
+  box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+}
+
+.browser-mockup > * {
+  display: block;
+  width: 100%;
 }
 
 /*-------- BLOG --------*/
