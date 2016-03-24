@@ -307,6 +307,9 @@ b, strong {
 #container {
   position: relative;
 }
+#main {
+	font-weight: 400;
+}
 @media screen and (min-width: 768px) {
   #main {
     display: inline;

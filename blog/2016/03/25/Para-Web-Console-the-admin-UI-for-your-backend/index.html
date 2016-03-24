@@ -12,16 +12,23 @@
     <meta name="description" content="Erudika is a tiny software company based in Sofia, Bulgaria.">
     <meta name="author" content="erudika.com">
     
-		<title>Archives: 2016/1 | Erudika Blog</title>
-		<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Erudika Blog">
-<meta property="og:url" content="http://www.erudika.com/blog/archives/2016/01/index.html">
+		<title>Para Web Console - the admin UI for your backend | Erudika Blog</title>
+		<meta name="description" content="Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
+to any of your Para servers and manage your objects easily through the web inter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Para Web Console - the admin UI for your backend">
+<meta property="og:url" content="http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description">
+<meta property="og:description" content="Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
+to any of your Para servers and manage your objects easily through the web inter">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/pwc1.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/pwc1_p1.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/pwc1_p2.png">
+<meta property="og:updated_time" content="2016-03-24T23:08:05.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Erudika Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Para Web Console - the admin UI for your backend">
+<meta name="twitter:description" content="Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
+to any of your Para servers and manage your objects easily through the web inter">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
@@ -62,7 +69,7 @@
 						</div>
 					</div>
 					
-					<div id="banner" style="background: url('/assets/img/banner.jpg') center #000;
+					<div id="banner" style="background: url('/assets/img/img5.jpg') center #000;
 					 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
 					
 					<div id="header-outer" class="outer">
@@ -76,53 +83,94 @@
 				</header>
 
 				<div class="outer">
-					<section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-	<a href="/blog/2016/01/05/para-1-17-released/" class="archive-article-date">
-  <time datetime="2016-01-05T16:20:27.000Z" itemprop="datePublished">Jan 5</time>
+					<section id="main"><article id="post-Para-Web-Console-the-admin-UI-for-your-backend" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/" class="article-date">
+  <time datetime="2016-03-24T23:02:02.000Z" itemprop="datePublished">25 Mar 2016</time>
 </a>
-  <div class="archive-article-inner">
+    
+  </div>
+  <div class="article-inner">
+    
 		
-<div style="background: url('/assets/img/img3.jpg') center transparent;
-		 background-size: cover;height: 250px;">&nbsp;</div>
 
-
-		<div class="article-entry">
-			
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2016/01/05/para-1-17-released/">Para v1.17 released</a>
+    <h1 class="article-title" itemprop="name">
+      Para Web Console - the admin UI for your backend
     </h1>
   
 
-			
-				<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
-deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend service.</p>
-				
-					<p class="article-more-link">
-						<a href="/blog/2016/01/05/para-1-17-released/#more">Read More</a>
-					</p>
-				
-			
-		</div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
+to any of your Para servers and manage your objects easily through the web interface. It’s powered by AngularJS and
+uses the great libraries <a href="https://github.com/marmelab/ng-admin" target="_blank" rel="external">ng-admin</a> and <a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>.
+The console works for both local and remotely deployed servers and you are more than welcome to modify it for your needs.
+We’d appreciate any <a href="https://github.com/erudika/para-admin-ui" target="_blank" rel="external">pull requests on GitHub</a>.</p>
+<a id="more"></a>
+<p><img src="/assets/img/pwc1.png" alt=""></p>
+<p>Once you connect to Para with your access keys, you see the dashboard where you see some aggregated information about
+your app and server. On the left there is a list of object types. These include both core types defined in Java classes
+and user-defined types created through the API. To create a custom type from the console, go to the “Edit App view”
+and edit the <code>Datatypes</code> field by adding your own type, then refresh the page and it will appear on the left. Also
+you can edit the resource permissions for your app</p>
+<p><img src="/assets/img/pwc1_p1.png" alt=""></p>
+<p>All types, except Linker (read-only), support CRUD operations in the web console. You can create and edit objects
+easily and you can also do full-text search and browse through all the pages of results. We hope to add more
+improvements to the project soon, like address visualization on a map and automatic configuration of custom fields.</p>
+<p><img src="/assets/img/pwc1_p2.png" alt=""></p>
+<p>We’ve also updated Para to v1.18.3 to support the new type of tokens used by the web console. You can now generate
+JWTs on the client-side and create “super” tokens from your access keys. These tokens give you full-access to the
+API for a limited time, until they expire. They are simple to work with and can be sent as a request header.
+Other improvements in this version include:</p>
+<ul>
+<li>Added support for anonymous permissions and guest access to the API</li>
+<li>Fixed default permissions to allow users to access their child objects (object created by them)</li>
+<li>Fixed CORS and GZip filters conflicts</li>
+</ul>
+<p>The admin interface is client-side only and your secret key is <em>never</em> sent over the the network. Instead, a JWT
+access token is generated locally and sent to the server on each request (valid for a week).</p>
+<p><em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <a data-url="http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/" data-id="cim6wd6xj000s1k4shv4j4p83" class="article-share-link">Share</a>
+      
+				<a href="https://twitter.com/albogdano">
+					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+				</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/frontend/">frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ng-admin/">ng-admin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/para/">para</a></li></ul>
+
+    </div>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Para v1.18 released, new site and jPrime</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+<section id="comments">
+	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/" data-numposts="5"></div>
+</section>
 </section>
 					
 						<aside id="sidebar" >
