@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-03-24T23:08:05.841Z</updated>
+  <updated>2016-03-25T12:21:27.122Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/"/>
     <id>http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</id>
     <published>2016-03-24T23:02:02.000Z</published>
-    <updated>2016-03-24T23:08:05.841Z</updated>
+    <updated>2016-03-25T12:21:27.122Z</updated>
     <content type="html"><![CDATA[<p>Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
 to any of your Para servers and manage your objects easily through the web interface. It’s powered by AngularJS and
 uses the great libraries <a href="https://github.com/marmelab/ng-admin" target="_blank" rel="external">ng-admin</a> and <a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>.
@@ -31,7 +31,7 @@ We’d appreciate any <a href="https://github.com/erudika/para-admin-ui" target=
 your app and server. On the left there is a list of object types. These include both core types defined in Java classes
 and user-defined types created through the API. To create a custom type from the console, go to the “Edit App view”
 and edit the <code>Datatypes</code> field by adding your own type, then refresh the page and it will appear on the left. Also
-you can edit the resource permissions for your app</p>
+you can edit the resource permissions for your app.</p>
 <p><img src="/assets/img/pwc1_p1.png" alt=""></p>
 <p>All types, except Linker (read-only), support CRUD operations in the web console. You can create and edit objects
 easily and you can also do full-text search and browse through all the pages of results. We hope to add more
@@ -48,6 +48,9 @@ Other improvements in this version include:</p>
 </ul>
 <p>The admin interface is client-side only and your secret key is <em>never</em> sent over the the network. Instead, a JWT
 access token is generated locally and sent to the server on each request (valid for a week).</p>
+<p>We created the web console as a supplementary tool to our paid backend management interface on <a href="https://paraio.com" target="_blank" rel="external">paraio.com</a>.
+It has all the features of the web console and more - backup and restore, simple permission management
+and scalability controls. And we offer free accounts for developers!</p>
 <p><em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
 ]]></content>
     <summary type="html">

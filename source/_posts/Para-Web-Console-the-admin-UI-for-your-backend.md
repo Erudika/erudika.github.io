@@ -22,7 +22,7 @@ Once you connect to Para with your access keys, you see the dashboard where you 
 your app and server. On the left there is a list of object types. These include both core types defined in Java classes
 and user-defined types created through the API. To create a custom type from the console, go to the "Edit App view"
 and edit the `Datatypes` field by adding your own type, then refresh the page and it will appear on the left. Also
-you can edit the resource permissions for your app
+you can edit the resource permissions for your app.
 
 ![](/assets/img/pwc1_p1.png)
 
@@ -43,6 +43,10 @@ Other improvements in this version include:
 
 The admin interface is client-side only and your secret key is *never* sent over the the network. Instead, a JWT
 access token is generated locally and sent to the server on each request (valid for a week).
+
+We created the web console as a supplementary tool to our paid backend management interface on [paraio.com](https://paraio.com).
+It has all the features of the web console and more - backup and restore, simple permission management
+and scalability controls. And we offer free accounts for developers!
 
 *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
 
