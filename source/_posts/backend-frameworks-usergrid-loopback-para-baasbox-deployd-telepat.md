@@ -94,11 +94,11 @@ JavaScript.
 **Language:** Java <br>
 **Database:** agnostic <br>
 **Documentation:** 9/10 <br>
-**Client libraries:** Java, JavaScript, .NET, PHP, Android <br>
+**Client libraries:** Java, JavaScript, .NET, PHP, Android, iOS <br>
 
-Para is our own little backend framework. It is powered by Java and was released in early 2014. Para integrates well
-with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults. The design is
-flexible enough so that anyone can implement the provided interfaces for search, persistence and caching functionality.
+Para is our own little backend framework. It is powered by Java and was released in early 2014. Out of the box, Para
+integrates with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults.
+The design is flexible enough so that anyone can implement the interfaces for search, persistence and caching functionality.
 We have plans to include connectors for [MongoDB](https://github.com/Erudika/para-dao-mongodb) (done!) and Cassandra soon.
 
 Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
