@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-06-01T12:43:18.687Z</updated>
+  <updated>2016-06-01T12:51:09.379Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,10 +19,10 @@
     <link href="http://www.erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/"/>
     <id>http://www.erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</id>
     <published>2016-06-01T10:40:20.000Z</published>
-    <updated>2016-06-01T12:43:18.687Z</updated>
+    <updated>2016-06-01T12:51:09.379Z</updated>
     <content type="html"><![CDATA[<p>Last week was <a href="http://jprime.io" target="_blank" rel="external">jPrime 2016</a>, the biggest Java conference on the Balkans. It was a huge success &mdash; more than 500 visitors, two tracks in two days. The slogan was <em>“Java - 21 and legally drunk”</em> and the two main themes were <strong>microservices</strong> and <strong>reactive programming</strong> with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.</p>
 <a id="more"></a>
-<p><img src="/assets/img/blogpost_media4.png" alt=""></p>
+<p><img src="https://www.erudika.com/assets/img/blogpost_media4.png" alt=""></p>
 <p>I really liked the talk by Kees Jan Koster where he explained what it is that distracts us from coding and how we can focus on getting things done and not spend too much time in meetings. Later, Hrvoje Crnjak talked about RxJava and how it could be used to make our applications more reactive. And on the second day I really enjoyed the talk on Go by Stoyan Rachev.</p>
 <p><img src="https://c7.staticflickr.com/8/7737/27107528510_d27d3dca9d_h.jpg" width="1600" height="983" alt=""></p>
 <p><img src="https://c2.staticflickr.com/8/7581/27312437601_f7021cbf45_h.jpg" width="1600" height="1034" alt=""></p>
@@ -55,14 +55,14 @@
     <link href="http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/"/>
     <id>http://www.erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</id>
     <published>2016-03-24T23:02:02.000Z</published>
-    <updated>2016-03-25T12:21:27.122Z</updated>
+    <updated>2016-06-01T12:51:04.635Z</updated>
     <content type="html"><![CDATA[<p>Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
 to any of your Para servers and manage your objects easily through the web interface. It’s powered by AngularJS and
 uses the great libraries <a href="https://github.com/marmelab/ng-admin" target="_blank" rel="external">ng-admin</a> and <a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>.
 The console works for both local and remotely deployed servers and you are more than welcome to modify it for your needs.
 We’d appreciate any <a href="https://github.com/erudika/para-admin-ui" target="_blank" rel="external">pull requests on GitHub</a>.</p>
 <a id="more"></a>
-<p><img src="/assets/img/pwc1.png" alt=""></p>
+<p><img src="https://www.erudika.com/assets/img/pwc1.png" alt=""></p>
 <p>Once you connect to Para with your access keys, you see the dashboard where you see some aggregated information about
 your app and server. On the left there is a list of object types. These include both core types defined in Java classes
 and user-defined types created through the API. To create a custom type from the console, go to the “Edit App view”
@@ -113,14 +113,14 @@ We’d appreciate any <a href="https://github.com/erudika/para-admin-ui">pull re
     <link href="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/"/>
     <id>http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</id>
     <published>2016-03-06T21:46:35.000Z</published>
-    <updated>2016-03-08T22:33:47.183Z</updated>
+    <updated>2016-06-01T12:50:55.479Z</updated>
     <content type="html"><![CDATA[<p>This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients,
 fixed many bugs, released the <a href="https://github.com/Erudika/para-client-android" target="_blank" rel="external">Android client for Para</a> and a new
 plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We’ve also updated
 the documentation of our open source backend framework and redesigned the landing page on
 <a href="http://www.paraio.org" target="_blank" rel="external">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>
 <a id="more"></a>
-<p><img src="/assets/img/blogpost_media3.png" alt=""></p>
+<p><img src="https://www.erudika.com/assets/img/blogpost_media3.png" alt=""></p>
 <p>Para <strong>v1.18</strong> supports plugins for the three main components in our framework - <code>DAO</code>, <code>Search</code> and <code>Cache</code>. These
 three interfaces are the foundation and their implementations define how objects are stored in a database, indexed by
  a search engine or cached in memory. Now you can create your own plugins that implement the <code>DAO</code>, for example,
@@ -182,7 +182,7 @@ the documentation of our open source backend framework and redesigned the landin
     <link href="http://www.erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>http://www.erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-03-07T00:33:26.039Z</updated>
+    <updated>2016-06-01T12:50:25.423Z</updated>
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
 <a id="more"></a>
@@ -196,7 +196,7 @@ Fixed Maven's JAR and WAR assembly - there's a single 'fat' executable WAR now
 Updated Elasticsearch to v2.1.1
 Updated design & added features to web console
 -->
-<h2 id="JSON_Web_Tokens_support">JSON Web Tokens support</h2><p><img src="/assets/img/blogpost_media2.png" alt=""></p>
+<h2 id="JSON_Web_Tokens_support">JSON Web Tokens support</h2><p><img src="https://www.erudika.com/assets/img/blogpost_media2.png" alt=""></p>
 <p><a href="http://jwt.io/" target="_blank" rel="external">JSON Web Tokens</a> are a new standard for authenticating clients and users. Think of them as
 ‘Cookies 2.0’. They are simply a signed JSON object containing some data about the authenticated user. The cool thing
 about JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely

@@ -16,7 +16,7 @@ the documentation of our open source backend framework and redesigned the landin
 
 <!-- more -->
 
-![](/assets/img/blogpost_media3.png)
+![](https://www.erudika.com/assets/img/blogpost_media3.png)
 
 Para **v1.18** supports plugins for the three main components in our framework - `DAO`, `Search` and `Cache`. These
 three interfaces are the foundation and their implementations define how objects are stored in a database, indexed by

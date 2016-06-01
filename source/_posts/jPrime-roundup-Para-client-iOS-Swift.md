@@ -11,7 +11,7 @@ Last week was [jPrime 2016](http://jprime.io), the biggest Java conference on th
 
 <!-- more -->
 
-![](/assets/img/blogpost_media4.png)
+![](https://www.erudika.com/assets/img/blogpost_media4.png)
 
 I really liked the talk by Kees Jan Koster where he explained what it is that distracts us from coding and how we can focus on getting things done and not spend too much time in meetings. Later, Hrvoje Crnjak talked about RxJava and how it could be used to make our applications more reactive. And on the second day I really enjoyed the talk on Go by Stoyan Rachev.
 
