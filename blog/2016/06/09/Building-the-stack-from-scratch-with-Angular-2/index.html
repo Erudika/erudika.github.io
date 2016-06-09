@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-us" class="nojs"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erudika is a tiny software company based in Sofia, Bulgaria.">
+    <meta name="author" content="erudika.com">
+    
+		<title>Building the stack from scratch with Angular 2 | Erudika Blog</title>
+		<meta name="description" content="In this tutorial we’re going to build a simple single-page application with Angualar 2. This is intended for 
+developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building the stack from scratch with Angular 2">
+<meta property="og:url" content="http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/index.html">
+<meta property="og:site_name" content="Erudika Blog">
+<meta property="og:description" content="In this tutorial we’re going to build a simple single-page application with Angualar 2. This is intended for 
+developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I g">
+<meta property="og:image" content="https://www.erudika.com/assets/img/blogpost_media5.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/rman_1.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/rman_2.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/rman_3.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/rman_4.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/rman_5.png">
+<meta property="og:image" content="http://www.erudika.com/blog/assets/img/rman_6.png">
+<meta property="og:updated_time" content="2016-06-09T12:23:18.803Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building the stack from scratch with Angular 2">
+<meta name="twitter:description" content="In this tutorial we’re going to build a simple single-page application with Angualar 2. This is intended for 
+developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I g">
+<meta name="twitter:creator" content="@para_io">
+<meta property="fb:app_id" content="119564591416126">
+		
+    <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
+		
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	<body>
+		<div id="container">
+			<div id="wrap">
+				<header id="header">
+					<div class="navbar navbar-default">
+						<div class="container">
+							<div class="navbar-header">
+								<a class="navbar-brand" href="/">
+									<img src="/assets/img/erudika.svg" width="256" height="66" alt="logo" class="erudika-logo"/>
+								</a>
+							</div>
+							<ul class="nav navbar-nav navbar-right hidden-xs">
+								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class=""><a href="/#projects">Projects</a></li>
+								<li class=""><a href="/#skills">Skills</a></li>
+								<li class=""><a href="/#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="banner" style="background: url('/assets/img/img7.jpg') center #000;
+					 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+					
+					<div id="header-outer" class="outer">
+						<div id="header-title" class="inner">
+							<h1 id="logo-wrap">
+								<span id="logo">Blog</span>
+							</h1>
+							
+						</div>
+					</div>
+				</header>
+
+				<div class="outer">
+					<section id="main"><article id="post-Building-the-stack-from-scratch-with-Angular-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" class="article-date">
+  <time datetime="2016-06-09T11:37:12.000Z" itemprop="datePublished">09 Jun 2016</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+		
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Building the stack from scratch with Angular 2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>In this tutorial we’re going to build a simple single-page application with <strong>Angualar 2</strong>. This is intended for 
+developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong> 
+installed on my machine and it’s running on Linux. I chose VS Code because we’ll be working with <strong>TypeScript</strong> 
+mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I’ve decided to save 
+some time and clone the excellent Angular 2 starter kit by <a href="https://github.com/mgechev" target="_blank" rel="external">Minko Gechev</a> called 
+<strong>‘angular2-seed’</strong>. For that you’ll also need <strong>Git</strong>, <strong>Node.js</strong> and <strong>npm</strong>.</p>
+<a id="more"></a>
+<p><img src="https://www.erudika.com/assets/img/blogpost_media5.png" alt=""></p>
+<h2 id="Step_0_(frontend)">Step 0 (frontend)</h2><ul>
+<li>Get <a href="https://code.visualstudio.com/Download" target="_blank" rel="external">Visual Studio Code</a></li>
+<li>Get <a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
+<li>Get <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js with npm</a></li>
+<li>Clone <a href="https://github.com/mgechev/angular2-seed" target="_blank" rel="external">‘angular2-seed’</a></li>
+<li>Open the project in the VS Code editor</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth <span class="number">1</span> https://github.com/mgechev/angular2-seed.git angular2-para</span><br><span class="line"><span class="built_in">cd</span> angular2-para</span><br><span class="line"><span class="comment"># install the project's dependencies</span></span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># watches your files and uses livereload by default</span></span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<p>Next - <strong>the backend</strong>. Here, I could write a simple backend in Node.js and Express but I’m lazy so I chose not to.
+Instead, I’m going to use <strong>Para</strong> for my backend and I’m not going to write <em>any</em> code on the server. If you are 
+new to Para, it’s a general-purpose backend framework/server written in Java. It will save me a lot of time and effort<br>because it has a nice JSON API for our app to connect to. To run the server you’re going to need a Java runtime.</p>
+<h2 id="Step_0_(backend)">Step 0 (backend)</h2><ul>
+<li>Get <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank" rel="external">Java</a></li>
+<li>Get <a href="http://www.paraio.org/" target="_blank" rel="external">Para</a></li>
+<li>Start the server in a separate terminal:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run Para</span></span><br><span class="line">java -jar para-x.y.z.war</span><br></pre></td></tr></table></figure>
+<p>Now, check if Para is running - open your browser and go to <code>http://localhost:8080/v1</code>. You should see a response like
+this:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">info</span>" : <span class="value"><span class="string">"Para - a backend for busy developers."</span></span>,</span><br><span class="line">  "<span class="attribute">version</span>" : <span class="value"><span class="string">"x.y.z"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>We haven’t got access keys to the server yet, so let’s go ahead and do that, open: 
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http:</span><span class="comment">//localhost:8080/v1/_setup</span></span><br></pre></td></tr></table></figure></p>
+<p>Save the credentials to a file, we’ll need them later to access the backend API.</p>
+<h1 id="Step_1_-_API_access">Step 1 - API access</h1><p>Let’s create an app for storing recipes - a recipe manager. Our goal will be to build just the basic CRUD functionality,
+without adding extra features like authentication and login pages. By default the backend is secured and only signed
+requests are allowed, but for the purpose of this tutorial we’re going to add a new permmission to allow all requests to 
+just one specific resource - <code>/v1/recipes</code>.</p>
+<p>Go to <a href="http://console.paraio.org" target="_blank" rel="external">console.paraio.org</a> and enter the credentials that you saved in the beginning. Also
+click the cog icon to edit the API endpoint and set it to <code>http://localhost:8080</code>. Click ‘Connect’.</p>
+<p>Next, go to ‘App’ on the left and edit the root app called <code>para</code>. You’ll see a section for resource permissions and 
+there you will write a simple permission definition in JSON:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">*</span>": <span class="value">&#123;</span><br><span class="line">    "<span class="attribute">recipes</span>": <span class="value">[<span class="string">"*"</span>, <span class="string">"?"</span>]</span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<p>This defines a single permission that allows <code>* - everyone</code> to access <code>/v1/recipes</code> using a list of allowed methods, 
+in this case <code>* - all HTTP methods</code> and <code>? - anonymous access</code> is allowed. Thus, we’re essentially making this resource 
+publicly available. Click ‘Save Changes’.</p>
+<p><img src="/assets/img/rman_1.png" alt=""></p>
+<h1 id="Step_2_-_CRUD_recipes">Step 2 - CRUD recipes</h1><p>Now let’s go back to our frontend and edit the ‘Home’ component under <code>src/client/app/+home</code>. We want to edit the HTML
+code a little bit in <code>home.component.html</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>My Recipes &amp;nbsp; </span><br><span class="line">    <span class="tag">&lt;<span class="title">button</span> (<span class="attribute">click</span>)=<span class="value">"clearForm() &amp;&amp; showForm = true"</span> [<span class="attribute">hidden</span>]=<span class="value">"showForm"</span>&gt;</span>Add<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">form</span> (<span class="attribute">submit</span>)=<span class="value">"addRecipe()"</span> [<span class="attribute">hidden</span>]=<span class="value">"!showForm"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> [(<span class="attribute">ngModel</span>)]=<span class="value">"newName"</span> <span class="attribute">placeholder</span>=<span class="value">"Title"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">textarea</span> [(<span class="attribute">ngModel</span>)]=<span class="value">"newRecipe"</span> <span class="attribute">rows</span>=<span class="value">"10"</span> <span class="attribute">cols</span>=<span class="value">"33"</span> <span class="attribute">placeholder</span>=<span class="value">"Recipe"</span>&gt;</span><span class="tag">&lt;/<span class="title">textarea</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">button</span> <span class="attribute">type</span>=<span class="value">"submit"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">span</span> *<span class="attribute">ngIf</span>=<span class="value">"editMode"</span>&gt;</span>Save<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">span</span> *<span class="attribute">ngIf</span>=<span class="value">"!editMode"</span>&gt;</span>Add<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">  &amp;nbsp;</span><br><span class="line">  <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> (<span class="attribute">click</span>)=<span class="value">"showForm = false"</span>&gt;</span>Close<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>I’ve added the “Add” button which shows the form where we can write a recipe (controlled by <code>showForm</code>), a textarea,
+and a close button. Notice how the text value of the “Add” button changes to “Save” when we’re in edit mode. Coming 
+from Angular 1, you’ll notice the weird <code>[(ngModel)]</code> syntax - it’s a two-way binding (single brackets is one-way).
+Similarly, <code>*ngIf</code> is just shorthand for <code>[ngIf]</code>. </p>
+<p>Also, I chose to set a new title in the header section in <code>src/client/app/shared/toolbar/toolbar.component.html</code>:
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Recipe Manager <span class="tag">&lt;<span class="title">code</span>&gt;</span><span class="tag">&lt;<span class="title">small</span>&gt;</span>v1.0.0<span class="tag">&lt;/<span class="title">small</span>&gt;</span><span class="tag">&lt;/<span class="title">code</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">more</span>&gt;</span><span class="tag">&lt;/<span class="title">more</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Let’s edit the <code>NameListService</code> which is part of the starter project and rename it to <code>RecipesService</code>. You’ll have 
+to rename all occurances of the class and also rename the folder <code>src/client/app/shared/name-list</code>. In the code for 
+<code>home.component.ts</code> we’ll add a new field <code>newRecipe: string</code> to hold the recipe text and the whole this should 
+look like this:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> HomeComponent &#123;</span><br><span class="line">    newName: <span class="built_in">string</span>;</span><br><span class="line">    newRecipe: <span class="built_in">string</span>;</span><br><span class="line">    <span class="constructor"><span class="keyword">constructor</span>(public recipeService: RecipeService) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    addName(): <span class="built_in">boolean</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.recipeService.add(<span class="keyword">this</span>.newName);</span><br><span class="line">      <span class="keyword">this</span>.newName = <span class="string">''</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now we’re going to focus on that <code>addName()</code> method. First rename it to <code>addRecipe()</code> and include the new field when the
+service is called:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">addRecipe(): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.recipeService.add(<span class="keyword">this</span>.newName, <span class="keyword">this</span>.newRecipe);</span><br><span class="line">    <span class="keyword">this</span>.newName = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">this</span>.newRecipe = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Let’s also add the method for listing recipes <code>listRecipes()</code> and call it upon initialization:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ngOnInit() &#123;</span><br><span class="line">    <span class="keyword">this</span>.listRecipes();</span><br><span class="line">&#125;</span><br><span class="line">listRecipes() &#123;</span><br><span class="line">    <span class="keyword">this</span>.recipeService.get().subscribe((data:<span class="built_in">any</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">this</span>.recipesList = data.items;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now we have to modify the <code>RecipeService</code> class to allow for another parameter <code>text</code>. Let’s also add the code 
+for making the <code>POST</code> request to the backend: 
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// URL of our public resource '/recipes'</span></span><br><span class="line"><span class="keyword">private</span> RECIPES_RESOURCE = <span class="string">"http://localhost:8080/v1/recipes"</span>;</span><br><span class="line"></span><br><span class="line">add(name: <span class="built_in">string</span>, text: <span class="built_in">string</span>): Observable&lt;<span class="built_in">any</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (!name || !text) &#123; <span class="keyword">return</span> Observable.of(<span class="literal">null</span>); &#125;</span><br><span class="line">    <span class="keyword">let</span> recipe:<span class="built_in">any</span> = &#123; name: name, text: text &#125;;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.http.post(<span class="keyword">this</span>.RECIPES_RESOURCE, <span class="built_in">JSON</span>.stringify(recipe), <span class="keyword">this</span>.options)</span><br><span class="line">        .map((response: Response) =&gt; response.json());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Going back to the component code in <code>home.component.ts</code>, we have to subscribe to the <code>Observable</code> returned by 
+<code>recipeService.add()</code> and get back the list of recipes when they arrive.
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.recipeService.add(<span class="keyword">this</span>.newName, <span class="keyword">this</span>.newRecipe).subscribe((data: <span class="built_in">any</span>) =&gt; &#123;</span><br><span class="line">    <span class="comment">// response might be null or empty</span></span><br><span class="line">    <span class="keyword">if</span> (data) &#123;</span><br><span class="line">        <span class="keyword">this</span>.recipesList.unshift(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Finally, we’ll add to <code>home.component.html</code> the markup for listing all available recipes, and also a box which appears
+when there are no recipes to show:
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"empty-box"</span> *<span class="attribute">ngIf</span>=<span class="value">"recipesList &amp;&amp; recipesList.length == 0"</span> [<span class="attribute">hidden</span>]=<span class="value">"showForm"</span>&gt;</span></span><br><span class="line">    No recipes to show.</span><br><span class="line">  <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">li</span> *<span class="attribute">ngFor</span>=<span class="value">"let recipe of recipesList"</span> <span class="attribute">class</span>=<span class="value">"recipe-box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">h3</span>&gt;</span>&#123;&#123;recipe.name&#125;&#125;<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">hr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span>&gt;</span>&#123;&#123;recipe.text&#125;&#125;<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">href</span>=<span class="value">"#"</span> (<span class="attribute">click</span>)=<span class="value">"editRecipe(recipe)"</span> <span class="attribute">class</span>=<span class="value">"small"</span>&gt;</span>edit<span class="tag">&lt;/<span class="title">button</span>&gt;</span> &amp;nbsp;</span><br><span class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> (<span class="attribute">click</span>)=<span class="value">"removeRecipe(recipe.id)"</span> <span class="attribute">class</span>=<span class="value">"red right"</span>&gt;</span>remove<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>There are two click events here - one for editing and one for deleting recipes. Let’s add the styling for 
+<code>.recipe-box</code> and <code>.empty-box</code> later in <code>home.component.css</code>:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.recipe-box</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-table</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">300px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">30px</span> <span class="number">30px</span> <span class="number">0</span> -<span class="number">7px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#106cc8</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.empty-box</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">1.5em</span> <span class="number">0</span> <span class="number">1em</span> <span class="number">0</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">3em</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#ccc</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">3px</span> dashed</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>In <code>main.css</code> I’ve also added a few more tweaks to the CSS:
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">input</span>, <span class="tag">textarea</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#106cc8</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">14px</span></span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">outline</span>:<span class="value"> none</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">8px</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="tag">button</span><span class="pseudo">:hover</span> <span class="rules">&#123; <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#28739e</span></span></span>; &#125;</span></span><br><span class="line"><span class="tag">button</span><span class="class">.small</span> <span class="rules">&#123; <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">12px</span></span></span>; <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">30px</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.red</span> <span class="rules">&#123; <span class="rule"><span class="attribute">color</span>:<span class="value"> indianred</span></span>; &#125;</span></span><br><span class="line"><span class="class">.right</span> <span class="rules">&#123; <span class="rule"><span class="attribute">float</span>:<span class="value"> right</span></span>; &#125;</span></span><br><span class="line"><span class="class">.center</span> <span class="rules">&#123; <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>; &#125;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/assets/img/rman_2.png" alt=""></p>
+<p>So, we should now we able to add recipes and after we click “Add” the form should be cleared and closed. 
+For this let’s add the following code in <code>home.component.ts</code> to reset the state of the form:
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clearForm(): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.showForm = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">this</span>.editMode = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">this</span>.recipeId = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">this</span>.newName = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">this</span>.newRecipe = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/assets/img/rman_3.png" alt=""></p>
+<p>The variable <code>recipeId</code> will keep the value of the <code>id</code> when a recipe is being edited. When “Save” is clicked this
+<code>id</code> is passed to the service and the backend so it won’t create a new object, just update an existing one.</p>
+<p>Let’s add more methods in our <code>recipeService</code> for updating and deleting recipes. 
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">edit(id: <span class="built_in">any</span>, name: <span class="built_in">string</span>, text: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!id) &#123; <span class="keyword">return</span>; &#125;</span><br><span class="line">    <span class="keyword">let</span> recipe:<span class="built_in">any</span> = &#123; name: name, text: text &#125;;</span><br><span class="line">    <span class="keyword">this</span>.http.patch(<span class="keyword">this</span>.RECIPES_RESOURCE + <span class="string">"/"</span> + id, <span class="built_in">JSON</span>.stringify(recipe), <span class="keyword">this</span>.options).toPromise();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">remove(id: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!id) &#123; <span class="keyword">return</span>; &#125;</span><br><span class="line">    <span class="keyword">this</span>.http.delete(<span class="keyword">this</span>.RECIPES_RESOURCE + <span class="string">"/"</span> + id, <span class="keyword">this</span>.options).toPromise();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Nothing special here, except the <code>.toPromise()</code> in the end which converts an <code>Observable</code> to <code>Promise</code> and executes
+it rigth away. We’re issuing these requests and we don’t care about the results because we can update the UI 
+instantly, without having to wait for the request to finish. </p>
+<p>In <code>home.component.ts</code> we’ll modify the code for <code>addRecipe()</code> to also edit a recipe when <code>recipeId</code> is set. 
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">addRecipe(): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.recipeId) &#123;</span><br><span class="line">        <span class="keyword">this</span>.recipesList.map((el) =&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (el.id == <span class="keyword">this</span>.recipeId) &#123;</span><br><span class="line">                el.name = <span class="keyword">this</span>.newName;</span><br><span class="line">                el.text = <span class="keyword">this</span>.newRecipe;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">this</span>.recipeService.edit(<span class="keyword">this</span>.recipeId, <span class="keyword">this</span>.newName, <span class="keyword">this</span>.newRecipe);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.recipeService.add(<span class="keyword">this</span>.newName, <span class="keyword">this</span>.newRecipe).subscribe((data: <span class="built_in">any</span>) =&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (data) &#123;</span><br><span class="line">                <span class="keyword">this</span>.recipesList.unshift(data);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.clearForm();</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">editRecipe(recipe: <span class="built_in">any</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.editMode = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">this</span>.showForm = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">this</span>.recipeId = recipe.id;</span><br><span class="line">    <span class="keyword">this</span>.newName = recipe.name;</span><br><span class="line">    <span class="keyword">this</span>.newRecipe = recipe.text;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">removeRecipe(id: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.recipeService.remove(id);</span><br><span class="line">    <span class="keyword">this</span>.recipesList = <span class="keyword">this</span>.recipesList.filter((el) =&gt; el.id !== id);</span><br><span class="line">    <span class="keyword">this</span>.clearForm();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>The methods <code>editRecipe()</code> and <code>removeRecipe()</code> are relatively straightforward - when editing, we set the mode in 
+<code>editMode = true</code> and we show the form, when removing we just filter the array <code>recipesList</code> and we discard the 
+deleted recipe if it matches the <code>id</code>.</p>
+<p><img src="/assets/img/rman_4.png" alt=""></p>
+<p>So far, so good. We can now add, edit and remove recipes but they aren’t very pretty and the formating of the text 
+is lost. In the next step we’ll make it possible to write the recipe text in Markdown and then render it in HTML.  </p>
+<h1 id="Step_3_-_Markdown_support">Step 3 - Markdown support</h1><p>First of all, let’s install <code>marked</code> - a nice JavaScript parser for Markdown:
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install marked --save</span><br><span class="line">typings install dt~marked --global --save</span><br></pre></td></tr></table></figure></p>
+<p>Then we import it in <code>home.component.ts</code> as <code>import *  as  marked from &#39;marked&#39;;</code>. Finally we’ll add a simple method
+called <code>md2html()</code> which will be used in our template.
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">md2html(text: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> marked(text || <span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>In our HTML template we change the line <code>&lt;div&gt;&lt;/div&gt;</code> like this:
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> [<span class="attribute">innerHTML</span>]=<span class="value">"md2html(recipe.text)"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Now we render the text to HTML on the client and this allows us to write beautiful recipes like this:</p>
+<p><img src="/assets/img/rman_5.png" alt=""></p>
+<h1 id="Step_4_-_Search">Step 4 - Search</h1><p>Final touch - recipe search. We’ll use the built-in full-text search in Para. In <code>recipe.service.ts</code>:
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search(q: <span class="built_in">string</span>): Observable&lt;<span class="built_in">string</span>[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.http.get(<span class="keyword">this</span>.RECIPES_RESOURCE + <span class="string">"?q="</span> + q)</span><br><span class="line">        .map((response: Response) =&gt; response.json());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>And in <code>home.component.ts</code>:
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a variable to keep the search query</span></span><br><span class="line">q: <span class="built_in">string</span>;</span><br><span class="line">search(): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.recipeService.search(<span class="keyword">this</span>.q || <span class="string">"*"</span>).subscribe((data:<span class="built_in">any</span>) =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (data.items) &#123;</span><br><span class="line">        <span class="keyword">this</span>.recipesList = data.items;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Finally, we add the search box in the template below the heading:
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>My Recipes &amp;nbsp; <span class="tag">&lt;<span class="title">button</span> <span class="attribute">...</span>&gt;</span>Add<span class="tag">&lt;/<span class="title">button</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">form</span> (<span class="attribute">submit</span>)=<span class="value">"search()"</span> [<span class="attribute">hidden</span>]=<span class="value">"showForm"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> [(<span class="attribute">ngModel</span>)]=<span class="value">"q"</span> <span class="attribute">placeholder</span>=<span class="value">"Search"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>And we’re done! The final result of our <strong>Recipe Manager 1.0.0</strong> 
+(check out <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="external">the live demo</a>):</p>
+<p><img src="/assets/img/rman_6.png" alt=""></p>
+<h2 id="Summary">Summary</h2><p>Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax. 
+Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java, 
+rather than a dynamic language like JS. The <code>import</code> syntax was a bit hard for me to get used to, especially 
+with all the different files I had to navigate through. In general, the exprience of writing Angular 2 apps is
+great - the syntax is clean, the app is well structured and the error messages are clear and understandable.   </p>
+<p><strong>Things we did:</strong></p>
+<ul>
+<li>wrote a few fancy AJAX calls to our backend API using observables</li>
+<li>wired a bunch of simple TypeScript code between a component and a service</li>
+<li>wrote some good old HTML and CSS</li>
+<li>imported an external library with npm an typings</li>
+</ul>
+<p><strong>Things we didn’t do:</strong></p>
+<ul>
+<li>write <em>any</em> backend code</li>
+<li>define the “recipe” data type on the server or in a database</li>
+</ul>
+<p>The code for this tutorial is on GitHub at <a href="https://github.com/albogdano/angular2-para" target="_blank" rel="external">albogdano/angular2-para</a>. 
+I’ve deployed the same code to GitHub pages as a <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="external">live demo</a> which 
+is powered by our <a href="https://paraio.com" target="_blank" rel="external">cloud-based Para service</a>.</p>
+<p> <em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <a data-url="http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" data-id="cip88jwfk0018sc4sr57k2nwk" class="article-share-link">Share</a>
+      
+				<a href="https://twitter.com/albogdano">
+					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+				</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/angular/">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/para/">para</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/tutorial/">tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/typescript/">typescript</a></li></ul>
+
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jPrime roundup, Para client for iOS and Swift</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" data-numposts="5"></div>
+</section>
+</section>
+					
+						<aside id="sidebar" >
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents
+			
+				<a href="/blog/atom.xml" title="RSS Feed" class="right"><i class="fa fa-rss"></i></a>
+			
+		</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/">Building the stack from scratch with Angular 2</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/">jPrime roundup, Para client for iOS and Swift</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/">Para Web Console - the admin UI for your backend</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/">Para v1.18 released, new site and jPrime</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/01/05/para-1-17-released/">Para v1.17 released</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/jprime/" style="font-size: 13.33px;">jprime</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/release/" style="font-size: 16.67px;">release</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a>
+    </div>
+  </div>
+
+  
+
+	<div>
+		<div id="search-form-wrap">
+			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.erudika.com/blog"></form>
+		</div>
+	</div>
+	<br><br>
+	<div class="text-center">
+		<small><i class="fa fa-cc"></i> Images taken from <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.</small>
+	</div>
+</aside>
+					
+				</div>
+				<footer>
+	
+	<div class="container">
+		<div class="row">
+			<div class=" columns">
+				<div class="col-xs-6">
+					Hosted on <a href="https://github.com/Erudika/erudika.github.io"><i class="fa fa-github fa-lg"></i> GitHub</a>
+				</div>
+				<div class="col-xs-6 text-right">
+					Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+			</div>
+			
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=119564591416126";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- End Facebook SDK -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
+</script>
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/blog/js/script.js" type="text/javascript"></script>
+
+		</div>
+
+		<!-- Google Analytics	 -->
+		
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-648525-7', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+	</body>
+</html>
