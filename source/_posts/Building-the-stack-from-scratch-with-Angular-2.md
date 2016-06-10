@@ -70,7 +70,7 @@ Save the credentials to a file, we'll need them later to access the backend API.
 
 Let's create an app for storing recipes - a recipe manager. Our goal will be to build just the basic CRUD functionality,
 without adding extra features like authentication and login pages. By default the backend is secured and only signed
-requests are allowed, but for the purpose of this tutorial we're going to add a new permmission to allow all requests to 
+requests are allowed, but for the purpose of this tutorial we're going to add a new permission to allow all requests to 
 just one specific resource - `/v1/recipes`.
 
 Go to [console.paraio.org](http://console.paraio.org) and enter the credentials that you saved in the beginning. Also
@@ -131,7 +131,7 @@ Also, I chose to set a new title in the header section in `src/client/app/shared
 ```
 
 Let's edit the `NameListService` which is part of the starter project and rename it to `RecipesService`. You'll have 
-to rename all occurances of the class and also rename the folder `src/client/app/shared/name-list`. In the code for 
+to rename all occurrences of the class and also rename the folder `src/client/app/shared/name-list`. In the code for 
 `home.component.ts` we'll add a new field `newRecipe: string` to hold the recipe text and the whole this should 
 look like this:
 
@@ -287,7 +287,7 @@ remove(id: string) {
 ```
 
 Nothing special here, except the `.toPromise()` in the end which converts an `Observable` to `Promise` and executes
-it rigth away. We're issuing these requests and we don't care about the results because we can update the UI 
+it right away. We're issuing these requests and we don't care about the results because we can update the UI 
 instantly, without having to wait for the request to finish. 
 
 In `home.component.ts` we'll modify the code for `addRecipe()` to also edit a recipe when `recipeId` is set. 
@@ -333,7 +333,7 @@ deleted recipe if it matches the `id`.
 
 ![](/assets/img/rman_4.png)
 
-So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formating of the text 
+So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text 
 is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.  
 
 # Step 3 - Markdown support
@@ -400,7 +400,7 @@ And we're done! The final result of our **Recipe Manager 1.0.0**
 Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax. 
 Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java, 
 rather than a dynamic language like JS. The `import` syntax was a bit hard for me to get used to, especially 
-with all the different files I had to navigate through. In general, the exprience of writing Angular 2 apps is
+with all the different files I had to navigate through. In general, the experience of writing Angular 2 apps is
 great - the syntax is clean, the app is well structured and the error messages are clear and understandable.   
 
 **Things we did:**
