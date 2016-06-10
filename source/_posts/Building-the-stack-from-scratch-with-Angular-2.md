@@ -66,7 +66,7 @@ http://localhost:8080/v1/_setup
 ```
 Save the credentials to a file, we'll need them later to access the backend API.
 
-# Step 1 - API access
+## Step 1 - API access
 
 Let's create an app for storing recipes - a recipe manager. Our goal will be to build just the basic CRUD functionality,
 without adding extra features like authentication and login pages. By default the backend is secured and only signed
@@ -93,7 +93,7 @@ publicly available. Click 'Save Changes'.
 
 ![](/assets/img/rman_1.png)
 
-# Step 2 - CRUD recipes
+## Step 2 - CRUD recipes
 
 Now let's go back to our frontend and edit the 'Home' component under `src/client/app/+home`. We want to edit the HTML
 code a little bit in `home.component.html`:
@@ -336,7 +336,7 @@ deleted recipe if it matches the `id`.
 So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text 
 is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.  
 
-# Step 3 - Markdown support
+## Step 3 - Markdown support
 
 First of all, let's install `marked` - a nice JavaScript parser for Markdown:
 ```bash
@@ -358,7 +358,7 @@ Now we render the text to HTML on the client and this allows us to write beautif
 
 ![](/assets/img/rman_5.png)
 
-# Step 4 - Search
+## Step 4 - Search
 
 Final touch - recipe search. We'll use the built-in full-text search in Para. In `recipe.service.ts`:
 ```ts
