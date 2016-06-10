@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-06-09T12:23:18.803Z</updated>
+  <updated>2016-06-10T11:07:25.067Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/"/>
     <id>http://www.erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</id>
     <published>2016-06-09T11:37:12.000Z</published>
-    <updated>2016-06-09T12:23:18.803Z</updated>
-    <content type="html"><![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angualar 2</strong>. This is intended for 
+    <updated>2016-06-10T11:07:25.067Z</updated>
+    <content type="html"><![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angular 2</strong>. This is intended for 
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong> 
 installed on my machine and it’s running on Linux. I chose VS Code because we’ll be working with <strong>TypeScript</strong> 
 mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I’ve decided to save 
@@ -158,7 +158,7 @@ is powered by our <a href="https://paraio.com" target="_blank" rel="external">cl
 <p> <em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angualar 2</strong>. This is intended for 
+    <![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angular 2</strong>. This is intended for 
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong> 
 installed on my machine and it’s running on Linux. I chose VS Code because we’ll be working with <strong>TypeScript</strong> 
 mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I’ve decided to save 
