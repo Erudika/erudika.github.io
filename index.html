@@ -19,7 +19,6 @@
     <meta property="fb:app_id" content="119564591416126" />
     <title>Erudika</title>
 
-		<style>body { opacity: 0; }</style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="none" onload="if(media!=='all')media='all'">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="none" onload="if(media!=='all')media='all'">
     <link href="assets/css/main.css" rel="stylesheet" media="none" onload="if(media!=='all')media='all'">
@@ -126,23 +125,23 @@
 				<div class="row centered">
 					<h1>OUR SKILLS</h1>
 					<div class="col-md-3 mt">
-						<canvas id="chart1" height="150" width="150"></canvas>
+						<img src="assets/img/c1.png" height="150" width="150"/>
 						<p>Web development</p>
 						<br>
 					</div>
 					<div class="col-md-3 mt">
-						<canvas id="chart2" height="150" width="150"></canvas>
+						<img src="assets/img/c2.png" height="150" width="150"/>
 						<p>Distributed cloud services</p>
 						<br>
 					</div>
 					<div class="col-md-3 mt">
-						<canvas id="chart3" height="150" width="150"></canvas>
+						<img src="assets/img/c3.png" height="150" width="150"/>
 						<p>Java &amp; JavaScript</p>
 						<br>
 					</div>
 					<div class="col-md-3 mt">
-						<canvas id="chart4" height="150" width="150"></canvas>
-						<p>DevOps in the cloud</p>
+						<img src="assets/img/c4.png" height="150" width="150"/>
+						<p >DevOps in the cloud</p>
 						<br>
 					</div>
 				</div>
@@ -154,16 +153,16 @@
 				<div class="row centered">
 					<div class="col-lg-8 col-lg-offset-2">
 						<div class="col-md-4">
-							<a href="https://github.com/erudika"><i class="fa fa-github"></i></a>
+							<a href="https://github.com/erudika" class="extlink"><i class="fa fa-github"></i></a>
 						</div>
 						<div class="col-md-4">
-							<a href="https://facebook.com/erudika.llc"><i class="fa fa-facebook"></i></a>
+							<a href="https://facebook.com/erudika.llc" class="extlink"><i class="fa fa-facebook"></i></a>
 						</div>
 						<div class="col-md-4">
-							<a href="https://twitter.com/erudika"><i class="fa fa-twitter"></i></a>
+							<a href="https://twitter.com/erudika" class="extlink"><i class="fa fa-twitter"></i></a>
 						</div>
 <!--						<div class="col-md-3">
-							<a href="https://plus.google.com/+ErudikaLLC"><i class="fa fa-google-plus"></i></a>
+							<a href="https://plus.google.com/+ErudikaLLC" class="extlink"><i class="fa fa-google-plus"></i></a>
 						</div>-->
 					</div>
 				</div>
@@ -214,20 +213,10 @@
 		</footer>
 
     <!-- Bootstrap core JavaScript -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
-			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "assets/img/erudika.png"); }
 			(function() {
-				var blue = "#3399cc";
-				var grey = "#cccccc";
-				new Chart($("#chart1").get(0).getContext("2d")).Doughnut([{ value: 80, color: blue }, { value: 20, color: grey }]);
-				new Chart($("#chart2").get(0).getContext("2d")).Doughnut([{ value: 75, color: blue }, { value: 35, color: grey }]);
-				new Chart($("#chart3").get(0).getContext("2d")).Doughnut([{ value: 90, color: blue }, { value: 10, color: grey }]);
-				new Chart($("#chart4").get(0).getContext("2d")).Doughnut([{ value: 55, color: blue }, { value: 45, color: grey }]);
-
 				$(".extlink").on("click touch", function() {
 					window.open(this.href, '_blank');
 					return false;

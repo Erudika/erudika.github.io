@@ -15,7 +15,6 @@ body {
 	font-weight: 300;
 	font-size: 18px;
 	color: #444444;
-	opacity: 1;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 	-webkit-text-size-adjust: 100%;
@@ -168,6 +167,10 @@ a:after {
 	background-color: #4e4e4e;
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+#skills img {
+	margin-bottom: 25px;
 }
 
 #skills * {
