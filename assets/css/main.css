@@ -490,6 +490,7 @@ b, strong {
   float: left;
   margin-left: -15px;
 }
+.erudika-logo { margin-left: -1em; }
 .nav-icon,
 .main-nav-link {
   float: left;
