@@ -141,7 +141,7 @@
 					</div>
 					<div class="col-md-3 mt">
 						<img src="assets/img/c4.png" height="150" width="150"/>
-						<p >DevOps in the cloud</p>
+						<p>DevOps in the cloud</p>
 						<br>
 					</div>
 				</div>
@@ -213,9 +213,12 @@
 		</footer>
 
     <!-- Bootstrap core JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script>
+    <script>
+			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "assets/img/erudika.png"); }
 			(function() {
 				$(".extlink").on("click touch", function() {
 					window.open(this.href, '_blank');
