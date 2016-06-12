@@ -238,7 +238,6 @@ b, strong {
 
 .browser-mockup {
   border-top: 2em solid rgba(230, 230, 230, 0.7);
-  /*box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);*/
   position: relative;
   border-radius: 3px 3px 0 0;
 	border-right: 1px solid #EDEDED;
@@ -328,15 +327,12 @@ b, strong {
   letter-spacing: 2px;
   color: #999;
   margin-bottom: 1em;
-  margin-left: 5px;
   line-height: 1em;
   font-weight: bold;
 }
 .article-inner,
 .archive-article-inner {
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -563,14 +559,13 @@ b, strong {
   padding: 5px 15px;
   -webkit-border-radius: 15px;
   border-radius: 3px;
-	border: 2px solid #BBB;
+	border: 1px solid #ddd;
 }
 .search-form input {
   border: none;
   background: none;
   color: #444;
   width: 100%;
-  font: 22px "Helvetica Neue", Helvetica, Arial, sans-serif;
   outline: none;
 	margin-left: 20px;
 }
@@ -849,8 +844,6 @@ a.article-title:hover {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: #ddd;
-    -webkit-box-shadow: 0 1px 2px #fff;
-    box-shadow: 0 1px 2px #fff;
   }
 }
 .article-nav-link-wrap {
@@ -906,8 +899,6 @@ a.article-title:hover {
   position: absolute;
   display: none;
   background: #fff;
-  -webkit-box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-  box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
   -webkit-border-radius: 3px;
   border-radius: 3px;
   margin-left: -145px;
@@ -1031,8 +1022,6 @@ a.article-title:hover {
 }
 #comments {
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   padding: 20px;
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
@@ -1060,7 +1049,6 @@ a.article-title:hover {
 }
 .archive-article-title {
   text-decoration: none;
-  font-weight: bold;
   color: #444;
   line-height: 1.6em;
 }
@@ -1073,7 +1061,6 @@ a.article-title:hover {
 .archive-article-date {
   color: #999;
   text-decoration: none;
-  font-size: 0.85em;
   line-height: 1em;
   margin-bottom: 0.5em;
   display: block;
@@ -1081,8 +1068,6 @@ a.article-title:hover {
 #page-nav {
   margin: 50px auto;
   background: #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   border: 1px solid #ddd;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -1334,8 +1319,6 @@ pre .javascript .function {
 .widget {
   color: #777;
   text-shadow: 0 1px #fff;
-  -webkit-box-shadow: 1px 2px 3px #ddd;
-  box-shadow: 1px 2px 3px #ddd;
   border: 1px solid #ddd;
   padding: 15px;
   -webkit-border-radius: 3px;
