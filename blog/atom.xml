@@ -420,7 +420,7 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
     <link href="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
     <id>http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
-    <updated>2016-05-22T23:01:58.620Z</updated>
+    <updated>2016-06-28T13:32:04.487Z</updated>
     <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
 server-side component of your website or app. Developers use them to build and iterate on products faster than ever
 before by focusing on the “fun” part - the frontend (client-side).</p>
@@ -493,7 +493,7 @@ We have plans to include connectors for <a href="https://github.com/Erudika/para
 it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
 we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
 others use it as an alternative to Parse for their mobile development.</p>
-<p>The <a href="www.paraio.org/docs">documentation</a> is great, contained in a single webpage for easy navigation and API methods
+<p>The <a href="http://www.paraio.org/docs" target="_blank" rel="external">documentation</a> is great, contained in a single webpage for easy navigation and API methods
 are described clearly. Getting started is pretty easy - download the executable WAR package and run it:
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar para-x.y.z.war</span><br><span class="line">$ curl localhost:<span class="number">8080</span>/v1/_setup</span><br></pre></td></tr></table></figure></p>
 <p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.

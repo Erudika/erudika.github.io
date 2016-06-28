@@ -106,7 +106,7 @@ it to power your mobile backend, we wanted to make the framework simpler by prov
 we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
 others use it as an alternative to Parse for their mobile development.
 
-The [documentation](www.paraio.org/docs) is great, contained in a single webpage for easy navigation and API methods
+The [documentation](http://www.paraio.org/docs) is great, contained in a single webpage for easy navigation and API methods
 are described clearly. Getting started is pretty easy - download the executable WAR package and run it:
 ```bash
 $ java -jar para-x.y.z.war
