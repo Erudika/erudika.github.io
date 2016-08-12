@@ -4,7 +4,7 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   <link href="http://www.erudika.com/blog/"/>
-  <updated>2016-08-12T08:07:54.949Z</updated>
+  <updated>2016-08-12T08:19:24.749Z</updated>
   <id>http://www.erudika.com/blog/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://www.erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/"/>
     <id>http://www.erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</id>
     <published>2016-08-12T08:01:00.000Z</published>
-    <updated>2016-08-12T08:07:54.949Z</updated>
-    <content type="html"><![CDATA[<p>Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realised we should’ve done this sooner. </p>
+    <updated>2016-08-12T08:19:24.749Z</updated>
+    <content type="html"><![CDATA[<p>Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realized we should’ve done this sooner. </p>
 <a id="more"></a>
 <p><img src="https://www.erudika.com/assets/img/blogpost_media6.png" alt=""></p>
 <p>There are several key players in terms of IoT cloud platforms, but we chose to focus on two - AWS and Azure. In Para <code>1.20.0</code> we’ve implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There’s a new object called <code>Thing</code> which holds all the information about your device - the state of the device, the security credentials for the cloud and other important data. When a <code>Thing</code> is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates <code>Thing</code> objects in the background. If you prefer one of these two approaches, we’d love to hear your feedback. </p>
@@ -42,18 +42,18 @@
 <li>Get an account from AWS and create a user with permissions to call the IoT API</li>
 <li>Set the <code>para.aws_access_key</code> and <code>para.aws_secret_key</code> properties in your Para config file</li>
 <li>Start the Para instance and create a <code>Thing</code> object through the API as shown above</li>
-<li>Take note of the <code>deviceDetails</code> field retured by this request as it contains certificates for your device</li>
+<li>Take note of the <code>deviceDetails</code> field returned by this request as it contains certificates for your device</li>
 <li>Use the certificates to set up your device and connect it to AWS IoT</li>
 <li>The <code>deviceState</code> field inside the Para <code>Thing</code> object is synced with the device shadow on AWS on every <code>GET</code> request</li>
 <li>Update the deviceState from the Para API and it will be synced with the device shadow on AWS on every <code>PATCH</code> request.</li>
 </ol>
 <h2 id="Other_changes_since_1-20_and_plans_for_the_next_release">Other changes since <code>1.20</code> and plans for the next release</h2><p>We’ve released quite a few improvements in <code>1.19</code> like the implementation of “join-like” queries using the method <code>findLinkedObjects()</code> this allows you to search for objects within a set of linked objects, in a many-to-many relationship. This feature relies on the <code>nested</code> query in Elasticsearch. </p>
-<p>We’ve also support for Microsoft accounts so you can now authenticate users with valid Windows accounts. Additionally, we’ve added independent social sign in for apps with their own OAuth keys, meaning that each app in Para has its own private settings and these can contain security credentials for Facebook, Twitter, etc. This was not possible before for apps other thant the root app. Hence, the new endpoint <code>/v1/_settings</code> was added for updating these new app settings. The full changelog can be found on <a href="https://github.com/Erudika/para/releases" target="_blank" rel="external">GitHub</a>.</p>
-<p>For the next release we’re hoping to implement a new Cassandra <code>DAO</code>, which is now overdue. An interesting fact about Para is that it was originally implemented to only run on top of Cassandra as a database layer. This was back in days when Cassandra was below version 1.0 and had no offical client library, instead we used the Hector client. Para is now database-agnostic but we really wanted to rewrite the original connector for Cassandra using the official Java drivers. </p>
+<p>Para now works with Microsoft accounts so you can authenticate users with valid Windows accounts. Additionally, we’ve added independent social sign in for apps with their own OAuth keys, meaning that each app in Para has its own private settings and these can contain security credentials for Facebook, Twitter, etc. This was not possible before for apps other than the root app. Hence, the new endpoint <code>/v1/_settings</code> was added for updating these new app settings. The full changelog can be found on <a href="https://github.com/Erudika/para/releases" target="_blank" rel="external">GitHub</a>.</p>
+<p>For the next release we’re hoping to implement a new Cassandra <code>DAO</code>, which is now overdue. An interesting fact about Para is that it was originally implemented to only run on top of Cassandra as a database layer. This was back in days when Cassandra was below version 1.0 and had no official client library, instead we used the Hector client. Para is now database-agnostic but we really wanted to rewrite the original connector for Cassandra using the official Java drivers. </p>
 <p><em>Have ideas for the next Para release? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realised we should’ve done this sooner. </p>]]>
+    <![CDATA[<p>Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realized we should’ve done this sooner. </p>]]>
     
     </summary>
     

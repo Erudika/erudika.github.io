@@ -7,7 +7,7 @@ comments: true
 img: img8.jpg
 ---
 
-Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realised we should've done this sooner. 
+Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realized we should've done this sooner. 
 
 <!-- more -->
 
@@ -69,7 +69,7 @@ PATCH /v1/things/myapp:664870213421895680
 1. Get an account from AWS and create a user with permissions to call the IoT API
 2. Set the `para.aws_access_key` and `para.aws_secret_key` properties in your Para config file
 3. Start the Para instance and create a `Thing` object through the API as shown above
-4. Take note of the `deviceDetails` field retured by this request as it contains certificates for your device
+4. Take note of the `deviceDetails` field returned by this request as it contains certificates for your device
 5. Use the certificates to set up your device and connect it to AWS IoT
 6. The `deviceState` field inside the Para `Thing` object is synced with the device shadow on AWS on every `GET` request
 7. Update the deviceState from the Para API and it will be synced with the device shadow on AWS on every `PATCH` request.
@@ -78,8 +78,8 @@ PATCH /v1/things/myapp:664870213421895680
 
 We've released quite a few improvements in `1.19` like the implementation of "join-like" queries using the method `findLinkedObjects()` this allows you to search for objects within a set of linked objects, in a many-to-many relationship. This feature relies on the `nested` query in Elasticsearch. 
 
-We've also support for Microsoft accounts so you can now authenticate users with valid Windows accounts. Additionally, we've added independent social sign in for apps with their own OAuth keys, meaning that each app in Para has its own private settings and these can contain security credentials for Facebook, Twitter, etc. This was not possible before for apps other thant the root app. Hence, the new endpoint `/v1/_settings` was added for updating these new app settings. The full changelog can be found on [GitHub](https://github.com/Erudika/para/releases).
+Para now works with Microsoft accounts so you can authenticate users with valid Windows accounts. Additionally, we've added independent social sign in for apps with their own OAuth keys, meaning that each app in Para has its own private settings and these can contain security credentials for Facebook, Twitter, etc. This was not possible before for apps other than the root app. Hence, the new endpoint `/v1/_settings` was added for updating these new app settings. The full changelog can be found on [GitHub](https://github.com/Erudika/para/releases).
 
-For the next release we're hoping to implement a new Cassandra `DAO`, which is now overdue. An interesting fact about Para is that it was originally implemented to only run on top of Cassandra as a database layer. This was back in days when Cassandra was below version 1.0 and had no offical client library, instead we used the Hector client. Para is now database-agnostic but we really wanted to rewrite the original connector for Cassandra using the official Java drivers. 
+For the next release we're hoping to implement a new Cassandra `DAO`, which is now overdue. An interesting fact about Para is that it was originally implemented to only run on top of Cassandra as a database layer. This was back in days when Cassandra was below version 1.0 and had no official client library, instead we used the Hector client. Para is now database-agnostic but we really wanted to rewrite the original connector for Cassandra using the official Java drivers. 
 
 *Have ideas for the next Para release? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
