@@ -7,15 +7,15 @@ comments: true
 img: img8.jpg
 ---
 
-Things - those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT - smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realized we should've done this sooner. 
+**Things** — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realized we should've done this sooner. 
 
 <!-- more -->
 
 ![](https://www.erudika.com/assets/img/blogpost_media6.png)
 
-There are several key players in terms of IoT cloud platforms, but we chose to focus on two - AWS and Azure. In Para `1.20.0` we've implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There's a new object called `Thing` which holds all the information about your device - the state of the device, the security credentials for the cloud and other important data. When a `Thing` is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates `Thing` objects in the background. If you prefer one of these two approaches, we'd love to hear your feedback. 
+There are several key players in terms of IoT cloud platforms, but we chose to focus on two — **AWS** and **Azure**. In Para `1.20.0` we've implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There's a new object called `Thing` which holds all the information about your device — the state of the device, the security credentials for the cloud and other important data. When a `Thing` is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates `Thing` objects in the background. If you prefer one of these two approaches, we'd love to hear your feedback. 
 
-Creating things from the Para API is really simple - you only need to configure your access keys for the cloud provider of your choice. Then you make a `POST` request:
+Creating things from the Para API is really simple — you only need to configure your access keys for the cloud provider of your choice. Then you make a `POST` request:
 
 ```
 POST /v1/things
@@ -64,7 +64,7 @@ PATCH /v1/things/myapp:664870213421895680
 }
 ```
 
-## Summary - getting started with Para and AWS IoT
+## Summary — getting started with Para and AWS IoT
 
 1. Get an account from AWS and create a user with permissions to call the IoT API
 2. Set the `para.aws_access_key` and `para.aws_secret_key` properties in your Para config file
