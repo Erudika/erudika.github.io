@@ -7,7 +7,7 @@ comments: true
 img: img8.jpg
 ---
 
-**Things** — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realized we should've done this sooner. 
+**Things** — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based on Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realized we should've done this sooner. 
 
 <!-- more -->
 
@@ -53,7 +53,7 @@ AWS have what they call "device shadows" a persistent storage for device state w
 }
 ```
 
-If we make a change in our backend and change the `Thing` to have `temp = 26` then this change is automatically reflected on AWS.
+If we make a change in our backend and change the `Thing` to have `temp = 26` then this change is automatically reflected on AWS and the shadow of the device is also updated.
 
 ```
 PATCH /v1/things/myapp:664870213421895680
