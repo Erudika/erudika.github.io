@@ -7,12 +7,12 @@ comments: true
 img: img7.jpg
 ---
 
-In this tutorial we're going to build a simple single-page application with **Angular 2**. This is intended for 
-developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got **Visual Studio Code** 
-installed on my machine and it's running on Linux. I chose VS Code because we'll be working with **TypeScript** 
-mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I've decided to save 
-some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https://github.com/mgechev) called 
-**'angular2-seed'**. For that you'll also need **Git**, **Node.js** and **npm**.
+In this tutorial we're going to build a simple single-page application with **Angular 2**. This is intended for
+developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got **Visual Studio Code**
+installed on my machine and it's running on Linux. I chose VS Code because we'll be working with **TypeScript**
+mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I've decided to save
+some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https://github.com/mgechev) called
+**'angular-seed'**. For that you'll also need **Git**, **Node.js** and **npm**.
 
 <!-- more -->
 
@@ -23,11 +23,11 @@ some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https:
 - Get [Visual Studio Code](https://code.visualstudio.com/Download)
 - Get [Git](https://git-scm.com/downloads)
 - Get [Node.js with npm](https://nodejs.org/en/download/)
-- Clone ['angular2-seed'](https://github.com/mgechev/angular2-seed)
+- Clone ['angular-seed'](https://github.com/mgechev/angular-seed)
 - Open the project in the VS Code editor
 
 ```bash
-git clone --depth 1 https://github.com/mgechev/angular2-seed.git angular2-para
+git clone --depth 1 https://github.com/mgechev/angular-seed.git angular2-para
 cd angular2-para
 # install the project's dependencies
 npm install
@@ -36,8 +36,8 @@ npm start
 ```
 
 Next - **the backend**. Here, I could write a simple backend in Node.js and Express but I'm lazy so I chose not to.
-Instead, I'm going to use **Para** for my backend and I'm not going to write *any* code on the server. If you are 
-new to Para, it's a general-purpose backend framework/server written in Java. It will save me a lot of time and effort  
+Instead, I'm going to use **Para** for my backend and I'm not going to write *any* code on the server. If you are
+new to Para, it's a general-purpose backend framework/server written in Java. It will save me a lot of time and effort
 because it has a nice JSON API for our app to connect to. To run the server you're going to need a Java runtime.
 
 ## Step 0 (backend)
@@ -60,7 +60,7 @@ this:
   "version" : "x.y.z"
 }
 ```
-We haven't got access keys to the server yet, so let's go ahead and do that, open: 
+We haven't got access keys to the server yet, so let's go ahead and do that, open:
 ```
 http://localhost:8080/v1/_setup
 ```
@@ -70,13 +70,13 @@ Save the credentials to a file, we'll need them later to access the backend API.
 
 Let's create an app for storing recipes - a recipe manager. Our goal will be to build just the basic CRUD functionality,
 without adding extra features like authentication and login pages. By default the backend is secured and only signed
-requests are allowed, but for the purpose of this tutorial we're going to add a new permission to allow all requests to 
+requests are allowed, but for the purpose of this tutorial we're going to add a new permission to allow all requests to
 just one specific resource - `/v1/recipes`.
 
 Go to [console.paraio.org](http://console.paraio.org) and enter the credentials that you saved in the beginning. Also
 click the cog icon to edit the API endpoint and set it to `http://localhost:8080`. Click 'Connect'.
 
-Next, go to 'App' on the left and edit the root app called `para`. You'll see a section for resource permissions and 
+Next, go to 'App' on the left and edit the root app called `para`. You'll see a section for resource permissions and
 there you will write a simple permission definition in JSON:
 
 ```json
@@ -87,8 +87,8 @@ there you will write a simple permission definition in JSON:
 }
 ```
 
-This defines a single permission that allows `* - everyone` to access `/v1/recipes` using a list of allowed methods, 
-in this case `* - all HTTP methods` and `? - anonymous access` is allowed. Thus, we're essentially making this resource 
+This defines a single permission that allows `* - everyone` to access `/v1/recipes` using a list of allowed methods,
+in this case `* - all HTTP methods` and `? - anonymous access` is allowed. Thus, we're essentially making this resource
 publicly available. Click 'Save Changes'.
 
 ![](/assets/img/rman_1.png)
@@ -99,7 +99,7 @@ Now let's go back to our frontend and edit the 'Home' component under `src/clien
 code a little bit in `home.component.html`:
 
 ```html
-<h1>My Recipes &nbsp; 
+<h1>My Recipes &nbsp;
     <button (click)="clearForm() && showForm = true" [hidden]="showForm">Add</button>
 </h1>
 <form (submit)="addRecipe()" [hidden]="!showForm">
@@ -120,9 +120,9 @@ code a little bit in `home.component.html`:
 ```
 
 I've added the "Add" button which shows the form where we can write a recipe (controlled by `showForm`), a textarea,
-and a close button. Notice how the text value of the "Add" button changes to "Save" when we're in edit mode. Coming 
+and a close button. Notice how the text value of the "Add" button changes to "Save" when we're in edit mode. Coming
 from Angular 1, you'll notice the weird `[(ngModel)]` syntax - it's a two-way binding (single brackets is one-way).
-Similarly, `*ngIf` is just shorthand for `[ngIf]`. 
+Similarly, `*ngIf` is just shorthand for `[ngIf]`.
 
 Also, I chose to set a new title in the header section in `src/client/app/shared/toolbar/toolbar.component.html`:
 ```html
@@ -130,9 +130,9 @@ Also, I chose to set a new title in the header section in `src/client/app/shared
 <more></more>
 ```
 
-Let's edit the `NameListService` which is part of the starter project and rename it to `RecipesService`. You'll have 
-to rename all occurrences of the class and also rename the folder `src/client/app/shared/name-list`. In the code for 
-`home.component.ts` we'll add a new field `newRecipe: string` to hold the recipe text and the whole this should 
+Let's edit the `NameListService` which is part of the starter project and rename it to `RecipesService`. You'll have
+to rename all occurrences of the class and also rename the folder `src/client/app/shared/name-list`. In the code for
+`home.component.ts` we'll add a new field `newRecipe: string` to hold the recipe text and the whole this should
 look like this:
 
 ```ts
@@ -173,8 +173,8 @@ listRecipes() {
 }
 ```
 
-Now we have to modify the `RecipeService` class to allow for another parameter `text`. Let's also add the code 
-for making the `POST` request to the backend: 
+Now we have to modify the `RecipeService` class to allow for another parameter `text`. Let's also add the code
+for making the `POST` request to the backend:
 ```ts
 // URL of our public resource '/recipes'
 private RECIPES_RESOURCE = "http://localhost:8080/v1/recipes";
@@ -187,7 +187,7 @@ add(name: string, text: string): Observable<any> {
 }
 ```
 
-Going back to the component code in `home.component.ts`, we have to subscribe to the `Observable` returned by 
+Going back to the component code in `home.component.ts`, we have to subscribe to the `Observable` returned by
 `recipeService.add()` and get back the list of recipes when they arrive.
 ```ts
 this.recipeService.add(this.newName, this.newRecipe).subscribe((data: any) => {
@@ -216,7 +216,7 @@ when there are no recipes to show:
 </ul>
 ```
 
-There are two click events here - one for editing and one for deleting recipes. Let's add the styling for 
+There are two click events here - one for editing and one for deleting recipes. Let's add the styling for
 `.recipe-box` and `.empty-box` later in `home.component.css`:
 
 ```css
@@ -254,7 +254,7 @@ button.small { font-size: 12px; height: 30px; }
 
 ![](/assets/img/rman_2.png)
 
-So, we should now we able to add recipes and after we click "Add" the form should be cleared and closed. 
+So, we should now we able to add recipes and after we click "Add" the form should be cleared and closed.
 For this let's add the following code in `home.component.ts` to reset the state of the form:
 ```ts
 clearForm(): boolean {
@@ -271,8 +271,8 @@ clearForm(): boolean {
 
 The variable `recipeId` will keep the value of the `id` when a recipe is being edited. When "Save" is clicked this
 `id` is passed to the service and the backend so it won't create a new object, just update an existing one.
- 
-Let's add more methods in our `recipeService` for updating and deleting recipes. 
+
+Let's add more methods in our `recipeService` for updating and deleting recipes.
 ```ts
 edit(id: any, name: string, text: string) {
     if (!id) { return; }
@@ -287,10 +287,10 @@ remove(id: string) {
 ```
 
 Nothing special here, except the `.toPromise()` in the end which converts an `Observable` to `Promise` and executes
-it right away. We're issuing these requests and we don't care about the results because we can update the UI 
-instantly, without having to wait for the request to finish. 
+it right away. We're issuing these requests and we don't care about the results because we can update the UI
+instantly, without having to wait for the request to finish.
 
-In `home.component.ts` we'll modify the code for `addRecipe()` to also edit a recipe when `recipeId` is set. 
+In `home.component.ts` we'll modify the code for `addRecipe()` to also edit a recipe when `recipeId` is set.
 ```ts
 addRecipe(): boolean {
     if (this.recipeId) {
@@ -327,14 +327,14 @@ removeRecipe(id: string) {
 }
 ```
 
-The methods `editRecipe()` and `removeRecipe()` are relatively straightforward - when editing, we set the mode in 
-`editMode = true` and we show the form, when removing we just filter the array `recipesList` and we discard the 
+The methods `editRecipe()` and `removeRecipe()` are relatively straightforward - when editing, we set the mode in
+`editMode = true` and we show the form, when removing we just filter the array `recipesList` and we discard the
 deleted recipe if it matches the `id`.
 
 ![](/assets/img/rman_4.png)
 
-So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text 
-is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.  
+So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text
+is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.
 
 ## Step 3 - Markdown support
 
@@ -390,18 +390,18 @@ Finally, we add the search box in the template below the heading:
 </div>
 ```
 
-And we're done! The final result of our **Recipe Manager 1.0.0** 
+And we're done! The final result of our **Recipe Manager 1.0.0**
 (check out [the live demo](http://albogdano.github.io/angular2-para/)):
 
 ![](/assets/img/rman_6.png)
 
 ## Summary
 
-Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax. 
-Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java, 
-rather than a dynamic language like JS. The `import` syntax was a bit hard for me to get used to, especially 
+Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax.
+Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java,
+rather than a dynamic language like JS. The `import` syntax was a bit hard for me to get used to, especially
 with all the different files I had to navigate through. In general, the experience of writing Angular 2 apps is
-great - the syntax is clean, the app is well structured and the error messages are clear and understandable.   
+great - the syntax is clean, the app is well structured and the error messages are clear and understandable.
 
 **Things we did:**
 
@@ -415,8 +415,8 @@ great - the syntax is clean, the app is well structured and the error messages a
 - write *any* backend code
 - define the "recipe" data type on the server or in a database
 
-The code for this tutorial is on GitHub at [albogdano/angular2-para](https://github.com/albogdano/angular2-para). 
-I've deployed the same code to GitHub pages as a [live demo](http://albogdano.github.io/angular2-para/) which 
+The code for this tutorial is on GitHub at [albogdano/angular2-para](https://github.com/albogdano/angular2-para).
+I've deployed the same code to GitHub pages as a [live demo](http://albogdano.github.io/angular2-para/) which
 is powered by our [cloud-based Para service](https://paraio.com).
 
  *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
