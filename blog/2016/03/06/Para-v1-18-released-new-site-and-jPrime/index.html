@@ -24,7 +24,7 @@ fixed many bugs, released the Android client for Para and a new
 plugin for MongoDB.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Para v1.18 released, new site and jPrime">
-<meta property="og:url" content="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/index.html">
+<meta property="og:url" content="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients,
 fixed many bugs, released the Android client for Para and a new
@@ -36,17 +36,25 @@ plugin for MongoDB.">
 <meta name="twitter:description" content="This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients,
 fixed many bugs, released the Android client for Para and a new
 plugin for MongoDB.">
+<meta name="twitter:image" content="https://www.erudika.com/assets/img/blogpost_media3.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
 		
 
+		<link rel="canonical" href="https://erudika.com/blog" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var host = "yoursite.com";
+			if ((host === window.location.host) && (window.location.protocol !== "https:"))
+			window.location.protocol = "https";
+		</script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -173,7 +181,7 @@ you use. Here are some of the different possible integrations that can work grea
 </ul>
 <p>In <strong>v1.18</strong> we also improved the permissions API by allowing developers to add permissions on specific objects by <code>id</code>.
 The following code, for example, allows a user with id of <code>user1</code> to delete a specific <code>Post</code> object:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paraClient.grantResourcePermission(<span class="string">"user1"</span>, <span class="string">"posts/123"</span>, [<span class="string">"DELETE"</span>]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">paraClient.grantResourcePermission(<span class="string">"user1"</span>, <span class="string">"posts/123"</span>, [<span class="string">"DELETE"</span>]);</div></pre></td></tr></table></figure>
 <p>In addition to this, we added special flags to every <code>ParaObject</code> that control persistence, indexing and caching operations.
 These flags are in the form of boolean properties and give you a fine-grained control over every object. You can now
 create transient objects that only live in memory (<code>stored: false</code>, <code>indexed: false</code>, <code>cached: true</code>), or objects that
@@ -183,7 +191,7 @@ developers. We’ll be focusing on making Para work with <a href="https://github
 <a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>, as well as, <strong>iOS</strong>.
 And even though we regret the recent news of <a href="http://blog.parse.com/announcements/moving-on/" target="_blank" rel="external">Parse shutting down</a>, we hope
 that more web and mobile developers will find <a href="https://paraio.com" target="_blank" rel="external">Para</a> useful and a good alternative to the Parse service.</p>
-<h2 id="Meet_us_at_the_jPrime_conference">Meet us at the jPrime conference</h2><p>We’ll be sponsoring <a href="http://jprime.io/" target="_blank" rel="external">jPrime</a> - a local conference with talks on Java, the JVM, mobile, web and best
+<h2 id="Meet-us-at-the-jPrime-conference"><a href="#Meet-us-at-the-jPrime-conference" class="headerlink" title="Meet us at the jPrime conference"></a>Meet us at the jPrime conference</h2><p>We’ll be sponsoring <a href="http://jprime.io/" target="_blank" rel="external">jPrime</a> - a local conference with talks on Java, the JVM, mobile, web and best
 practices, which will be held on <strong>May 26-27th, 2016</strong> in Sofia, Bulgaria. It’s run by the
 <a href="https://jug.bg/en/" target="_blank" rel="external">Bulgarian Java User Group</a> and backed by the biggest software companies in the city. If you’re in
 the area and into Java, you should definitely come to jPrime. Send us an email and we’ll arrange for you some Para
@@ -194,10 +202,10 @@ stickers on the day of the conference.</p>
       
     </div>
     <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-id="cirrh78bh000u5j4sba81c782" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-id="civ027ssz0004z54szp7yyc7j" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
 				</a>
       
 
@@ -232,7 +240,7 @@ stickers on the day of the conference.</p>
 
 
 <section id="comments">
-	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-numposts="5"></div>
+	<div class="fb-comments" data-href="https://erudika.com/blog/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-numposts="5"></div>
 </section>
 </section>
 					
@@ -287,7 +295,7 @@ stickers on the day of the conference.</p>
 
 	<div>
 		<div id="search-form-wrap">
-			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.erudika.com/blog"></form>
+			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form>
 		</div>
 	</div>
 	<br><br>
@@ -332,11 +340,11 @@ stickers on the day of the conference.</p>
 			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
 </script>
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/blog/js/script.js" type="text/javascript"></script>
+<script src="/blog/js/script.js"></script>
 
 		</div>
 

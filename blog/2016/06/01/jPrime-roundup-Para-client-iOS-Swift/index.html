@@ -22,7 +22,7 @@
 		<meta name="description" content="Last week was jPrime 2016, the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was “Java - 21 and legally drunk” and the two">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jPrime roundup, Para client for iOS and Swift">
-<meta property="og:url" content="http://www.erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/index.html">
+<meta property="og:url" content="https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Last week was jPrime 2016, the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was “Java - 21 and legally drunk” and the two">
 <meta property="og:image" content="https://www.erudika.com/assets/img/blogpost_media4.png">
@@ -33,17 +33,25 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jPrime roundup, Para client for iOS and Swift">
 <meta name="twitter:description" content="Last week was jPrime 2016, the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was “Java - 21 and legally drunk” and the two">
+<meta name="twitter:image" content="https://www.erudika.com/assets/img/blogpost_media4.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
 		
 
+		<link rel="canonical" href="https://erudika.com/blog" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var host = "yoursite.com";
+			if ((host === window.location.host) && (window.location.protocol !== "https:"))
+			window.location.protocol = "https";
+		</script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -153,17 +161,17 @@
 <p><img src="https://c4.staticflickr.com/8/7726/26776482963_dccfd6e904_h.jpg" width="1600" height="1060" alt=""></p>
 <p>Just before jPrime, we released a <a href="https://github.com/Erudika/para-client-ios" target="_blank" rel="external">client library</a> for Para that works with iOS devices, including tvOS and OS X. It is written in Swift and is <a href="http://cocoadocs.org/docsets/ParaClient" target="_blank" rel="external">published on CocoaPods</a>. We encountered <a href="http://stackoverflow.com/a/37374778/108758" target="_blank" rel="external">a lot of problems with Xcode and CocoaPods</a> along the way - unstable IDE, poor Objective-C interoperability and poor documentation were slowing us down. Personally, I liked Swift and this was my first time using it, but the overall programming experience with Xcode left in me a feeling of unstability and beta-ness. The developer tools for Java and Android are just superior in comparison, and in a way, I’m glad <a href="http://arstechnica.com/tech-policy/2016/05/google-wins-trial-against-oracle-as-jury-finds-android-is-fair-use/" target="_blank" rel="external">Java won</a>. </p>
 <p>Now you can build iOS apps that are powered by Para on the backend:</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ParaClient</span><br><span class="line"><span class="comment">// avoid using the secret key on mobile devices</span></span><br><span class="line"><span class="keyword">let</span> client = <span class="type">ParaClient</span>(accessKey: <span class="string">"ACCESS_KEY"</span>, secretKey:<span class="string">""</span>)</span><br><span class="line">client.signIn(<span class="string">"facebook"</span>, providerToken: <span class="string">"fb_access_token"</span>, callback: &#123; user <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">if</span> user != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="comment">// success! user is authenticated, JWT token is saved on the device</span></span><br><span class="line">        <span class="comment">// you can now call the API methods</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ParaClient</div><div class="line"><span class="comment">// avoid using the secret key on mobile devices</span></div><div class="line"><span class="keyword">let</span> client = <span class="type">ParaClient</span>(accessKey: <span class="string">"ACCESS_KEY"</span>, secretKey:<span class="string">""</span>)</div><div class="line">client.signIn(<span class="string">"facebook"</span>, providerToken: <span class="string">"fb_access_token"</span>, callback: &#123; user <span class="keyword">in</span></div><div class="line">    <span class="keyword">if</span> user != <span class="literal">nil</span> &#123;</div><div class="line">        <span class="comment">// success! user is authenticated, JWT token is saved on the device</span></div><div class="line">        <span class="comment">// you can now call the API methods</span></div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>Finally, we also updated Para to version <code>1.18.5</code> which includes a number of <a href="https://github.com/Erudika/para/releases" target="_blank" rel="external">bug fixes</a>. The release is on Maven Central and you can download the executable <a href="https://github.com/Erudika/para/releases/download/v1.18.5/para-1.18.5.war" target="_blank" rel="external">WAR binary file from GitHub</a>. </p>
 <p><em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
 
       
     </div>
     <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/" data-id="cirrh78bb000a5j4srmqor1vp" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/" data-id="civ027sta000bz54s20mibapl" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
 				</a>
       
 
@@ -198,7 +206,7 @@
 
 
 <section id="comments">
-	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/" data-numposts="5"></div>
+	<div class="fb-comments" data-href="https://erudika.com/blog/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/" data-numposts="5"></div>
 </section>
 </section>
 					
@@ -253,7 +261,7 @@
 
 	<div>
 		<div id="search-form-wrap">
-			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.erudika.com/blog"></form>
+			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form>
 		</div>
 	</div>
 	<br><br>
@@ -298,11 +306,11 @@
 			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
 </script>
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/blog/js/script.js" type="text/javascript"></script>
+<script src="/blog/js/script.js"></script>
 
 		</div>
 

@@ -22,7 +22,7 @@
 		<meta name="description" content="Things — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="An open source backend for the Internet of Things">
-<meta property="og:url" content="http://www.erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/index.html">
+<meta property="og:url" content="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Things — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increa">
 <meta property="og:image" content="https://www.erudika.com/assets/img/blogpost_media6.png">
@@ -30,17 +30,25 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="An open source backend for the Internet of Things">
 <meta name="twitter:description" content="Things — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increa">
+<meta name="twitter:image" content="https://www.erudika.com/assets/img/blogpost_media6.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
 		
 
+		<link rel="canonical" href="https://erudika.com/blog" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var host = "yoursite.com";
+			if ((host === window.location.host) && (window.location.protocol !== "https:"))
+			window.location.protocol = "https";
+		</script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -146,7 +154,7 @@
 <p><img src="https://www.erudika.com/assets/img/blogpost_media6.png" alt=""></p>
 <p>There are several key players in terms of IoT cloud platforms, but we chose to focus on two — <strong>AWS</strong> and <strong>Azure</strong>. In Para <code>1.20.0</code> we’ve implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There’s a new object called <code>Thing</code> which holds all the information about your device — the state of the device, the security credentials for the cloud and other important data. When a <code>Thing</code> is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates <code>Thing</code> objects in the background. If you prefer one of these two approaches, we’d love to hear your feedback. </p>
 <p>Creating things from the Para API is really simple — you only need to configure your access keys for the cloud provider of your choice. Then you make a <code>POST</code> request:</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">POST</span> /<span class="literal">v1</span>/things</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"RPiThingy"</span>,</span><br><span class="line">  <span class="string">"serviceBroker"</span>: <span class="string">"AWS"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">POST /v1/things</div><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;RPiThingy&quot;,</div><div class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>The <code>serviceBroker</code> switches between IoT service providers and can either be “AWS” or “Azure”. The request above will perform several tasks on AWS before it returns, it will:</p>
 <ul>
 <li>Create a device certificate</li>
@@ -154,12 +162,12 @@
 <li>Create a new thing (device) and attach it to the certificate above</li>
 </ul>
 <p>Finally, a new <code>Thing</code> object is created within Para. The returned JSON object contains the inlined certificate and private key which should be transferred to the physical device. Once it starts sending data to AWS using the MQTT protocol you can poll for device state changes by reading the <code>Thing</code> object:</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET <span class="regexp">/v1/</span>things/<span class="string">myapp:</span><span class="number">664870213421895680</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET /v1/things/myapp:664870213421895680</div></pre></td></tr></table></figure>
 <p>AWS have what they call “device shadows” a persistent storage for device state which is useful for remembering what was the last state of the device if it ever got disconnected. Let’s assume that this shadow has been updated by our Raspberry Pi thingy and it set a <code>temp = 24</code> variable. Once we read object like we did above, it gets the latest state from AWS. </p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">id</span>": <span class="value"><span class="string">"664870213421895680"</span></span>,</span><br><span class="line">  "<span class="attribute">timestamp</span>": <span class="value"><span class="number">1468601996535</span></span>,</span><br><span class="line">  "<span class="attribute">type</span>": <span class="value"><span class="string">"thing"</span></span>,</span><br><span class="line">  "<span class="attribute">appid</span>": <span class="value"><span class="string">"myapp"</span></span>,</span><br><span class="line">  "<span class="attribute">name</span>": <span class="value"><span class="string">"RPiThingy"</span></span><br><span class="line">  <span class="string">"serviceBroker"</span>: <span class="string">"AWS"</span></span>,</span><br><span class="line">  "<span class="attribute">deviceState</span>": <span class="value">&#123;</span><br><span class="line">  	"<span class="attribute">temp</span>": <span class="value"><span class="number">24</span></span><br><span class="line">  </span>&#125;</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;id&quot;: &quot;664870213421895680&quot;,</div><div class="line">  &quot;timestamp&quot;: 1468601996535,</div><div class="line">  &quot;type&quot;: &quot;thing&quot;,</div><div class="line">  &quot;appid&quot;: &quot;myapp&quot;,</div><div class="line">  &quot;name&quot;: &quot;RPiThingy&quot;</div><div class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;,</div><div class="line">  &quot;deviceState&quot;: &#123;</div><div class="line">  	&quot;temp&quot;: 24</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>If we make a change in our backend and change the <code>Thing</code> to have <code>temp = 26</code> then this change is automatically reflected on AWS and the shadow of the device is also updated.</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PATCH /v1/things/myapp:<span class="number">664870213421895680</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"deviceState"</span>: &#123;</span><br><span class="line">    <span class="string">"temp"</span>: <span class="number">26</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Summary_—_getting_started_with_Para_and_AWS_IoT">Summary — getting started with Para and AWS IoT</h2><ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PATCH /v1/things/myapp:664870213421895680</div><div class="line">&#123;</div><div class="line">  &quot;deviceState&quot;: &#123;</div><div class="line">    &quot;temp&quot;: 26</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Summary-—-getting-started-with-Para-and-AWS-IoT"><a href="#Summary-—-getting-started-with-Para-and-AWS-IoT" class="headerlink" title="Summary — getting started with Para and AWS IoT"></a>Summary — getting started with Para and AWS IoT</h2><ol>
 <li>Get an account from AWS and create a user with permissions to call the IoT API</li>
 <li>Set the <code>para.aws_access_key</code> and <code>para.aws_secret_key</code> properties in your Para config file</li>
 <li>Start the Para instance and create a <code>Thing</code> object through the API as shown above</li>
@@ -168,7 +176,7 @@
 <li>The <code>deviceState</code> field inside the Para <code>Thing</code> object is synced with the device shadow on AWS on every <code>GET</code> request</li>
 <li>Update the deviceState from the Para API and it will be synced with the device shadow on AWS on every <code>PATCH</code> request.</li>
 </ol>
-<h2 id="Other_changes_since_1-20_and_plans_for_the_next_release">Other changes since <code>1.20</code> and plans for the next release</h2><p>We’ve released quite a few improvements in <code>1.19</code> like the implementation of “join-like” queries using the method <code>findLinkedObjects()</code> this allows you to search for objects within a set of linked objects, in a many-to-many relationship. This feature relies on the <code>nested</code> query in Elasticsearch. </p>
+<h2 id="Other-changes-since-1-20-and-plans-for-the-next-release"><a href="#Other-changes-since-1-20-and-plans-for-the-next-release" class="headerlink" title="Other changes since 1.20 and plans for the next release"></a>Other changes since <code>1.20</code> and plans for the next release</h2><p>We’ve released quite a few improvements in <code>1.19</code> like the implementation of “join-like” queries using the method <code>findLinkedObjects()</code> this allows you to search for objects within a set of linked objects, in a many-to-many relationship. This feature relies on the <code>nested</code> query in Elasticsearch. </p>
 <p>Para now works with Microsoft accounts so you can authenticate users with valid Windows accounts. Additionally, we’ve added independent social sign in for apps with their own OAuth keys, meaning that each app in Para has its own private settings and these can contain security credentials for Facebook, Twitter, etc. This was not possible before for apps other than the root app. Hence, the new endpoint <code>/v1/_settings</code> was added for updating these new app settings. The full changelog can be found on <a href="https://github.com/Erudika/para/releases" target="_blank" rel="external">GitHub</a>.</p>
 <p>For the next release we’re hoping to implement a new Cassandra <code>DAO</code>, which is now overdue. An interesting fact about Para is that it was originally implemented to only run on top of Cassandra as a database layer. This was back in days when Cassandra was below version 1.0 and had no official client library, instead we used the Hector client. Para is now database-agnostic but we really wanted to rewrite the original connector for Cassandra using the official Java drivers. </p>
 <p><em>Have ideas for the next Para release? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
@@ -176,10 +184,10 @@
       
     </div>
     <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-id="cirrh78bq001f5j4s4hx5ps0x" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-id="civ027sst0001z54s62juiya3" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
 				</a>
       
 
@@ -205,7 +213,7 @@
 
 
 <section id="comments">
-	<div class="fb-comments" data-href="http://www.erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-numposts="5"></div>
+	<div class="fb-comments" data-href="https://erudika.com/blog/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-numposts="5"></div>
 </section>
 </section>
 					
@@ -260,7 +268,7 @@
 
 	<div>
 		<div id="search-form-wrap">
-			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.erudika.com/blog"></form>
+			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form>
 		</div>
 	</div>
 	<br><br>
@@ -305,11 +313,11 @@
 			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
 </script>
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/blog/js/script.js" type="text/javascript"></script>
+<script src="/blog/js/script.js"></script>
 
 		</div>
 

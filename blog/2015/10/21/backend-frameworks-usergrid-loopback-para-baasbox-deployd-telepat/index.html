@@ -23,32 +23,40 @@
 server-side component of your website or app. Developers use them to build and it">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
-<meta property="og:url" content="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/index.html">
+<meta property="og:url" content="https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
 server-side component of your website or app. Developers use them to build and it">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/usergrid.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/loopback.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/paraio.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/baasbox.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/deployd.png">
-<meta property="og:image" content="http://www.erudika.com/blog/assets/img/telepat.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/usergrid.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/loopback.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/paraio.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/baasbox.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/deployd.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/telepat.png">
 <meta property="og:updated_time" content="2016-06-28T13:32:04.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
 <meta name="twitter:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
 server-side component of your website or app. Developers use them to build and it">
+<meta name="twitter:image" content="https://erudika.com/blog/assets/img/usergrid.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
 		
 
+		<link rel="canonical" href="https://erudika.com/blog" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
     <link href="/assets/css/main.css" rel="stylesheet">
+
+		<script type="text/javascript">
+			var host = "yoursite.com";
+			if ((host === window.location.host) && (window.location.protocol !== "https:"))
+			window.location.protocol = "https";
+		</script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -162,7 +170,7 @@ the one you wrote yourself - you can use a package that’s already out there an
 <p>Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building
 anything from websites to desktop software or games. The ones that target mobile apps usually have features like
 realtime push, notifications support and client libraries for Android and iOS. We’ll cover both types of frameworks here.</p>
-<h2 id="UserGrid"><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/usergrid.png"></p>
+<h2 id="UserGrid"><a href="#UserGrid" class="headerlink" title="UserGrid "></a><a href="http://usergrid.apache.org" target="_blank" rel="external">UserGrid</a> <a href="https://github.com/apache/usergrid" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/usergrid.png"></p>
 <p><strong>Multitenant:</strong> yes <br>
 <strong>Language:</strong> Java <br>
 <strong>Database:</strong> Cassandra <br>
@@ -185,7 +193,7 @@ is supported but it appears that only Facebook login works out-of-the-box. Other
 queries and push notifications (in v2.0).</p>
 <p>Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
 your organization. It is used in production by quite a few companies.</p>
-<h2 id="LoopBack"><a href="http://loopback.io" target="_blank" rel="external">LoopBack</a> <a href="https://github.com/strongloop/loopback" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/loopback.png"></p>
+<h2 id="LoopBack"><a href="#LoopBack" class="headerlink" title="LoopBack "></a><a href="http://loopback.io" target="_blank" rel="external">LoopBack</a> <a href="https://github.com/strongloop/loopback" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/loopback.png"></p>
 <p><strong>Multitenant:</strong> no <br>
 <strong>Language:</strong> JavaScript <br>
 <strong>Database:</strong> agnostic <br>
@@ -207,7 +215,7 @@ there’s <code>npm</code> and tons of modules on GitHub.</p>
 <p>LoopBack is great for REST API service generation and very rapid prototyping. Developers can get up and running in
 minutes by building a custom API using the given CLI tool. LoopBack is a very good fit for all projects written in
 JavaScript.</p>
-<h2 id="Para"><a href="https://paraio.org" target="_blank" rel="external">Para</a> <a href="https://github.com/Erudika/para" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/paraio.png" style="border: 1px solid #CCCCCC"></p>
+<h2 id="Para"><a href="#Para" class="headerlink" title="Para "></a><a href="https://paraio.org" target="_blank" rel="external">Para</a> <a href="https://github.com/Erudika/para" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/paraio.png" style="border: 1px solid #CCCCCC"></p>
 <p><strong>Multitenant:</strong> yes <br>
 <strong>Language:</strong> Java <br>
 <strong>Database:</strong> agnostic <br>
@@ -223,7 +231,7 @@ we created a general-purpose BaaS. Some of our clients are using it as an API se
 others use it as an alternative to Parse for their mobile development.</p>
 <p>The <a href="http://www.paraio.org/docs" target="_blank" rel="external">documentation</a> is great, contained in a single webpage for easy navigation and API methods
 are described clearly. Getting started is pretty easy - download the executable WAR package and run it:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar para-x.y.z.war</span><br><span class="line">$ curl localhost:<span class="number">8080</span>/v1/_setup</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ java -jar para-x.y.z.war</div><div class="line">$ curl localhost:8080/v1/_setup</div></pre></td></tr></table></figure></p>
 <p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.
 If you wish to integrate Para with your own code, there’s a package on Maven central - just search for <code>para-server</code>.
 The WAR file can also be deployed to inside a servlet container like Tomcat.</p>
@@ -238,7 +246,7 @@ permissions and support for JSON Web Tokens are available since version 1.17. Pa
 authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.</p>
 <p>Para is a good choice if you are building a cloud-based web service and it’s great for rapid prototyping.
 It’s an easy-to-use and flexible platform that scales well. A backend for busy developers.</p>
-<h2 id="BaasBox"><a href="http://www.baasbox.com" target="_blank" rel="external">BaasBox</a> <a href="https://github.com/baasbox/baasbox" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/baasbox.png"></p>
+<h2 id="BaasBox"><a href="#BaasBox" class="headerlink" title="BaasBox "></a><a href="http://www.baasbox.com" target="_blank" rel="external">BaasBox</a> <a href="https://github.com/baasbox/baasbox" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/baasbox.png"></p>
 <p><strong>Multitenant:</strong> yes, <a href="http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend" target="_blank" rel="external">since v0.8.4</a> <br>
 <strong>Language:</strong> Java <br>
 <strong>Database:</strong> OrientDB <br>
@@ -256,7 +264,7 @@ features are excellent - you have social login, friendship/followers API and use
 files and assets API, push notifications and a plugin system.</p>
 <p>BaasBox is a good choice as a mBaaS for building mobile backend services. If you are a mobile app developer
 definitely consider BaasBox for your backend.</p>
-<h2 id="Deployd"><a href="http://deployd.com" target="_blank" rel="external">Deployd</a> <a href="https://github.com/deployd/deployd" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC"></p>
+<h2 id="Deployd"><a href="#Deployd" class="headerlink" title="Deployd "></a><a href="http://deployd.com" target="_blank" rel="external">Deployd</a> <a href="https://github.com/deployd/deployd" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC"></p>
 <p><strong>Multitenant:</strong> no <br>
 <strong>Language:</strong> JavaScript <br>
 <strong>Database:</strong> MongoDB <br>
@@ -274,7 +282,7 @@ collections (plain old JS objects) and events. Events can be emitted and process
 built-in. Other functionality like social login support is provided by third-party modules.</p>
 <p>Deployd is good for those who like a nice web admin UI and build JavaScript apps with Node.js. If you like
 MongoDB and Node.js, you’ll love Deployd!</p>
-<h2 id="Telepat"><a href="http://telepat.io" target="_blank" rel="external">Telepat</a> <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/telepat.png"></p>
+<h2 id="Telepat"><a href="#Telepat" class="headerlink" title="Telepat "></a><a href="http://telepat.io" target="_blank" rel="external">Telepat</a> <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="external"><i class="fa fa-github-square"></i></a></h2><p><img src="/assets/img/telepat.png"></p>
 <p><strong>Multitenant:</strong> yes <br>
 <strong>Language:</strong> JavaScript <br>
 <strong>Database:</strong> agnostic <br>
@@ -291,7 +299,7 @@ first but they provide a nice Docker package that will help you with that.</p>
 implemented with passwords and tokens.</p>
 <p>Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
 like push notifications. It’s well worth checking out especially if you’re building realtime apps.</p>
-<h2 id="Summary">Summary</h2><p>We’ve shown how developers can leverage open source backend frameworks to accelerate time-to-market and enhance
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>We’ve shown how developers can leverage open source backend frameworks to accelerate time-to-market and enhance
 their products’ security and scalability. While some frameworks cater to mobile developers and make very specific
 choices in terms of technology stack, other try to have broader use cases and be database-agnostic.</p>
 <p>In order to decide which BaaS package is best for your project, start by defining its scope and platform - is it
@@ -303,10 +311,10 @@ locally on your development machine and give it a try.</p>
       
     </div>
     <div class="article-footer">
-      <a data-url="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" data-id="cirrh78bf000l5j4s0y64affg" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" data-id="civ027st60008z54s70jfb8xv" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
-					<img class="img-circle" src="http://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
 				</a>
       
 
@@ -341,7 +349,7 @@ locally on your development machine and give it a try.</p>
 
 
 <section id="comments">
-	<div class="fb-comments" data-href="http://www.erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" data-numposts="5"></div>
+	<div class="fb-comments" data-href="https://erudika.com/blog/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/" data-numposts="5"></div>
 </section>
 </section>
 					
@@ -396,7 +404,7 @@ locally on your development machine and give it a try.</p>
 
 	<div>
 		<div id="search-form-wrap">
-			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.erudika.com/blog"></form>
+			<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form>
 		</div>
 	</div>
 	<br><br>
@@ -441,11 +449,11 @@ locally on your development machine and give it a try.</p>
 			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
 </script>
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/blog/js/script.js" type="text/javascript"></script>
+<script src="/blog/js/script.js"></script>
 
 		</div>
 
