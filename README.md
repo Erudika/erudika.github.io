@@ -1,4 +1,4 @@
-# [Erudika.com](http://erudika.com) website
+# [Erudika.com](https://erudika.com) website
 
 This is the code for our website.
 

@@ -12,7 +12,7 @@ This past month was interesting and quite busy for us - we got valuable feedback
 fixed many bugs, released the [Android client for Para](https://github.com/Erudika/para-client-android) and a new
 plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We've also updated
 the documentation of our open source backend framework and redesigned the landing page on
-[paraio.org](http://www.paraio.org). The docs should now look even better on mobile devices with high-DPI displays.
+[paraio.org](https://paraio.org). The docs should now look even better on mobile devices with high-DPI displays.
 
 <!-- more -->
 
@@ -24,7 +24,7 @@ three interfaces are the foundation and their implementations define how objects
  like we did for MongoDB. To create a plugin, you simply create a new Java project and import `para-core` using Maven.
  Then you implement one of the three interfaces above. Finally, put the compiled plugin inside a `lib` folder relative
  to the `para-x.y.z.war`. For more information about plugins,
- [refer to the documentation](http://www.paraio.org/docs/#008-plugins).
+ [refer to the documentation](https://paraio.org/docs/#008-plugins).
 
 Our [para-dao-mongodb](https://github.com/Erudika/para-dao-mongodb) plugin is the first official plugin for Para and
 it adds support for MongoDB. It was written by [Luca Venturella](https://github.com/lucav) and works with the latest

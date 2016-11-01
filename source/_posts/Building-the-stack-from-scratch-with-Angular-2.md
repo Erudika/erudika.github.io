@@ -43,7 +43,7 @@ because it has a nice JSON API for our app to connect to. To run the server you'
 ## Step 0 (backend)
 
 - Get [Java](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-- Get [Para](http://www.paraio.org/)
+- Get [Para](https://paraio.org/)
 - Start the server in a separate terminal:
 
 ```bash
@@ -73,7 +73,7 @@ without adding extra features like authentication and login pages. By default th
 requests are allowed, but for the purpose of this tutorial we're going to add a new permission to allow all requests to
 just one specific resource - `/v1/recipes`.
 
-Go to [console.paraio.org](http://console.paraio.org) and enter the credentials that you saved in the beginning. Also
+Go to [console.paraio.org](https://console.paraio.org) and enter the credentials that you saved in the beginning. Also
 click the cog icon to edit the API endpoint and set it to `http://localhost:8080`. Click 'Connect'.
 
 Next, go to 'App' on the left and edit the root app called `para`. You'll see a section for resource permissions and

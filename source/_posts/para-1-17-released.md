@@ -36,7 +36,7 @@ store information and claims about the user and that information is signed and c
 
 Originally, Para supported only cookies and allowed users to sign in only to the server running Para.
 This was quite limiting. Now with JWTs users can be authenticated and created per app
-(see [the docs for apps](http://www.paraio.org/docs/#011-apps)) through the API.
+(see [the docs for apps](https://paraio.org/docs/#011-apps)) through the API.
 Cookies are still supported but using web tokens is recommended. For example, to sign in a user with
 Facebook you have to make a request like this:
 

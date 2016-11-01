@@ -77,7 +77,7 @@
     <link href="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/"/>
     <id>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</id>
     <published>2016-06-09T11:37:12.000Z</published>
-    <updated>2016-11-01T22:27:00.715Z</updated>
+    <updated>2016-11-01T23:30:31.863Z</updated>
     
     <content type="html"><![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angular 2</strong>. This is intended for
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong>
@@ -101,7 +101,7 @@ new to Para, it’s a general-purpose backend framework/server written in Java. 
 because it has a nice JSON API for our app to connect to. To run the server you’re going to need a Java runtime.</p>
 <h2 id="Step-0-backend"><a href="#Step-0-backend" class="headerlink" title="Step 0 (backend)"></a>Step 0 (backend)</h2><ul>
 <li>Get <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank" rel="external">Java</a></li>
-<li>Get <a href="http://www.paraio.org/" target="_blank" rel="external">Para</a></li>
+<li>Get <a href="https://paraio.org/" target="_blank" rel="external">Para</a></li>
 <li>Start the server in a separate terminal:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># run Para</span></div><div class="line">java -jar para-x.y.z.war</div></pre></td></tr></table></figure>
@@ -115,7 +115,7 @@ this:</p>
 without adding extra features like authentication and login pages. By default the backend is secured and only signed
 requests are allowed, but for the purpose of this tutorial we’re going to add a new permission to allow all requests to
 just one specific resource - <code>/v1/recipes</code>.</p>
-<p>Go to <a href="http://console.paraio.org" target="_blank" rel="external">console.paraio.org</a> and enter the credentials that you saved in the beginning. Also
+<p>Go to <a href="https://console.paraio.org" target="_blank" rel="external">console.paraio.org</a> and enter the credentials that you saved in the beginning. Also
 click the cog icon to edit the API endpoint and set it to <code>http://localhost:8080</code>. Click ‘Connect’.</p>
 <p>Next, go to ‘App’ on the left and edit the root app called <code>para</code>. You’ll see a section for resource permissions and
 there you will write a simple permission definition in JSON:</p>
@@ -347,13 +347,13 @@ We’d appreciate any &lt;a href=&quot;https://github.com/erudika/para-admin-ui&
     <link href="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/"/>
     <id>https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</id>
     <published>2016-03-06T21:46:35.000Z</published>
-    <updated>2016-06-01T12:50:55.479Z</updated>
+    <updated>2016-11-01T23:30:53.303Z</updated>
     
     <content type="html"><![CDATA[<p>This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients,
 fixed many bugs, released the <a href="https://github.com/Erudika/para-client-android" target="_blank" rel="external">Android client for Para</a> and a new
 plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We’ve also updated
 the documentation of our open source backend framework and redesigned the landing page on
-<a href="http://www.paraio.org" target="_blank" rel="external">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>
+<a href="https://paraio.org" target="_blank" rel="external">paraio.org</a>. The docs should now look even better on mobile devices with high-DPI displays.</p>
 <a id="more"></a>
 <p><img src="https://www.erudika.com/assets/img/blogpost_media3.png" alt=""></p>
 <p>Para <strong>v1.18</strong> supports plugins for the three main components in our framework - <code>DAO</code>, <code>Search</code> and <code>Cache</code>. These
@@ -362,7 +362,7 @@ three interfaces are the foundation and their implementations define how objects
  like we did for MongoDB. To create a plugin, you simply create a new Java project and import <code>para-core</code> using Maven.
  Then you implement one of the three interfaces above. Finally, put the compiled plugin inside a <code>lib</code> folder relative
  to the <code>para-x.y.z.war</code>. For more information about plugins,
- <a href="http://www.paraio.org/docs/#008-plugins" target="_blank" rel="external">refer to the documentation</a>.</p>
+ <a href="https://paraio.org/docs/#008-plugins" target="_blank" rel="external">refer to the documentation</a>.</p>
 <p>Our <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">para-dao-mongodb</a> plugin is the first official plugin for Para and
 it adds support for MongoDB. It was written by <a href="https://github.com/lucav" target="_blank" rel="external">Luca Venturella</a> and works with the latest
 Mongo server v3.2. We plan to add more plugins like this for Cassandra, PostgreSQL and others. By writing your own
@@ -400,7 +400,7 @@ stickers on the day of the conference.</p>
 fixed many bugs, released the &lt;a href=&quot;https://github.com/Erudika/para-client-android&quot;&gt;Android client for Para&lt;/a&gt; and a new
 plugin for MongoDB. The number one request for this version was support for plugins and MongoDB. We’ve also updated
 the documentation of our open source backend framework and redesigned the landing page on
-&lt;a href=&quot;http://www.paraio.org&quot;&gt;paraio.org&lt;/a&gt;. The docs should now look even better on mobile devices with high-DPI displays.&lt;/p&gt;
+&lt;a href=&quot;https://paraio.org&quot;&gt;paraio.org&lt;/a&gt;. The docs should now look even better on mobile devices with high-DPI displays.&lt;/p&gt;
     
     </summary>
     
@@ -420,7 +420,7 @@ the documentation of our open source backend framework and redesigned the landin
     <link href="https://erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>https://erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-06-01T12:50:25.423Z</updated>
+    <updated>2016-11-01T23:31:20.678Z</updated>
     
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
@@ -442,7 +442,7 @@ about JWTs is that they are stateless and can be stored anywhere - cookies, loca
 store information and claims about the user and that information is signed and cannot be tampered with.</p>
 <p>Originally, Para supported only cookies and allowed users to sign in only to the server running Para.
 This was quite limiting. Now with JWTs users can be authenticated and created per app
-(see <a href="http://www.paraio.org/docs/#011-apps" target="_blank" rel="external">the docs for apps</a>) through the API.
+(see <a href="https://paraio.org/docs/#011-apps" target="_blank" rel="external">the docs for apps</a>) through the API.
 Cookies are still supported but using web tokens is recommended. For example, to sign in a user with
 Facebook you have to make a request like this:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">POST /v1/jwt_auth</div><div class="line">&#123;</div><div class="line">  <span class="string">"appid"</span>: <span class="string">"app:myapp"</span>,</div><div class="line">  <span class="string">"provider"</span>: <span class="string">"facebook"</span>,</div><div class="line">  <span class="string">"token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eWIiO..."</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -499,7 +499,7 @@ deployed on &lt;a href=&quot;https://paraio.com&quot;&gt;ParaIO.com&lt;/a&gt;, o
     <link href="https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
     <id>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
-    <updated>2016-06-28T13:32:04.487Z</updated>
+    <updated>2016-11-01T23:31:04.398Z</updated>
     
     <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
 server-side component of your website or app. Developers use them to build and iterate on products faster than ever
@@ -573,7 +573,7 @@ We have plans to include connectors for <a href="https://github.com/Erudika/para
 it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
 we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
 others use it as an alternative to Parse for their mobile development.</p>
-<p>The <a href="http://www.paraio.org/docs" target="_blank" rel="external">documentation</a> is great, contained in a single webpage for easy navigation and API methods
+<p>The <a href="https://paraio.org/docs" target="_blank" rel="external">documentation</a> is great, contained in a single webpage for easy navigation and API methods
 are described clearly. Getting started is pretty easy - download the executable WAR package and run it:
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ java -jar para-x.y.z.war</div><div class="line">$ curl localhost:8080/v1/_setup</div></pre></td></tr></table></figure></p>
 <p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.
