@@ -33,7 +33,7 @@ server-side component of your website or app. Developers use them to build and i
 <meta property="og:image" content="https://erudika.com/blog/assets/img/baasbox.png">
 <meta property="og:image" content="https://erudika.com/blog/assets/img/deployd.png">
 <meta property="og:image" content="https://erudika.com/blog/assets/img/telepat.png">
-<meta property="og:updated_time" content="2016-11-01T23:31:04.398Z">
+<meta property="og:updated_time" content="2016-11-04T16:59:48.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
 <meta name="twitter:description" content="Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
@@ -224,7 +224,8 @@ JavaScript.</p>
 <p>Para is our own little backend framework. It is powered by Java and was released in early 2014. Out of the box, Para
 integrates with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults.
 The design is flexible enough so that anyone can implement the interfaces for search, persistence and caching functionality.
-We have plans to include connectors for <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">MongoDB</a> (done!) and Cassandra soon.</p>
+Apart from DynamoDB, we have connectors for <a href="https://github.com/Erudika/para-dao-mongodb" target="_blank" rel="external">MongoDB</a> and
+<a href="https://github.com/Erudika/para-dao-cassandra" target="_blank" rel="external">Cassandra</a>. We’re planning to include support for PostgreSQL as well.</p>
 <p>Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
 it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
 we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
