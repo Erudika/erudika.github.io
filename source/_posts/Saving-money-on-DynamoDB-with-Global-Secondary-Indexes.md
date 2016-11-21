@@ -7,7 +7,7 @@ comments: true
 img: img9.jpg
 ---
 
-**Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI). 
+**Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI).
 
 We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it's a managed service and we had one less thing to maintain. Later we found out that global indexes could help us save a lot of extra costs and so we implemented a simple solution, which we call "shared tables".
 
@@ -68,30 +68,32 @@ The result of the above request is going to be the table `shared` and the index 
 
 <pre>
 
- +------------+      +------------+
- | table1_id1 |      | table1_id1 |
- +------------+      +------------+
- | table2_id3 |      | table1_id2 |
- +------------+      +------------+
- | table3_id5 |      | table2_id3 |
- +------------+      +------------+
- | table1_id2 |      | table2_id4 |
- +------------+      +------------+
- | table2_id4 +------+ table3_id5 |
- +------------+      +------------+
- | table3_id6 |      | table3_id6 |
- +------------+      +------------+
- |   . . .    |      |   . . .    |
- +------------+      +------------+
- | tableN_idX |      | tableN_idX |
- +------------+      +------------+
- | tableN_idY |      | tableN_idY |
- +------------+      +------------+
-     shared           shared-index
+  WRITE TO +          READ FROM ^
+           |                    |
+  +--------v---+      +---------+--+
+  | table1_id1 |      | table1_id1 |
+  +------------+      +------------+
+  | table2_id3 |      | table1_id2 |
+  +------------+      +------------+
+  | table3_id5 |      | table2_id3 |
+  +------------+      +------------+
+  | table1_id2 |      | table2_id4 |
+  +------------+      +------------+
+  | table2_id4 +------+ table3_id5 |
+  +------------+      +------------+
+  | table3_id6 |      | table3_id6 |
+  +------------+      +------------+
+  |   . . .    |      |   . . .    |
+  +------------+      +------------+
+  | tableN_idX |      | tableN_idX |
+  +------------+      +------------+
+  | tableN_idY |      | tableN_idY |
+  +------------+      +------------+
+      shared           shared-index
 
 </pre>
 
-The next important decision will be the format of the primary key in the `shared` table. We've decided to go for `tableID_objectID` — each object key is prefixed by the name of the table it belongs to. It's a simple and effective way to avoid key collisions and make sure that a request coming from "table1" cannot read the objects in "table2", for example.  
+The next important decision will be the format of the primary key in the `shared` table. We've decided to go for `tableID_objectID` — each object key is prefixed by the name of the table it belongs to. It's a simple and effective way to avoid key collisions and make sure that a request coming from "table1" cannot read the objects in "table2", for example.
 
 Now, we have to modify our code to be able to make requests to the new shared table and to do that we wrote a simple "routing" function which gives us the correct key to an object in a shared table:
 
@@ -110,12 +112,12 @@ So, if we had a read function in our code called `readObject(key, table)` this w
 
 ```java
 String readPageFromSharedTable(String tableID, String fromKey, List<Page<Item, QueryOutcome>> results) {
-  ValueMap valueMap = new ValueMap().withString(":aid", tableID);
+  ValueMap valueMap = new ValueMap().withString(":tid", tableID);
   valueMap.put(":ts", fromKey);
   Index index = getSharedIndex(tableID);
 
   QuerySpec spec = new QuerySpec().withMaxPageSize(100).withMaxResultSize(100).
-      withKeyConditionExpression("tableID = :aid and timestamp > :ts").
+      withKeyConditionExpression("tableID = :tid and timestamp > :ts").
       withValueMap(valueMap);
 
   Page<Item, QueryOutcome> items = index.query(spec);
