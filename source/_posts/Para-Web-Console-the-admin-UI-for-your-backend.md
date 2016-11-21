@@ -16,7 +16,7 @@ We'd appreciate any [pull requests on GitHub](https://github.com/erudika/para-ad
 
 <!-- more -->
 
-![](https://www.erudika.com/assets/img/pwc1.png)
+![](https://erudika.com/assets/img/pwc1.png)
 
 Once you connect to Para with your access keys, you see the dashboard where you see some aggregated information about
 your app and server. On the left there is a list of object types. These include both core types defined in Java classes

@@ -25,10 +25,12 @@
 <meta property="og:url" content="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advan">
-<meta property="og:updated_time" content="2016-11-21T16:02:34.238Z">
+<meta property="og:image" content="https://erudika.com/assets/img/blogpost_media7.png">
+<meta property="og:updated_time" content="2016-11-21T16:05:05.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saving money on DynamoDB with Global Secondary Indexes">
 <meta name="twitter:description" content="Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advan">
+<meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media7.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
@@ -150,6 +152,7 @@
         <p>Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI). </p>
 <p>We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it’s a managed service and we had one less thing to maintain. Later we found out that global indexes would help us save a lot of extra costs and so we implemented a simple solution, which we call “shared tables”.</p>
 <a id="more"></a>
+<p><img src="https://erudika.com/assets/img/blogpost_media7.png" alt=""></p>
 <p>Our solution is applicable to cases where you have a large number of Dynamo tables but each of these has a low utilization. For example, it may contain a few hundred items and have low throughput capacity of 1 read and 1 write per second. The idea is to combine those tables into one and save some money. First, let’s look at this neat ASCII diagram of what we have so far.</p>
 <pre>
 

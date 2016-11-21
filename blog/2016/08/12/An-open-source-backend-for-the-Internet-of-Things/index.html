@@ -25,12 +25,12 @@
 <meta property="og:url" content="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Things — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increa">
-<meta property="og:image" content="https://www.erudika.com/assets/img/blogpost_media6.png">
-<meta property="og:updated_time" content="2016-08-12T08:27:55.605Z">
+<meta property="og:image" content="https://erudika.com/assets/img/blogpost_media6.png">
+<meta property="og:updated_time" content="2016-11-21T16:05:35.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="An open source backend for the Internet of Things">
 <meta name="twitter:description" content="Things — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increa">
-<meta name="twitter:image" content="https://www.erudika.com/assets/img/blogpost_media6.png">
+<meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media6.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
@@ -151,7 +151,7 @@
       
         <p><strong>Things</strong> — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based on Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realized we should’ve done this sooner. </p>
 <a id="more"></a>
-<p><img src="https://www.erudika.com/assets/img/blogpost_media6.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/blogpost_media6.png" alt=""></p>
 <p>There are several key players in terms of IoT cloud platforms, but we chose to focus on two — <strong>AWS</strong> and <strong>Azure</strong>. In Para <code>1.20.0</code> we’ve implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There’s a new object called <code>Thing</code> which holds all the information about your device — the state of the device, the security credentials for the cloud and other important data. When a <code>Thing</code> is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates <code>Thing</code> objects in the background. If you prefer one of these two approaches, we’d love to hear your feedback. </p>
 <p>Creating things from the Para API is really simple — you only need to configure your access keys for the cloud provider of your choice. Then you make a <code>POST</code> request:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">POST /v1/things</div><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;RPiThingy&quot;,</div><div class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>

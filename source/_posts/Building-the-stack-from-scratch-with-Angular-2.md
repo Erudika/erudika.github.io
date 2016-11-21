@@ -16,7 +16,7 @@ some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https:
 
 <!-- more -->
 
-![](https://www.erudika.com/assets/img/blogpost_media5.png)
+![](https://erudika.com/assets/img/blogpost_media5.png)
 
 ## Step 0 (frontend)
 

@@ -13,6 +13,8 @@ We migrated from Cassandra to DynamoDB a while back. This decision was taken mai
 
 <!-- more -->
 
+![](https://erudika.com/assets/img/blogpost_media7.png)
+
 Our solution is applicable to cases where you have a large number of Dynamo tables but each of these has a low utilization. For example, it may contain a few hundred items and have low throughput capacity of 1 read and 1 write per second. The idea is to combine those tables into one and save some money. First, let's look at this neat ASCII diagram of what we have so far.
 
 <pre>
