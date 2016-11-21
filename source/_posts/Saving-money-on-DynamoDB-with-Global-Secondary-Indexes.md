@@ -7,9 +7,9 @@ comments: true
 img: img9.jpg
 ---
 
-Amazon's DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI). 
+**Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI). 
 
-We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it's a managed service and we had one less thing to maintain. Later we found out that global indexes would help us save a lot of extra costs and so we implemented a simple solution, which we call "shared tables".
+We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it's a managed service and we had one less thing to maintain. Later we found out that global indexes could help us save a lot of extra costs and so we implemented a simple solution, which we call "shared tables".
 
 <!-- more -->
 
@@ -134,4 +134,4 @@ String readPageFromSharedTable(String tableID, String fromKey, List<Page<Item, Q
 
 Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs **$0.66/month**. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay **(100 * 0.66) = $66 per month**. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere **$1.32/month** for the minimum capacity of 1 read/s and 1 write/s. That's a *50x* cost reduction — good job!
 
-*If you liked this post, you should check out Para - our backend service for busy developers. Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+*If you liked this post, you should check out [Para](https://paraio.com) - our backend service for busy developers. Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
