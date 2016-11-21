@@ -132,6 +132,6 @@ String readPageFromSharedTable(String tableID, String fromKey, List<Page<Item, Q
 
 ## Conclusion
 
-Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs **$0.66/month**. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay **(100 * 0.66) = $66 per month**. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere **$1.32/month** for the minimum capacity of 1 read/s and 1 write/s. That's a **50x cost reduction** — good job!
+Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs **$0.66/month**. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay **(100 * 0.66) = $66 per month**. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere **$1.32/month** for the minimum capacity of 1 read/s and 1 write/s. That's a *50x* cost reduction — good job!
 
-*If you liked this post, you should check out Para - our backend service for busy developers? Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+*If you liked this post, you should check out Para - our backend service for busy developers. Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
