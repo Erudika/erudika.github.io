@@ -80,7 +80,7 @@ a:after {
 /* Bootstrap Modifications */
 
 .navbar {
-	font-weight: 800;
+	font-weight: 400;
 	font-size: 14px;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -101,6 +101,10 @@ a:after {
 	margin-bottom: 10px;
 }
 
+.navbar-default .navbar-nav>li>a {
+	font-weight: 400;
+}
+
 .lead {
 	letter-spacing: 1px;
 }
@@ -116,40 +120,57 @@ a:after {
 }
 
 .img-cloud .cloud2 {
-	color: #3399cc;
+	color: #CCC;
 }
 
 /* hello */
 #hello {
 	width: 100%;
-	padding: 100px 0 100px 0;
-	background: url(../img/bg.jpg) no-repeat center center scroll;
+	padding: 50px 0 100px 0;
+	/*background: linear-gradient(to bottom right, #349acc, #ef00e5 15%, #d7f0a2 15%, #d7f0a2 85%, #fff 85%);*/
+	/*background: linear-gradient(to bottom, #349acc -22%, rgb(200, 236, 219) 74%, #fff 96%);*/
+	background: linear-gradient(to bottom, #349acc -12%, #FFF 100%);
+/*	background: url(../img/bg.jpg) no-repeat center center scroll;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
+
 }
 
 #hello h1 {
-	font-size: 36pt;
-	font-weight: 700;
+	font-size: 40pt;
+	font-weight: 300;
 	letter-spacing: 3px;
 	color: white;
-	text-shadow: -1px 2px 0px black;
+	/*text-shadow: -1px 2px 0px black;*/
 }
 
 #hello h2 {
-	color: black;
-	font-weight: 400;
+	color: #333333;
+	font-weight: 300;
+}
+
+#hello-icon1 {
+	color: white;
+	position: absolute;
+	top: 60px;
+	font-size: 50px;
+}
+#hello-icon2 {
+	color: white;
+	position: absolute;
+	bottom: -150px;
+	left: 0;
+	font-size: 152px;
 }
 
 /* Blue */
-#blue {
-	background-color: #3399cc;
-	padding-top: 50px;
-	margin-bottom: 0px;
+.blue {
+	padding: 50px 0 80px 0;
 }
 
+/*
 #blue h3 {
 	color: white;
 	font-weight: 400;
@@ -160,7 +181,7 @@ a:after {
 	color: white;
 	font-weight: 400;
 	font-size: 20px;
-}
+}*/
 
 /* Skills */
 #skills {
