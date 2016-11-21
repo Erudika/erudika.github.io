@@ -9,11 +9,11 @@ img: img9.jpg
 
 Amazon's DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI). 
 
-We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also bacause it's a managed service and we had one less thing to maintain. Later we found out that global indexes would help us save a lot of extra costs and so we implemented a simple solution, which we call "shared tables".
+We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it's a managed service and we had one less thing to maintain. Later we found out that global indexes would help us save a lot of extra costs and so we implemented a simple solution, which we call "shared tables".
 
 <!-- more -->
 
-Our solution is aplicable to cases where you have a large number of Dynamo tables but each of these has a low utilization. For example, it may contain a few hundred items and have low throughput capacity of 1 read and 1 write per second. The idea is to combine those tables into one and save some money. First, let's look at this neat ASCII diagram of what we have so far.
+Our solution is applicable to cases where you have a large number of Dynamo tables but each of these has a low utilization. For example, it may contain a few hundred items and have low throughput capacity of 1 read and 1 write per second. The idea is to combine those tables into one and save some money. First, let's look at this neat ASCII diagram of what we have so far.
 
 <pre>
 
@@ -30,33 +30,33 @@ We are going to create a new table called `shared` and also we'll have to create
 
 ```java
 boolean createSharedTable(String sharedTableName, long readCapacity, long writeCapacity) {
-	if (existsTable(sharedTableName)) {
-		return false;
-	}
-	try {
-		// build the GSI request
-		GlobalSecondaryIndex secIndex = new GlobalSecondaryIndex().
-				withIndexName(sharedTableName + "-index").
-				withProvisionedThroughput(new ProvisionedThroughput().
-						withReadCapacityUnits(1L).
-						withWriteCapacityUnits(1L)).
-				withProjection(new Projection().withProjectionType(ProjectionType.ALL)).
-				withKeySchema(new KeySchemaElement().withAttributeName("tableID").withKeyType(KeyType.HASH),
-						new KeySchemaElement().withAttributeName("timestamp").withKeyType(KeyType.RANGE));
+  if (existsTable(sharedTableName)) {
+    return false;
+  }
+  try {
+    // build the GSI request
+    GlobalSecondaryIndex secIndex = new GlobalSecondaryIndex().
+        withIndexName(sharedTableName + "-index").
+        withProvisionedThroughput(new ProvisionedThroughput().
+            withReadCapacityUnits(1L).
+            withWriteCapacityUnits(1L)).
+        withProjection(new Projection().withProjectionType(ProjectionType.ALL)).
+        withKeySchema(new KeySchemaElement().withAttributeName("tableID").withKeyType(KeyType.HASH),
+            new KeySchemaElement().withAttributeName("timestamp").withKeyType(KeyType.RANGE));
 
-		// create the shared table with the above GSI attached
-		getClient().createTable(new CreateTableRequest().withTableName(sharedTableName).
-				withKeySchema(new KeySchemaElement(Config._KEY, KeyType.HASH)).
-				withAttributeDefinitions(new AttributeDefinition(Config._KEY, ScalarAttributeType.S),
-						new AttributeDefinition("tableID", ScalarAttributeType.S),
-						new AttributeDefinition("timestamp", ScalarAttributeType.S)).
-				withGlobalSecondaryIndexes(secIndex).
-				withProvisionedThroughput(new ProvisionedThroughput(readCapacity, writeCapacity)));
-	} catch (Exception e) {
-		logger.error("Failed to create shared table.", e);
-		return false;
-	}
-	return true;
+    // create the shared table with the above GSI attached
+    getClient().createTable(new CreateTableRequest().withTableName(sharedTableName).
+        withKeySchema(new KeySchemaElement(Config._KEY, KeyType.HASH)).
+        withAttributeDefinitions(new AttributeDefinition(Config._KEY, ScalarAttributeType.S),
+            new AttributeDefinition("tableID", ScalarAttributeType.S),
+            new AttributeDefinition("timestamp", ScalarAttributeType.S)).
+        withGlobalSecondaryIndexes(secIndex).
+        withProvisionedThroughput(new ProvisionedThroughput(readCapacity, writeCapacity)));
+  } catch (Exception e) {
+    logger.error("Failed to create shared table.", e);
+    return false;
+  }
+  return true;
 }
 ```
 
@@ -95,12 +95,12 @@ Now, we have to modify our code to be able to make requests to the new shared ta
 
 ```java
 String getKeyForTableID(String key, String tableID) {
-	// if table is shared return the composite key
-	if (isSharedTable(tableID)) {
-		return tableID + "_" + key;
-	} else {
-		return key;
-	}
+  // if table is shared return the composite key
+  if (isSharedTable(tableID)) {
+    return tableID + "_" + key;
+  } else {
+    return key;
+  }
 }
 ```
 
@@ -108,26 +108,28 @@ So, if we had a read function in our code called `readObject(key, table)` this w
 
 ```java
 String readPageFromSharedTable(String tableID, String fromKey, List<Page<Item, QueryOutcome>> results) {
-	ValueMap valueMap = new ValueMap().withString(":aid", tableID);
-	valueMap.put(":ts", fromKey);
-	Index index = getSharedIndex(tableID);
+  ValueMap valueMap = new ValueMap().withString(":aid", tableID);
+  valueMap.put(":ts", fromKey);
+  Index index = getSharedIndex(tableID);
 
-	QuerySpec spec = new QuerySpec().withMaxPageSize(100).withMaxResultSize(100).
-			withKeyConditionExpression("tableID = :aid and timestamp > :ts").
-			withValueMap(valueMap);
+  QuerySpec spec = new QuerySpec().withMaxPageSize(100).withMaxResultSize(100).
+      withKeyConditionExpression("tableID = :aid and timestamp > :ts").
+      withValueMap(valueMap);
 
-	Page<Item, QueryOutcome> items = index.query(spec);
+  Page<Item, QueryOutcome> items = index.query(spec);
 
-	if (items.hasNextPage()) {
-		results.add(items.firstPage());
-		// return last key as a start key to next page
-		return items.getLowLevelResult().getQueryResult().getLastEvaluatedKey().get("timestamp").getS();
-	} else {
-		return null;
-	}
+  if (items.hasNextPage()) {
+    results.add(items.firstPage());
+    // return last key as a start key to next page
+    return items.getLowLevelResult().getQueryResult().getLastEvaluatedKey().get("timestamp").getS();
+  } else {
+    return null;
+  }
 }
 ```
 
 ## Conclusion
 
-Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs $0.66/month. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay (100 * 0.66) = $66 per month. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere $1.32/month for the mininum capacity of 1 read/s and 1 write/s. That's a 50x cost reduction — good job!
+Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs **$0.66/month**. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay **(100 * 0.66) = $66 per month**. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere **$1.32/month** for the minimum capacity of 1 read/s and 1 write/s. That's a **50x cost reduction** — good job!
+
+*If you liked this post, you should check out Para - our backend service for busy developers? Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
