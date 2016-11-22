@@ -257,6 +257,10 @@ b, strong {
 	font-weight: 400;
 }
 
+.text-white {
+  color: #CECECE;
+}
+
 .browser-mockup {
   border-top: 2em solid rgba(230, 230, 230, 0.7);
   position: relative;
