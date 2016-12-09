@@ -611,6 +611,40 @@ b, strong {
 .search-form-submit:focus {
   color: #777;
 }
+
+#search-box {
+	background: #fff;
+	width: 100%;
+	padding: 10px;
+	-webkit-border-radius: 15px;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+}
+
+.tt-menu {
+	width: 100%;
+	margin: 2px 0;
+	padding: 5px 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.tt-suggestion {
+	width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tt-suggestion.tt-cursor {
+	color: #fff;
+	background-color: #0097cf;
+}
+
+.twitter-typeahead {
+	width: 100%;
+}
+
 .article {
   margin: 50px 0;
 }

@@ -4,9 +4,9 @@
   
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://erudika.com/"/>
+  <link href="https://erudika.com/blog/"/>
   <updated>2016-11-21T17:28:09.710Z</updated>
-  <id>https://erudika.com/</id>
+  <id>https://erudika.com/blog/</id>
   
   <author>
     <name>Alexander B.</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Saving money on DynamoDB with Global Secondary Indexes</title>
-    <link href="https://erudika.com/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/"/>
-    <id>https://erudika.com/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/</id>
+    <link href="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/"/>
+    <id>https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/</id>
     <published>2016-11-21T15:39:07.000Z</published>
     <updated>2016-11-21T17:28:09.710Z</updated>
     
@@ -86,18 +86,18 @@
     </summary>
     
     
-      <category term="aws" scheme="https://erudika.com/tags/aws/"/>
+      <category term="aws" scheme="https://erudika.com/blog/tags/aws/"/>
     
-      <category term="dynamodb" scheme="https://erudika.com/tags/dynamodb/"/>
+      <category term="dynamodb" scheme="https://erudika.com/blog/tags/dynamodb/"/>
     
-      <category term="tips" scheme="https://erudika.com/tags/tips/"/>
+      <category term="tips" scheme="https://erudika.com/blog/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>An open source backend for the Internet of Things</title>
-    <link href="https://erudika.com/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/"/>
-    <id>https://erudika.com/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</id>
+    <link href="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/"/>
+    <id>https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</id>
     <published>2016-08-12T08:01:00.000Z</published>
     <updated>2016-11-21T16:05:35.418Z</updated>
     
@@ -141,20 +141,20 @@
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
-      <category term="release" scheme="https://erudika.com/tags/release/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="iot" scheme="https://erudika.com/tags/iot/"/>
+      <category term="iot" scheme="https://erudika.com/blog/tags/iot/"/>
     
-      <category term="devices" scheme="https://erudika.com/tags/devices/"/>
+      <category term="devices" scheme="https://erudika.com/blog/tags/devices/"/>
     
   </entry>
   
   <entry>
     <title>Building the stack from scratch with Angular 2</title>
-    <link href="https://erudika.com/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/"/>
-    <id>https://erudika.com/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</id>
+    <link href="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/"/>
+    <id>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</id>
     <published>2016-06-09T11:37:12.000Z</published>
     <updated>2016-11-21T16:05:05.411Z</updated>
     
@@ -309,20 +309,20 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     </summary>
     
     
-      <category term="angular" scheme="https://erudika.com/tags/angular/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
     
-      <category term="tutorial" scheme="https://erudika.com/tags/tutorial/"/>
+      <category term="tutorial" scheme="https://erudika.com/blog/tags/tutorial/"/>
     
-      <category term="typescript" scheme="https://erudika.com/tags/typescript/"/>
+      <category term="typescript" scheme="https://erudika.com/blog/tags/typescript/"/>
     
   </entry>
   
   <entry>
     <title>jPrime roundup, Para client for iOS and Swift</title>
-    <link href="https://erudika.com/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/"/>
-    <id>https://erudika.com/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</id>
+    <link href="https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/"/>
+    <id>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</id>
     <published>2016-06-01T10:40:20.000Z</published>
     <updated>2016-11-21T16:05:05.419Z</updated>
     
@@ -347,22 +347,22 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
-      <category term="release" scheme="https://erudika.com/tags/release/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="jprime" scheme="https://erudika.com/tags/jprime/"/>
+      <category term="jprime" scheme="https://erudika.com/blog/tags/jprime/"/>
     
-      <category term="ios" scheme="https://erudika.com/tags/ios/"/>
+      <category term="ios" scheme="https://erudika.com/blog/tags/ios/"/>
     
-      <category term="swift" scheme="https://erudika.com/tags/swift/"/>
+      <category term="swift" scheme="https://erudika.com/blog/tags/swift/"/>
     
   </entry>
   
   <entry>
     <title>Para Web Console - the admin UI for your backend</title>
-    <link href="https://erudika.com/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/"/>
-    <id>https://erudika.com/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</id>
+    <link href="https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/"/>
+    <id>https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</id>
     <published>2016-03-24T23:02:02.000Z</published>
     <updated>2016-11-21T16:05:05.415Z</updated>
     
@@ -411,20 +411,20 @@ We’d appreciate any &lt;a href=&quot;https://github.com/erudika/para-admin-ui&
     </summary>
     
     
-      <category term="angular" scheme="https://erudika.com/tags/angular/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
     
-      <category term="ng-admin" scheme="https://erudika.com/tags/ng-admin/"/>
+      <category term="ng-admin" scheme="https://erudika.com/blog/tags/ng-admin/"/>
     
-      <category term="frontend" scheme="https://erudika.com/tags/frontend/"/>
+      <category term="frontend" scheme="https://erudika.com/blog/tags/frontend/"/>
     
   </entry>
   
   <entry>
     <title>Para v1.18 released, new site and jPrime</title>
-    <link href="https://erudika.com/2016/03/06/Para-v1-18-released-new-site-and-jPrime/"/>
-    <id>https://erudika.com/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</id>
+    <link href="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/"/>
+    <id>https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</id>
     <published>2016-03-06T21:46:35.000Z</published>
     <updated>2016-11-21T16:05:05.415Z</updated>
     
@@ -484,20 +484,20 @@ the documentation of our open source backend framework and redesigned the landin
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
-      <category term="release" scheme="https://erudika.com/tags/release/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="mongodb" scheme="https://erudika.com/tags/mongodb/"/>
+      <category term="mongodb" scheme="https://erudika.com/blog/tags/mongodb/"/>
     
-      <category term="jprime" scheme="https://erudika.com/tags/jprime/"/>
+      <category term="jprime" scheme="https://erudika.com/blog/tags/jprime/"/>
     
   </entry>
   
   <entry>
     <title>Para v1.17 released</title>
-    <link href="https://erudika.com/2016/01/05/para-1-17-released/"/>
-    <id>https://erudika.com/2016/01/05/para-1-17-released/</id>
+    <link href="https://erudika.com/blog/2016/01/05/para-1-17-released/"/>
+    <id>https://erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
     <updated>2016-11-21T16:05:05.423Z</updated>
     
@@ -565,18 +565,18 @@ deployed on &lt;a href=&quot;https://paraio.com&quot;&gt;ParaIO.com&lt;/a&gt;, o
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
-      <category term="release" scheme="https://erudika.com/tags/release/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="backend" scheme="https://erudika.com/tags/backend/"/>
+      <category term="backend" scheme="https://erudika.com/blog/tags/backend/"/>
     
   </entry>
   
   <entry>
     <title>Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat</title>
-    <link href="https://erudika.com/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
-    <id>https://erudika.com/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
+    <link href="https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
+    <id>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
     <updated>2016-11-04T16:59:48.355Z</updated>
     
@@ -742,22 +742,22 @@ before by focusing on the “fun” part - the frontend (client-side).&lt;/p&gt;
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/tags/para/"/>
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
-      <category term="backend" scheme="https://erudika.com/tags/backend/"/>
+      <category term="backend" scheme="https://erudika.com/blog/tags/backend/"/>
     
-      <category term="baas" scheme="https://erudika.com/tags/baas/"/>
+      <category term="baas" scheme="https://erudika.com/blog/tags/baas/"/>
     
-      <category term="frameworks" scheme="https://erudika.com/tags/frameworks/"/>
+      <category term="frameworks" scheme="https://erudika.com/blog/tags/frameworks/"/>
     
-      <category term="API" scheme="https://erudika.com/tags/API/"/>
+      <category term="API" scheme="https://erudika.com/blog/tags/API/"/>
     
   </entry>
   
   <entry>
     <title>Hello World!</title>
-    <link href="https://erudika.com/2015/10/16/hello-world/"/>
-    <id>https://erudika.com/2015/10/16/hello-world/</id>
+    <link href="https://erudika.com/blog/2015/10/16/hello-world/"/>
+    <id>https://erudika.com/blog/2015/10/16/hello-world/</id>
     <published>2015-10-15T21:00:00.000Z</published>
     <updated>2015-12-04T10:26:46.272Z</updated>
     
@@ -787,7 +787,7 @@ looking for a simple and scalable backend service, make sure you follow us and t
     </summary>
     
     
-      <category term="general" scheme="https://erudika.com/tags/general/"/>
+      <category term="general" scheme="https://erudika.com/blog/tags/general/"/>
     
   </entry>
   
