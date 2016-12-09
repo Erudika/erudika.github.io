@@ -122,6 +122,16 @@ ga('send', 'pageview');
 				</header>
 
 				<div class="outer">
+					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
+					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search" />
+					<small class="right">powered by
+						<a href="https://paraio.com" target="_blank">
+							<img src="/assets/img/para_logo.png" width="16" height="16" alt="Para logo"/>
+						</a>
+					</small>
+				</div>
+
+				<div class="outer">
 					<section id="main">
   
   
@@ -270,14 +280,17 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
     </div></section>
   
 </section>
-					
-					<aside id="sidebar" >
-  
-    
+				</div>
+				<footer>
+	<div class="container">
+		
+			<div class="row">
+	<div class="col-md-6">
+		
   <div class="widget-wrap">
     <h3 class="widget-title">Recents
 			
-				<a href="/blog/atom.xml" title="RSS Feed" class="right"><i class="fa fa-rss"></i></a>
+				<a href="/blog/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a>
 			
 		</h3>
     <div class="widget">
@@ -307,10 +320,9 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
     </div>
   </div>
 
-  
-    
-  
-    
+	</div>
+	<div class="col-md-3">
+		
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
@@ -318,32 +330,35 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
     </div>
   </div>
 
-  
+	</div>
+	<div class="col-md-3">
+		<div class="widget-wrap">
+	<div class="widget">
+		<a class="twitter-timeline" data-lang="en" data-width="290" data-height="220" data-theme="light" href="https://twitter.com/erudika">
+			Tweets by erudika</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
 
-	<div>
+
+	</div>
+
+<!--	<div>
 		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>
-		<!--<input type="text" id="search-box" class="search-form" value="" placeholder="Search" />-->
-	</div>
-	<br><br>
-	<div class="text-center">
-		<small><i class="fa fa-cc"></i> Images taken from <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.</small>
-	</div>
-</aside>
+	</div>-->
+</div>
 
-					
-				</div>
-				<footer>
-	
-	<div class="container">
+		
 		<div class="row">
-			<div class=" columns">
 				<div class="col-xs-6">
-					Hosted on <a href="https://github.com/Erudika/erudika.github.io"><i class="fa fa-github fa-lg"></i> GitHub</a>
+					<i class="fa fa-creative-commons" title="Creative Commons Attribution, Share-Alike License"></i>
+					2016 Erudika
 				</div>
 				<div class="col-xs-6 text-right">
-					Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+					<a href="https://github.com/Erudika/erudika.github.io" target="_blank">Powered by Hexo.</a>
+					<strong>
+						Images courtesy of <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.
+					</strong>
 				</div>
-			</div>
 		</div>
 	</div>
 </footer>
@@ -366,15 +381,18 @@ deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend serv
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script>
 			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
+
+			var APPID = "app:albogdano";
+			var ENDPOINT = "https://paraio.com/v1"; // OR "http://localhost:8080/v1"
 			$.ajaxSetup({
-					headers: { 'Authorization': 'Anonymous app:asd' }
+					headers: { 'Authorization': 'Anonymous ' + APPID }
 			});
 
 			var blogposts = new Bloodhound({
 				datumTokenizer: Bloodhound.tokenizers.whitespace,
 				queryTokenizer: Bloodhound.tokenizers.whitespace,
 				remote: {
-					url: 'http://localhost:8080/v1/blogposts?q=%QUERY',
+					url: ENDPOINT + '/blogposts?q=%QUERY',
 					wildcard: '%QUERY',
 					transform: function(res) {
 						return res.items || [];

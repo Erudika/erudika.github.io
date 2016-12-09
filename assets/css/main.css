@@ -339,8 +339,8 @@ b, strong {
   #main {
     display: inline;
     float: left;
-    width: 73.33333333333333%;
-    margin: 0 0.833333333333333%;
+    width: 100%;
+    margin: 0;
   }
 }
 .article-date,
@@ -350,10 +350,8 @@ b, strong {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #999;
   margin-bottom: 1em;
   line-height: 1em;
-  font-weight: bold;
 }
 .article-inner,
 .archive-article-inner {
@@ -629,11 +627,16 @@ b, strong {
 	border: 1px solid #ccc;
 }
 
+.tt-suggestion:last-child {
+	border-bottom: none;
+}
+
 .tt-suggestion {
-	width: 150px;
+/*	width: 260px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;*/
+	border-bottom: 1px dashed #ccc;
 }
 
 .tt-suggestion.tt-cursor {
@@ -1376,15 +1379,10 @@ pre .javascript .function {
   margin: 30px 0;
 }
 .widget {
-  color: #777;
-  text-shadow: 0 1px #fff;
-  border: 1px solid #ddd;
-  padding: 15px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  color: white;
 }
 .widget a {
-  color: #258fb8;
+  color: white;
   text-decoration: none;
 }
 .widget a:hover {

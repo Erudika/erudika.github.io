@@ -124,10 +124,17 @@
 				</header>
 
 				<div class="outer">
+					<!--		<div id="search-form-wrap"><%- search_form({button: '&#xF002;'}) %></div>-->
+					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search" />
+					<small class="right">powered by
+						<a href="https://paraio.com" target="_blank">
+							<img src="/assets/img/para_logo.png" width="16" height="16" alt="Para logo"/>
+						</a>
+					</small>
+				</div>
+
+				<div class="outer">
 					<section id="main"><%- body %></section>
-					<% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-					<%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-					<% } %>
 				</div>
 				<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 			</div>

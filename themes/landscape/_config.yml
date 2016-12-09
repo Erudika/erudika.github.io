@@ -9,10 +9,10 @@ excerpt_link: Read More
 fancybox: true
 
 # Sidebar
-sidebar: right
+sidebar: bottom
 widgets:
 - recent_posts
-- category
+- twitter
 - tagcloud
 
 # Miscellaneous

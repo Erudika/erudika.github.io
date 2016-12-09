@@ -5,15 +5,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script>
 			if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
+
+			var APPID = "app:albogdano";
+			var ENDPOINT = "https://paraio.com/v1"; // OR "http://localhost:8080/v1"
 			$.ajaxSetup({
-					headers: { 'Authorization': 'Anonymous app:asd' }
+					headers: { 'Authorization': 'Anonymous ' + APPID }
 			});
 
 			var blogposts = new Bloodhound({
 				datumTokenizer: Bloodhound.tokenizers.whitespace,
 				queryTokenizer: Bloodhound.tokenizers.whitespace,
 				remote: {
-					url: 'http://localhost:8080/v1/blogposts?q=%QUERY',
+					url: ENDPOINT + '/blogposts?q=%QUERY',
 					wildcard: '%QUERY',
 					transform: function(res) {
 						return res.items || [];

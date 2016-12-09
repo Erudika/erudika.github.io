@@ -1,17 +1,19 @@
 <footer>
-	<% if (theme.sidebar === 'bottom'){ %>
-    <%- partial('_partial/sidebar') %>
-  <% } %>
 	<div class="container">
+		<% if (theme.sidebar === 'bottom'){ %>
+			<%- partial('_partial/sidebar') %>
+		<% } %>
 		<div class="row">
-			<div class=" columns">
 				<div class="col-xs-6">
-					Hosted on <a href="https://github.com/Erudika/erudika.github.io"><i class="fa fa-github fa-lg"></i> GitHub</a>
+					<i class="fa fa-creative-commons" title="Creative Commons Attribution, Share-Alike License"></i>
+					2016 Erudika
 				</div>
 				<div class="col-xs-6 text-right">
-					Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+					<a href="https://github.com/Erudika/erudika.github.io" target="_blank">Powered by Hexo.</a>
+					<strong>
+						Images courtesy of <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.
+					</strong>
 				</div>
-			</div>
 		</div>
 	</div>
 </footer>
