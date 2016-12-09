@@ -614,9 +614,9 @@ b, strong {
 	background: #fff;
 	width: 100%;
 	padding: 10px;
-	-webkit-border-radius: 15px;
 	border-radius: 3px;
 	border: 1px solid #ddd;
+	font-size: 1.4em;
 }
 
 .tt-menu {
@@ -637,6 +637,8 @@ b, strong {
   overflow: hidden;
   text-overflow: ellipsis;*/
 	border-bottom: 1px dashed #ccc;
+	font-size: 1.4em;
+	padding: 10px 0;
 }
 
 .tt-suggestion.tt-cursor {
