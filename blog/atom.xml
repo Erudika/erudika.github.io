@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2016-12-12T14:50:33.776Z</updated>
+  <updated>2016-12-12T17:48:15.443Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/"/>
     <id>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</id>
     <published>2016-12-12T14:48:29.000Z</published>
-    <updated>2016-12-12T14:50:33.776Z</updated>
+    <updated>2016-12-12T17:48:15.443Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Static site generators are great</strong> — they get the job done quickly for our blogs, landing pages and project websites.
 They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless”
@@ -50,9 +50,9 @@ It’s written in JavaScript for Node.js and it’s really simple to use. Let’
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g para-cli</div></pre></td></tr></table></figure>
 <p>Now you can see all the options by typing <code>para-cli</code> in the console. There are several basic commands for reading,
 writing and deleting objects and one for search. For now, we’re only interested in the <code>create</code> command.</p>
-<p>Go over to <a href="http://paraio.com" target="_blank" rel="external">ParaIO.com</a> and get a free account, if you don’t have one already. Next, we’ll create
-a new app where we can store our blog posts. If you already have an existing app with some objects in it, you can still
-fit in the content of your site by using objects of a different type, like <code>blogpost</code>.</p>
+<p>Go over to <a href="http://paraio.com/signin" target="_blank" rel="external">ParaIO.com</a> and sign in to get a free account, if you don’t have one already.
+Next, we’ll create a new app where we can store our blog posts. If you already have an existing app with some objects
+in it, you can still fit in the content of your site by using objects of a different type, like <code>blogpost</code>.</p>
 <p><img src="https://erudika.com/assets/img/ftsearch1.png" alt=""></p>
 <p>Take a note of your Para access and secret keys, we’ll need them for our CLI tool. Now it’s time to gather our HTML
 files and send them to Para for indexing.</p>
