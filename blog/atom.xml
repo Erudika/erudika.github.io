@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2016-11-21T17:28:09.710Z</updated>
+  <updated>2016-12-12T14:49:03.214Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -14,6 +14,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Implementing full-text search for your static site</title>
+    <link href="https://erudika.com/blog/2016/12/11/Implementing-full-text-search-for-your-static-site/"/>
+    <id>https://erudika.com/blog/2016/12/11/Implementing-full-text-search-for-your-static-site/</id>
+    <published>2016-12-11T21:48:29.000Z</published>
+    <updated>2016-12-12T14:49:03.214Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Static site generators are great</strong> — they get the job done quickly for our blogs, landing pages and project websites.
+They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless”
+technology. Static sites are perfect for content which rarely changes. They lack dynamic features, but the main problem
+is that you can’t search quickly for a piece of content without leaving the site, which hinders the user experience.</p>
+<p>We generate our blog using Hexo, a simple static site generator, and we’re quite happy with it. We’ve always felt that
+our search box could be improved and sending users off to Google was just sloppy. In this tutorial, I’ll show you how
+you can also upgrade the search box on your blog or static site.</p>
+<a id="more"></a>
+<p><img src="https://erudika.com/assets/img/blogpost_media8.png" alt=""></p>
+<p>So we have a bunch of HTML files generated for our site and we need them indexed somewhere so we can query them later.
+The search box will send AJAX requests to the search API and presents the results to the user — very simple setup.
+So we’ll need three things:</p>
+<ol>
+<li>a tool for quickly indexing our content;</li>
+<li>a full-text search API, preferably one that is free;</li>
+<li>some JavaScript code to call the API and show the results.</li>
+</ol>
+<p>Currently, there are several solutions for implementing full-text search. Depending on the time and money you are
+willing to spend, you could either host your own search server, like Elasticsearch or Solr, or pay for a service like
+Algolia. Now, for something as simple as a blog with ten articles in it, paying for servers or a monthly subscription
+fee is a bit excessive. This is where <a href="https://paraio.com" target="_blank" rel="external">Para</a> comes in — our flexible, open-source backend service.
+It’s absolutely free for developers and the search functionality inside of it is <strong>powered by Elasticsearch</strong> — <em>sweet!</em></p>
+<p>Initially, when we started with this task we didn’t have the tool for indexing our blog posts and this lead to us
+writing <a href="https://github.com/Erudika/para-cli" target="_blank" rel="external">para-cli</a> — a command-line tool for working with our Para backend server.
+It’s written in JavaScript for Node.js and it’s really simple to use. Let’s go ahead and install it:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g para-cli</div></pre></td></tr></table></figure>
+<p>Now you can see all the options by typing <code>para-cli</code> in the console. There are several basic commands for reading,
+writing and deleting objects and one for search. For now, we’re only interested in the <code>create</code> command.</p>
+<p>Go over to <a href="http://paraio.com" target="_blank" rel="external">ParaIO.com</a> and get a free account, if you don’t have one already. Next, we’ll create
+a new app where we can store our blog posts. If you already have an existing app with some objects in it, you can still
+fit in the content of your site by using objects of a different type, like <code>blogpost</code>.</p>
+<p><img src="https://erudika.com/assets/img/ftsearch1.png" alt=""></p>
+<p>Take a note of your Para access and secret keys, we’ll need them for our CLI tool. Now it’s time to gather our HTML
+files and send them to Para for indexing.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ para-cli create &quot;blog/20*/**/*.html&quot; --type &quot;blogpost&quot; --sanitize \</div><div class="line">--accessKey &quot;app:myapp&quot; --secretKey &quot;[key]&quot;</div></pre></td></tr></table></figure>
+<p><img src="https://erudika.com/assets/img/ftsearch2.png" alt=""></p>
+<p>In our case, HTML files are located in a folder called ‘blog’ with subfolders for each year. The CLI tool will parse
+every HTML file and look for the these two tags:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:title"</span> <span class="attr">content</span>=<span class="string">"…"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:url"</span> <span class="attr">content</span>=<span class="string">"…"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Most static site generators, like Octopress and Hexo, automatically include these tags in the code. We’ll also want
+to index newly published blog posts, so we can simply execute the command above again and everything will be in sync.
+If all went well, we should now have all our content indexed and ready. Let’s test it by sending a search query:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ para-cli search &quot;some keyword&quot; --accessKey &quot;app:myapp&quot; --secretKey &quot;[key]&quot;</div></pre></td></tr></table></figure>
+<p>This should return the results in as an array of JSON objects. Awesome! Now, in order for our client-side JavaScript
+widget to be able to be able to access the Para search API without a secret key, we’ll have to allow public access to
+the <code>blogposts</code> resource.</p>
+<p><img src="https://erudika.com/assets/img/ftsearch3.png" alt=""></p>
+<p>The search box in our case is implemented with good old jQuery and a plugin called
+<a href="https://twitter.github.io/typeahead.js/" target="_blank" rel="external">typehead.js</a>. The code is very simple — it calls the search API and queries
+objects of type <code>blogpost</code>. The results are in the form of a JSON object with several properties but we’re only
+interested in the objects found so we transform it into an <code>Array</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> APPID = <span class="string">"app:myapp"</span>;</div><div class="line"><span class="keyword">var</span> ENDPOINT = <span class="string">"https://paraio.com/v1"</span>;</div><div class="line"></div><div class="line">$.ajaxSetup(&#123;</div><div class="line">  <span class="attr">headers</span>: &#123;<span class="string">'Authorization'</span>: <span class="string">'Anonymous '</span> + APPID&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> blogposts = <span class="keyword">new</span> Bloodhound(&#123;</div><div class="line">  <span class="attr">datumTokenizer</span>: Bloodhound.tokenizers.whitespace,</div><div class="line">  <span class="attr">queryTokenizer</span>: Bloodhound.tokenizers.whitespace,</div><div class="line">  <span class="attr">remote</span>: &#123;</div><div class="line">    <span class="attr">url</span>: ENDPOINT + <span class="string">'/blogposts?q=%QUERY'</span>,</div><div class="line">    <span class="attr">wildcard</span>: <span class="string">'%QUERY'</span>,</div><div class="line">    <span class="attr">transform</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> res.items || [];</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">'#search-box'</span>).typeahead(&#123;</div><div class="line">  <span class="attr">hint</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">highlight</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">minLength</span>: <span class="number">3</span></div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'blogposts'</span>,</div><div class="line">  <span class="attr">source</span>: blogposts,</div><div class="line">  <span class="attr">templates</span>: &#123;</div><div class="line">    <span class="attr">notFound</span>: <span class="string">'&lt;i&gt;No results.&lt;/i&gt;'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">display</span>: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> result.name;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">'#search-box'</span>).bind(<span class="string">'typeahead:select'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">ev, result</span>) </span>&#123;</div><div class="line">  <span class="built_in">window</span>.location = result.url || <span class="string">''</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Finally we add some CSS styling to make our widget look good. Some of these classes are typehead.js specific but can
+also be modified.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#search-box</span> &#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">1.4em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tt-menu</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">2px</span> <span class="number">0</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tt-suggestion</span><span class="selector-pseudo">:last-child</span> &#123;</div><div class="line">  <span class="attribute">border-bottom</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tt-suggestion</span> &#123;</div><div class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">1.4em</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.tt-suggestion</span><span class="selector-class">.tt-cursor</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#0097cf</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.twitter-typeahead</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Final-result"><a href="#Final-result" class="headerlink" title="Final result"></a>Final result</h2><p><em>That’s it!</em> You can try out the finished thing at the top of this page, above the title.
+We chose jQuery just because it was already included in our HTML code but you can just as easily achieve the same
+result with other JS frameworks like Angular or React.</p>
+<p><em>If you liked this post, you can also follow us <a href="https://twitter.com/erudika" target="_blank" rel="external">on Twitter</a> or chat with us
+<a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>.</em></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Static site generators are great&lt;/strong&gt; — they get the job done quickly for our blogs, landing pages and project websites.
+They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless”
+technology. Static sites are perfect for content which rarely changes. They lack dynamic features, but the main problem
+is that you can’t search quickly for a piece of content without leaving the site, which hinders the user experience.&lt;/p&gt;
+&lt;p&gt;We generate our blog using Hexo, a simple static site generator, and we’re quite happy with it. We’ve always felt that
+our search box could be improved and sending users off to Google was just sloppy. In this tutorial, I’ll show you how
+you can also upgrade the search box on your blog or static site.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="search" scheme="https://erudika.com/blog/tags/search/"/>
+    
+      <category term="blog" scheme="https://erudika.com/blog/tags/blog/"/>
+    
+      <category term="para-cli" scheme="https://erudika.com/blog/tags/para-cli/"/>
+    
+  </entry>
   
   <entry>
     <title>Saving money on DynamoDB with Global Secondary Indexes</title>
@@ -141,9 +231,9 @@
     </summary>
     
     
-      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
-    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="iot" scheme="https://erudika.com/blog/tags/iot/"/>
     
@@ -156,7 +246,7 @@
     <link href="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/"/>
     <id>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</id>
     <published>2016-06-09T11:37:12.000Z</published>
-    <updated>2016-11-21T16:05:05.411Z</updated>
+    <updated>2016-12-12T14:41:02.468Z</updated>
     
     <content type="html"><![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angular 2</strong>. This is intended for
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong>
@@ -202,7 +292,7 @@ there you will write a simple permission definition in JSON:</p>
 <p>This defines a single permission that allows <code>* - everyone</code> to access <code>/v1/recipes</code> using a list of allowed methods,
 in this case <code>* - all HTTP methods</code> and <code>? - anonymous access</code> is allowed. Thus, we’re essentially making this resource
 publicly available. Click ‘Save Changes’.</p>
-<p><img src="/assets/img/rman_1.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/rman_1.png" alt=""></p>
 <h2 id="Step-2-CRUD-recipes"><a href="#Step-2-CRUD-recipes" class="headerlink" title="Step 2 - CRUD recipes"></a>Step 2 - CRUD recipes</h2><p>Now let’s go back to our frontend and edit the ‘Home’ component under <code>src/client/app/+home</code>. We want to edit the HTML
 code a little bit in <code>home.component.html</code>:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Recipes &amp;nbsp;</div><div class="line">    <span class="tag">&lt;<span class="name">button</span> (<span class="attr">click</span>)=<span class="string">"clearForm() &amp;&amp; showForm = true"</span> [<span class="attr">hidden</span>]=<span class="string">"showForm"</span>&gt;</span>Add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> (<span class="attr">submit</span>)=<span class="string">"addRecipe()"</span> [<span class="attr">hidden</span>]=<span class="string">"!showForm"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> [(<span class="attr">ngModel</span>)]=<span class="string">"newName"</span> <span class="attr">placeholder</span>=<span class="string">"Title"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">textarea</span> [(<span class="attr">ngModel</span>)]=<span class="string">"newRecipe"</span> <span class="attr">rows</span>=<span class="string">"10"</span> <span class="attr">cols</span>=<span class="string">"33"</span> <span class="attr">placeholder</span>=<span class="string">"Recipe"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"editMode"</span>&gt;</span>Save<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">"!editMode"</span>&gt;</span>Add<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">  &amp;nbsp;</div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> (<span class="attr">click</span>)=<span class="string">"showForm = false"</span>&gt;</span>Close<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -236,11 +326,11 @@ when there are no recipes to show:
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.recipe-box</span> &#123;</div><div class="line">  <span class="attribute">display</span>: inline-table;</div><div class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">30px</span> <span class="number">30px</span> <span class="number">0</span> -<span class="number">7px</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#106cc8</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.empty-box</span> &#123;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">1.5em</span> <span class="number">0</span> <span class="number">1em</span> <span class="number">0</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">3em</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#ccc</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">3px</span> dashed;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>In <code>main.css</code> I’ve also added a few more tweaks to the CSS:
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">input</span>, <span class="selector-tag">textarea</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#106cc8</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="attribute">outline</span>: none;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">8px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">button</span><span class="selector-pseudo">:hover</span> &#123; <span class="attribute">background-color</span>: <span class="number">#28739e</span>; &#125;</div><div class="line"><span class="selector-tag">button</span><span class="selector-class">.small</span> &#123; <span class="attribute">font-size</span>: <span class="number">12px</span>; <span class="attribute">height</span>: <span class="number">30px</span>; &#125;</div><div class="line"><span class="selector-class">.red</span> &#123; <span class="attribute">color</span>: indianred; &#125;</div><div class="line"><span class="selector-class">.right</span> &#123; <span class="attribute">float</span>: right; &#125;</div><div class="line"><span class="selector-class">.center</span> &#123; <span class="attribute">text-align</span>: center; &#125;</div></pre></td></tr></table></figure></p>
-<p><img src="/assets/img/rman_2.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/rman_2.png" alt=""></p>
 <p>So, we should now we able to add recipes and after we click “Add” the form should be cleared and closed.
 For this let’s add the following code in <code>home.component.ts</code> to reset the state of the form:
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">clearForm(): <span class="built_in">boolean</span> &#123;</div><div class="line">    <span class="keyword">this</span>.showForm = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">this</span>.editMode = <span class="literal">false</span>;</div><div class="line">    <span class="keyword">this</span>.recipeId = <span class="literal">null</span>;</div><div class="line">    <span class="keyword">this</span>.newName = <span class="string">''</span>;</div><div class="line">    <span class="keyword">this</span>.newRecipe = <span class="string">''</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><img src="/assets/img/rman_3.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/rman_3.png" alt=""></p>
 <p>The variable <code>recipeId</code> will keep the value of the <code>id</code> when a recipe is being edited. When “Save” is clicked this
 <code>id</code> is passed to the service and the backend so it won’t create a new object, just update an existing one.</p>
 <p>Let’s add more methods in our <code>recipeService</code> for updating and deleting recipes.
@@ -253,7 +343,7 @@ instantly, without having to wait for the request to finish.</p>
 <p>The methods <code>editRecipe()</code> and <code>removeRecipe()</code> are relatively straightforward - when editing, we set the mode in
 <code>editMode = true</code> and we show the form, when removing we just filter the array <code>recipesList</code> and we discard the
 deleted recipe if it matches the <code>id</code>.</p>
-<p><img src="/assets/img/rman_4.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/rman_4.png" alt=""></p>
 <p>So far, so good. We can now add, edit and remove recipes but they aren’t very pretty and the formatting of the text
 is lost. In the next step we’ll make it possible to write the recipe text in Markdown and then render it in HTML.</p>
 <h2 id="Step-3-Markdown-support"><a href="#Step-3-Markdown-support" class="headerlink" title="Step 3 - Markdown support"></a>Step 3 - Markdown support</h2><p>First of all, let’s install <code>marked</code> - a nice JavaScript parser for Markdown:
@@ -264,7 +354,7 @@ called <code>md2html()</code> which will be used in our template.
 <p>In our HTML template we change the line <code>&lt;div&gt;&lt;/div&gt;</code> like this:
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> [<span class="attr">innerHTML</span>]=<span class="string">"md2html(recipe.text)"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>Now we render the text to HTML on the client and this allows us to write beautiful recipes like this:</p>
-<p><img src="/assets/img/rman_5.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/rman_5.png" alt=""></p>
 <h2 id="Step-4-Search"><a href="#Step-4-Search" class="headerlink" title="Step 4 - Search"></a>Step 4 - Search</h2><p>Final touch - recipe search. We’ll use the built-in full-text search in Para. In <code>recipe.service.ts</code>:
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">search(q: <span class="built_in">string</span>): Observable&lt;<span class="built_in">string</span>[]&gt; &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.http.get(<span class="keyword">this</span>.RECIPES_RESOURCE + <span class="string">"?q="</span> + q)</div><div class="line">        .map((response: Response) =&gt; response.json());</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>And in <code>home.component.ts</code>:
@@ -273,7 +363,7 @@ called <code>md2html()</code> which will be used in our template.
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Recipes &amp;nbsp; <span class="tag">&lt;<span class="name">button</span> <span class="attr">...</span>&gt;</span>Add<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">form</span> (<span class="attr">submit</span>)=<span class="string">"search()"</span> [<span class="attr">hidden</span>]=<span class="string">"showForm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> [(<span class="attr">ngModel</span>)]=<span class="string">"q"</span> <span class="attr">placeholder</span>=<span class="string">"Search"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>And we’re done! The final result of our <strong>Recipe Manager 1.0.0</strong>
 (check out <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="external">the live demo</a>):</p>
-<p><img src="/assets/img/rman_6.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/rman_6.png" alt=""></p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax.
 Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java,
 rather than a dynamic language like JS. The <code>import</code> syntax was a bit hard for me to get used to, especially
@@ -309,9 +399,9 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
-    
       <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="tutorial" scheme="https://erudika.com/blog/tags/tutorial/"/>
     
@@ -347,9 +437,9 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     </summary>
     
     
-      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
-    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="jprime" scheme="https://erudika.com/blog/tags/jprime/"/>
     
@@ -364,9 +454,9 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     <link href="https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/"/>
     <id>https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</id>
     <published>2016-03-24T23:02:02.000Z</published>
-    <updated>2016-11-21T16:05:05.415Z</updated>
+    <updated>2016-12-12T14:39:56.405Z</updated>
     
-    <content type="html"><![CDATA[<p>Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
+    <content type="html"><![CDATA[<p>We’ve released a simple web management console for Para. It’s open source, client-side only and lets you connect
 to any of your Para servers and manage your objects easily through the web interface. It’s powered by AngularJS and
 uses the great libraries <a href="https://github.com/marmelab/ng-admin" target="_blank" rel="external">ng-admin</a> and <a href="https://github.com/mgonto/restangular" target="_blank" rel="external">Restangular</a>.
 The console works for both local and remotely deployed servers and you are more than welcome to modify it for your needs.
@@ -378,11 +468,11 @@ your app and server. On the left there is a list of object types. These include 
 and user-defined types created through the API. To create a custom type from the console, go to the “Edit App view”
 and edit the <code>Datatypes</code> field by adding your own type, then refresh the page and it will appear on the left. Also
 you can edit the resource permissions for your app.</p>
-<p><img src="/assets/img/pwc1_p1.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/pwc1_p1.png" alt=""></p>
 <p>All types, except Linker (read-only), support CRUD operations in the web console. You can create and edit objects
 easily and you can also do full-text search and browse through all the pages of results. We hope to add more
 improvements to the project soon, like address visualization on a map and automatic configuration of custom fields.</p>
-<p><img src="/assets/img/pwc1_p2.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/pwc1_p2.png" alt=""></p>
 <p>We’ve also updated Para to v1.18.3 to support the new type of tokens used by the web console. You can now generate
 JWTs on the client-side and create “super” tokens from your access keys. These tokens give you full-access to the
 API for a limited time, until they expire. They are simple to work with and can be sent as a request header.
@@ -402,7 +492,7 @@ and scalability controls. And we offer free accounts for developers!</p>
     
     <summary type="html">
     
-      &lt;p&gt;Yesterday we released a simple web management console for Para. It’s open source, client-side only and lets you connect
+      &lt;p&gt;We’ve released a simple web management console for Para. It’s open source, client-side only and lets you connect
 to any of your Para servers and manage your objects easily through the web interface. It’s powered by AngularJS and
 uses the great libraries &lt;a href=&quot;https://github.com/marmelab/ng-admin&quot;&gt;ng-admin&lt;/a&gt; and &lt;a href=&quot;https://github.com/mgonto/restangular&quot;&gt;Restangular&lt;/a&gt;.
 The console works for both local and remotely deployed servers and you are more than welcome to modify it for your needs.
@@ -411,9 +501,9 @@ We’d appreciate any &lt;a href=&quot;https://github.com/erudika/para-admin-ui&
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
-    
       <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="ng-admin" scheme="https://erudika.com/blog/tags/ng-admin/"/>
     
@@ -484,9 +574,9 @@ the documentation of our open source backend framework and redesigned the landin
     </summary>
     
     
-      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
-    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="mongodb" scheme="https://erudika.com/blog/tags/mongodb/"/>
     
@@ -565,9 +655,9 @@ deployed on &lt;a href=&quot;https://paraio.com&quot;&gt;ParaIO.com&lt;/a&gt;, o
     </summary>
     
     
-      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
-    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="backend" scheme="https://erudika.com/blog/tags/backend/"/>
     

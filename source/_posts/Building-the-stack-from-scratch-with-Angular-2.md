@@ -91,7 +91,7 @@ This defines a single permission that allows `* - everyone` to access `/v1/recip
 in this case `* - all HTTP methods` and `? - anonymous access` is allowed. Thus, we're essentially making this resource
 publicly available. Click 'Save Changes'.
 
-![](/assets/img/rman_1.png)
+![](https://erudika.com/assets/img/rman_1.png)
 
 ## Step 2 - CRUD recipes
 
@@ -252,7 +252,7 @@ button.small { font-size: 12px; height: 30px; }
 .center { text-align: center; }
 ```
 
-![](/assets/img/rman_2.png)
+![](https://erudika.com/assets/img/rman_2.png)
 
 So, we should now we able to add recipes and after we click "Add" the form should be cleared and closed.
 For this let's add the following code in `home.component.ts` to reset the state of the form:
@@ -267,7 +267,7 @@ clearForm(): boolean {
 }
 ```
 
-![](/assets/img/rman_3.png)
+![](https://erudika.com/assets/img/rman_3.png)
 
 The variable `recipeId` will keep the value of the `id` when a recipe is being edited. When "Save" is clicked this
 `id` is passed to the service and the backend so it won't create a new object, just update an existing one.
@@ -331,7 +331,7 @@ The methods `editRecipe()` and `removeRecipe()` are relatively straightforward -
 `editMode = true` and we show the form, when removing we just filter the array `recipesList` and we discard the
 deleted recipe if it matches the `id`.
 
-![](/assets/img/rman_4.png)
+![](https://erudika.com/assets/img/rman_4.png)
 
 So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text
 is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.
@@ -356,7 +356,7 @@ In our HTML template we change the line `<div>{{recipe.text}}</div>` like this:
 ```
 Now we render the text to HTML on the client and this allows us to write beautiful recipes like this:
 
-![](/assets/img/rman_5.png)
+![](https://erudika.com/assets/img/rman_5.png)
 
 ## Step 4 - Search
 
@@ -393,7 +393,7 @@ Finally, we add the search box in the template below the heading:
 And we're done! The final result of our **Recipe Manager 1.0.0**
 (check out [the live demo](http://albogdano.github.io/angular2-para/)):
 
-![](/assets/img/rman_6.png)
+![](https://erudika.com/assets/img/rman_6.png)
 
 ## Summary
 
