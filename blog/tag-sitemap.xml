@@ -121,14 +121,14 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/angular/</loc>
+        <loc>https://erudika.com/blog/tags/para/</loc>
         <lastmod>2016-12-12T14:41:02.468Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/para/</loc>
+        <loc>https://erudika.com/blog/tags/angular/</loc>
         <lastmod>2016-12-12T14:41:02.468Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -150,21 +150,21 @@
 
     <url>
         <loc>https://erudika.com/blog/tags/search/</loc>
-        <lastmod>2016-12-12T14:49:03.214Z</lastmod>
+        <lastmod>2016-12-12T14:50:33.776Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/blog/</loc>
-        <lastmod>2016-12-12T14:49:03.214Z</lastmod>
+        <lastmod>2016-12-12T14:50:33.776Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/para-cli/</loc>
-        <lastmod>2016-12-12T14:49:03.214Z</lastmod>
+        <lastmod>2016-12-12T14:50:33.776Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

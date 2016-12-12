@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2016-12-12T14:49:03.214Z</updated>
+  <updated>2016-12-12T14:50:33.776Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Implementing full-text search for your static site</title>
-    <link href="https://erudika.com/blog/2016/12/11/Implementing-full-text-search-for-your-static-site/"/>
-    <id>https://erudika.com/blog/2016/12/11/Implementing-full-text-search-for-your-static-site/</id>
-    <published>2016-12-11T21:48:29.000Z</published>
-    <updated>2016-12-12T14:49:03.214Z</updated>
+    <link href="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/"/>
+    <id>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</id>
+    <published>2016-12-12T14:48:29.000Z</published>
+    <updated>2016-12-12T14:50:33.776Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Static site generators are great</strong> — they get the job done quickly for our blogs, landing pages and project websites.
 They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless”
@@ -231,9 +231,9 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
-    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="iot" scheme="https://erudika.com/blog/tags/iot/"/>
     
@@ -399,9 +399,9 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     </summary>
     
     
-      <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
-    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
     
       <category term="tutorial" scheme="https://erudika.com/blog/tags/tutorial/"/>
     
@@ -437,9 +437,9 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
-    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="jprime" scheme="https://erudika.com/blog/tags/jprime/"/>
     
@@ -501,9 +501,9 @@ We’d appreciate any &lt;a href=&quot;https://github.com/erudika/para-admin-ui&
     </summary>
     
     
-      <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
-    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
     
       <category term="ng-admin" scheme="https://erudika.com/blog/tags/ng-admin/"/>
     
@@ -574,9 +574,9 @@ the documentation of our open source backend framework and redesigned the landin
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
-    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="mongodb" scheme="https://erudika.com/blog/tags/mongodb/"/>
     
@@ -655,9 +655,9 @@ deployed on &lt;a href=&quot;https://paraio.com&quot;&gt;ParaIO.com&lt;/a&gt;, o
     </summary>
     
     
-      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
-    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="backend" scheme="https://erudika.com/blog/tags/backend/"/>
     
