@@ -84,16 +84,14 @@
 
 	var APPID = "app:albogdano";
 	var ENDPOINT = "https://paraio.com/v1"; // OR "http://localhost:8080/v1"
-	var LIMIT = 6;
-	$.ajaxSetup({
-		headers: {'Authorization': 'Anonymous ' + APPID}
-	});
+
+	$.ajaxSetup({headers: {'Authorization': 'Anonymous ' + APPID}});
 
 	var blogposts = new Bloodhound({
 		datumTokenizer: Bloodhound.tokenizers.whitespace,
 		queryTokenizer: Bloodhound.tokenizers.whitespace,
 		remote: {
-			url: ENDPOINT + '/blogposts?limit=' + LIMIT + '&q=%QUERY',
+			url: ENDPOINT + '/blogposts?limit=6&q=%QUERY',
 			wildcard: '%QUERY',
 			transform: function (res) {
 				return res.items || [];
@@ -109,7 +107,7 @@
 	{
 		name: 'blogposts',
 		source: blogposts,
-		limit: LIMIT,
+		limit: 40,
 		templates: {
 			notFound: '<i>No results.</i>'
 		},
