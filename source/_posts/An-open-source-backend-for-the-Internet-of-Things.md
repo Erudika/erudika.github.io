@@ -3,7 +3,7 @@ title: An open source backend for the Internet of Things
 date: 2016-08-12 11:01:00
 tags: [release, para, iot, devices]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img8.jpg
 ---
 

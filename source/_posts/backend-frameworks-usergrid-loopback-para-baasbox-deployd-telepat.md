@@ -3,7 +3,7 @@ title: Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Par
 date: 2015-10-21 14:17:19
 tags: [backend, baas, frameworks, para, API]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img2.jpg
 ---
 

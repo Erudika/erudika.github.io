@@ -3,7 +3,7 @@ title: Para Web Console - the admin UI for your backend
 date: 2016-03-25 01:02:02
 tags: [para, ng-admin, angular, frontend]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img5.jpg
 ---
 

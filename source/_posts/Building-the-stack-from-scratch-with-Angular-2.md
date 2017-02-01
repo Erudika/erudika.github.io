@@ -3,7 +3,7 @@ title: Building the stack from scratch with Angular 2
 date: 2016-06-09 14:37:12
 tags: [angular, para, tutorial, typescript]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img7.jpg
 ---
 

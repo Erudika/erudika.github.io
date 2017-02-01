@@ -3,7 +3,7 @@ title: Implementing full-text search for your static site
 date: 2016-12-12 16:48:29
 tags: [search, blog, para-cli]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img10.jpg
 ---
 

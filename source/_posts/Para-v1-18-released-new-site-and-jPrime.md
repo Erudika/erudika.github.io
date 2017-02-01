@@ -3,7 +3,7 @@ title: 'Para v1.18 released, new site and jPrime'
 date: 2016-03-06 23:46:35
 tags: [para, release, mongodb, jprime]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img4.jpg
 ---
 

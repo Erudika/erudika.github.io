@@ -3,7 +3,7 @@ title: Saving money on DynamoDB with Global Secondary Indexes
 date: 2016-11-21 17:39:07
 tags: [aws, dynamodb, tips]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img9.jpg
 ---
 

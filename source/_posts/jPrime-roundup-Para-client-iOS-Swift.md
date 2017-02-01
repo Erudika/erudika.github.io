@@ -3,7 +3,7 @@ title: jPrime roundup, Para client for iOS and Swift
 date: 2016-06-01 13:40:20
 tags: [para, ios, swift, jprime, release]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img6.jpg
 ---
 

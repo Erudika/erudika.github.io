@@ -1,6 +1,6 @@
 title: Hello World 2!
 tags: general
-comments: true
+comments: false
 date: 2015-09-15
 ---
 

@@ -7,72 +7,8 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
-        <lastmod>2016-12-12T17:48:15.443Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
-        <lastmod>2016-12-12T14:41:02.468Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</loc>
-        <lastmod>2016-12-12T14:39:56.405Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/</loc>
-        <lastmod>2016-11-21T17:28:09.710Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</loc>
-        <lastmod>2016-11-21T16:05:35.418Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/2016/01/05/para-1-17-released/</loc>
-        <lastmod>2016-11-21T16:05:05.423Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
-        <lastmod>2016-11-21T16:05:05.419Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</loc>
-        <lastmod>2016-11-21T16:05:05.415Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
-        <lastmod>2016-11-04T16:59:48.355Z</lastmod>
+        <lastmod>2017-01-31T20:16:48.497Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -80,7 +16,71 @@
 
     <url>
         <loc>https://erudika.com/blog/2015/10/16/hello-world/</loc>
-        <lastmod>2015-12-04T10:26:46.272Z</lastmod>
+        <lastmod>2017-01-31T20:16:48.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2017-01-31T20:16:48.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
+        <lastmod>2017-01-31T20:16:48.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/</loc>
+        <lastmod>2017-01-31T20:16:48.489Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</loc>
+        <lastmod>2017-01-31T20:16:48.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</loc>
+        <lastmod>2017-01-31T20:16:48.485Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</loc>
+        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
+        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
+        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

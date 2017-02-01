@@ -3,7 +3,7 @@ title: Para v1.17 released
 date: 2016-01-05 18:20:27
 tags: [backend, para, release]
 author: alex@erudika.com
-comments: true
+comments: false
 img: img3.jpg
 ---
 

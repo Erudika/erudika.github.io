@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2016-12-12T17:48:15.443Z</updated>
+  <updated>2017-01-31T20:16:48.481Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/"/>
     <id>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</id>
     <published>2016-12-12T14:48:29.000Z</published>
-    <updated>2016-12-12T17:48:15.443Z</updated>
+    <updated>2017-01-31T20:16:48.481Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Static site generators are great</strong> — they get the job done quickly for our blogs, landing pages and project websites.
 They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless”
@@ -110,7 +110,7 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
     <link href="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/"/>
     <id>https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/</id>
     <published>2016-11-21T15:39:07.000Z</published>
-    <updated>2016-11-21T17:28:09.710Z</updated>
+    <updated>2017-01-31T20:16:48.489Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Amazon’s DynamoDB</strong> is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI).</p>
 <p>We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it’s a managed service and we had one less thing to maintain. Later we found out that global indexes could help us save a lot of extra costs and so we implemented a simple solution, which we call “shared tables”.</p>
@@ -189,7 +189,7 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
     <link href="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/"/>
     <id>https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</id>
     <published>2016-08-12T08:01:00.000Z</published>
-    <updated>2016-11-21T16:05:35.418Z</updated>
+    <updated>2017-01-31T20:16:48.481Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Things</strong> — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based on Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realized we should’ve done this sooner. </p>
 <a id="more"></a>
@@ -246,7 +246,7 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
     <link href="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/"/>
     <id>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</id>
     <published>2016-06-09T11:37:12.000Z</published>
-    <updated>2016-12-12T14:41:02.468Z</updated>
+    <updated>2017-01-31T20:16:48.481Z</updated>
     
     <content type="html"><![CDATA[<p>In this tutorial we’re going to build a simple single-page application with <strong>Angular 2</strong>. This is intended for
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong>
@@ -414,7 +414,7 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     <link href="https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/"/>
     <id>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</id>
     <published>2016-06-01T10:40:20.000Z</published>
-    <updated>2016-11-21T16:05:05.419Z</updated>
+    <updated>2017-01-31T20:16:48.493Z</updated>
     
     <content type="html"><![CDATA[<p>Last week was <a href="http://jprime.io" target="_blank" rel="external">jPrime 2016</a>, the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was <em>“Java - 21 and legally drunk”</em> and the two main themes were <strong>microservices</strong> and <strong>reactive programming</strong> with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.</p>
 <a id="more"></a>
@@ -454,7 +454,7 @@ some time and clone the excellent Angular 2 starter kit by &lt;a href=&quot;http
     <link href="https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/"/>
     <id>https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</id>
     <published>2016-03-24T23:02:02.000Z</published>
-    <updated>2016-12-12T14:39:56.405Z</updated>
+    <updated>2017-01-31T20:16:48.485Z</updated>
     
     <content type="html"><![CDATA[<p>We’ve released a simple web management console for Para. It’s open source, client-side only and lets you connect
 to any of your Para servers and manage your objects easily through the web interface. It’s powered by AngularJS and
@@ -516,7 +516,7 @@ We’d appreciate any &lt;a href=&quot;https://github.com/erudika/para-admin-ui&
     <link href="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/"/>
     <id>https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</id>
     <published>2016-03-06T21:46:35.000Z</published>
-    <updated>2016-11-21T16:05:05.415Z</updated>
+    <updated>2017-01-31T20:16:48.485Z</updated>
     
     <content type="html"><![CDATA[<p>This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients,
 fixed many bugs, released the <a href="https://github.com/Erudika/para-client-android" target="_blank" rel="external">Android client for Para</a> and a new
@@ -589,7 +589,7 @@ the documentation of our open source backend framework and redesigned the landin
     <link href="https://erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>https://erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2016-11-21T16:05:05.423Z</updated>
+    <updated>2017-01-31T20:16:48.497Z</updated>
     
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
@@ -668,7 +668,7 @@ deployed on &lt;a href=&quot;https://paraio.com&quot;&gt;ParaIO.com&lt;/a&gt;, o
     <link href="https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
     <id>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
-    <updated>2016-11-04T16:59:48.355Z</updated>
+    <updated>2017-01-31T20:16:48.493Z</updated>
     
     <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
 server-side component of your website or app. Developers use them to build and iterate on products faster than ever
@@ -849,13 +849,13 @@ before by focusing on the “fun” part - the frontend (client-side).&lt;/p&gt;
     <link href="https://erudika.com/blog/2015/10/16/hello-world/"/>
     <id>https://erudika.com/blog/2015/10/16/hello-world/</id>
     <published>2015-10-15T21:00:00.000Z</published>
-    <updated>2015-12-04T10:26:46.272Z</updated>
+    <updated>2017-01-31T20:16:48.493Z</updated>
     
     <content type="html"><![CDATA[<p>Hey there! We are Erudika and this is our blog. Here, we’ll share information about our current projects and
 developments. You can follow us on Twitter as well - <a href="https://twitter.com/erudika" target="_blank" rel="external">@erudika</a>, or fork us on
 <a href="https://github.com/erudika" target="_blank" rel="external">GitHub</a>.</p>
-<p>We’re busy developing and running our own SaaS called Para (<a href="https://paraio.com" target="_blank" rel="external">https://paraio.com</a>). If you are a developer
-looking for a simple and scalable backend service, make sure you follow us and try our developer plans. They’re free!
+<p>We’re busy developing and running our own backend SaaS called Para (<a href="https://paraio.com" target="_blank" rel="external">https://paraio.com</a>). If you are a developer
+looking for a simple and scalable backend service, make sure you follow us and try our developer plan - it’s free!
 <a id="more"></a></p>
 <p><blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">
 <a href="http://t.co/4ybIZHeniM" target="_blank" rel="external">http://t.co/4ybIZHeniM</a>
@@ -871,8 +871,8 @@ dev accounts!</p>&mdash; Para (@para_io) <a href="https://twitter.com/para_io/st
       &lt;p&gt;Hey there! We are Erudika and this is our blog. Here, we’ll share information about our current projects and
 developments. You can follow us on Twitter as well - &lt;a href=&quot;https://twitter.com/erudika&quot;&gt;@erudika&lt;/a&gt;, or fork us on
 &lt;a href=&quot;https://github.com/erudika&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We’re busy developing and running our own SaaS called Para (&lt;a href=&quot;https://paraio.com&quot;&gt;https://paraio.com&lt;/a&gt;). If you are a developer
-looking for a simple and scalable backend service, make sure you follow us and try our developer plans. They’re free!
+&lt;p&gt;We’re busy developing and running our own backend SaaS called Para (&lt;a href=&quot;https://paraio.com&quot;&gt;https://paraio.com&lt;/a&gt;). If you are a developer
+looking for a simple and scalable backend service, make sure you follow us and try our developer plan - it’s free!
     
     </summary>
     
