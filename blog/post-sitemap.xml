@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2017-02-09T13:14:37.721Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2016/01/05/para-1-17-released/</loc>
         <lastmod>2017-01-31T20:16:48.497Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,14 +24,6 @@
 
     <url>
         <loc>https://erudika.com/blog/2015/10/16/hello-world/</loc>
-        <lastmod>2017-01-31T20:16:48.493Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
         <lastmod>2017-01-31T20:16:48.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

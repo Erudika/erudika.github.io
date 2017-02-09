@@ -25,7 +25,7 @@ Some BaaS frameworks are designed with focus on mobile app development (mBaaS) a
 anything from websites to desktop software or games. The ones that target mobile apps usually have features like
 realtime push, notifications support and client libraries for Android and iOS. We'll cover both types of frameworks here.
 
-## [UserGrid](http://usergrid.apache.org) [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
+## [UserGrid](http://usergrid.apache.org) - [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
 <img src="/assets/img/usergrid.png">
 
 **Multitenant:** yes <br>
@@ -56,7 +56,7 @@ queries and push notifications (in v2.0).
 Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
 your organization. It is used in production by quite a few companies.
 
-## [LoopBack](http://loopback.io) [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
+## [LoopBack](http://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
 <img src="/assets/img/loopback.png">
 
 **Multitenant:** no <br>
@@ -86,8 +86,7 @@ LoopBack is great for REST API service generation and very rapid prototyping. De
 minutes by building a custom API using the given CLI tool. LoopBack is a very good fit for all projects written in
 JavaScript.
 
-
-## [Para](https://paraio.org) [<i class="fa fa-github-square"></i>](https://github.com/Erudika/para)
+## [Para](https://paraio.com) - [<i class="fa fa-github-square"></i>](https://github.com/Erudika/para)
 <img src="/assets/img/paraio.png" style="border: 1px solid #CCCCCC">
 
 **Multitenant:** yes <br>
@@ -131,7 +130,7 @@ authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.
 Para is a good choice if you are building a cloud-based web service and it's great for rapid prototyping.
 It's an easy-to-use and flexible platform that scales well. A backend for busy developers.
 
-## [BaasBox](http://www.baasbox.com) [<i class="fa fa-github-square"></i>](https://github.com/baasbox/baasbox)
+## BaasBox - [<i class="fa fa-github-square"></i>](https://github.com/baasbox/baasbox)
 <img src="/assets/img/baasbox.png">
 
 **Multitenant:** yes, [since v0.8.4](http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend) <br>
@@ -139,6 +138,8 @@ It's an easy-to-use and flexible platform that scales well. A backend for busy d
 **Database:** OrientDB <br>
 **Documentation:** 9/10 <br>
 **Client libraries:** Android/Java, iOS, JavaScript <br>
+
+**Unmaintained** (as of Feb. 2017)
 
 BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would
 need to run a backend server. It's been around since early 2013. It provides good support for Android and iOS
@@ -153,10 +154,9 @@ and collections of objects and also allows you to link them in one-to-many or ma
 features are excellent - you have social login, friendship/followers API and user management. Other features include
 files and assets API, push notifications and a plugin system.
 
-BaasBox is a good choice as a mBaaS for building mobile backend services. If you are a mobile app developer
-definitely consider BaasBox for your backend.
+*As of February 2017, the open source BaasBox server seems abandoned with a last commit on Dec. 3rd, 2015.*
 
-## [Deployd](http://deployd.com) [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
+## [Deployd](http://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
 <img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
 
 **Multitenant:** no <br>
@@ -178,16 +178,15 @@ Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.
 collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
 built-in. Other functionality like social login support is provided by third-party modules.
 
-Deployd is good for those who like a nice web admin UI and build JavaScript apps with Node.js. If you like
-MongoDB and Node.js, you'll love Deployd!
+*As of February 2017, Deployd's development on GitHub seems to be stale.*
 
-## [Telepat](http://telepat.io) [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
+## [Telepat](http://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
 <img src="/assets/img/telepat.png">
 
 **Multitenant:** yes <br>
 **Language:** JavaScript <br>
 **Database:** agnostic <br>
-**Documentation:**  6/10 <br>
+**Documentation:**  7/10 <br>
 **Client libraries:** Android, iOS, JavaScript <br>
 
 Telepat is the youngest framework of the bunch. It's a realtime data sync solution for mobile and other applications.
@@ -204,6 +203,8 @@ implemented with passwords and tokens.
 
 Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
 like push notifications. It's well worth checking out especially if you're building realtime apps.
+
+*As of February 2017, Telepat's development on GitHub seems to be stale.*
 
 ## Summary
 
