@@ -127,15 +127,14 @@ a:after {
 #hello {
 	width: 100%;
 	padding: 50px 0 100px 0;
-	/*background: linear-gradient(to bottom right, #349acc, #ef00e5 15%, #d7f0a2 15%, #d7f0a2 85%, #fff 85%);*/
-	/*background: linear-gradient(to bottom, #349acc -22%, rgb(200, 236, 219) 74%, #fff 96%);*/
-	background: linear-gradient(to bottom, #349acc -12%, #FFF 100%);
+	background: linear-gradient(to bottom right, #349acc, #63befa 15%, #EEE 95%);
+	/*background: linear-gradient(to bottom, #63befa -22%, rgb(200, 236, 219) 74%, #fff 96%);*/
+	/*background: linear-gradient(to bottom, #349acc -12%, #FFF 100%);*/
 /*	background: url(../img/bg.jpg) no-repeat center center scroll;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;*/
-
 }
 
 #hello h1 {
