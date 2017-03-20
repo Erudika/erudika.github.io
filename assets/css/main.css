@@ -169,19 +169,6 @@ a:after {
 	padding: 50px 0 80px 0;
 }
 
-/*
-#blue h3 {
-	color: white;
-	font-weight: 400;
-	margin-bottom: 35px;
-}
-
-#blue p {
-	color: white;
-	font-weight: 400;
-	font-size: 20px;
-}*/
-
 /* Skills */
 #skills {
 	background-color: #4e4e4e;
@@ -266,6 +253,7 @@ b, strong {
   border-radius: 3px 3px 0 0;
 	border-right: 1px solid #EDEDED;
 	border-left: 1px solid #EDEDED;
+	border-bottom: 2px solid #CCC;
   margin: 1em 1em 0 1em;
   flex: 1;
 }
