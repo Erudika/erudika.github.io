@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2017-01-31T20:16:48.481Z</updated>
+  <updated>2017-04-26T23:22:38.462Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introducing Scoold - an open source Q&amp;A platform</title>
+    <link href="https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/"/>
+    <id>https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/</id>
+    <published>2017-04-27T05:48:28.000Z</published>
+    <updated>2017-04-26T23:22:38.462Z</updated>
+    
+    <content type="html"><![CDATA[<p>Have you ever wanted to have a Q&amp;A section on your website with the functionality of Stack Overflow? Well, this one is for you! Scoold is a cloud-ready Stack Overflow clone, powered by our Para backend. It’s a real-world application, showcasing the Para technology and how it can be utilized to get a project off the ground quickly. Scoold is a lightweight (~4000 LOC) web application written in Java – it runs great on the smallest Heroku dyno and doesn’t require a database. </p>
+<a id="more"></a>
+<p><img src="https://erudika.com/assets/img/blogpost_media9.png" alt=""></p>
+<h1 id="A-brief-history-of-Scoold"><a href="#A-brief-history-of-Scoold" class="headerlink" title="A brief history of Scoold"></a>A brief history of Scoold</h1><p>I started the project back in 2008. Initially, the idea was to build a social network for schools. Yeah, I know, another Facebook, right? Kinda. The project was already in development around the time when Stack Overflow (SO) launched and I was really inspired by it. In the beginning SO was just this one website and had no themed versions of itself, so I decided to build a version of it for students and teachers, instead of programmers. The project was unsucessful but it gave birth to another project which is now known as <a href="https://paraio.org" target="_blank" rel="external">Para</a>. Scoold’s backend code was extracted to a separate library, refactored and published on GitHub and Maven. </p>
+<p>So, for the past few years I was busy developing Para, while Scoold just sat there on my hard drive, doing nothing. I knew it could be useful to somebody and I started refactoring and modernizing it, in January. By mid-February it was out on <a href="https://github.com/Erudika/scoold" target="_blank" rel="external">GitHub</a> and redeployed on Heroku (previously it ran on EC2). I’ve reduced the code significantly by removing old features and just focused on making it work like Stack Overflow. </p>
+<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><p>So, what can you do on Scoold? It implements most the SO features – you can ask and answer questions, upvote and downvote posts, earn badges and reputation. Each edit creates an new revision, making it easy to follow the history of edits. The posts can be written in Markdown, which is then rendered by Para to HTML.
+The reputation system is simple but effective. People are awarded reputation points for good questions and answers, as well as various badges for their achievements on the site. Not all badges found on SO are implemented, though. </p>
+<p><img src="https://erudika.com/assets/img/scoold.png" alt=""></p>
+<p>When posting a question, you can attach a location to it – a nifty feature which is <em>not</em> implemented on Stack Overflow. This allows you to filter questions based on their location, making it easy to find those that have been asked in your region. Geolocation queries are implemented through the Elasticsearch <code>geo_point</code> data type. </p>
+<p><img src="https://erudika.com/assets/img/scoold1.png" alt=""></p>
+<p>You can search for anything on Scoold because each post is indexed and analyzed by Elasticsearch – a powerful search engine. You can easily find users, questions and answers from the search bar on top. The search results are paginated, each page showing 30 results (this can be changed in the config file).</p>
+<p><img src="https://erudika.com/assets/img/scoold2.png" alt=""></p>
+<p>I really wanted to keep things simple on the frontend – a classic, light frontend with jQuery works fine. Scoold used jQuery from the very beginning, and the trusted JavaScript library is still very useful today. It takes care of all theAJAX requests and toggles a bunch of elements on the screen, nothing more. Everything is rendered on the server, just like in the good old days. The content is easily crawlable by search engines which is great for SEO and the URLs are pretty tidy, too.</p>
+<p>The design has been completely revamped to have a clean and modern look. The frontend code uses Materialize CSS – a framework based on Google’s Material Design Lite. It’s responsive and beautiful. Icons are from FontAwesome. On your profile page you can choose your own picture of use your Gravatar. Logging in is quick, without registration forms or passwords. Initially, Facebook and Google are supported as identity providers, but others are also available, like Microsoft, Twitter and Github (supported by Para). </p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><p>Scoold, is ready for cloud deployment and can run on any cloud infrastructure or on your own servers. Currently, it runs on Heroku. You can simply click the ‘Deploy to Heroku’ button below and get up-and-running in minutes. It is a single JAR file (generated by Spring Boot) that is executed like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -Dserver.port=$PORT -jar target/scoold*.jar</div></pre></td></tr></table></figure>
+<p>There are a few environment variables that need to be set before deployment. You can find these under the “Settings” tab for your application, click “Reveal Config Vars”.
+The most important ones are these:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">para_endpoint = &quot;https://paraio.com&quot;</div><div class="line">para_access_key = &quot;app:scoold&quot;</div><div class="line">para_secret_key = &quot;*****************&quot;</div><div class="line">para_fb_app_id = &quot;123456789&quot;</div><div class="line">para_fb_secret = &quot;***********************&quot;</div><div class="line">para_gmaps_api_key = &quot;********************************&quot;</div><div class="line">para_google_client_id = &quot;********************************</div><div class="line">para_google_analytics_id = &quot;UA-123456-7&quot;</div></pre></td></tr></table></figure>
+<p>Scoold needs to know the location of a Para server, and to connect, you need your app’s access key and secret key (see <a href="https://paraio.org/docs" target="_blank" rel="external">Para docs</a>). </p>
+<p><a href="https://heroku.com/deploy?template=https://github.com/Erudika/scoold" target="_blank" rel="external"><img src="https://www.herokucdn.com/deploy/button.svg" alt=" click here to deploy "></a></p>
+<p><strong>The website of the project is <a href="https://scoold.com" target="_blank" rel="external">https://scoold.com</a>, and the live demo is at <a href="https://live.scoold.com" target="_blank" rel="external">https://live.scoold.com</a>.</strong></p>
+<p><em>You can follow Scoold <a href="https://twitter.com/getscoold" target="_blank" rel="external">on Twitter</a> or chat with us about it <a href="https://gitter.im/Erudika/scoold" target="_blank" rel="external">on Gitter</a>.</em></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Have you ever wanted to have a Q&amp;amp;A section on your website with the functionality of Stack Overflow? Well, this one is for you! Scoold is a cloud-ready Stack Overflow clone, powered by our Para backend. It’s a real-world application, showcasing the Para technology and how it can be utilized to get a project off the ground quickly. Scoold is a lightweight (~4000 LOC) web application written in Java – it runs great on the smallest Heroku dyno and doesn’t require a database. &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="scoold" scheme="https://erudika.com/blog/tags/scoold/"/>
+    
+      <category term="stackoverflow" scheme="https://erudika.com/blog/tags/stackoverflow/"/>
+    
+      <category term="clone" scheme="https://erudika.com/blog/tags/clone/"/>
+    
+  </entry>
   
   <entry>
     <title>Implementing full-text search for your static site</title>

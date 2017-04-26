@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/</loc>
+        <lastmod>2017-04-26T23:22:38.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
         <lastmod>2017-02-09T13:14:37.721Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,7 +31,7 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/2015/10/16/hello-world/</loc>
+        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
         <lastmod>2017-01-31T20:16:48.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -31,7 +39,7 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
+        <loc>https://erudika.com/blog/2015/10/16/hello-world/</loc>
         <lastmod>2017-01-31T20:16:48.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
