@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
+        <lastmod>2017-05-22T19:29:32.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/</loc>
         <lastmod>2017-04-26T23:22:38.462Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +33,6 @@
     <url>
         <loc>https://erudika.com/blog/2016/01/05/para-1-17-released/</loc>
         <lastmod>2017-01-31T20:16:48.497Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
-        <lastmod>2017-01-31T20:16:48.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
