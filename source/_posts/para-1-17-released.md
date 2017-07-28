@@ -41,7 +41,7 @@ Cookies are still supported but using web tokens is recommended. For example, to
 Facebook you have to make a request like this:
 
 ```js
-POST /v1/jwt_auth
+POST /jwt_auth
 {
   "appid": "app:myapp",
   "provider": "facebook",

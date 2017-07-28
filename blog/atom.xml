@@ -636,7 +636,7 @@ the documentation of our open source backend framework and redesigned the landin
     <link href="https://erudika.com/blog/2016/01/05/para-1-17-released/"/>
     <id>https://erudika.com/blog/2016/01/05/para-1-17-released/</id>
     <published>2016-01-05T16:20:27.000Z</published>
-    <updated>2017-01-31T20:16:48.497Z</updated>
+    <updated>2017-07-16T15:11:13.344Z</updated>
     
     <content type="html"><![CDATA[<p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
 deployed on <a href="https://paraio.com" target="_blank" rel="external">ParaIO.com</a>, our hosted backend service.</p>
@@ -661,7 +661,7 @@ This was quite limiting. Now with JWTs users can be authenticated and created pe
 (see <a href="https://paraio.org/docs/#011-apps" target="_blank" rel="external">the docs for apps</a>) through the API.
 Cookies are still supported but using web tokens is recommended. For example, to sign in a user with
 Facebook you have to make a request like this:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">POST /v1/jwt_auth</div><div class="line">&#123;</div><div class="line">  <span class="string">"appid"</span>: <span class="string">"app:myapp"</span>,</div><div class="line">  <span class="string">"provider"</span>: <span class="string">"facebook"</span>,</div><div class="line">  <span class="string">"token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eWIiO..."</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">POST /jwt_auth</div><div class="line">&#123;</div><div class="line">  <span class="string">"appid"</span>: <span class="string">"app:myapp"</span>,</div><div class="line">  <span class="string">"provider"</span>: <span class="string">"facebook"</span>,</div><div class="line">  <span class="string">"token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eWIiO..."</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>The token above is a Facebook access token which is exchanged for a Para access token in the form of JWT.
 If that request succeeds, the access token for Para is returned and that user is now authenticated with <code>app:myapp</code>.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"jwt"</span>: &#123;</div><div class="line">    <span class="string">"access_token"</span>: <span class="string">"eyJhbGciOiJIUzI1NiJ9.eyJ..."</span>,</div><div class="line">    <span class="string">"expires"</span>: <span class="number">1450137214490</span>,</div><div class="line">    <span class="string">"refresh"</span>: <span class="number">1450137216490</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"user"</span>: &#123;</div><div class="line">    <span class="string">"id"</span>:<span class="string">"user1"</span>,</div><div class="line">    <span class="string">"timestamp"</span>: <span class="number">1399721289987</span>,</div><div class="line">    <span class="string">"type"</span>:<span class="string">"user"</span>,</div><div class="line">    <span class="string">"appid"</span>:<span class="string">"myapp"</span>,</div><div class="line">    ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -715,11 +715,13 @@ deployed on &lt;a href=&quot;https://paraio.com&quot;&gt;ParaIO.com&lt;/a&gt;, o
     <link href="https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/"/>
     <id>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</id>
     <published>2015-10-21T11:17:19.000Z</published>
-    <updated>2017-02-09T13:14:37.721Z</updated>
+    <updated>2017-07-26T21:08:20.240Z</updated>
     
-    <content type="html"><![CDATA[<p>Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
-server-side component of your website or app. Developers use them to build and iterate on products faster than ever
-before by focusing on the “fun” part - the frontend (client-side).</p>
+    <content type="html"><![CDATA[<p>Let’s have a look at and compare some modern open source backend frameworks that are available today.
+These frameworks handle the server-side operations of your website or app. Developers use them to build and
+iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).
+This blog post will be a comparison between open source frameworks only and does not aim to cover all backend
+services on the market.</p>
 <a id="more"></a>
 <p>The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually
 in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented
@@ -872,9 +874,11 @@ locally on your development machine and give it a try.</p>
     
     <summary type="html">
     
-      &lt;p&gt;Let’s have a look at some modern open source backend frameworks that are available today. These frameworks act as your
-server-side component of your website or app. Developers use them to build and iterate on products faster than ever
-before by focusing on the “fun” part - the frontend (client-side).&lt;/p&gt;
+      &lt;p&gt;Let’s have a look at and compare some modern open source backend frameworks that are available today.
+These frameworks handle the server-side operations of your website or app. Developers use them to build and
+iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).
+This blog post will be a comparison between open source frameworks only and does not aim to cover all backend
+services on the market.&lt;/p&gt;
     
     </summary>
     

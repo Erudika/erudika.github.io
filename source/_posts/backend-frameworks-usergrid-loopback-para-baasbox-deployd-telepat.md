@@ -7,9 +7,11 @@ comments: false
 img: img2.jpg
 ---
 
-Let's have a look at some modern open source backend frameworks that are available today. These frameworks act as your
-server-side component of your website or app. Developers use them to build and iterate on products faster than ever
-before by focusing on the "fun" part - the frontend (client-side).
+Let's have a look at and compare some modern open source backend frameworks that are available today.
+These frameworks handle the server-side operations of your website or app. Developers use them to build and
+iterate on products faster than ever before by focusing on the "fun" part - the frontend (client-side).
+This blog post will be a comparison between open source frameworks only and does not aim to cover all backend
+services on the market.
 
 <!-- more -->
 
