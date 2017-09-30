@@ -19,23 +19,21 @@
 		<meta property="fb:app_id" content="119564591416126">
     
 		<title>Implementing full-text search for your static site | Erudika Blog</title>
-		<meta name="description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites.
-They make it easy to build something, deploy it and forget it — free hosting, nothin">
+		<meta name="description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites. They make it easy to build something, deploy it and forget it — free hosting, nothin">
+<meta name="keywords" content="search,blog,para-cli">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Implementing full-text search for your static site">
 <meta property="og:url" content="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites.
-They make it easy to build something, deploy it and forget it — free hosting, nothin">
+<meta property="og:description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites. They make it easy to build something, deploy it and forget it — free hosting, nothin">
 <meta property="og:image" content="https://erudika.com/assets/img/blogpost_media8.png">
 <meta property="og:image" content="https://erudika.com/assets/img/ftsearch1.png">
 <meta property="og:image" content="https://erudika.com/assets/img/ftsearch2.png">
 <meta property="og:image" content="https://erudika.com/assets/img/ftsearch3.png">
-<meta property="og:updated_time" content="2017-01-31T20:16:48.481Z">
+<meta property="og:updated_time" content="2017-09-30T20:50:26.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Implementing full-text search for your static site">
-<meta name="twitter:description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites.
-They make it easy to build something, deploy it and forget it — free hosting, nothin">
+<meta name="twitter:description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites. They make it easy to build something, deploy it and forget it — free hosting, nothin">
 <meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media8.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
@@ -134,7 +132,7 @@ ga('send', 'pageview');
 				</header>
 
 				<div class="outer">
-					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
+					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
 					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search" />
 					<small class="right">powered by
 						<a href="https://paraio.com" target="_blank">
@@ -196,7 +194,7 @@ It’s written in JavaScript for Node.js and it’s really simple to use. Let’
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g para-cli</div></pre></td></tr></table></figure>
 <p>Now you can see all the options by typing <code>para-cli</code> in the console. There are several basic commands for reading,
 writing and deleting objects and one for search. For now, we’re only interested in the <code>create</code> command.</p>
-<p>Go over to <a href="http://paraio.com/signin" target="_blank" rel="external">ParaIO.com</a> and sign in to get a free account, if you don’t have one already.
+<p>Go over to <a href="https://paraio.com/signin" target="_blank" rel="external">ParaIO.com</a> and sign in to get a free account, if you don’t have one already.
 Next, we’ll create a new app where we can store our blog posts. If you already have an existing app with some objects
 in it, you can still fit in the content of your site by using objects of a different type, like <code>blogpost</code>.</p>
 <p><img src="https://erudika.com/assets/img/ftsearch1.png" alt=""></p>
@@ -232,7 +230,7 @@ result with other JS frameworks like Angular or React.</p>
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/" data-id="cj1zkmdg40004ox4sjl9chb3n" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/" data-id="cj1zkmdg40004ox4sjl9chb3n" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
@@ -332,7 +330,7 @@ result with other JS frameworks like Angular or React.</p>
 	</div>
 
 <!--	<div>
-		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>
+		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>
 	</div>-->
 </div>
 

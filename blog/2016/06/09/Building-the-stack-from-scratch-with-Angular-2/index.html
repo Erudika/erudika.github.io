@@ -19,14 +19,13 @@
 		<meta property="fb:app_id" content="119564591416126">
     
 		<title>Building the stack from scratch with Angular 2 | Erudika Blog</title>
-		<meta name="description" content="In this tutorial we’re going to build a simple single-page application with Angular 2. This is intended for
-developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got">
+		<meta name="description" content="In this tutorial we’re going to build a simple single-page application with Angular 2. This is intended for developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got">
+<meta name="keywords" content="para,angular,tutorial,typescript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Building the stack from scratch with Angular 2">
 <meta property="og:url" content="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description" content="In this tutorial we’re going to build a simple single-page application with Angular 2. This is intended for
-developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got">
+<meta property="og:description" content="In this tutorial we’re going to build a simple single-page application with Angular 2. This is intended for developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got">
 <meta property="og:image" content="https://erudika.com/assets/img/blogpost_media5.png">
 <meta property="og:image" content="https://erudika.com/assets/img/rman_1.png">
 <meta property="og:image" content="https://erudika.com/assets/img/rman_2.png">
@@ -34,11 +33,10 @@ developers unfamiliar with 2 or having some experience with AngularJS 1. First o
 <meta property="og:image" content="https://erudika.com/assets/img/rman_4.png">
 <meta property="og:image" content="https://erudika.com/assets/img/rman_5.png">
 <meta property="og:image" content="https://erudika.com/assets/img/rman_6.png">
-<meta property="og:updated_time" content="2017-01-31T20:16:48.481Z">
+<meta property="og:updated_time" content="2017-09-30T20:50:09.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building the stack from scratch with Angular 2">
-<meta name="twitter:description" content="In this tutorial we’re going to build a simple single-page application with Angular 2. This is intended for
-developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got">
+<meta name="twitter:description" content="In this tutorial we’re going to build a simple single-page application with Angular 2. This is intended for developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got">
 <meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media5.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
@@ -137,7 +135,7 @@ ga('send', 'pageview');
 				</header>
 
 				<div class="outer">
-					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
+					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
 					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search" />
 					<small class="right">powered by
 						<a href="https://paraio.com" target="_blank">
@@ -192,7 +190,7 @@ Instead, I’m going to use <strong>Para</strong> for my backend and I’m not g
 new to Para, it’s a general-purpose backend framework/server written in Java. It will save me a lot of time and effort
 because it has a nice JSON API for our app to connect to. To run the server you’re going to need a Java runtime.</p>
 <h2 id="Step-0-backend"><a href="#Step-0-backend" class="headerlink" title="Step 0 (backend)"></a>Step 0 (backend)</h2><ul>
-<li>Get <a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html" target="_blank" rel="external">Java</a></li>
+<li>Get <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Java</a></li>
 <li>Get <a href="https://paraio.org/" target="_blank" rel="external">Para</a></li>
 <li>Start the server in a separate terminal:</li>
 </ul>
@@ -312,7 +310,7 @@ is powered by our <a href="https://paraio.com" target="_blank" rel="external">cl
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" data-id="cj1zkmdg30003ox4sbncj598a" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" data-id="cj1zkmdg30003ox4sbncj598a" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
@@ -412,7 +410,7 @@ is powered by our <a href="https://paraio.com" target="_blank" rel="external">cl
 	</div>
 
 <!--	<div>
-		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>
+		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>
 	</div>-->
 </div>
 

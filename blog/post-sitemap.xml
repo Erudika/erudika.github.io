@@ -7,16 +7,8 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
-        <lastmod>2017-07-26T21:08:20.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/2016/01/05/para-1-17-released/</loc>
-        <lastmod>2017-07-16T15:11:13.344Z</lastmod>
+        <lastmod>2017-09-30T20:53:28.901Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +16,31 @@
 
     <url>
         <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
-        <lastmod>2017-05-22T19:29:32.894Z</lastmod>
+        <lastmod>2017-09-30T20:52:49.602Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2017-09-30T20:51:08.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
+        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
+        <lastmod>2017-09-30T20:50:09.589Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -72,22 +88,6 @@
 
     <url>
         <loc>https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
         <lastmod>2017-01-31T20:16:48.481Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

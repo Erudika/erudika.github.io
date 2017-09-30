@@ -16,48 +16,6 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/tutorial/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/typescript/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/search/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/blog/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/para-cli/</loc>
-        <lastmod>2017-01-31T20:16:48.481Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/angular/</loc>
-        <lastmod>2017-01-31T20:16:48.485Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/tags/ng-admin/</loc>
         <lastmod>2017-01-31T20:16:48.485Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -128,64 +86,106 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/jprime/</loc>
-        <lastmod>2017-05-22T19:29:32.894Z</lastmod>
+        <loc>https://erudika.com/blog/tags/angular/</loc>
+        <lastmod>2017-09-30T20:50:09.589Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/ios/</loc>
-        <lastmod>2017-05-22T19:29:32.894Z</lastmod>
+        <loc>https://erudika.com/blog/tags/tutorial/</loc>
+        <lastmod>2017-09-30T20:50:09.589Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/swift/</loc>
-        <lastmod>2017-05-22T19:29:32.894Z</lastmod>
+        <loc>https://erudika.com/blog/tags/typescript/</loc>
+        <lastmod>2017-09-30T20:50:09.589Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/release/</loc>
-        <lastmod>2017-07-16T15:11:13.344Z</lastmod>
+        <loc>https://erudika.com/blog/tags/search/</loc>
+        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/para/</loc>
-        <lastmod>2017-07-26T21:08:20.240Z</lastmod>
+        <loc>https://erudika.com/blog/tags/blog/</loc>
+        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/backend/</loc>
-        <lastmod>2017-07-26T21:08:20.240Z</lastmod>
+        <loc>https://erudika.com/blog/tags/para-cli/</loc>
+        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/baas/</loc>
-        <lastmod>2017-07-26T21:08:20.240Z</lastmod>
+        <lastmod>2017-09-30T20:51:08.224Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/frameworks/</loc>
-        <lastmod>2017-07-26T21:08:20.240Z</lastmod>
+        <lastmod>2017-09-30T20:51:08.224Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/API/</loc>
-        <lastmod>2017-07-26T21:08:20.240Z</lastmod>
+        <lastmod>2017-09-30T20:51:08.224Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/jprime/</loc>
+        <lastmod>2017-09-30T20:52:49.602Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/ios/</loc>
+        <lastmod>2017-09-30T20:52:49.602Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/swift/</loc>
+        <lastmod>2017-09-30T20:52:49.602Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/release/</loc>
+        <lastmod>2017-09-30T20:53:28.901Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/para/</loc>
+        <lastmod>2017-09-30T20:53:28.901Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/backend/</loc>
+        <lastmod>2017-09-30T20:53:28.901Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
