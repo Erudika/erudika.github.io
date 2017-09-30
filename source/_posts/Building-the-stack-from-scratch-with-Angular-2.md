@@ -42,7 +42,7 @@ because it has a nice JSON API for our app to connect to. To run the server you'
 
 ## Step 0 (backend)
 
-- Get [Java](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+- Get [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 - Get [Para](https://paraio.org/)
 - Start the server in a separate terminal:
 

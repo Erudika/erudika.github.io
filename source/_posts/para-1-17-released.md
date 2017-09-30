@@ -29,7 +29,7 @@ Updated design & added features to web console
 
 ![](https://erudika.com/assets/img/blogpost_media2.png)
 
-[JSON Web Tokens](http://jwt.io/) are a new standard for authenticating clients and users. Think of them as
+[JSON Web Tokens](https://jwt.io/) are a new standard for authenticating clients and users. Think of them as
 'Cookies 2.0'. They are simply a signed JSON object containing some data about the authenticated user. The cool thing
 about JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
 store information and claims about the user and that information is signed and cannot be tampered with.
@@ -76,7 +76,7 @@ running native Android code. The app's code, even though compiled, is not truste
 API access credentials like a `secret_key` for Para. In this case JWT is ideal because it gives that app (untrusted client)
 temporary access to the API. Para access tokens are valid for one week, by default.
 
-Special thanks to the guys at [Connect2ID](http://connect2id.com/products/nimbus-jose-jwt) for their excellent JWT
+Special thanks to the guys at [Connect2ID](https://connect2id.com/products/nimbus-jose-jwt) for their excellent JWT
 library for Java which we use in Para.
 
 ## Resource permissions

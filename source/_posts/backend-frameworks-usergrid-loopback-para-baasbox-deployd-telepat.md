@@ -182,7 +182,7 @@ built-in. Other functionality like social login support is provided by third-par
 
 *As of February 2017, Deployd's development on GitHub seems to be stale.*
 
-## [Telepat](http://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
+## [Telepat](https://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
 <img src="/assets/img/telepat.png">
 
 **Multitenant:** yes <br>

@@ -45,7 +45,7 @@ $ npm install -g para-cli
 Now you can see all the options by typing `para-cli` in the console. There are several basic commands for reading,
 writing and deleting objects and one for search. For now, we’re only interested in the `create` command.
 
-Go over to [ParaIO.com](http://paraio.com/signin) and sign in to get a free account, if you don’t have one already.
+Go over to [ParaIO.com](https://paraio.com/signin) and sign in to get a free account, if you don’t have one already.
 Next, we’ll create a new app where we can store our blog posts. If you already have an existing app with some objects
 in it, you can still fit in the content of your site by using objects of a different type, like `blogpost`.
 
