@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
+        <lastmod>2017-12-07T14:15:46.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2016/01/05/para-1-17-released/</loc>
         <lastmod>2017-09-30T20:53:28.901Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +33,6 @@
     <url>
         <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
         <lastmod>2017-09-30T20:51:08.224Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
-        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

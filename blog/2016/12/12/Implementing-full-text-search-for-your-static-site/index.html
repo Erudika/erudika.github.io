@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://erudika.com/assets/img/ftsearch1.png">
 <meta property="og:image" content="https://erudika.com/assets/img/ftsearch2.png">
 <meta property="og:image" content="https://erudika.com/assets/img/ftsearch3.png">
-<meta property="og:updated_time" content="2017-09-30T20:50:26.317Z">
+<meta property="og:updated_time" content="2017-12-07T14:15:46.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Implementing full-text search for your static site">
 <meta name="twitter:description" content="Static site generators are great — they get the job done quickly for our blogs, landing pages and project websites. They make it easy to build something, deploy it and forget it — free hosting, nothin">
@@ -185,15 +185,15 @@ So we’ll need three things:</p>
 <p>Currently, there are several solutions for implementing full-text search. Depending on the time and money you are
 willing to spend, you could either host your own search server, like Elasticsearch or Solr, or pay for a service like
 Algolia. Now, for something as simple as a blog with ten articles in it, paying for servers or a monthly subscription
-fee is a bit excessive. This is where <a href="https://paraio.com" target="_blank" rel="external">Para</a> comes in — our flexible, open-source backend service.
+fee is a bit excessive. This is where <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> comes in — our flexible, open-source backend service.
 It’s absolutely free for developers and the search functionality inside of it is <strong>powered by Elasticsearch</strong> — <em>sweet!</em></p>
 <p>Initially, when we started with this task we didn’t have the tool for indexing our blog posts and this lead to us
-writing <a href="https://github.com/Erudika/para-cli" target="_blank" rel="external">para-cli</a> — a command-line tool for working with our Para backend server.
+writing <a href="https://github.com/Erudika/para-cli" target="_blank" rel="noopener">para-cli</a> — a command-line tool for working with our Para backend server.
 It’s written in JavaScript for Node.js and it’s really simple to use. Let’s go ahead and install it:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g para-cli</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install -g para-cli</div><div class="line"># run setup and set endpoint to either &apos;http://localhost:8080&apos; or &apos;https://paraio.com&apos;</div><div class="line">$ para-cli setup</div></pre></td></tr></table></figure>
 <p>Now you can see all the options by typing <code>para-cli</code> in the console. There are several basic commands for reading,
 writing and deleting objects and one for search. For now, we’re only interested in the <code>create</code> command.</p>
-<p>Go over to <a href="https://paraio.com/signin" target="_blank" rel="external">ParaIO.com</a> and sign in to get a free account, if you don’t have one already.
+<p>Go over to <a href="https://paraio.com/signin" target="_blank" rel="noopener">ParaIO.com</a> and sign in to get a free account, if you don’t have one already.
 Next, we’ll create a new app where we can store our blog posts. If you already have an existing app with some objects
 in it, you can still fit in the content of your site by using objects of a different type, like <code>blogpost</code>.</p>
 <p><img src="https://erudika.com/assets/img/ftsearch1.png" alt=""></p>
@@ -213,7 +213,7 @@ widget to be able to be able to access the Para search API without a secret key,
 the <code>blogposts</code> resource.</p>
 <p><img src="https://erudika.com/assets/img/ftsearch3.png" alt=""></p>
 <p>The search box in our case is implemented with good old jQuery and a plugin called
-<a href="https://twitter.github.io/typeahead.js/" target="_blank" rel="external">typehead.js</a>. The code is very simple — it calls the search API and queries
+<a href="https://twitter.github.io/typeahead.js/" target="_blank" rel="noopener">typehead.js</a>. The code is very simple — it calls the search API and queries
 objects of type <code>blogpost</code>. The results are in the form of a JSON object with several properties but we’re only
 interested in the objects found so we transform it into an <code>Array</code>.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> APPID = <span class="string">"app:myapp"</span>;</div><div class="line"><span class="keyword">var</span> ENDPOINT = <span class="string">"https://paraio.com/v1"</span>;</div><div class="line"></div><div class="line">$.ajaxSetup(&#123;</div><div class="line">  <span class="attr">headers</span>: &#123;<span class="string">'Authorization'</span>: <span class="string">'Anonymous '</span> + APPID&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> blogposts = <span class="keyword">new</span> Bloodhound(&#123;</div><div class="line">  <span class="attr">datumTokenizer</span>: Bloodhound.tokenizers.whitespace,</div><div class="line">  <span class="attr">queryTokenizer</span>: Bloodhound.tokenizers.whitespace,</div><div class="line">  <span class="attr">remote</span>: &#123;</div><div class="line">    <span class="attr">url</span>: ENDPOINT + <span class="string">'/blogposts?q=%QUERY'</span>,</div><div class="line">    <span class="attr">wildcard</span>: <span class="string">'%QUERY'</span>,</div><div class="line">    <span class="attr">transform</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> res.items || [];</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">'#search-box'</span>).typeahead(&#123;</div><div class="line">  <span class="attr">hint</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">highlight</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">minLength</span>: <span class="number">3</span></div><div class="line">&#125;,</div><div class="line">&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'blogposts'</span>,</div><div class="line">  <span class="attr">source</span>: blogposts,</div><div class="line">  <span class="attr">templates</span>: &#123;</div><div class="line">    <span class="attr">notFound</span>: <span class="string">'&lt;i&gt;No results.&lt;/i&gt;'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">display</span>: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> result.name;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">'#search-box'</span>).bind(<span class="string">'typeahead:select'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">ev, result</span>) </span>&#123;</div><div class="line">  <span class="built_in">window</span>.location = result.url || <span class="string">''</span>;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
@@ -223,8 +223,8 @@ also be modified.</p>
 <h2 id="Final-result"><a href="#Final-result" class="headerlink" title="Final result"></a>Final result</h2><p><em>That’s it!</em> You can try out the finished thing at the top of this page, above the title.
 We chose jQuery just because it was already included in our HTML code but you can just as easily achieve the same
 result with other JS frameworks like Angular or React.</p>
-<p><em>If you liked this post, you can also follow us <a href="https://twitter.com/erudika" target="_blank" rel="external">on Twitter</a> or chat with us
-<a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>.</em></p>
+<p><em>If you liked this post, you can also follow us <a href="https://twitter.com/erudika" target="_blank" rel="noopener">on Twitter</a> or chat with us
+<a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>.</em></p>
 
       
     </div>

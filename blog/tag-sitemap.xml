@@ -107,27 +107,6 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/search/</loc>
-        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/blog/</loc>
-        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/para-cli/</loc>
-        <lastmod>2017-09-30T20:50:26.317Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/tags/baas/</loc>
         <lastmod>2017-09-30T20:51:08.224Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -186,6 +165,27 @@
     <url>
         <loc>https://erudika.com/blog/tags/backend/</loc>
         <lastmod>2017-09-30T20:53:28.901Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/search/</loc>
+        <lastmod>2017-12-07T14:15:46.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/blog/</loc>
+        <lastmod>2017-12-07T14:15:46.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/para-cli/</loc>
+        <lastmod>2017-12-07T14:15:46.034Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

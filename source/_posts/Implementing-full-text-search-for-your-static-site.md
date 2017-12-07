@@ -40,6 +40,8 @@ It’s written in JavaScript for Node.js and it’s really simple to use. Let’
 
 ```
 $ npm install -g para-cli
+# run setup and set endpoint to either 'http://localhost:8080' or 'https://paraio.com'
+$ para-cli setup
 ```
 
 Now you can see all the options by typing `para-cli` in the console. There are several basic commands for reading,
