@@ -163,6 +163,13 @@ a:after {
 	left: 0;
 	font-size: 152px;
 }
+#hello-icon3 {
+	color: white;
+	position: absolute;
+	top: -100px;
+	right: -25px;
+	font-size: 52px;
+}
 
 /* Blue */
 .blue {
