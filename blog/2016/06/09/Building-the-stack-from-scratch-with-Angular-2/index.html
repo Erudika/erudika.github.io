@@ -173,15 +173,15 @@ ga('send', 'pageview');
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got <strong>Visual Studio Code</strong>
 installed on my machine and it’s running on Linux. I chose VS Code because we’ll be working with <strong>TypeScript</strong>
 mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I’ve decided to save
-some time and clone the excellent Angular 2 starter kit by <a href="https://github.com/mgechev" target="_blank" rel="external">Minko Gechev</a> called
+some time and clone the excellent Angular 2 starter kit by <a href="https://github.com/mgechev" target="_blank" rel="noopener">Minko Gechev</a> called
 <strong>‘angular-seed’</strong>. For that you’ll also need <strong>Git</strong>, <strong>Node.js</strong> and <strong>npm</strong>.</p>
 <a id="more"></a>
 <p><img src="https://erudika.com/assets/img/blogpost_media5.png" alt=""></p>
 <h2 id="Step-0-frontend"><a href="#Step-0-frontend" class="headerlink" title="Step 0 (frontend)"></a>Step 0 (frontend)</h2><ul>
-<li>Get <a href="https://code.visualstudio.com/Download" target="_blank" rel="external">Visual Studio Code</a></li>
-<li>Get <a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
-<li>Get <a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js with npm</a></li>
-<li>Clone <a href="https://github.com/mgechev/angular-seed" target="_blank" rel="external">‘angular-seed’</a></li>
+<li>Get <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">Visual Studio Code</a></li>
+<li>Get <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a></li>
+<li>Get <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js with npm</a></li>
+<li>Clone <a href="https://github.com/mgechev/angular-seed" target="_blank" rel="noopener">‘angular-seed’</a></li>
 <li>Open the project in the VS Code editor</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> --depth 1 https://github.com/mgechev/angular-seed.git angular2-para</div><div class="line"><span class="built_in">cd</span> angular2-para</div><div class="line"><span class="comment"># install the project's dependencies</span></div><div class="line">npm install</div><div class="line"><span class="comment"># watches your files and uses livereload by default</span></div><div class="line">npm start</div></pre></td></tr></table></figure>
@@ -190,8 +190,8 @@ Instead, I’m going to use <strong>Para</strong> for my backend and I’m not g
 new to Para, it’s a general-purpose backend framework/server written in Java. It will save me a lot of time and effort
 because it has a nice JSON API for our app to connect to. To run the server you’re going to need a Java runtime.</p>
 <h2 id="Step-0-backend"><a href="#Step-0-backend" class="headerlink" title="Step 0 (backend)"></a>Step 0 (backend)</h2><ul>
-<li>Get <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Java</a></li>
-<li>Get <a href="https://paraio.org/" target="_blank" rel="external">Para</a></li>
+<li>Get <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">Java</a></li>
+<li>Get <a href="https://paraio.org/" target="_blank" rel="noopener">Para</a></li>
 <li>Start the server in a separate terminal:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># run Para</span></div><div class="line">java -jar para-x.y.z.war</div></pre></td></tr></table></figure>
@@ -205,7 +205,7 @@ this:</p>
 without adding extra features like authentication and login pages. By default the backend is secured and only signed
 requests are allowed, but for the purpose of this tutorial we’re going to add a new permission to allow all requests to
 just one specific resource - <code>/v1/recipes</code>.</p>
-<p>Go to <a href="https://console.paraio.org" target="_blank" rel="external">console.paraio.org</a> and enter the credentials that you saved in the beginning. Also
+<p>Go to <a href="https://console.paraio.org" target="_blank" rel="noopener">console.paraio.org</a> and enter the credentials that you saved in the beginning. Also
 click the cog icon to edit the API endpoint and set it to <code>http://localhost:8080</code>. Click ‘Connect’.</p>
 <p>Next, go to ‘App’ on the left and edit the root app called <code>para</code>. You’ll see a section for resource permissions and
 there you will write a simple permission definition in JSON:</p>
@@ -283,7 +283,7 @@ called <code>md2html()</code> which will be used in our template.
 <p>Finally, we add the search box in the template below the heading:
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My Recipes &amp;nbsp; <span class="tag">&lt;<span class="name">button</span> <span class="attr">...</span>&gt;</span>Add<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">form</span> (<span class="attr">submit</span>)=<span class="string">"search()"</span> [<span class="attr">hidden</span>]=<span class="string">"showForm"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> [(<span class="attr">ngModel</span>)]=<span class="string">"q"</span> <span class="attr">placeholder</span>=<span class="string">"Search"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>And we’re done! The final result of our <strong>Recipe Manager 1.0.0</strong>
-(check out <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="external">the live demo</a>):</p>
+(check out <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="noopener">the live demo</a>):</p>
 <p><img src="https://erudika.com/assets/img/rman_6.png" alt=""></p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax.
 Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java,
@@ -302,15 +302,15 @@ great - the syntax is clean, the app is well structured and the error messages a
 <li>write <em>any</em> backend code</li>
 <li>define the “recipe” data type on the server or in a database</li>
 </ul>
-<p>The code for this tutorial is on GitHub at <a href="https://github.com/albogdano/angular2-para" target="_blank" rel="external">albogdano/angular2-para</a>.
-I’ve deployed the same code to GitHub pages as a <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="external">live demo</a> which
-is powered by our <a href="https://paraio.com" target="_blank" rel="external">cloud-based Para service</a>.</p>
-<p> <em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
+<p>The code for this tutorial is on GitHub at <a href="https://github.com/albogdano/angular2-para" target="_blank" rel="noopener">albogdano/angular2-para</a>.
+I’ve deployed the same code to GitHub pages as a <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="noopener">live demo</a> which
+is powered by our <a href="https://paraio.com" target="_blank" rel="noopener">cloud-based Para service</a>.</p>
+<p> <em>Have questions or suggestions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>!</em></p>
 
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" data-id="cj1zkmdg30003ox4sbncj598a" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" data-id="cjnbiluzt0006ai4svudktgij" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
@@ -364,6 +364,10 @@ is powered by our <a href="https://paraio.com" target="_blank" rel="external">cl
       <ul>
         
           <li>
+            <a href="/blog/2018/10/15/Announcing-Scoold-Pro/">Announcing Scoold Pro</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/">Introducing Scoold - an open source Q&amp;A platform</a>
           </li>
         
@@ -379,10 +383,6 @@ is powered by our <a href="https://paraio.com" target="_blank" rel="external">cl
             <a href="/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/">An open source backend for the Internet of Things</a>
           </li>
         
-          <li>
-            <a href="/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/">Building the stack from scratch with Angular 2</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -393,7 +393,7 @@ is powered by our <a href="https://paraio.com" target="_blank" rel="external">cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 13.33px;">jprime</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/release/" style="font-size: 16.67px;">release</a> <a href="/blog/tags/scoold/" style="font-size: 10px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a>
+      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 13.33px;">jprime</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/release/" style="font-size: 16.67px;">release</a> <a href="/blog/tags/scoold/" style="font-size: 13.33px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a>
     </div>
   </div>
 

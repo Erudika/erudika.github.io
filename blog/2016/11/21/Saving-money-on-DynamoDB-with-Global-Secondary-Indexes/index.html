@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advan">
 <meta property="og:image" content="https://erudika.com/assets/img/blogpost_media7.png">
-<meta property="og:updated_time" content="2017-01-31T20:16:48.489Z">
+<meta property="og:updated_time" content="2017-01-31T20:16:48.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Saving money on DynamoDB with Global Secondary Indexes">
 <meta name="twitter:description" content="Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advan">
@@ -216,12 +216,12 @@ ga('send', 'pageview');
 <p>So, if we had a read function in our code called <code>readObject(key, table)</code> this will have to be changed to <code>readObject(getKeyForTableID(key, table))</code>. Thus we can not only read from standard tables but also we can read object from our <code>shared</code> table. Finally, if we want to query multiple objects (pages of objects) from <code>shared</code> we do a scan operation on the global index instead of the original table.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function">String <span class="title">readPageFromSharedTable</span><span class="params">(String tableID, String fromKey, List&lt;Page&lt;Item, QueryOutcome&gt;&gt; results)</span> </span>&#123;</div><div class="line">  ValueMap valueMap = <span class="keyword">new</span> ValueMap().withString(<span class="string">":tid"</span>, tableID);</div><div class="line">  valueMap.put(<span class="string">":ts"</span>, fromKey);</div><div class="line">  Index index = getSharedIndex(tableID);</div><div class="line"></div><div class="line">  QuerySpec spec = <span class="keyword">new</span> QuerySpec().withMaxPageSize(<span class="number">100</span>).withMaxResultSize(<span class="number">100</span>).</div><div class="line">      withKeyConditionExpression(<span class="string">"tableID = :tid and timestamp &gt; :ts"</span>).</div><div class="line">      withValueMap(valueMap);</div><div class="line"></div><div class="line">  Page&lt;Item, QueryOutcome&gt; items = index.query(spec);</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (items.hasNextPage()) &#123;</div><div class="line">    results.add(items.firstPage());</div><div class="line">    <span class="comment">// return last key as a start key to next page</span></div><div class="line">    <span class="keyword">return</span> items.getLowLevelResult().getQueryResult().getLastEvaluatedKey().get(<span class="string">"timestamp"</span>).getS();</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let’s do some simple calculations. At the time of writing, a table with 1/1 throughput costs <strong>$0.66/month</strong>. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we’d have to pay <strong>(100 * 0.66) = $66 per month</strong>. That’s a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere <strong>$1.32/month</strong> for the minimum capacity of 1 read/s and 1 write/s. That’s a <em>50x</em> cost reduction — good job!</p>
-<p><em>If you liked this post, you should check out <a href="https://paraio.com" target="_blank" rel="external">Para</a> - our backend service for busy developers. Also, chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="external">on Gitter</a>!</em></p>
+<p><em>If you liked this post, you should check out <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> - our backend service for busy developers. Also, chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>!</em></p>
 
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/" data-id="cj1zkmdgb000box4s79ewg82m" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/" data-id="cjnbiluzw0008ai4sr076opal" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
@@ -275,6 +275,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/blog/2018/10/15/Announcing-Scoold-Pro/">Announcing Scoold Pro</a>
+          </li>
+        
+          <li>
             <a href="/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/">Introducing Scoold - an open source Q&amp;A platform</a>
           </li>
         
@@ -290,10 +294,6 @@ ga('send', 'pageview');
             <a href="/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/">An open source backend for the Internet of Things</a>
           </li>
         
-          <li>
-            <a href="/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/">Building the stack from scratch with Angular 2</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -304,7 +304,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 13.33px;">jprime</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/release/" style="font-size: 16.67px;">release</a> <a href="/blog/tags/scoold/" style="font-size: 10px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a>
+      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 13.33px;">jprime</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/release/" style="font-size: 16.67px;">release</a> <a href="/blog/tags/scoold/" style="font-size: 13.33px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/stackoverflow/" style="font-size: 10px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a>
     </div>
   </div>
 
