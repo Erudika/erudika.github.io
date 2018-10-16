@@ -16,6 +16,13 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/tags/mongodb/</loc>
+        <lastmod>2017-01-31T20:16:48.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/tags/ng-admin/</loc>
         <lastmod>2017-01-31T20:16:48.486Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,13 +31,6 @@
 
     <url>
         <loc>https://erudika.com/blog/tags/frontend/</loc>
-        <lastmod>2017-01-31T20:16:48.486Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/mongodb/</loc>
         <lastmod>2017-01-31T20:16:48.486Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -177,22 +177,22 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/release/</loc>
-        <lastmod>2018-10-16T09:17:44.191Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/tags/scoold/</loc>
-        <lastmod>2018-10-16T09:17:44.191Z</lastmod>
+        <lastmod>2018-10-16T09:26:31.360Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/enterprise/</loc>
-        <lastmod>2018-10-16T09:17:44.191Z</lastmod>
+        <lastmod>2018-10-16T09:26:31.360Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/release/</loc>
+        <lastmod>2018-10-16T09:26:31.360Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
