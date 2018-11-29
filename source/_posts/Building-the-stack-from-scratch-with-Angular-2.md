@@ -1,5 +1,5 @@
 layout: post
-title: Building the stack from scratch with Angular 2
+title: Building a full stack application from scratch with Angular
 date: 2016-06-09 14:37:12
 tags: [angular, para, tutorial, typescript]
 author: alex@erudika.com
@@ -7,7 +7,9 @@ comments: false
 img: img7.jpg
 ---
 
-In this tutorial we're going to build a simple single-page application with **Angular 2**. This is intended for
+**UPDATE:** This article and its associated code have recently been updated for Angular 7.x.
+
+In this tutorial we're going to build a simple single-page application with **Angular 2/4/6/7**. This is intended for
 developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got **Visual Studio Code**
 installed on my machine and it's running on Linux. I chose VS Code because we'll be working with **TypeScript**
 mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I've decided to save
