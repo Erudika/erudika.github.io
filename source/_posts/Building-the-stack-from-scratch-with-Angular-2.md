@@ -7,14 +7,14 @@ comments: false
 img: img7.jpg
 ---
 
-**UPDATE:** This article and its associated code have recently been updated for Angular 7.x.
+**UPDATE:** This article and its associated code have been updated for Angular 7.x.
 
-In this tutorial we're going to build a simple single-page application with **Angular 2/4/6/7**. This is intended for
-developers unfamiliar with 2 or having some experience with AngularJS 1. First of all, I got **Visual Studio Code**
+In this tutorial we're going to build a simple single-page application with **Angular 2+**. This is intended for
+developers unfamiliar with 2+ or having some experience with AngularJS. First of all, I got **Visual Studio Code**
 installed on my machine and it's running on Linux. I chose VS Code because we'll be working with **TypeScript**
 mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I've decided to save
 some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https://github.com/mgechev) called
-**'angular-seed'**. For that you'll also need **Git**, **Node.js** and **npm**.
+**'angular-seed'**. You'll also need to have **Git**, **Node.js** and **npm** installed.
 
 <!-- more -->
 
@@ -97,99 +97,120 @@ publicly available. Click 'Save Changes'.
 
 ## Step 2 - CRUD recipes
 
-Now let's go back to our frontend and edit the 'Home' component under `src/client/app/+home`. We want to edit the HTML
+Now let's go back to our frontend and edit the 'Home' component under `src/client/app/home`. We want to edit the HTML
 code a little bit in `home.component.html`:
 
 ```html
-<h1>My Recipes &nbsp;
-    <button (click)="clearForm() && showForm = true" [hidden]="showForm">Add</button>
-</h1>
-<form (submit)="addRecipe()" [hidden]="!showForm">
-  <div>
-    <input [(ngModel)]="newName" placeholder="Title">
-  </div>
-  <br>
-  <div>
-    <textarea [(ngModel)]="newRecipe" rows="10" cols="33" placeholder="Recipe"></textarea>
-  </div>
-  <button type="submit">
-    <span *ngIf="editMode">Save</span>
-    <span *ngIf="!editMode">Add</span>
-  </button>
-  &nbsp;
-  <a href="#" (click)="showForm = false">Close</a>
-</form>
+<ul>
+  <li *ngFor="let recipe of recipesList; let i = index" class="recipe-box">
+    <div [hidden]="editedRecipes.get(recipe.id) || (!recipe.id && createMode)">
+      <h3>{{recipe.name}}</h3>
+      <hr>
+      <div [innerHTML]="md2html(recipe.text)"></div>
+      <br>
+      <button href="#" (click)="editRecipe(recipe)">edit</button> &nbsp;
+      <a href="#" (click)="removeRecipe(recipe.id)" class="red right">remove</a>
+    </div>
+    <div [hidden]="(recipe.id || !createMode) && !editedRecipes.get(recipe.id)">
+      <form (submit)="addRecipe(recipe)">
+        <div>
+          <input [(ngModel)]="recipe.name" placeholder="Title" [name]="'name' + i">
+        </div>
+        <br>
+        <div>
+          <textarea [(ngModel)]="recipe.text" rows="10" cols="33" placeholder="Recipe" [name]="'text' + i"></textarea>
+        </div>
+        <button type="submit">
+          <span *ngIf="createMode">Add</span>
+          <span *ngIf="!createMode">Save</span>
+        </button>
+        &nbsp;
+        <a href="#" (click)="closeForm(recipe.id)">Close</a>
+      </form>
+    </div>
+  </li>
+</ul>
 ```
 
-I've added the "Add" button which shows the form where we can write a recipe (controlled by `showForm`), a textarea,
+I've added the "Add" button which shows the form where we can write a recipe (controlled by `newRecipeForm()`), a textarea,
 and a close button. Notice how the text value of the "Add" button changes to "Save" when we're in edit mode. Coming
-from Angular 1, you'll notice the weird `[(ngModel)]` syntax - it's a two-way binding (single brackets is one-way).
+from AngularJS, you'll notice the weird `[(ngModel)]` syntax - it's a two-way binding (single brackets is one-way).
 Similarly, `*ngIf` is just shorthand for `[ngIf]`.
 
-Also, I chose to set a new title in the header section in `src/client/app/shared/toolbar/toolbar.component.html`:
+Also, I chose to set a new title in the header section in `src/client/app/core/toolbar/toolbar.component.html`:
 ```html
-<h1>Recipe Manager <code><small>v1.0.0</small></code></h1>
-<more></more>
+<h1>Recipe Manager <code><small>v{{version}}</small></code></h1>
+<div class="more"></div>
 ```
 
 Let's edit the `NameListService` which is part of the starter project and rename it to `RecipesService`. You'll have
 to rename all occurrences of the class and also rename the folder `src/client/app/shared/name-list`. In the code for
-`home.component.ts` we'll add a new field `newRecipe: string` to hold the recipe text and the whole this should
-look like this:
+`home.component.ts` we'll add a few fields to manage the recipes. The start of that component should look like this:
 
 ```ts
-export class HomeComponent {
-    newName: string;
-    newRecipe: string;
-    constructor(public recipeService: RecipeService) {}
+export class HomeComponent implements OnInit {
+  recipesList: Array<any>;
+  createMode = false;
+  q: string;
+  editedRecipes: Map<string, boolean>;
 
-    addName(): boolean {
-      this.recipeService.add(this.newName);
-      this.newName = '';
-      return false;
-    }
+  constructor(public recipeService: RecipeService) {
+    this.editedRecipes = new Map<string, boolean>();
+    this.recipesList = new Array();
+  }
+
+  addRecipe(): boolean { }
 }
 ```
 
-Now we're going to focus on that `addName()` method. First rename it to `addRecipe()` and include the new field when the
-service is called:
+Now we're going to focus on that `addRecipe()` method so let's implement it:
 
 ```ts
-addRecipe(): boolean {
-    this.recipeService.add(this.newName, this.newRecipe);
-    this.newName = '';
-    this.newRecipe = '';
-    return false;
+addRecipe(recipe: any) {
+	this.recipeService.add(recipe.name, recipe.text)
+		.subscribe((data: any) => {
+			if (data) {
+				if (this.createMode) {
+					const first = this.recipesList.shift();
+					this.recipesList.unshift(data);
+					this.recipesList.unshift(first);
+				} else {
+					this.recipesList.unshift(data);
+				}
+			}
+		});
+	this.closeForm(recipe.id);
 }
 ```
 Let's also add the method for listing recipes `listRecipes()` and call it upon initialization:
 
 ```ts
 ngOnInit() {
-    this.listRecipes();
+	this.listRecipes();
 }
+
 listRecipes() {
-    this.recipeService.get().subscribe((data:any) => {
-        this.recipesList = data.items;
-    });
+	this.recipeService.get()
+		.subscribe((data: any) => {
+			this.recipesList = data.items;
+		});
 }
 ```
 
-Now we have to modify the `RecipeService` class to allow for another parameter `text`. Let's also add the code
-for making the `POST` request to the backend:
+Now we have to modify the `RecipeService` in `recipe.service.ts` to allow for another parameter `text` in the
+`add()` method. Let's also add the code for making the `POST` request to the backend:
 ```ts
-// URL of our public resource '/recipes'
-private RECIPES_RESOURCE = "http://localhost:8080/v1/recipes";
+private appID = 'app:myapp';
+private RECIPES_RESOURCE = Config.API + '/v1/recipes';
 
-add(name: string, text: string): Observable<any> {
-    if (!name || !text) { return Observable.of(null); }
-    let recipe:any = { name: name, text: text };
-    return this.http.post(this.RECIPES_RESOURCE, JSON.stringify(recipe), this.options)
-        .map((response: Response) => response.json());
+add(name: string, text: string) {
+	if (!name || !text) { return of(null); }
+	const recipe: any = { name: name, text: text };
+	return this.http.post(this.RECIPES_RESOURCE, JSON.stringify(recipe), this.options);
 }
 ```
 
-Going back to the component code in `home.component.ts`, we have to subscribe to the `Observable` returned by
+You'll notice that in `home.component.ts`, we subscribe to the `Observable` returned by
 `recipeService.add()` and get back the list of recipes when they arrive.
 ```ts
 this.recipeService.add(this.newName, this.newRecipe).subscribe((data: any) => {
@@ -200,26 +221,20 @@ this.recipeService.add(this.newName, this.newRecipe).subscribe((data: any) => {
 });
 ```
 
-Finally, we'll add to `home.component.html` the markup for listing all available recipes, and also a box which appears
+In `home.component.html` we loop over the `recipesList` of all available recipes, and also a box which appears
 when there are no recipes to show:
 ```html
 <ul>
-  <div class="empty-box" *ngIf="recipesList && recipesList.length == 0" [hidden]="showForm">
+  <div class="empty-box" *ngIf="recipesList && recipesList.length == 0">
     No recipes to show.
   </div>
   <li *ngFor="let recipe of recipesList" class="recipe-box">
-    <h3>{{recipe.name}}</h3>
-    <hr>
-    <div>{{recipe.text}}</div>
-    <br>
-    <button href="#" (click)="editRecipe(recipe)" class="small">edit</button> &nbsp;
-    <a href="#" (click)="removeRecipe(recipe.id)" class="red right">remove</a>
+    ...
   </li>
 </ul>
 ```
 
-There are two click events here - one for editing and one for deleting recipes. Let's add the styling for
-`.recipe-box` and `.empty-box` later in `home.component.css`:
+Let's add the styling for `.recipe-box` and `.empty-box` later in `home.component.css`:
 
 ```css
 .recipe-box {
@@ -257,15 +272,23 @@ button.small { font-size: 12px; height: 30px; }
 ![](https://erudika.com/assets/img/rman_2.png)
 
 So, we should now we able to add recipes and after we click "Add" the form should be cleared and closed.
-For this let's add the following code in `home.component.ts` to reset the state of the form:
+For this let's add a couple of methods in `home.component.ts` - one to initialize the form and one to reset the
+state of the form:
 ```ts
-clearForm(): boolean {
-    this.showForm = false;
-    this.editMode = false;
-    this.recipeId = null;
-    this.newName = '';
-    this.newRecipe = '';
-    return true;
+newRecipeForm() {
+	if (!this.createMode) {
+		this.recipesList.unshift({name: '', text: ''});
+		this.createMode = true;
+	}
+}
+
+closeForm(recipeId: string) {
+	if (recipeId) {
+		this.editedRecipes.set(recipeId, false);
+	} else if (this.createMode) {
+		this.recipesList.shift();
+		this.createMode = false;
+	}
 }
 ```
 
@@ -273,86 +296,83 @@ clearForm(): boolean {
 
 The variable `recipeId` will keep the value of the `id` when a recipe is being edited. When "Save" is clicked this
 `id` is passed to the service and the backend so it won't create a new object, just update an existing one.
-
-Let's add more methods in our `recipeService` for updating and deleting recipes.
-```ts
-edit(id: any, name: string, text: string) {
-    if (!id) { return; }
-    let recipe:any = { name: name, text: text };
-    this.http.patch(this.RECIPES_RESOURCE + "/" + id, JSON.stringify(recipe), this.options).toPromise();
-}
-
-remove(id: string) {
-    if (!id) { return; }
-    this.http.delete(this.RECIPES_RESOURCE + "/" + id, this.options).toPromise();
-}
-```
-
-Nothing special here, except the `.toPromise()` in the end which converts an `Observable` to `Promise` and executes
-it right away. We're issuing these requests and we don't care about the results because we can update the UI
+We're issuing these requests and we don't care about the results because we can update the UI
 instantly, without having to wait for the request to finish.
 
-In `home.component.ts` we'll modify the code for `addRecipe()` to also edit a recipe when `recipeId` is set.
 ```ts
-addRecipe(): boolean {
-    if (this.recipeId) {
-        this.recipesList.map((el) => {
-            if (el.id == this.recipeId) {
-                el.name = this.newName;
-                el.text = this.newRecipe;
-            }
-        });
-        this.recipeService.edit(this.recipeId, this.newName, this.newRecipe);
-    } else {
-        this.recipeService.add(this.newName, this.newRecipe).subscribe((data: any) => {
-            if (data) {
-                this.recipesList.unshift(data);
-            }
-        });
-    }
-    this.clearForm();
-    return false;
-}
-
 editRecipe(recipe: any) {
-    this.editMode = true;
-    this.showForm = true;
-    this.recipeId = recipe.id;
-    this.newName = recipe.name;
-    this.newRecipe = recipe.text;
+	this.editedRecipes.set(recipe.id, true);
 }
 
 removeRecipe(id: string) {
-    this.recipeService.remove(id);
-    this.recipesList = this.recipesList.filter((el) => el.id !== id);
-    this.clearForm();
+	this.recipeService.remove(id).subscribe();
+	this.recipesList = this.recipesList.filter((el) => el.id !== id);
 }
 ```
 
-The methods `editRecipe()` and `removeRecipe()` are relatively straightforward - when editing, we set the mode in
-`editMode = true` and we show the form, when removing we just filter the array `recipesList` and we discard the
-deleted recipe if it matches the `id`.
+Let's also add similar methods in our `recipeService` for updating and deleting recipes. The methods `editRecipe()` and
+`removeRecipe()` are relatively straightforward - when editing, we switch to edit mode and we show the form, when
+removing we just filter the array `recipesList` and we discard the deleted recipe if it matches the `id`.
+
+```ts
+edit(id: string, name: string, text: string) {
+	if (!id) { return of(null); }
+	const recipe: any = { name: name, text: text };
+	return this.http.patch(this.RECIPES_RESOURCE + '/' + id, JSON.stringify(recipe), this.options);
+}
+
+remove(id: string) {
+	if (!id) { return of(null); }
+	return this.http.delete(this.RECIPES_RESOURCE + '/' + id, this.options);
+}
+```
+
+In `home.component.ts` we'll modify the code for `addRecipe()` to also edit a recipe when `recipe.id` is set.
+```ts
+addRecipe(recipe: any) {
+	if (recipe && recipe.id) {
+		this.recipeService.edit(recipe.id, recipe.name, recipe.text).subscribe();
+	} else {
+		this.recipeService.add(recipe.name, recipe.text)
+			.subscribe((data: any) => {
+				if (data) {
+					if (this.createMode) {
+						const first = this.recipesList.shift();
+						this.recipesList.unshift(data);
+						this.recipesList.unshift(first);
+					} else {
+						this.recipesList.unshift(data);
+					}
+				}
+			});
+	}
+	this.closeForm(recipe.id);
+}
+```
 
 ![](https://erudika.com/assets/img/rman_4.png)
 
-So far, so good. We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text
+We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text
 is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.
 
 ## Step 3 - Markdown support
 
-First of all, let's install `marked` - a nice JavaScript parser for Markdown:
+First of all, let's install `showdown` - a nice JavaScript parser for Markdown:
 ```bash
-npm install marked --save
-typings install dt~marked --global --save
+npm install showdown --save
+npm install @types/showdown --save-dev
 ```
-Then we import it in `home.component.ts` as `import *  as  marked from 'marked';`. Finally we'll add a simple method
-called `md2html()` which will be used in our template.
+Then we import it in `home.component.ts`:
+```
+import { Converter } from 'showdown';
+```
+Finally we'll implement a simple method called `md2html()` which will be used in our template.
 ```ts
-md2html(text: string) {
-    return marked(text || "");
+md2html(text: string): string {
+	return new Converter().makeHtml(text || '');
 }
 ```
-In our HTML template we change the line `<div>{{recipe.text}}</div>` like this:
+In our HTML template we call it like this:
 ```html
 <div [innerHTML]="md2html(recipe.text)"></div>
 ```
@@ -360,54 +380,51 @@ Now we render the text to HTML on the client and this allows us to write beautif
 
 ![](https://erudika.com/assets/img/rman_5.png)
 
-## Step 4 - Search
+## Step 4 - Full-text search
 
-Final touch - recipe search. We'll use the built-in full-text search in Para. In `recipe.service.ts`:
+The final feature left is the recipe search box. We'll use the built-in full-text search in Para. In `recipe.service.ts`:
 ```ts
-search(q: string): Observable<string[]> {
-    return this.http.get(this.RECIPES_RESOURCE + "?q=" + q)
-        .map((response: Response) => response.json());
+search(q: string) {
+	return this.http.get(this.RECIPES_RESOURCE + '?q=' + q, this.options);
 }
 ```
 And in `home.component.ts`:
 ```ts
-// a variable to keep the search query
-q: string;
 search(): boolean {
-    this.recipeService.search(this.q || "*").subscribe((data:any) => {
-      if (data.items) {
-        this.recipesList = data.items;
-      }
-    });
-    return false;
+	this.recipeService.search(this.q || '*').subscribe((data: any) => {
+		if (data.items) {
+			this.recipesList = data.items;
+		}
+	});
+	return false;
 }
 ```
 Finally, we add the search box in the template below the heading:
 ```html
-<h1>My Recipes &nbsp; <button ...>Add</button></h1>
+<h1>My Recipes &nbsp; <button (click)="newRecipeForm()">Add</button></h1>
 <div>
-  <form (submit)="search()" [hidden]="showForm">
-    <input type="text" [(ngModel)]="q" placeholder="Search">
+  <form (submit)="search()">
+    <input type="text" [(ngModel)]="q" name="searchText" placeholder="Search">
   </form>
 </div>
 ```
 
-And we're done! The final result of our **Recipe Manager 1.0.0**
+And we're done! Here's final result of our **Recipe Manager**
 (check out [the live demo](http://albogdano.github.io/angular2-para/)):
 
 ![](https://erudika.com/assets/img/rman_6.png)
 
 ## Summary
 
-Learning Angular 2 takes some time as it introduces a lot of architectural changes and new syntax.
+Learning Angular takes some time as it introduces a lot of architectural changes and new syntax.
 Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java,
 rather than a dynamic language like JS. The `import` syntax was a bit hard for me to get used to, especially
-with all the different files I had to navigate through. In general, the experience of writing Angular 2 apps is
+with all the different files I had to navigate through. In general, the experience of writing Angular apps is
 great - the syntax is clean, the app is well structured and the error messages are clear and understandable.
 
 **Things we did:**
 
-- wrote a few fancy AJAX calls to our backend API using observables
+- wrote a few fancy AJAX calls to our backend API
 - wired a bunch of simple TypeScript code between a component and a service
 - wrote some good old HTML and CSS
 - imported an external library with npm an typings

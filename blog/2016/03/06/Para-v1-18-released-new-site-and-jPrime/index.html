@@ -20,7 +20,7 @@
     
 		<title>Para v1.18 released, new site and jPrime | Erudika Blog</title>
 		<meta name="description" content="This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, fixed many bugs, released the Android client for Para and a new plugin for MongoDB.">
-<meta name="keywords" content="release,para,mongodb,jprime">
+<meta name="keywords" content="para,release,mongodb,jprime">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Para v1.18 released, new site and jPrime">
 <meta property="og:url" content="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/index.html">
@@ -190,7 +190,7 @@ you use. Here are some of the different possible integrations that can work grea
 </ul>
 <p>In <strong>v1.18</strong> we also improved the permissions API by allowing developers to add permissions on specific objects by <code>id</code>.
 The following code, for example, allows a user with id of <code>user1</code> to delete a specific <code>Post</code> object:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">paraClient.grantResourcePermission(<span class="string">"user1"</span>, <span class="string">"posts/123"</span>, [<span class="string">"DELETE"</span>]);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">paraClient.grantResourcePermission(<span class="string">"user1"</span>, <span class="string">"posts/123"</span>, [<span class="string">"DELETE"</span>]);</span><br></pre></td></tr></table></figure>
 <p>In addition to this, we added special flags to every <code>ParaObject</code> that control persistence, indexing and caching operations.
 These flags are in the form of boolean properties and give you a fine-grained control over every object. You can now
 create transient objects that only live in memory (<code>stored: false</code>, <code>indexed: false</code>, <code>cached: true</code>), or objects that
@@ -211,7 +211,7 @@ stickers on the day of the conference.</p>
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-id="cjnbiwsah0009zp4st6junj8x" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/" data-id="cjpvfnro1000btj4scrn2ayl8" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author">&nbsp; Alex B.

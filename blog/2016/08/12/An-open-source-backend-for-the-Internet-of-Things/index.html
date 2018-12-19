@@ -20,7 +20,7 @@
     
 		<title>An open source backend for the Internet of Things | Erudika Blog</title>
 		<meta name="description" content="Things — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increa">
-<meta name="keywords" content="release,para,iot,devices">
+<meta name="keywords" content="para,release,iot,devices">
 <meta property="og:type" content="article">
 <meta property="og:title" content="An open source backend for the Internet of Things">
 <meta property="og:url" content="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/index.html">
@@ -169,7 +169,7 @@ ga('send', 'pageview');
 <p><img src="https://erudika.com/assets/img/blogpost_media6.png" alt=""></p>
 <p>There are several key players in terms of IoT cloud platforms, but we chose to focus on two — <strong>AWS</strong> and <strong>Azure</strong>. In Para <code>1.20.0</code> we’ve implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There’s a new object called <code>Thing</code> which holds all the information about your device — the state of the device, the security credentials for the cloud and other important data. When a <code>Thing</code> is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates <code>Thing</code> objects in the background. If you prefer one of these two approaches, we’d love to hear your feedback. </p>
 <p>Creating things from the Para API is really simple — you only need to configure your access keys for the cloud provider of your choice. Then you make a <code>POST</code> request:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">POST /v1/things</div><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;RPiThingy&quot;,</div><div class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">POST /v1/things</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;RPiThingy&quot;,</span><br><span class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>serviceBroker</code> switches between IoT service providers and can either be “AWS” or “Azure”. The request above will perform several tasks on AWS before it returns, it will:</p>
 <ul>
 <li>Create a device certificate</li>
@@ -177,11 +177,11 @@ ga('send', 'pageview');
 <li>Create a new thing (device) and attach it to the certificate above</li>
 </ul>
 <p>Finally, a new <code>Thing</code> object is created within Para. The returned JSON object contains the inlined certificate and private key which should be transferred to the physical device. Once it starts sending data to AWS using the MQTT protocol you can poll for device state changes by reading the <code>Thing</code> object:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET /v1/things/myapp:664870213421895680</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/things/myapp:664870213421895680</span><br></pre></td></tr></table></figure>
 <p>AWS have what they call “device shadows” a persistent storage for device state which is useful for remembering what was the last state of the device if it ever got disconnected. Let’s assume that this shadow has been updated by our Raspberry Pi thingy and it set a <code>temp = 24</code> variable. Once we read object like we did above, it gets the latest state from AWS. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;id&quot;: &quot;664870213421895680&quot;,</div><div class="line">  &quot;timestamp&quot;: 1468601996535,</div><div class="line">  &quot;type&quot;: &quot;thing&quot;,</div><div class="line">  &quot;appid&quot;: &quot;myapp&quot;,</div><div class="line">  &quot;name&quot;: &quot;RPiThingy&quot;</div><div class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;,</div><div class="line">  &quot;deviceState&quot;: &#123;</div><div class="line">  	&quot;temp&quot;: 24</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;id&quot;: &quot;664870213421895680&quot;,</span><br><span class="line">  &quot;timestamp&quot;: 1468601996535,</span><br><span class="line">  &quot;type&quot;: &quot;thing&quot;,</span><br><span class="line">  &quot;appid&quot;: &quot;myapp&quot;,</span><br><span class="line">  &quot;name&quot;: &quot;RPiThingy&quot;</span><br><span class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;,</span><br><span class="line">  &quot;deviceState&quot;: &#123;</span><br><span class="line">  	&quot;temp&quot;: 24</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>If we make a change in our backend and change the <code>Thing</code> to have <code>temp = 26</code> then this change is automatically reflected on AWS and the shadow of the device is also updated.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PATCH /v1/things/myapp:664870213421895680</div><div class="line">&#123;</div><div class="line">  &quot;deviceState&quot;: &#123;</div><div class="line">    &quot;temp&quot;: 26</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PATCH /v1/things/myapp:664870213421895680</span><br><span class="line">&#123;</span><br><span class="line">  &quot;deviceState&quot;: &#123;</span><br><span class="line">    &quot;temp&quot;: 26</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="Summary-—-getting-started-with-Para-and-AWS-IoT"><a href="#Summary-—-getting-started-with-Para-and-AWS-IoT" class="headerlink" title="Summary — getting started with Para and AWS IoT"></a>Summary — getting started with Para and AWS IoT</h2><ol>
 <li>Get an account from AWS and create a user with permissions to call the IoT API</li>
 <li>Set the <code>para.aws_access_key</code> and <code>para.aws_secret_key</code> properties in your Para config file</li>
@@ -199,7 +199,7 @@ ga('send', 'pageview');
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-id="cjnbiwsab0003zp4sdff0brer" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-id="cjpvfnrnv0003tj4spjv69tte" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author">&nbsp; Alex B.
@@ -227,7 +227,7 @@ ga('send', 'pageview');
   
     <a href="/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Building the stack from scratch with Angular 2</div>
+      <div class="article-nav-title">Building a full stack application from scratch with Angular</div>
     </a>
   
 </nav>
