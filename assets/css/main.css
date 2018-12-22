@@ -995,11 +995,10 @@ a.article-title:hover {
   clear: both;
 }
 .article-share-twitter,
-.article-share-facebook,
 .article-share-pinterest,
 .article-share-google {
-  width: 50px;
-  height: 36px;
+  width: 33%;
+  height: 45px;
   display: block;
   float: left;
   position: relative;
@@ -1007,7 +1006,6 @@ a.article-title:hover {
   text-shadow: 0 1px #fff;
 }
 .article-share-twitter:before,
-.article-share-facebook:before,
 .article-share-pinterest:before,
 .article-share-google:before {
   font-size: 20px;
@@ -1017,12 +1015,11 @@ a.article-title:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -10px;
+  margin-top: -13px;
   margin-left: -10px;
   text-align: center;
 }
 .article-share-twitter:hover,
-.article-share-facebook:hover,
 .article-share-pinterest:hover,
 .article-share-google:hover {
   color: #fff;
@@ -1033,13 +1030,6 @@ a.article-title:hover {
 .article-share-twitter:hover {
   background: #00aced;
   text-shadow: 0 1px #008abe;
-}
-.article-share-facebook:before {
-  content: "\f09a";
-}
-.article-share-facebook:hover {
-  background: #3b5998;
-  text-shadow: 0 1px #2f477a;
 }
 .article-share-pinterest:before {
   content: "\f0d2";
