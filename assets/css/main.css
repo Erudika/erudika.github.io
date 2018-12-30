@@ -639,6 +639,8 @@ b, strong {
 .tt-suggestion.tt-cursor {
 	color: #fff;
 	background-color: #0097cf;
+  margin: auto -10px;
+  padding: 10px;
 }
 
 .twitter-typeahead {
