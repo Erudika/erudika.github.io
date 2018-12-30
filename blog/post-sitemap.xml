@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
+        <lastmod>2018-12-30T22:04:41.584Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
         <lastmod>2018-12-19T17:46:39.820Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,14 +58,6 @@
     <url>
         <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
         <lastmod>2017-09-30T20:52:49.602Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
-        <lastmod>2017-09-30T20:51:08.224Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
