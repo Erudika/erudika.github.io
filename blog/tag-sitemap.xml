@@ -115,13 +115,6 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/release/</loc>
-        <lastmod>2018-11-02T08:33:04.208Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/tags/enterprise/</loc>
         <lastmod>2018-11-02T08:33:04.208Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -145,13 +138,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/typescript/</loc>
         <lastmod>2018-12-19T17:46:39.820Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/para/</loc>
-        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -185,7 +171,7 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/scoold/</loc>
+        <loc>https://erudika.com/blog/tags/open-source/</loc>
         <lastmod>2018-12-30T22:04:41.584Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -199,8 +185,50 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/open-source/</loc>
-        <lastmod>2018-12-30T22:04:41.584Z</lastmod>
+        <loc>https://erudika.com/blog/tags/release/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/para/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/scoold/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/docker/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/kubernetes/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/helm/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/lucene/</loc>
+        <lastmod>2019-01-29T12:45:39.538Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
