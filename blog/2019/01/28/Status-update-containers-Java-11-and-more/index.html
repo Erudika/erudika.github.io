@@ -19,19 +19,19 @@
 		<meta property="fb:app_id" content="119564591416126">
     
 		<title>Status update - containers, Java 11 and more | Erudika Blog</title>
-		<meta name="description" content="Over the past couple of months I’ve been busy maintaining Para and Scoold and a few patches have been released. The changes are minor and are mostly related to dependency upgrades. A few minor bugs ha">
+		<meta name="description" content="Over the past couple of months we’ve been busy maintaining Para and  Scoold and a few patches have been released. The changes are minor and are mostly related  to dependency upgrades. A few minor bugs">
 <meta name="keywords" content="release,para,scoold,docker,kubernetes,helm,lucene">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Status update - containers, Java 11 and more">
 <meta property="og:url" content="https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description" content="Over the past couple of months I’ve been busy maintaining Para and Scoold and a few patches have been released. The changes are minor and are mostly related to dependency upgrades. A few minor bugs ha">
+<meta property="og:description" content="Over the past couple of months we’ve been busy maintaining Para and  Scoold and a few patches have been released. The changes are minor and are mostly related  to dependency upgrades. A few minor bugs">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://erudika.com/assets/img/blogpost_media12.png">
-<meta property="og:updated_time" content="2019-01-29T12:45:39.538Z">
+<meta property="og:updated_time" content="2019-01-31T21:37:11.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Status update - containers, Java 11 and more">
-<meta name="twitter:description" content="Over the past couple of months I’ve been busy maintaining Para and Scoold and a few patches have been released. The changes are minor and are mostly related to dependency upgrades. A few minor bugs ha">
+<meta name="twitter:description" content="Over the past couple of months we’ve been busy maintaining Para and  Scoold and a few patches have been released. The changes are minor and are mostly related  to dependency upgrades. A few minor bugs">
 <meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media12.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
@@ -162,10 +162,10 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Over the past couple of months I’ve been busy maintaining Para and Scoold and a few patches have been released.
-The changes are minor and are mostly related to dependency upgrades. A few minor bugs have been fixed as well.
-Scoold has received some much welcome pull requests with translations from our awesome contributors. It is now
-available in 12 different languages! </p>
+        <p>Over the past couple of months we’ve been busy maintaining <a href="https://paraio.org" target="_blank" rel="noopener">Para</a> and 
+<a href="https://scoold.com" target="_blank" rel="noopener">Scoold</a> and a few patches have been released. The changes are minor and are mostly related 
+to dependency upgrades. A few minor bugs have been fixed as well. Scoold has received some much welcome pull 
+requests with translations from our awesome contributors. It is now available in 12 different languages! </p>
 <a id="more"></a>
 <p><img src="/assets/img/blogpost_media12.png" alt=""></p>
 <p>Last year came the release of Java 11 and we’re quite happy to announce that both Scoold and Para are fully 
@@ -185,9 +185,11 @@ against XSS attacks, we’ve also upgraded the template engine, Velocity, to 2.0
 The JAR package is more appropriate for deploying Scoold to hosts without a servlet container, as it includes an
 instance of the embedded Jetty server. This is the case for Heroku, for example.</p>
 <p>Apart from Heroku, we’ve added support and documentation for lots of other deployment options — AWS, Azure, 
-DigitalOcean and Google App Engine. Not only that but we’ve added a new <code>helm/</code> folder with a Helm chart for those
+DigitalOcean and Google App Engine. Not only that, but we’ve added a new <code>helm/</code> folder with a Helm chart for those
 of you who want to deploy Scoold to a Kubernetes cluster with a single command:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">helm install --name my-scoold ./scoold</span><br></pre></td></tr></table></figure>
+<p>Read the <a href="https://github.com/Erudika/scoold/tree/master/helm" target="_blank" rel="noopener">Scoold chart README</a> for more details on how to 
+configure the pod.</p>
 <p>Para does not yet include a Helm chart because it has lots of different database combinations and it’s hard to choose
 the best option for everyone. It is available on Docker Hub and so is Scoold. To run a Para server locally with
 Docker, simply run:</p>

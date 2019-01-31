@@ -8,10 +8,10 @@ comments: false
 img: img14.jpg
 ---
 
-Over the past couple of months I've been busy maintaining Para and Scoold and a few patches have been released.
-The changes are minor and are mostly related to dependency upgrades. A few minor bugs have been fixed as well.
-Scoold has received some much welcome pull requests with translations from our awesome contributors. It is now
-available in 12 different languages! 
+Over the past couple of months we've been busy maintaining [Para](https://paraio.org) and 
+[Scoold](https://scoold.com) and a few patches have been released. The changes are minor and are mostly related 
+to dependency upgrades. A few minor bugs have been fixed as well. Scoold has received some much welcome pull 
+requests with translations from our awesome contributors. It is now available in 12 different languages! 
 
 <!-- more -->
 
@@ -39,12 +39,15 @@ The JAR package is more appropriate for deploying Scoold to hosts without a serv
 instance of the embedded Jetty server. This is the case for Heroku, for example.
 
 Apart from Heroku, we've added support and documentation for lots of other deployment options — AWS, Azure, 
-DigitalOcean and Google App Engine. Not only that but we've added a new `helm/` folder with a Helm chart for those
+DigitalOcean and Google App Engine. Not only that, but we've added a new `helm/` folder with a Helm chart for those
 of you who want to deploy Scoold to a Kubernetes cluster with a single command:
 
 ```
 helm install --name my-scoold ./scoold
 ```
+
+Read the [Scoold chart README](https://github.com/Erudika/scoold/tree/master/helm) for more details on how to 
+configure the pod.
 
 Para does not yet include a Helm chart because it has lots of different database combinations and it's hard to choose
 the best option for everyone. It is available on Docker Hub and so is Scoold. To run a Para server locally with
