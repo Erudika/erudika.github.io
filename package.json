@@ -12,13 +12,13 @@
     "hexo-generator-category": "^0.1.2",
     "hexo-generator-feed": "^1.2.2",
     "hexo-generator-index": "^0.2.1",
-    "hexo-generator-seo-friendly-sitemap": "^0.0.22",
+    "hexo-generator-seo-friendly-sitemap": "^0.0.25",
     "hexo-generator-tag": "^0.2.0",
     "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-marked": "^0.3.2",
+    "hexo-renderer-marked": "^1.0.1",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
-    "marked": "^0.5.1",
-    "uglify-js": "^3.4.9"
+    "marked": "^0.6.2",
+    "uglify-js": "^3.6.0"
   }
 }
