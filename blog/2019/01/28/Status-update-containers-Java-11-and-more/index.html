@@ -167,6 +167,7 @@ ga('send', 'pageview');
 to dependency upgrades. A few minor bugs have been fixed as well. Scoold has received some much welcome pull 
 requests with translations from our awesome contributors. It is now available in 12 different languages! </p>
 <a id="more"></a>
+
 <p><img src="/assets/img/blogpost_media12.png" alt=""></p>
 <p>Last year came the release of Java 11 and we’re quite happy to announce that both Scoold and Para are fully 
 compatible with JDK 11. This required that we upgrade most of the dependencies like Spring and Guice, for 
@@ -188,16 +189,20 @@ instance of the embedded Jetty server. This is the case for Heroku, for example.
 DigitalOcean and Google App Engine. Not only that, but we’ve added a new <code>helm/</code> folder with a Helm chart for those
 of you who want to deploy Scoold to a Kubernetes cluster with a single command:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">helm install --name my-scoold ./scoold</span><br></pre></td></tr></table></figure>
+
 <p>Read the <a href="https://github.com/Erudika/scoold/tree/master/helm" target="_blank" rel="noopener">Scoold chart README</a> for more details on how to 
 configure the pod.</p>
 <p>Para does not yet include a Helm chart because it has lots of different database combinations and it’s hard to choose
 the best option for everyone. It is available on Docker Hub and so is Scoold. To run a Para server locally with
 Docker, simply run:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti -p 8080:8080 --rm -v para-data:/para/data \</span><br><span class="line">  -v $(pwd)/application.conf:/para/application.conf \</span><br><span class="line">  -e JAVA_OPTS=&quot;-Dconfig.file=/para/application.conf&quot; erudikaltd/para</span><br></pre></td></tr></table></figure>
+
 <p>To run just Scoold locally, try:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti -p 8000:8000 --rm -v $(pwd)/application.conf:/scoold/application.conf \</span><br><span class="line">  -e JAVA_OPTS=&quot;-Dconfig.file=/scoold/application.conf&quot; erudikaltd/scoold</span><br></pre></td></tr></table></figure>
+
 <p>Or, to run both Para and Scoold locally with Docker use the <code>docker-compose</code> command from inside the Scoold folder:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+
 <p>Each release of Para and Scoold has a tag and that tag is reflected on Docker Hub. So you can fetch a particular tag and
 run that, or use the <code>:latest</code> tag which contains the most recent updates from the <code>master</code> branch. You can see all the 
 containers available on <a href="https://hub.docker.com/u/erudikaltd" target="_blank" rel="noopener">our Docker Hub page</a>, which includes all the Para plugins
@@ -214,7 +219,7 @@ for a spin and report any issues on <a href="https://github.com/albogdano/lucene
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/" data-id="cjrguvxok0008gk4s6t8r0vo6" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/" data-id="cjxp6ouia000hpi4s7sqvsbgy" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author">&nbsp; Alex B.
@@ -229,6 +234,15 @@ for a spin and report any issues on <a href="https://github.com/albogdano/lucene
   
     
 <nav id="article-nav">
+  
+    <a href="/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Webhooks implemented in Para and Scoold
+        
+      </div>
+    </a>
   
   
     <a href="/blog/2018/12/30/Top-5-open-source-Q-A-platforms/" id="article-nav-older" class="article-nav-link-wrap">
@@ -259,6 +273,10 @@ for a spin and report any issues on <a href="https://github.com/albogdano/lucene
       <ul>
         
           <li>
+            <a href="/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/">Webhooks implemented in Para and Scoold</a>
+          </li>
+        
+          <li>
             <a href="/blog/2019/01/28/Status-update-containers-Java-11-and-more/">Status update - containers, Java 11 and more</a>
           </li>
         
@@ -274,10 +292,6 @@ for a spin and report any issues on <a href="https://github.com/albogdano/lucene
             <a href="/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/">Introducing Scoold - an open source Q&amp;A platform</a>
           </li>
         
-          <li>
-            <a href="/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/">Implementing full-text search for your static site</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -288,7 +302,7 @@ for a spin and report any issues on <a href="https://github.com/albogdano/lucene
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 12.5px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 12.5px;">jprime</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/release/" style="font-size: 17.5px;">release</a> <a href="/blog/tags/scoold/" style="font-size: 15px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/stackoverflow/" style="font-size: 12.5px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a>
+      <a href="/blog/tags/API/" style="font-size: 10px;">API</a> <a href="/blog/tags/angular/" style="font-size: 12.5px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 10px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 12.5px;">jprime</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/release/" style="font-size: 17.5px;">release</a> <a href="/blog/tags/scoold/" style="font-size: 15px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/stackoverflow/" style="font-size: 12.5px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 10px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/webhooks/" style="font-size: 10px;">webhooks</a>
     </div>
   </div>
 

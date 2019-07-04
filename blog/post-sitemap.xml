@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/</loc>
+        <lastmod>2019-07-04T22:06:48.211Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/</loc>
         <lastmod>2019-01-31T21:37:11.810Z</lastmod>
         <changefreq>weekly</changefreq>
