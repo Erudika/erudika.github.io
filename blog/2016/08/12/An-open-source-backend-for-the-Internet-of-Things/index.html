@@ -9,7 +9,7 @@
 -->
 <!DOCTYPE html>
 <html lang="en-us" class="nojs">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,10 +106,10 @@ ga('send', 'pageview');
 								</a>
 							</div>
 							<ul class="nav navbar-nav navbar-right hidden-xs">
-								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
-								<li class=""><a href="/#projects">Projects</a></li>
-								<li class=""><a href="/#support">Support</a></li>
-								<li class=""><a href="/#contact">Contact</a></li>
+								<li class><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class><a href="/#projects">Projects</a></li>
+								<li class><a href="/#support">Support</a></li>
+								<li class><a href="/#contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -129,7 +129,7 @@ ga('send', 'pageview');
 
 				<div class="outer">
 					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
-					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search">
+					<input type="text" id="search-box" class="search-form mt" value placeholder="Search">
 					<small class="right">powered by
 						<a href="https://paraio.com" target="_blank">
 							<img src="/assets/img/para_logo.svg" width="60" alt="Para">
@@ -138,7 +138,7 @@ ga('send', 'pageview');
 				</div>
 
 				<div class="outer">
-					<section id="main"><article id="post-An-open-source-backend-for-the-Internet-of-Things" class="article article-type-post" itemscope="" itemprop="blogPost">
+					<section id="main"><article id="post-An-open-source-backend-for-the-Internet-of-Things" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" class="article-date">
   <time datetime="2016-08-12T08:01:00.000Z" itemprop="datePublished">12 Aug 2016</time>
@@ -165,7 +165,7 @@ ga('send', 'pageview');
         <p><strong>Things</strong> — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based on Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realized we should’ve done this sooner. </p>
 <a id="more"></a>
 
-<p><img src="https://erudika.com/assets/img/blogpost_media6.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/blogpost_media6.png" alt></p>
 <p>There are several key players in terms of IoT cloud platforms, but we chose to focus on two — <strong>AWS</strong> and <strong>Azure</strong>. In Para <code>1.20.0</code> we’ve implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There’s a new object called <code>Thing</code> which holds all the information about your device — the state of the device, the security credentials for the cloud and other important data. When a <code>Thing</code> is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates <code>Thing</code> objects in the background. If you prefer one of these two approaches, we’d love to hear your feedback. </p>
 <p>Creating things from the Para API is really simple — you only need to configure your access keys for the cloud provider of your choice. Then you make a <code>POST</code> request:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">POST /v1/things</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;RPiThingy&quot;,</span><br><span class="line">  &quot;serviceBroker&quot;: &quot;AWS&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -202,7 +202,7 @@ ga('send', 'pageview');
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-id="cjxp6ouht0001pi4s8iiwfqwt" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" data-id="cjxp8520f0001i84sppi6rsqx" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author">&nbsp; Alex B.

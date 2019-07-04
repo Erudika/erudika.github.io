@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.8.0"
+    "version": "3.9.0"
   },
   "dependencies": {
-    "ejs": "^2.6.1",
-    "hexo": "^3.8.0",
+    "ejs": "^2.6.2",
+    "hexo": "^3.9.0",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-category": "^0.1.2",
     "hexo-generator-feed": "^1.2.2",
@@ -18,7 +18,7 @@
     "hexo-renderer-marked": "^1.0.1",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
-    "marked": "^0.6.2",
+    "marked": "^0.6.3",
     "uglify-js": "^3.6.0"
   }
 }

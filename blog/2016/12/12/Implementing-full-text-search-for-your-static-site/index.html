@@ -9,7 +9,7 @@
 -->
 <!DOCTYPE html>
 <html lang="en-us" class="nojs">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,10 +109,10 @@ ga('send', 'pageview');
 								</a>
 							</div>
 							<ul class="nav navbar-nav navbar-right hidden-xs">
-								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
-								<li class=""><a href="/#projects">Projects</a></li>
-								<li class=""><a href="/#support">Support</a></li>
-								<li class=""><a href="/#contact">Contact</a></li>
+								<li class><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class><a href="/#projects">Projects</a></li>
+								<li class><a href="/#support">Support</a></li>
+								<li class><a href="/#contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -132,7 +132,7 @@ ga('send', 'pageview');
 
 				<div class="outer">
 					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
-					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search">
+					<input type="text" id="search-box" class="search-form mt" value placeholder="Search">
 					<small class="right">powered by
 						<a href="https://paraio.com" target="_blank">
 							<img src="/assets/img/para_logo.svg" width="60" alt="Para">
@@ -141,7 +141,7 @@ ga('send', 'pageview');
 				</div>
 
 				<div class="outer">
-					<section id="main"><article id="post-Implementing-full-text-search-for-your-static-site" class="article article-type-post" itemscope="" itemprop="blogPost">
+					<section id="main"><article id="post-Implementing-full-text-search-for-your-static-site" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/" class="article-date">
   <time datetime="2016-12-12T14:48:29.000Z" itemprop="datePublished">12 Dec 2016</time>
@@ -174,7 +174,7 @@ our search box could be improved and sending users off to Google was just sloppy
 you can also upgrade the search box on your blog or static site.</p>
 <a id="more"></a>
 
-<p><img src="https://erudika.com/assets/img/blogpost_media8.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/blogpost_media8.png" alt></p>
 <p>So we have a bunch of HTML files generated for our site and we need them indexed somewhere so we can query them later.
 The search box will send AJAX requests to the search API and presents the results to the user — very simple setup.
 So we’ll need three things:</p>
@@ -198,12 +198,12 @@ writing and deleting objects and one for search. For now, we’re only intereste
 <p>Go over to <a href="https://paraio.com/signin" target="_blank" rel="noopener">ParaIO.com</a> and sign in to get a free account, if you don’t have one already.
 Next, we’ll create a new app where we can store our blog posts. If you already have an existing app with some objects
 in it, you can still fit in the content of your site by using objects of a different type, like <code>blogpost</code>.</p>
-<p><img src="https://erudika.com/assets/img/ftsearch1.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/ftsearch1.png" alt></p>
 <p>Take a note of your Para access and secret keys, we’ll need them for our CLI tool. Now it’s time to gather our HTML
 files and send them to Para for indexing.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ para-cli create &quot;blog/20*/**/*.html&quot; --type &quot;blogpost&quot; --sanitize \</span><br><span class="line">--accessKey &quot;app:myapp&quot; --secretKey &quot;[key]&quot;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://erudika.com/assets/img/ftsearch2.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/ftsearch2.png" alt></p>
 <p>In our case, HTML files are located in a folder called ‘blog’ with subfolders for each year. The CLI tool will parse
 every HTML file and look for the these two tags:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:title"</span> <span class="attr">content</span>=<span class="string">"…"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">"og:url"</span> <span class="attr">content</span>=<span class="string">"…"</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -216,7 +216,7 @@ If all went well, we should now have all our content indexed and ready. Let’s 
 <p>This should return the results in as an array of JSON objects. Awesome! Now, in order for our client-side JavaScript
 widget to be able to be able to access the Para search API without a secret key, we’ll have to allow public access to
 the <code>blogposts</code> resource.</p>
-<p><img src="https://erudika.com/assets/img/ftsearch3.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/ftsearch3.png" alt></p>
 <p>The search box in our case is implemented with good old jQuery and a plugin called
 <a href="https://twitter.github.io/typeahead.js/" target="_blank" rel="noopener">typehead.js</a>. The code is very simple — it calls the search API and queries
 objects of type <code>blogpost</code>. The results are in the form of a JSON object with several properties but we’re only
@@ -236,7 +236,7 @@ result with other JS frameworks like Angular or React.</p>
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/" data-id="cjxp6ouhz0005pi4somkgjvej" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/" data-id="cjxp8520h0003i84svc4an64d" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author">&nbsp; Alex B.

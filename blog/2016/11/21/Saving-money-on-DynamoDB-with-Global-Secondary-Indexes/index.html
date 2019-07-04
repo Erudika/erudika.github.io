@@ -9,7 +9,7 @@
 -->
 <!DOCTYPE html>
 <html lang="en-us" class="nojs">
-  <head><meta name="generator" content="Hexo 3.8.0">
+  <head><meta name="generator" content="Hexo 3.9.0">
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,10 +106,10 @@ ga('send', 'pageview');
 								</a>
 							</div>
 							<ul class="nav navbar-nav navbar-right hidden-xs">
-								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
-								<li class=""><a href="/#projects">Projects</a></li>
-								<li class=""><a href="/#support">Support</a></li>
-								<li class=""><a href="/#contact">Contact</a></li>
+								<li class><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class><a href="/#projects">Projects</a></li>
+								<li class><a href="/#support">Support</a></li>
+								<li class><a href="/#contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -129,7 +129,7 @@ ga('send', 'pageview');
 
 				<div class="outer">
 					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
-					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search">
+					<input type="text" id="search-box" class="search-form mt" value placeholder="Search">
 					<small class="right">powered by
 						<a href="https://paraio.com" target="_blank">
 							<img src="/assets/img/para_logo.svg" width="60" alt="Para">
@@ -138,7 +138,7 @@ ga('send', 'pageview');
 				</div>
 
 				<div class="outer">
-					<section id="main"><article id="post-Saving-money-on-DynamoDB-with-Global-Secondary-Indexes" class="article article-type-post" itemscope="" itemprop="blogPost">
+					<section id="main"><article id="post-Saving-money-on-DynamoDB-with-Global-Secondary-Indexes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/" class="article-date">
   <time datetime="2016-11-21T15:39:07.000Z" itemprop="datePublished">21 Nov 2016</time>
@@ -166,7 +166,7 @@ ga('send', 'pageview');
 <p>We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it’s a managed service and we had one less thing to maintain. Later we found out that global indexes could help us save a lot of extra costs and so we implemented a simple solution, which we call “shared tables”.</p>
 <a id="more"></a>
 
-<p><img src="https://erudika.com/assets/img/blogpost_media7.png" alt=""></p>
+<p><img src="https://erudika.com/assets/img/blogpost_media7.png" alt></p>
 <p>Our solution is applicable to cases where you have a large number of Dynamo tables but each of these has a low utilization. For example, it may contain a few hundred items and have low throughput capacity of 1 read and 1 write per second. The idea is to combine those tables into one and save some money. First, let’s look at this neat ASCII diagram of what we have so far.</p>
 <pre>
 
@@ -224,7 +224,7 @@ ga('send', 'pageview');
       
     </div>
     <div class="article-footer">
-      <a data-url="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/" data-id="cjxp6oui7000epi4snbhvz4p8" class="article-share-link">Share</a>
+      <a data-url="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/" data-id="cjxp8520n0008i84s88kr1mgn" class="article-share-link">Share</a>
       
 				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author">&nbsp; Alex B.
