@@ -8,26 +8,26 @@ comments: false
 img: img13.jpg
 ---
 
-I've assembled a list of the top open source Q&A platforms that are currently available. The list contains 
+I've assembled a list of the top open source Q&A platforms that are currently available. The list contains
 only projects which are in **active development** and have a working demo site. There are a few similar blog
-posts out there but they're quite outdated. Most of the projects listed below are inspired by Stack Overflow 
-which is in fact the most popular community for questions and answers related to programming. Please, bear 
+posts out there but they're quite outdated. Most of the projects listed below are inspired by Stack Overflow
+which is in fact the most popular community for questions and answers related to programming. Please, bear
 in mind that **the list is not ordered in any way**.
 
 <!-- more -->
 
 ![](/assets/img/blogpost_media11.png)
 
-## Question2Answer - [<i class="fa fa-github-square"></i>](https://github.com/q2a/question2answer)
+## Discourse - [<i class="fa fa-github-square"></i>](https://github.com/discourse/discourse)
 
-![](/assets/img/q2a.png)
+![](/assets/img/discourse.png)
 
-**Website:** [https://www.question2answer.org](https://www.question2answer.org)<br>
-**Language:** PHP <br>
-**Database:** MySQL<br>
-**License:** GPL 2<br>
-**Commercial support:** [Yes](https://docs.question2answer.org/services/)<br>
-**Demo:** [https://www.question2answer.org/qa/](https://www.question2answer.org/qa/)<br>
+**Website:** [https://www.discourse.org](https://www.discourse.org)<br>
+**Language:** Ruby, Rails <br>
+**Database:** PostgreSQL<br>
+**License:** GPL 2 <br>
+**Commercial support:** [Yes](https://www.discourse.org)<br>
+**Demo:** [https://try.discourse.org](https://try.discourse.org)<br>
 
 ## Scoold - [<i class="fa fa-github-square"></i>](https://github.com/erudika/scoold)
 
@@ -62,13 +62,13 @@ in mind that **the list is not ordered in any way**.
 **Commercial support:** [Yes](https://vanillaforums.com/en/)<br>
 **Demo:** [https://open.vanillaforums.com](https://open.vanillaforums.com/)<br>
 
-## Discourse - [<i class="fa fa-github-square"></i>](https://github.com/discourse/discourse)
+## Question2Answer - [<i class="fa fa-github-square"></i>](https://github.com/q2a/question2answer)
 
-![](/assets/img/discourse.png)
+![](/assets/img/q2a.png)
 
-**Website:** [https://www.discourse.org](https://www.discourse.org)<br>
-**Language:** Ruby, Rails <br>
-**Database:** PostgreSQL<br>
-**License:** GPL 2 <br>
-**Commercial support:** [Yes](https://www.discourse.org)<br>
-**Demo:** [https://try.discourse.org](https://try.discourse.org)<br>
+**Website:** [https://www.question2answer.org](https://www.question2answer.org)<br>
+**Language:** PHP <br>
+**Database:** MySQL<br>
+**License:** GPL 2<br>
+**Commercial support:** [Yes](https://docs.question2answer.org/services/)<br>
+**Demo:** [https://www.question2answer.org/qa/](https://www.question2answer.org/qa/)<br>

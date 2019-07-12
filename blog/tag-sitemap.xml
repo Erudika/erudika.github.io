@@ -3,14 +3,28 @@
 
 
     <url>
-        <loc>https://erudika.com/blog/tags/webhooks/</loc>
-        <lastmod>2019-07-04T22:06:48.211Z</lastmod>
+        <loc>https://erudika.com/blog/tags/open-source/</loc>
+        <lastmod>2019-07-12T09:08:23.306Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
+        <lastmod>2019-07-12T09:08:23.306Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/scoold/</loc>
+        <lastmod>2019-07-12T09:08:23.306Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/webhooks/</loc>
         <lastmod>2019-07-04T22:06:48.211Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -54,20 +68,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/docker/</loc>
         <lastmod>2019-01-31T21:37:11.810Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/open-source/</loc>
-        <lastmod>2018-12-30T22:04:41.584Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
-        <lastmod>2018-12-30T22:04:41.584Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
