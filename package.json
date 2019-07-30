@@ -19,6 +19,7 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3",
     "marked": "^0.7.0",
-    "uglify-js": "^3.6.0"
+    "uglify-js": "^3.6.0",
+    "lodash": "4.17.15"
   }
 }
