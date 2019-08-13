@@ -34,7 +34,8 @@
 <meta property="og:image" content="https://erudika.com/assets/img/rman_4.png">
 <meta property="og:image" content="https://erudika.com/assets/img/rman_5.png">
 <meta property="og:image" content="https://erudika.com/assets/img/rman_6.png">
-<meta property="og:updated_time" content="2019-08-13T07:31:13.453Z">
+<meta property="og:image" content="https://erudika.com/assets/img/rman_7.png">
+<meta property="og:updated_time" content="2019-08-13T10:05:21.885Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building a full stack application from scratch with Angular">
 <meta name="twitter:description" content="UPDATE: This article and its associated code have been updated for Angular 8.x. In this tutorial we’re going to build a simple single-page application with Angular (v8 and above). This is intended for">
@@ -319,6 +320,10 @@ is lost. In the next step we’ll make it possible to write the recipe text in M
 <p>And we’re done! Here’s final result of our <strong>Recipe Manager</strong>
 (check out <a href="http://albogdano.github.io/angular2-para/" target="_blank" rel="noopener">the live demo</a>):</p>
 <p><img src="https://erudika.com/assets/img/rman_6.png" alt></p>
+<h2 id="Final-touches"><a href="#Final-touches" class="headerlink" title="Final touches"></a>Final touches</h2><p>You can see the result in your browser by running <code>ng serve</code>. Optionally, you can make this web application “progressive”
+(PWA) by adding the package <code>@angular/pwa</code> with <code>ng add @angular/pwa</code>. This will create a <code>manifest.json</code> and make the
+page available offline. Our code now passes the Lighthouse audit with flying colors!</p>
+<p><img src="https://erudika.com/assets/img/rman_7.png" alt></p>
 <p>All that is left is to build the project for production and deploy it:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ng build --prod --base-href /angular2-para/</span><br><span class="line"># git push origin master</span><br></pre></td></tr></table></figure>
 

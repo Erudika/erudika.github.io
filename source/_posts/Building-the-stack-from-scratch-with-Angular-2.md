@@ -459,6 +459,14 @@ And we're done! Here's final result of our **Recipe Manager**
 
 ![](https://erudika.com/assets/img/rman_6.png)
 
+## Final touches
+
+You can see the result in your browser by running `ng serve`. Optionally, you can make this web application "progressive"
+(PWA) by adding the package `@angular/pwa` with `ng add @angular/pwa`. This will create a `manifest.json` and make the
+page available offline. Our code now passes the Lighthouse audit with flying colors!
+
+![](https://erudika.com/assets/img/rman_7.png)
+
 All that is left is to build the project for production and deploy it:
 ```
 ng build --prod --base-href /angular2-para/
