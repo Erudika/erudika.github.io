@@ -7,14 +7,15 @@ comments: false
 img: img7.jpg
 ---
 
-**UPDATE:** This article and its associated code have been updated for Angular 7.x.
+**UPDATE:** This article and its associated code have been updated for Angular 8.x.
 
-In this tutorial we're going to build a simple single-page application with **Angular 2+**. This is intended for
-developers unfamiliar with 2+ or having some experience with AngularJS. First of all, I got **Visual Studio Code**
-installed on my machine and it's running on Linux. I chose VS Code because we'll be working with **TypeScript**
-mostly and it has great support for it, but you can code in your favourite IDE as well. Next, I've decided to save
-some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https://github.com/mgechev) called
-**'angular-seed'**. You'll also need to have **Git**, **Node.js** and **npm** installed.
+In this tutorial we're going to build a simple single-page application with **Angular** (v8 and above). This is intended
+for developers unfamiliar with the new framework or having some experience with AngularJS. First of all, I got
+**Visual Studio Code** installed on my machine and it's running on Linux. I chose VS Code because we'll be working with
+**TypeScript** mostly and it has great support for it, but you can code in your favourite IDE as well.
+Originally, the code in this article was based on the excellent Angular 2 Seed project by [Minko Gechev](https://github.com/mgechev)
+That project is now deprecated in favor of Angular CLI and the code here has been migrated to use the new official build
+tool for Angular. You'll also need to have **Git**, **Node.js** and **npm** installed.
 
 <!-- more -->
 
@@ -25,16 +26,17 @@ some time and clone the excellent Angular 2 starter kit by [Minko Gechev](https:
 - Get [Visual Studio Code](https://code.visualstudio.com/Download)
 - Get [Git](https://git-scm.com/downloads)
 - Get [Node.js with npm](https://nodejs.org/en/download/)
-- Clone ['angular-seed'](https://github.com/mgechev/angular-seed)
+- Install ['Angular CLI'](https://cli.angular.io/) with `npm install -g @angular/cli`
 - Open the project in the VS Code editor
 
 ```bash
-git clone --depth 1 https://github.com/mgechev/angular-seed.git angular2-para
-cd angular2-para
+npm install -g @angular/cli
+ng new angular-para
+cd angular-para
 # install the project's dependencies
 npm install
-# watches your files and uses livereload by default
-npm start
+# watches your files and does live reload
+ng serve
 ```
 
 Next - **the backend**. Here, I could write a simple backend in Node.js and Express but I'm lazy so I chose not to.
@@ -44,13 +46,13 @@ because it has a nice JSON API for our app to connect to. To run the server you'
 
 ## Step 0 (backend)
 
-- Get [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+- Get [Java](https://jdk.java.net/12/)
 - Get [Para](https://paraio.org/)
 - Start the server in a separate terminal:
 
 ```bash
 # run Para
-java -jar para-x.y.z.war
+java -jar para-x.y.z.jar
 ```
 
 Now, check if Para is running - open your browser and go to `http://localhost:8080/v1`. You should see a response like
@@ -97,11 +99,18 @@ publicly available. Click 'Save Changes'.
 
 ## Step 2 - CRUD recipes
 
-Now let's go back to our frontend and edit the 'Home' component under `src/client/app/home`. We want to edit the HTML
-code a little bit in `home.component.html`:
+Let's create a new frontend component called "home" with the command `ng generate component home`.
+Now let's edit the 'home' component under `src/app/home`. In particular, we want to edit the HTML code in `home.component.html`:
 
 ```html
+<h1>My Recipes &nbsp; <button (click)="newRecipeForm()">Add</button></h1>
+<div>
+  <form (submit)="search()">
+    <input type="text" [(ngModel)]="q" name="searchText" placeholder="Search">
+  </form>
+</div>
 <ul>
+	<!-- TODO: add box showing "no recipes found" -->
   <li *ngFor="let recipe of recipesList; let i = index" class="recipe-box">
     <div [hidden]="editedRecipes.get(recipe.id) || (!recipe.id && createMode)">
       <h3>{{recipe.name}}</h3>
@@ -137,17 +146,54 @@ and a close button. Notice how the text value of the "Add" button changes to "Sa
 from AngularJS, you'll notice the weird `[(ngModel)]` syntax - it's a two-way binding (single brackets is one-way).
 Similarly, `*ngIf` is just shorthand for `[ngIf]`.
 
-Also, I chose to set a new title in the header section in `src/client/app/core/toolbar/toolbar.component.html`:
+Let's create a new "core" module and 2 new components inside it - the "toolbar" and "navbar".
+```
+ng generate module core
+ng generate component core/toolbar
+ng generate component core/navbar
+```
+
+Also, I chose to set a new title in the header section in `src/app/core/toolbar/toolbar.component.html`:
 ```html
 <h1>Recipe Manager <code><small>v{{version}}</small></code></h1>
 <div class="more"></div>
 ```
 
-Let's edit the `NameListService` which is part of the starter project and rename it to `RecipesService`. You'll have
-to rename all occurrences of the class and also rename the folder `src/client/app/shared/name-list`. In the code for
-`home.component.ts` we'll add a few fields to manage the recipes. The start of that component should look like this:
+Let's create a new service to talk to our Para backend and fetch recipes. Let's call it `RecipesService`.
+```
+ng generate service recipe
+```
+The service file should be located in `src/app/recipe.service.ts`. We'll modify the file `recipe.service.ts` to allow for
+another parameter `text` in the `add()` method. Let's also add the code for making the `POST` request to the backend:
 
 ```ts
+import { environment as Config } from 'src/environments/environment';
+
+@Injectable()
+export class RecipeService {
+	private appID = 'app:myapp';
+	private RECIPES_RESOURCE = Config.API + '/v1/recipes';
+
+	add(name: string, text: string) {
+		if (!name || !text) { return of(null); }
+		const recipe: any = { name: name, text: text };
+		return this.http.post(this.RECIPES_RESOURCE, JSON.stringify(recipe), this.options);
+	}
+}
+```
+The `Config` object is actually imported from `src/environments/environment.ts` where we have a JS object containing all
+the configuration properties for our project. That file replaced with `environment.prod.ts` when we compile the project
+for production use.
+
+In the code for `home.component.ts` we'll add a few fields to manage the recipes. The start of that component should look
+like this:
+
+```ts
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.css'],
+})
 export class HomeComponent implements OnInit {
   recipesList: Array<any>;
   createMode = false;
@@ -197,19 +243,6 @@ listRecipes() {
 }
 ```
 
-Now we have to modify the `RecipeService` in `recipe.service.ts` to allow for another parameter `text` in the
-`add()` method. Let's also add the code for making the `POST` request to the backend:
-```ts
-private appID = 'app:myapp';
-private RECIPES_RESOURCE = Config.API + '/v1/recipes';
-
-add(name: string, text: string) {
-	if (!name || !text) { return of(null); }
-	const recipe: any = { name: name, text: text };
-	return this.http.post(this.RECIPES_RESOURCE, JSON.stringify(recipe), this.options);
-}
-```
-
 You'll notice that in `home.component.ts`, we subscribe to the `Observable` returned by
 `recipeService.add()` and get back the list of recipes when they arrive.
 ```ts
@@ -254,13 +287,25 @@ Let's add the styling for `.recipe-box` and `.empty-box` later in `home.componen
   text-align: center;
 }
 ```
-In `main.css` I've also added a few more tweaks to the CSS:
+In `src/styles.css` I've also added a few more tweaks to the CSS:
 ```css
 input, textarea {
   border: 1px solid #106cc8;
   font-size: 14px;
+  height: 40px;
   outline: none;
   padding: 8px;
+}
+button {
+  background-color: #106cc8;
+  border-style: none;
+  color: rgba(255, 255, 255, 0.87);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 18px;
+  text-decoration: none;
 }
 button:hover { background-color: #28739e; }
 button.small { font-size: 12px; height: 30px; }
@@ -310,7 +355,7 @@ removeRecipe(id: string) {
 }
 ```
 
-Let's also add similar methods in our `recipeService` for updating and deleting recipes. The methods `editRecipe()` and
+Let's also add similar methods in our `RecipeService` for updating and deleting recipes. The methods `editRecipe()` and
 `removeRecipe()` are relatively straightforward - when editing, we switch to edit mode and we show the form, when
 removing we just filter the array `recipesList` and we discard the deleted recipe if it matches the `id`.
 
@@ -414,16 +459,24 @@ And we're done! Here's final result of our **Recipe Manager**
 
 ![](https://erudika.com/assets/img/rman_6.png)
 
+All that is left is to build the project for production and deploy it:
+```
+ng build --prod --base-href /angular2-para/
+# git push origin master
+```
+
 ## Summary
 
 Learning Angular takes some time as it introduces a lot of architectural changes and new syntax.
-Writing in TypeScript feels fresh and more like writing in a real statically typed language like C# or Java,
+Writing in TypeScript feels fresh and more like writing in a modern statically typed language like C# or Java,
 rather than a dynamic language like JS. The `import` syntax was a bit hard for me to get used to, especially
-with all the different files I had to navigate through. In general, the experience of writing Angular apps is
-great - the syntax is clean, the app is well structured and the error messages are clear and understandable.
+with all the different files I had to navigate through. In general, the experience of writing Angular apps with the help
+of the new Angular CLI tool is great - the scaffolding just works, the build process is fast and painless,
+the TypeScript syntax is clean, the app is well structured and the error messages are clear and understandable.
 
 **Things we did:**
 
+- generated a new project from scratch with Angular CLI
 - wrote a few fancy AJAX calls to our backend API
 - wired a bunch of simple TypeScript code between a component and a service
 - wrote some good old HTML and CSS
@@ -431,10 +484,10 @@ great - the syntax is clean, the app is well structured and the error messages a
 
 **Things we didn't do:**
 
-- write *any* backend code
-- define the "recipe" data type on the server or in a database
+- didn't write *any* backend code for CRUD operations on recipes
+- didn't define a schema for the "recipe" type on the server side
 
-The code for this tutorial is on GitHub at [albogdano/angular2-para](https://github.com/albogdano/angular2-para).
+The complete code for this tutorial is on GitHub at [albogdano/angular2-para](https://github.com/albogdano/angular2-para).
 I've deployed the same code to GitHub pages as a [live demo](http://albogdano.github.io/angular2-para/) which
 is powered by our [cloud-based Para service](https://paraio.com).
 

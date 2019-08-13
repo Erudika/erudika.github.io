@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>https://erudika.com/blog/tags/typescript/</loc>
+        <lastmod>2019-08-13T07:31:13.453Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/tutorial/</loc>
+        <lastmod>2019-08-13T07:31:13.453Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/angular/</loc>
+        <lastmod>2019-08-13T07:31:13.453Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/para/</loc>
+        <lastmod>2019-08-13T07:31:13.453Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/tags/open-source/</loc>
         <lastmod>2019-07-12T09:08:23.306Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,13 +53,6 @@
 
     <url>
         <loc>https://erudika.com/blog/tags/webhooks/</loc>
-        <lastmod>2019-07-04T22:06:48.211Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/para/</loc>
         <lastmod>2019-07-04T22:06:48.211Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -96,27 +117,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/backend/</loc>
         <lastmod>2018-12-30T15:21:10.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/typescript/</loc>
-        <lastmod>2018-12-19T17:46:39.820Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/tutorial/</loc>
-        <lastmod>2018-12-19T17:46:39.820Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/angular/</loc>
-        <lastmod>2018-12-19T17:46:39.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
