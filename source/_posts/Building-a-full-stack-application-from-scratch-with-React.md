@@ -2,7 +2,7 @@
 layout: post
 title: Building a full stack application from scratch with React
 date: 2019-08-14 23:38:11
-tags: [react, para, tutorial, typescript]
+tags: [react, para, tutorial, jsx]
 author: alex@erudika.com
 comments: false
 img: img7.jpg
