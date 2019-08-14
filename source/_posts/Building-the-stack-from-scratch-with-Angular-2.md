@@ -7,7 +7,7 @@ comments: false
 img: img7.jpg
 ---
 
-**UPDATE:** This article and its associated code have been updated for Angular 8.x.
+**UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](http://www.erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/).
 
 In this tutorial we're going to build a simple single-page application with **Angular** (v8 and above). This is intended
 for developers unfamiliar with the new framework or having some experience with AngularJS. First of all, I got

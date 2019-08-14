@@ -3,50 +3,57 @@
 
 
     <url>
+        <loc>https://erudika.com/blog/tags/react/</loc>
+        <lastmod>2019-08-14T22:28:47.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/tags/typescript/</loc>
-        <lastmod>2019-08-13T10:05:21.885Z</lastmod>
+        <lastmod>2019-08-14T22:28:47.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/tutorial/</loc>
-        <lastmod>2019-08-13T10:05:21.885Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/angular/</loc>
-        <lastmod>2019-08-13T10:05:21.885Z</lastmod>
+        <lastmod>2019-08-14T22:28:47.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/para/</loc>
-        <lastmod>2019-08-13T10:05:21.885Z</lastmod>
+        <lastmod>2019-08-14T22:28:47.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/angular/</loc>
+        <lastmod>2019-08-14T21:24:55.195Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/open-source/</loc>
-        <lastmod>2019-07-12T09:08:23.306Z</lastmod>
+        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
-        <lastmod>2019-07-12T09:08:23.306Z</lastmod>
+        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/scoold/</loc>
-        <lastmod>2019-07-12T09:08:23.306Z</lastmod>
+        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
