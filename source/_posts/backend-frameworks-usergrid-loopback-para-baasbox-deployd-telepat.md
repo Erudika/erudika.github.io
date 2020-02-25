@@ -33,8 +33,9 @@ realtime push, notifications support and client libraries for Android and iOS. W
 **Multitenant:** yes <br>
 **Language:** Java <br>
 **Database:** Cassandra <br>
-**Documentation:** 9/10 <br>
+**Documentation:** 8/10 <br>
 **Client libraries:** Android, iOS, JavaScript, Ruby, Java, .NET, PHP
+<i class="fa fa-warning"></i> **Unmaintained**
 
 Usergrid is an Apache backend-as-a-service project built with Java. It's been around since 2011 and is actively
 developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
@@ -57,6 +58,8 @@ queries and push notifications (in v2.0).
 
 Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
 your organization. It is used in production by quite a few companies.
+
+**Unmaintained** (latest release is from 2016, latest GitHub commit was in May 2019)
 
 ## [LoopBack](http://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
 <img src="/assets/img/loopback.png">
@@ -95,7 +98,7 @@ JavaScript.
 **Language:** Java <br>
 **Database:** agnostic <br>
 **Documentation:** 9/10 <br>
-**Client libraries:** Java, JavaScript, .NET, PHP, Android, iOS <br>
+**Client libraries:** Java, JavaScript, .NET, PHP, Python, Android, iOS <br>
 
 Para is our own little backend framework. It is powered by Java and was released in early 2014. Out of the box, Para
 integrates with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults.
@@ -127,7 +130,8 @@ can be used to validate object properties. Full-text search is enabled by defaul
 Authentication between clients and the server is not based on OAuth, [intentionally](http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/).
 Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained
 permissions and support for JSON Web Tokens are available since version 1.17. Para also has built-in support for third-party
-authentication with Facebook, Twitter, Google+, GitHub and LinkedIn.
+authentication with Facebook, Twitter, Google, GitHub, LinkedIn, Microsoft, Slack, as well as any OAuth 2.0 server.
+It also supports LDAP, Active Directory and SAML.
 
 Para is a good choice if you are building a cloud-based web service and it's great for rapid prototyping.
 It's an easy-to-use and flexible platform that scales well. A backend for busy developers.
@@ -138,10 +142,9 @@ It's an easy-to-use and flexible platform that scales well. A backend for busy d
 **Multitenant:** yes, [since v0.8.4](http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend) <br>
 **Language:** Java <br>
 **Database:** OrientDB <br>
-**Documentation:** 9/10 <br>
+**Documentation:** 8/10 <br>
 **Client libraries:** Android/Java, iOS, JavaScript <br>
-
-**Unmaintained** (as of Feb. 2017)
+<i class="fa fa-warning"></i> **Unmaintained**
 
 BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would
 need to run a backend server. It's been around since early 2013. It provides good support for Android and iOS
@@ -156,7 +159,7 @@ and collections of objects and also allows you to link them in one-to-many or ma
 features are excellent - you have social login, friendship/followers API and user management. Other features include
 files and assets API, push notifications and a plugin system.
 
-*As of February 2017, the open source BaasBox server seems abandoned with a last commit on Dec. 3rd, 2015.*
+**Unmaintained** (The open source project seems to be abandoned, last commit on GitHub was on Dec. 3rd, 2015)
 
 ## [Deployd](http://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
 <img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
@@ -164,8 +167,9 @@ files and assets API, push notifications and a plugin system.
 **Multitenant:** no <br>
 **Language:** JavaScript <br>
 **Database:** MongoDB <br>
-**Documentation:** 7/10 <br>
+**Documentation:** 6/10 <br>
 **Client libraries:** none <br>
+<i class="fa fa-warning"></i> **Unmaintained**
 
 Deployd is an API building platform for Node.js and runs on top of MongoDB. It's been around since 2012. The cool
 thing about it is its web dashboard and the CLI tool called `dpd`. The framework, it seems, was designed to be used
@@ -180,7 +184,7 @@ Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.
 collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
 built-in. Other functionality like social login support is provided by third-party modules.
 
-*As of February 2017, Deployd's development on GitHub seems to be stale.*
+**Unmaintained** - latest release on GitHub was in April 2019
 
 ## [Telepat](https://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
 <img src="/assets/img/telepat.png">
@@ -188,8 +192,9 @@ built-in. Other functionality like social login support is provided by third-par
 **Multitenant:** yes <br>
 **Language:** JavaScript <br>
 **Database:** agnostic <br>
-**Documentation:**  7/10 <br>
+**Documentation:**  6/10 <br>
 **Client libraries:** Android, iOS, JavaScript <br>
+<i class="fa fa-warning"></i> **Unmaintained**
 
 Telepat is the youngest framework of the bunch. It's a realtime data sync solution for mobile and other applications.
 It's fairly new -  first released in 2015. The framework is focused on realtime push and flexibility. It's database
@@ -206,7 +211,7 @@ implemented with passwords and tokens.
 Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
 like push notifications. It's well worth checking out especially if you're building realtime apps.
 
-*As of February 2017, Telepat's development on GitHub seems to be stale.*
+**Unmaintained** Telepat is no longer actively developed on GitHub (latest commit was in 2017).
 
 ## Summary
 

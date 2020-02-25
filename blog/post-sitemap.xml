@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2020-02-25T11:49:15.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/</loc>
         <lastmod>2019-08-14T22:46:13.025Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,14 +50,6 @@
     <url>
         <loc>https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/</loc>
         <lastmod>2019-01-31T21:37:11.810Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
-        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

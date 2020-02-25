@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://erudika.com/blog/tags/API/</loc>
+        <lastmod>2020-02-25T11:49:15.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/frameworks/</loc>
+        <lastmod>2020-02-25T11:49:15.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/baas/</loc>
+        <lastmod>2020-02-25T11:49:15.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/backend/</loc>
+        <lastmod>2020-02-25T11:49:15.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/para/</loc>
+        <lastmod>2020-02-25T11:49:15.894Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/tags/jsx/</loc>
         <lastmod>2019-08-14T22:46:13.025Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,13 +53,6 @@
 
     <url>
         <loc>https://erudika.com/blog/tags/tutorial/</loc>
-        <lastmod>2019-08-14T22:46:13.025Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/para/</loc>
         <lastmod>2019-08-14T22:46:13.025Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -103,34 +131,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/docker/</loc>
         <lastmod>2019-01-31T21:37:11.810Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/API/</loc>
-        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/frameworks/</loc>
-        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/baas/</loc>
-        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/backend/</loc>
-        <lastmod>2018-12-30T15:21:10.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
