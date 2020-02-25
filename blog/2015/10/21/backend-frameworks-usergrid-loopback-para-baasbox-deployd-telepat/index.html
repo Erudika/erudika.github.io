@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://erudika.com/assets/img/baasbox.png">
 <meta property="og:image" content="https://erudika.com/assets/img/deployd.png">
 <meta property="og:image" content="https://erudika.com/assets/img/telepat.png">
-<meta property="og:updated_time" content="2020-02-25T11:55:22.847Z">
+<meta property="og:updated_time" content="2020-02-25T12:00:38.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat">
 <meta name="twitter:description" content="Let’s compare some modern open source backend frameworks that are available today. These frameworks handle the server-side operations of your website or app. Developers use them to build and iterate o">
@@ -190,7 +190,7 @@ realtime push, notifications support and client libraries for Android and iOS. W
 <strong>Database:</strong> Cassandra <br>
 <strong>Documentation:</strong> 8/10 <br>
 <strong>Client libraries:</strong> Android, iOS, JavaScript, Ruby, Java, .NET, PHP <br>
-<i class="fa fa-warning"></i> <strong>Unmaintained</strong></p>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (latest release is from 2016)</p>
 <p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively
 developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
 in addition to a queue system like AWS SQS.</p>
@@ -208,14 +208,14 @@ is supported but it appears that only Facebook login works out-of-the-box. Other
 queries and push notifications (in v2.0).</p>
 <p>Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
 your organization. It is used in production by quite a few companies.</p>
-<p><strong>Unmaintained</strong> Latest release is from 2016, latest GitHub commit was in May 2019.</p>
 <h2 id="LoopBack"><a href="#LoopBack" class="headerlink" title="LoopBack - "></a><a href="http://loopback.io" target="_blank" rel="noopener">LoopBack</a> - <a href="https://github.com/strongloop/loopback" target="_blank" rel="noopener"><i class="fa fa-github-square"></i></a></h2><img src="/assets/img/loopback.png">
 
 <p><strong>Multitenant:</strong> no <br>
 <strong>Language:</strong> JavaScript <br>
 <strong>Database:</strong> agnostic <br>
 <strong>Documentation:</strong> 9/10 <br>
-<strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br></p>
+<strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br>
+<strong>Status:</strong> Active</p>
 <p>LoopBack is a Node.js API framework by StrongLoop, part of IBM. It’s been around since 2013 and is actively developed
 and has great commercial support. It is focused on REST API development and provides a visual editor for editing and
 deploying apps. Mobile app developers will love the Android and iOS SDKs and the push system.</p>
@@ -238,7 +238,8 @@ JavaScript.</p>
 <strong>Language:</strong> Java <br>
 <strong>Database:</strong> agnostic <br>
 <strong>Documentation:</strong> 9/10 <br>
-<strong>Client libraries:</strong> Java, JavaScript, .NET, PHP, Python, Android, iOS <br></p>
+<strong>Client libraries:</strong> Java, JavaScript, .NET, PHP, Python, Android, iOS <br>
+<strong>Status:</strong> Active</p>
 <p>Para is our own little backend framework. It is powered by Java and was released in early 2014. Out of the box, Para
 integrates with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults.
 The design is flexible enough so that anyone can implement the interfaces for search, persistence and caching functionality.
@@ -274,7 +275,7 @@ It’s an easy-to-use and flexible platform that scales well. A backend for busy
 <strong>Database:</strong> OrientDB <br>
 <strong>Documentation:</strong> 8/10 <br>
 <strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br>
-<i class="fa fa-warning"></i> <strong>Unmaintained</strong></p>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (last commit on GitHub was in Dec. 2015.)</p>
 <p>BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would
 need to run a backend server. It’s been around since early 2013. It provides good support for Android and iOS
 clients and JavaScript.</p>
@@ -285,7 +286,6 @@ which is sort of a hybrid database and has a lot of cool features.</p>
 and collections of objects and also allows you to link them in one-to-many or many-to-many relationships. Social
 features are excellent - you have social login, friendship/followers API and user management. Other features include
 files and assets API, push notifications and a plugin system.</p>
-<p><strong>Unmaintained</strong> The open source project seems to be abandoned, last commit on GitHub was in Dec. 2015.</p>
 <h2 id="Deployd"><a href="#Deployd" class="headerlink" title="Deployd - "></a><a href="http://deployd.com" target="_blank" rel="noopener">Deployd</a> - <a href="https://github.com/deployd/deployd" target="_blank" rel="noopener"><i class="fa fa-github-square"></i></a></h2><img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
 
 <p><strong>Multitenant:</strong> no <br>
@@ -293,7 +293,7 @@ files and assets API, push notifications and a plugin system.</p>
 <strong>Database:</strong> MongoDB <br>
 <strong>Documentation:</strong> 6/10 <br>
 <strong>Client libraries:</strong> none <br>
-<i class="fa fa-warning"></i> <strong>Unmaintained</strong></p>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (last release was in April 2019)</p>
 <p>Deployd is an API building platform for Node.js and runs on top of MongoDB. It’s been around since 2012. The cool
 thing about it is its web dashboard and the CLI tool called <code>dpd</code>. The framework, it seems, was designed to be used
 as part of your project only, i.e. not as a standalone external API server, and has no client libraries available
@@ -304,7 +304,6 @@ with <code>dpd -d</code>. That’s it.</p>
 <p>Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.js. It has great support for
 collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
 built-in. Other functionality like social login support is provided by third-party modules.</p>
-<p><strong>Unmaintained</strong> Latest release on GitHub was in April 2019.</p>
 <h2 id="Telepat"><a href="#Telepat" class="headerlink" title="Telepat - "></a><a href="https://telepat.io" target="_blank" rel="noopener">Telepat</a> - <a href="https://github.com/telepat-io/telepat-api" target="_blank" rel="noopener"><i class="fa fa-github-square"></i></a></h2><img src="/assets/img/telepat.png">
 
 <p><strong>Multitenant:</strong> yes <br>
@@ -312,7 +311,7 @@ built-in. Other functionality like social login support is provided by third-par
 <strong>Database:</strong> agnostic <br>
 <strong>Documentation:</strong>  6/10 <br>
 <strong>Client libraries:</strong> Android, iOS, JavaScript <br>
-<i class="fa fa-warning"></i> <strong>Unmaintained</strong></p>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (last commit was in 2017)</p>
 <p>Telepat is the youngest framework of the bunch. It’s a realtime data sync solution for mobile and other applications.
 It’s fairly new -  first released in 2015. The framework is focused on realtime push and flexibility. It’s database
 agnostic but seems to be designed to work with NoSQL databases like Couchbase. Search is
@@ -324,7 +323,6 @@ first but they provide a nice Docker package that will help you with that.</p>
 implemented with passwords and tokens.</p>
 <p>Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
 like push notifications. It’s well worth checking out especially if you’re building realtime apps.</p>
-<p><strong>Unmaintained</strong> Telepat is no longer actively developed on GitHub (latest commit was in 2017).</p>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>We’ve shown how developers can leverage open source backend frameworks to accelerate time-to-market and enhance
 their products’ security and scalability. While some frameworks cater to mobile developers and make very specific
 choices in terms of technology stack, other try to have broader use cases and be database-agnostic.</p>
@@ -403,7 +401,7 @@ locally on your development machine and give it a try.</p>
           </li>
         
           <li>
-            <a href="/blog/2018/12/30/Top-5-open-source-Q-A-platforms/">Top 5 open source Q&amp;A platforms for 2019</a>
+            <a href="/blog/2018/12/30/Top-5-open-source-Q-A-platforms/">Top 5 open source Q&amp;A platforms for 2020</a>
           </li>
         
           <li>

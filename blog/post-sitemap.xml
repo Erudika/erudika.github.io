@@ -9,7 +9,15 @@
 
     <url>
         <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
-        <lastmod>2020-02-25T11:55:22.847Z</lastmod>
+        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
+        <lastmod>2020-02-25T11:57:10.353Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,14 +34,6 @@
     <url>
         <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
         <lastmod>2019-08-14T21:24:55.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
-        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

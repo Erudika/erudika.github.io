@@ -35,7 +35,7 @@ realtime push, notifications support and client libraries for Android and iOS. W
 **Database:** Cassandra <br>
 **Documentation:** 8/10 <br>
 **Client libraries:** Android, iOS, JavaScript, Ruby, Java, .NET, PHP <br>
-<i class="fa fa-warning"></i> **Unmaintained**
+**Status:** <i class="fa fa-warning"></i> Unmaintained (latest release is from 2016)
 
 Usergrid is an Apache backend-as-a-service project built with Java. It's been around since 2011 and is actively
 developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
@@ -59,7 +59,6 @@ queries and push notifications (in v2.0).
 Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
 your organization. It is used in production by quite a few companies.
 
-**Unmaintained** Latest release is from 2016, latest GitHub commit was in May 2019.
 
 ## [LoopBack](http://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
 <img src="/assets/img/loopback.png">
@@ -69,6 +68,7 @@ your organization. It is used in production by quite a few companies.
 **Database:** agnostic <br>
 **Documentation:** 9/10 <br>
 **Client libraries:** Android/Java, iOS, JavaScript <br>
+**Status:** Active
 
 LoopBack is a Node.js API framework by StrongLoop, part of IBM. It's been around since 2013 and is actively developed
 and has great commercial support. It is focused on REST API development and provides a visual editor for editing and
@@ -99,6 +99,7 @@ JavaScript.
 **Database:** agnostic <br>
 **Documentation:** 9/10 <br>
 **Client libraries:** Java, JavaScript, .NET, PHP, Python, Android, iOS <br>
+**Status:** Active
 
 Para is our own little backend framework. It is powered by Java and was released in early 2014. Out of the box, Para
 integrates with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults.
@@ -144,7 +145,7 @@ It's an easy-to-use and flexible platform that scales well. A backend for busy d
 **Database:** OrientDB <br>
 **Documentation:** 8/10 <br>
 **Client libraries:** Android/Java, iOS, JavaScript <br>
-<i class="fa fa-warning"></i> **Unmaintained**
+**Status:** <i class="fa fa-warning"></i> Unmaintained (last commit on GitHub was in Dec. 2015.)
 
 BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would
 need to run a backend server. It's been around since early 2013. It provides good support for Android and iOS
@@ -159,7 +160,6 @@ and collections of objects and also allows you to link them in one-to-many or ma
 features are excellent - you have social login, friendship/followers API and user management. Other features include
 files and assets API, push notifications and a plugin system.
 
-**Unmaintained** The open source project seems to be abandoned, last commit on GitHub was in Dec. 2015.
 
 ## [Deployd](http://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
 <img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
@@ -169,7 +169,7 @@ files and assets API, push notifications and a plugin system.
 **Database:** MongoDB <br>
 **Documentation:** 6/10 <br>
 **Client libraries:** none <br>
-<i class="fa fa-warning"></i> **Unmaintained**
+**Status:** <i class="fa fa-warning"></i> Unmaintained (last release was in April 2019)
 
 Deployd is an API building platform for Node.js and runs on top of MongoDB. It's been around since 2012. The cool
 thing about it is its web dashboard and the CLI tool called `dpd`. The framework, it seems, was designed to be used
@@ -184,7 +184,6 @@ Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.
 collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
 built-in. Other functionality like social login support is provided by third-party modules.
 
-**Unmaintained** Latest release on GitHub was in April 2019.
 
 ## [Telepat](https://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
 <img src="/assets/img/telepat.png">
@@ -194,7 +193,7 @@ built-in. Other functionality like social login support is provided by third-par
 **Database:** agnostic <br>
 **Documentation:**  6/10 <br>
 **Client libraries:** Android, iOS, JavaScript <br>
-<i class="fa fa-warning"></i> **Unmaintained**
+**Status:** <i class="fa fa-warning"></i> Unmaintained (last commit was in 2017)
 
 Telepat is the youngest framework of the bunch. It's a realtime data sync solution for mobile and other applications.
 It's fairly new -  first released in 2015. The framework is focused on realtime push and flexibility. It's database
@@ -211,7 +210,6 @@ implemented with passwords and tokens.
 Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
 like push notifications. It's well worth checking out especially if you're building realtime apps.
 
-**Unmaintained** Telepat is no longer actively developed on GitHub (latest commit was in 2017).
 
 ## Summary
 

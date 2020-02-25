@@ -4,35 +4,56 @@
 
     <url>
         <loc>https://erudika.com/blog/tags/API/</loc>
-        <lastmod>2020-02-25T11:55:22.847Z</lastmod>
+        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/frameworks/</loc>
-        <lastmod>2020-02-25T11:55:22.847Z</lastmod>
+        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/baas/</loc>
-        <lastmod>2020-02-25T11:55:22.847Z</lastmod>
+        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/backend/</loc>
-        <lastmod>2020-02-25T11:55:22.847Z</lastmod>
+        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/para/</loc>
-        <lastmod>2020-02-25T11:55:22.847Z</lastmod>
+        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/open-source/</loc>
+        <lastmod>2020-02-25T11:57:10.353Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
+        <lastmod>2020-02-25T11:57:10.353Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/scoold/</loc>
+        <lastmod>2020-02-25T11:57:10.353Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -68,27 +89,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/angular/</loc>
         <lastmod>2019-08-14T21:24:55.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/open-source/</loc>
-        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
-        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/scoold/</loc>
-        <lastmod>2019-07-12T09:10:12.932Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
