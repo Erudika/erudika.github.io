@@ -34,7 +34,7 @@ realtime push, notifications support and client libraries for Android and iOS. W
 **Language:** Java <br>
 **Database:** Cassandra <br>
 **Documentation:** 8/10 <br>
-**Client libraries:** Android, iOS, JavaScript, Ruby, Java, .NET, PHP
+**Client libraries:** Android, iOS, JavaScript, Ruby, Java, .NET, PHP <br>
 <i class="fa fa-warning"></i> **Unmaintained**
 
 Usergrid is an Apache backend-as-a-service project built with Java. It's been around since 2011 and is actively
@@ -59,7 +59,7 @@ queries and push notifications (in v2.0).
 Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
 your organization. It is used in production by quite a few companies.
 
-**Unmaintained** (latest release is from 2016, latest GitHub commit was in May 2019)
+**Unmaintained** Latest release is from 2016, latest GitHub commit was in May 2019.
 
 ## [LoopBack](http://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
 <img src="/assets/img/loopback.png">
@@ -159,7 +159,7 @@ and collections of objects and also allows you to link them in one-to-many or ma
 features are excellent - you have social login, friendship/followers API and user management. Other features include
 files and assets API, push notifications and a plugin system.
 
-**Unmaintained** (The open source project seems to be abandoned, last commit on GitHub was on Dec. 3rd, 2015)
+**Unmaintained** The open source project seems to be abandoned, last commit on GitHub was in Dec. 2015.
 
 ## [Deployd](http://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
 <img src="/assets/img/deployd.png" style="border: 1px solid #CCCCCC">
@@ -184,7 +184,7 @@ Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.
 collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
 built-in. Other functionality like social login support is provided by third-party modules.
 
-**Unmaintained** - latest release on GitHub was in April 2019
+**Unmaintained** Latest release on GitHub was in April 2019.
 
 ## [Telepat](https://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
 <img src="/assets/img/telepat.png">
