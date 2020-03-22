@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2019-08-14T22:46:13.025Z</updated>
+  <updated>2020-03-22T21:05:27.584Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -14,7 +14,42 @@
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Status update - Python client, Scoold API, integrations and more</title>
+    <link href="https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/"/>
+    <id>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</id>
+    <published>2020-03-22T20:41:38.000Z</published>
+    <updated>2020-03-22T21:05:27.584Z</updated>
+    
+    <content type="html"><![CDATA[<p>Over the past year or so we’ve added a number of new features and integrations to Scoold and Para. In particular, Scoold has received hundreds of bug fixes and dozens of pull requests on GitHub. The community has been quiteactive with feature requests and suggestions.We’re also happy to report that profits from Scoold Pro are increasing and we’re proud to have several large clients,like Cisco, IBM and DBS Bank, who have successfully deployed it in production.</p><a id="more"></a><p><img src="/assets/img/blogpost_media15.png" alt=""></p><h2 id="Python-Client-for-Para"><a href="#Python-Client-for-Para" class="headerlink" title="Python Client for Para"></a>Python Client for Para</h2><p>The big news around Para is the availability of the new Para client written in Python. This has been a feature requestfor a while now and we finally shipped it in February of 2020. The Python ecosystem is evergrowing and we’re happyto support one of the most popular programming environments out there. </p><p>You can quickly install the Python client from PyPi by executing the following command:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip3 install paraclient</span><br></pre></td></tr></table></figure><p>Then you import the library like this:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> paraclient <span class="keyword">import</span> ParaClient</span><br><span class="line"></span><br><span class="line">paraclient = ParaClient(<span class="string">'ACCESS_KEY'</span>, <span class="string">'SECRET_KEY'</span>);</span><br></pre></td></tr></table></figure><p>Pull requests and bug reports are more than welcome on the <a href="https://github.com/Erudika/para-client-python" target="_blank" rel="noopener">project’s page on GitHub</a>.</p><h2 id="Scoold-Pro-integrated-with-Slack-and-Mattermost"><a href="#Scoold-Pro-integrated-with-Slack-and-Mattermost" class="headerlink" title="Scoold Pro integrated with Slack and Mattermost"></a>Scoold Pro integrated with Slack and Mattermost</h2><p>First we added integration between Scoold Pro and Slack in version <code>1.33.0</code> last summer. It allows you to connectScoold Pro to a number of Slack teams and channels. You can directly map Slack channels to Scoold spaces.Once you authorize the selected channels, Scoold Pro will start sending in-chat notifications for key eventslike the creation of a new question or answer, or whenever somebody on your team was mentioned in a Scoold post.</p><p>Not only that, but you can ask and answer questions directly from Slack, using the <code>/scoold</code> slash command.Asking a question on Slack is as easy as writing <code>/scoold ask How do I do X?</code>. To answer, simply type in <code>/scoold answer [question URL] Here&#39;s my answer...</code>. You can also turn any chat message into a Scoold question or answer by using the special message actions. If you wish to compose a longer post you can open up a specialdialog box, where you can write longer text.</p><p>Approving questions and answers without leaving the channel is another handy feature for moderators who wish to keep an eye on new posts on Scoold. If new posts require explicit approval from moderators, Scoold Pro will notifythe chat by presenting the option to “Approve” or “Delete” the newly created post. </p><p>Then, around Xmas 2019 we released the Mattermost integration. Mattermost is the open source Slack alternative whichcan be self-hosted and is used by a huge number of companies. Scoold Pro integrates with Mattermost in exactly the the same way as with Slack and the two integrations have identical features. The only difference is that the integration with Mattermost is part of Scoold Pro rather than Para. This means that Scoold can be installed behinda firewall and still connect to a local instance of Mattermost even if the Para backend is hosted elsewhere ona public cloud.</p><p>There are lots of other nice features so be sure to check out the <a href="https://scoold.com/slack.html" target="_blank" rel="noopener">Scoold Pro + Slack</a>and <a href="https://scoold.com/mattermost.html" target="_blank" rel="noopener">Scoold Pro + Mattermost</a> web pages for more information.</p><h2 id="Scoold-API"><a href="#Scoold-API" class="headerlink" title="Scoold API"></a>Scoold API</h2><p>The long-awaited RESTful API is finally available in Scoold <code>1.38.0</code> (for both OSS and Pro). I has been in developmentfor a few months now and was long overdue. You can check out the <a href="https://live.scoold.com/api.html" target="_blank" rel="noopener">Swagger documentation</a>for the full list of API resources. There are no API clients at the moment but you can easily generate one fromthe <a href="https://live.scoold.com/api.json" target="_blank" rel="noopener">API schema</a>, using <a href="https://swagger.io/tools/swagger-codegen/" target="_blank" rel="noopener">Swagger Codegen</a>.</p><p>This is a fully-fledged API, meaning you can execute all read and write operations in Scoold programmatically. It is much easier to call the Scoold API and create a new question, for example, than to call the Para API and constructthe question object manually. This is because there are extra steps and logic behind each and every Scoold task, likecreating a new post or user.</p><p>When combined with webhooks, the Scoold API allows you to create complex and powerful integrations for the needs of your organization. See the <a href="https://github.com/Erudika/scoold#rest-api" target="_blank" rel="noopener">README</a> to learn more.</p><h2 id="Backup-and-restore"><a href="#Backup-and-restore" class="headerlink" title="Backup and restore"></a>Backup and restore</h2><p>Another important new feature has landed in Scoold <code>1.37.0</code> and that is the ability to create full copies of the Scoolddatabase which can later be restored. Scoold administrators can download zipped copies of the data from the “Administration” page. Each ZIP archive contains a number of JSON files which contain the data extracted from Para forthe corrsponding Scoold application.</p><p>To restore a previously created backup, simply select a ZIP archive and click the “Import” button. You can alsoimport a single JSON file containing one or more Para objects. This is useful in situations where you only wantto do a partial restore of some of the objects.</p><h2 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h2><p>And finally, we’ve improved the customizabitly of Scoold with support for custom theming and 5 ready-to-use themes.There’s also a new dark mode. Take a look:</p><p><img src="/assets/img/dark_mode.png" alt=""></p><p>Scoold administrators can create custom themes by modifying the CSS of an existing theme or by creating a customstylesheet from scratch.</p><p><em>You can download Scoold from <a href="https://scoold.com" target="_blank" rel="noopener">Scoold.com</a> and sign up for a free account on <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> - our fully managed backend service, supporting multiple Scoold instances. Questions? Chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>!</em></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Over the past year or so we’ve added a number of new features and integrations to Scoold and Para. In particular, 
+Scoold has received hundreds of bug fixes and dozens of pull requests on GitHub. The community has been quite
+active with feature requests and suggestions.
+We’re also happy to report that profits from Scoold Pro are increasing and we’re proud to have several large clients,
+like Cisco, IBM and DBS Bank, who have successfully deployed it in production.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="scoold" scheme="https://erudika.com/blog/tags/scoold/"/>
+    
+      <category term="api" scheme="https://erudika.com/blog/tags/api/"/>
+    
+      <category term="slack" scheme="https://erudika.com/blog/tags/slack/"/>
+    
+      <category term="mattermost" scheme="https://erudika.com/blog/tags/mattermost/"/>
+    
+      <category term="python" scheme="https://erudika.com/blog/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Building a full stack application from scratch with React</title>
@@ -36,6 +71,7 @@ The code project for this article was generated with &lt;code&gt;create-react-ap
 You’ll also need to have &lt;strong&gt;Git&lt;/strong&gt;, &lt;strong&gt;Node.js&lt;/strong&gt; and &lt;strong&gt;npm&lt;/strong&gt; installed.&lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
@@ -67,6 +103,7 @@ like &lt;code&gt;create&lt;/code&gt;, &lt;code&gt;update&lt;/code&gt; and &lt;co
     </summary>
     
     
+    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
@@ -94,6 +131,7 @@ to dependency upgrades. A few minor bugs have been fixed as well. Scoold has rec
 requests with translations from our awesome contributors. It is now available in 12 different languages! &lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
@@ -132,6 +170,7 @@ in mind that &lt;strong&gt;the list is not ordered in any way&lt;/strong&gt;.&lt
     </summary>
     
     
+    
       <category term="scoold" scheme="https://erudika.com/blog/tags/scoold/"/>
     
       <category term="stackoverflow" scheme="https://erudika.com/blog/tags/stackoverflow/"/>
@@ -156,6 +195,7 @@ in mind that &lt;strong&gt;the list is not ordered in any way&lt;/strong&gt;.&lt
     </summary>
     
     
+    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="scoold" scheme="https://erudika.com/blog/tags/scoold/"/>
@@ -178,6 +218,7 @@ in mind that &lt;strong&gt;the list is not ordered in any way&lt;/strong&gt;.&lt
       &lt;p&gt;Have you ever wanted to have a Q&amp;amp;A section on your website with the functionality of Stack Overflow? Well, this one is for you! Scoold is a cloud-ready Stack Overflow clone, powered by our Para backend. It’s a real-world application, showcasing the Para technology and how it can be utilized to get a project off the ground quickly. Scoold is a lightweight (~4000 LOC) web application written in Java – it runs great on the smallest Heroku dyno and doesn’t require a database. &lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="scoold" scheme="https://erudika.com/blog/tags/scoold/"/>
@@ -210,6 +251,7 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
     </summary>
     
     
+    
       <category term="search" scheme="https://erudika.com/blog/tags/search/"/>
     
       <category term="blog" scheme="https://erudika.com/blog/tags/blog/"/>
@@ -235,6 +277,7 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
     </summary>
     
     
+    
       <category term="aws" scheme="https://erudika.com/blog/tags/aws/"/>
     
       <category term="dynamodb" scheme="https://erudika.com/blog/tags/dynamodb/"/>
@@ -257,6 +300,7 @@ you can also upgrade the search box on your blog or static site.&lt;/p&gt;
       &lt;p&gt;&lt;strong&gt;Things&lt;/strong&gt; — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based on Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer’s suggestion that we realized we should’ve done this sooner. &lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
@@ -292,6 +336,7 @@ tool for Angular. You’ll also need to have &lt;strong&gt;Git&lt;/strong&gt;, &
     </summary>
     
     
+    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
@@ -316,6 +361,7 @@ tool for Angular. You’ll also need to have &lt;strong&gt;Git&lt;/strong&gt;, &
       &lt;p&gt;Last week was &lt;a href=&quot;http://jprime.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;jPrime 2016&lt;/a&gt;, the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was *”Java - 21 and legally drunk”* and the two main themes were &lt;strong&gt;microservices&lt;/strong&gt; and &lt;strong&gt;reactive programming&lt;/strong&gt; with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.&lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
@@ -350,6 +396,7 @@ We’d appreciate any &lt;a href=&quot;https://github.com/erudika/para-admin-ui&
     </summary>
     
     
+    
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
     
       <category term="angular" scheme="https://erudika.com/blog/tags/angular/"/>
@@ -380,6 +427,7 @@ the documentation of our open source backend framework and redesigned the landin
     </summary>
     
     
+    
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
     
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
@@ -405,6 +453,7 @@ the documentation of our open source backend framework and redesigned the landin
 deployed on &lt;a href=&quot;https://paraio.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ParaIO.com&lt;/a&gt;, our hosted backend service.&lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="release" scheme="https://erudika.com/blog/tags/release/"/>
@@ -433,6 +482,7 @@ This blog post will be a comparison between open source frameworks only and does
 services on the market.&lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
@@ -465,6 +515,7 @@ developments. You can follow us on Twitter as well - &lt;a href=&quot;https://tw
 looking for a simple and scalable backend service, make sure you follow us and try our developer plan - it’s free!&lt;/p&gt;
     
     </summary>
+    
     
     
       <category term="general" scheme="https://erudika.com/blog/tags/general/"/>
