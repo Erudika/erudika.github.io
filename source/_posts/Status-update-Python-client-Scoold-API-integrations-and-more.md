@@ -2,7 +2,7 @@
 layout: post
 title: 'Status update - Python client, Scoold API, integrations and more'
 date: 2020-03-22 22:41:38
-tags: [scoold, para, api, slack, mattermost, python]
+tags: [scoold, para, API, slack, mattermost, python]
 author: alex@erudika.com
 comments: false
 img: img16.jpg
