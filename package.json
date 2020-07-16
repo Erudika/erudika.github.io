@@ -19,7 +19,7 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "marked": "^0.8.0",
     "minimist": ">=1.2.2",
     "uglify-js": "^3.8.0"
