@@ -71,7 +71,7 @@ and [Scoold Pro + Mattermost](https://scoold.com/mattermost.html) web pages for 
 ## Scoold API
 
 The long-awaited RESTful API is finally available in Scoold `1.38.0` (for both OSS and Pro). I has been in development
-for a few months now and was long overdue. You can check out the [Swagger documentation](https://live.scoold.com/api.html)
+for a few months now and was long overdue. You can check out the [Swagger documentation](https://live.scoold.com/apidocs)
 for the full list of API resources. There are no API clients at the moment but you can easily generate one from
 the [API schema](https://live.scoold.com/api.json), using [Swagger Codegen](https://swagger.io/tools/swagger-codegen/).
 
