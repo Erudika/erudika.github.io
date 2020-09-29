@@ -9,7 +9,7 @@ img: img17.jpg
 ---
 
 We're happy to announce the availability of Scoold Cloud - the official hosting for Scoold Pro. We've been working
-on it for the past few months and we can't wait for you to try it out. Now you can easily deploy a Scoold Pro 
+on it for the past few months and we can't wait for you to try it out. Now you can easily deploy a Scoold Pro
 server in the cloud. Scaling and upgrades are handled by us, leaving you to focus on your community. When used in
 combination with our serverless backend, [Para](https://paraio.com), Scoold Cloud offers a simple and efficient
 solution for knowledge sharing within your organization, with zero maintainance.
@@ -20,13 +20,13 @@ solution for knowledge sharing within your organization, with zero maintainance.
 
 ## Deploy Scoold Pro in minutes
 
-Hosting Scoold Pro yourself can be challenging especially if you don't have prior experience with hosting Java 
-applications in the cloud. Many of our clients have asked us for help during the installation process and some 
-even got stuck along the way because they are not familiar with the platform they are using. 
-You are faced with many choices while deploying Scoold - you have to choose one of the many cloud providers 
-(AWS, Azure, Google Cloud Platform, Heroku, DigitalOcean, etc.). Then, you can either choose to go with Docker 
+Hosting Scoold Pro yourself can be challenging especially if you don't have prior experience with hosting Java
+applications in the cloud. Many of our clients have asked us for help during the installation process and some
+even got stuck along the way because they are not familiar with the platform they are using.
+You are faced with many choices while deploying Scoold - you have to choose one of the many cloud providers
+(AWS, Azure, Google Cloud Platform, Heroku, DigitalOcean, etc.). Then, you can either choose to go with Docker
 or run the application directly. So we decided to simplify the whole process and offer Scoold as a service.
-Scoold Cloud makes the deployment process effortless - it takes just a few clicks to run a fresh instance of 
+Scoold Cloud makes the deployment process effortless - it takes just a few clicks to run a fresh instance of
 Scoold Pro.
 
 Let's run a new Scoold Pro server. First, visit [cloud.scoold.com](https://cloud.scoold.com/login) and register.
@@ -78,13 +78,13 @@ on your local machine, Scoold Cloud will not be able to connect and your Scoold 
 
 ![](/assets/img/scooldcloud_pricing.png)
 
-Scoold Cloud pricing starts from &euro; 49 per for a single node deployment. For a load-balanced cluster of two nodes 
-with high availability and failover, the price per month is &euro; 79. For larger installations you can deploy a 
-4 node cluster for &euro; 129 per month. You can deploy as many instances as you like by purchasing deployment credits
+Scoold Cloud pricing starts from &euro;49/month for a single node deployment. For a load-balanced cluster of two nodes
+with high availability and failover, the price per month is &euro;79/month. For larger installations you can deploy a
+4 node cluster for &euro;129/month. You can deploy as many instances as you like by purchasing deployment credits
 from your "Account" page.
 
 Billing is on a monthly basis. The prices don't include European Union VAT (not applicable to customers outside the EU).
 
 
-*Need a Para backend for your Scoold Pro server? Sign up for a free account on [Para](https://paraio.com) - 
+*Need a Para backend for your Scoold Pro server? Sign up for a free account on [Para](https://paraio.com) -
 our fully managed backend service, supporting multiple Scoold instances. Questions? [Chat with us](https://cloud.scoold.com)!*
