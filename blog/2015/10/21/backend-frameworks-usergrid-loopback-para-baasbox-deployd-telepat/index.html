@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://erudika.com/assets/img/deployd.png">
 <meta property="og:image" content="https://erudika.com/assets/img/telepat.png">
 <meta property="article:published_time" content="2015-10-21T11:17:19.000Z">
-<meta property="article:modified_time" content="2020-02-25T12:00:38.093Z">
+<meta property="article:modified_time" content="2021-01-19T14:18:33.506Z">
 <meta property="article:author" content="Alexander B.">
 <meta property="article:tag" content="para">
 <meta property="article:tag" content="backend">
@@ -191,9 +191,9 @@ realtime push, notifications support and client libraries for Android and iOS. W
 <p><strong>Multitenant:</strong> yes <br>
 <strong>Language:</strong> Java <br>
 <strong>Database:</strong> Cassandra <br>
-<strong>Documentation:</strong> 8/10 <br>
+<strong>Documentation:</strong> 7/10 <br>
 <strong>Client libraries:</strong> Android, iOS, JavaScript, Ruby, Java, .NET, PHP <br>
-<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (latest release is from 2016)</p>
+<strong>Status:</strong> Active</p>
 <p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively
 developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
 in addition to a queue system like AWS SQS.</p>
@@ -255,7 +255,6 @@ others use it as an alternative to Parse for their mobile development.</p>
 <p>The <a href="https://paraio.org/docs" target="_blank" rel="noopener">documentation</a> is great, contained in a single webpage for easy navigation and API methods
 are described clearly. Getting started is pretty easy - download the executable WAR package and run it:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar para-x.y.z.war</span><br><span class="line">$ curl localhost:8080/v1/_setup</span><br></pre></td></tr></table></figure>
-
 <p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.
 If you wish to integrate Para with your own code, there’s a package on Maven central - just search for <code>para-server</code>.
 The WAR file can also be deployed to inside a servlet container like Tomcat.</p>

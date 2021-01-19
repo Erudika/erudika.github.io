@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2021-01-19T14:18:33.506Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2020/09/22/Announcing-Scoold-Cloud/</loc>
         <lastmod>2020-09-29T11:42:02.928Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,14 +26,6 @@
     <url>
         <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
         <lastmod>2020-04-02T13:59:11.683Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
-        <lastmod>2020-02-25T12:00:38.093Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

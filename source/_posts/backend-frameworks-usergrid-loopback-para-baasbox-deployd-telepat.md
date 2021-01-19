@@ -33,9 +33,9 @@ realtime push, notifications support and client libraries for Android and iOS. W
 **Multitenant:** yes <br>
 **Language:** Java <br>
 **Database:** Cassandra <br>
-**Documentation:** 8/10 <br>
+**Documentation:** 7/10 <br>
 **Client libraries:** Android, iOS, JavaScript, Ruby, Java, .NET, PHP <br>
-**Status:** <i class="fa fa-warning"></i> Unmaintained (latest release is from 2016)
+**Status:** Active
 
 Usergrid is an Apache backend-as-a-service project built with Java. It's been around since 2011 and is actively
 developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
