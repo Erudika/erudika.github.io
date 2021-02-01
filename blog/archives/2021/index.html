@@ -18,26 +18,13 @@
 		<meta name="author" content="erudika.com">
 		<meta property="fb:app_id" content="119564591416126">
     
-		<title>Status update - containers, Java 11 and more | Erudika Blog</title>
-		<meta name="description" content="Over the past couple of months we’ve been busy maintaining Para and  Scoold and a few patches have been released. The changes are minor and are mostly related  to dependency upgrades. A few minor bugs">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Status update - containers, Java 11 and more">
-<meta property="og:url" content="https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/index.html">
+		<title>Archives: 2021 | Erudika Blog</title>
+		<meta property="og:type" content="website">
+<meta property="og:title" content="Erudika Blog">
+<meta property="og:url" content="https://erudika.com/blog/archives/2021/index.html">
 <meta property="og:site_name" content="Erudika Blog">
-<meta property="og:description" content="Over the past couple of months we’ve been busy maintaining Para and  Scoold and a few patches have been released. The changes are minor and are mostly related  to dependency upgrades. A few minor bugs">
-<meta property="og:image" content="https://erudika.com/assets/img/blogpost_media12.png">
-<meta property="article:published_time" content="2019-01-28T21:37:01.000Z">
-<meta property="article:modified_time" content="2019-01-31T21:37:11.810Z">
 <meta property="article:author" content="Alexander B.">
-<meta property="article:tag" content="release">
-<meta property="article:tag" content="para">
-<meta property="article:tag" content="scoold">
-<meta property="article:tag" content="docker">
-<meta property="article:tag" content="kubernetes">
-<meta property="article:tag" content="helm">
-<meta property="article:tag" content="lucene">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media12.png">
 <meta name="twitter:creator" content="@para_io">
 <meta property="fb:app_id" content="119564591416126">
 		
@@ -78,7 +65,7 @@
 			"name": "Erudika | Blog",
 			"url": "https://erudika.com/blog",
 			"genre": "technology/technical writing",
-			"headline": "Status update - containers, Java 11 and more"
+			"headline": "Archives: 2021"
 			}]
 		</script>
 		<!-- Google Analytics	 -->
@@ -119,7 +106,7 @@ ga('send', 'pageview');
 						</div>
 					</div>
 					
-					<div id="banner" style="background: url('/assets/img/img14.jpg') center #000;
+					<div id="banner" style="background: url('/assets/img/banner.jpg') center #000;
 							 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
 					
 					<div id="header-outer" class="outer">
@@ -143,122 +130,56 @@ ga('send', 'pageview');
 				</div>
 
 				<div class="outer">
-					<section id="main"><article id="post-Status-update-containers-Java-11-and-more" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2019/01/28/Status-update-containers-Java-11-and-more/" class="article-date">
-  <time datetime="2019-01-28T21:37:01.000Z" itemprop="datePublished">28 Jan 2019</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-		
-
-    
-      <header class="article-header">
-        
+					<section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      Status update - containers, Java 11 and more
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+	<a href="/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/" class="archive-article-date">
+  <time datetime="2021-02-01T08:38:27.000Z" itemprop="datePublished">Feb 1</time>
+</a>
+  <div class="archive-article-inner">
+		
+<div style="background: url('/assets/img/img18.jpg') center transparent;
+		 background-size: cover;height: 150px;">&nbsp;</div>
+
+
+		<div class="article-entry">
+			
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/">Status update - Para goes global, pricing changes</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Over the past couple of months we’ve been busy maintaining <a href="https://paraio.org" target="_blank" rel="noopener">Para</a> and 
-<a href="https://scoold.com" target="_blank" rel="noopener">Scoold</a> and a few patches have been released. The changes are minor and are mostly related 
-to dependency upgrades. A few minor bugs have been fixed as well. Scoold has received some much welcome pull 
-requests with translations from our awesome contributors. It is now available in 12 different languages! </p>
-<a id="more"></a>
-
-<p><img src="/assets/img/blogpost_media12.png" alt></p>
-<p>Last year came the release of Java 11 and we’re quite happy to announce that both Scoold and Para are fully 
-compatible with JDK 11. This required that we upgrade most of the dependencies like Spring and Guice, for 
-example. </p>
-<p>The latest release of Para is <code>1.31.1</code> and it contains a number of fixes. The code responsible for authenticating
-users with LinkedIn has been updated and it’s now compatible with their latest API v2.0. We recommend that you 
-update your Para server to 1.31.1` if you’re using LinkedIn.</p>
-<p>SAML authentication has been a desired feature for some time so we’ve implemented it as part of the Para backend.
-Hence, <a href="https://www.scoold.com/" target="_blank" rel="noopener">Scoold PRO</a> and all Para clients can take advantage of that and authenticate users 
-through any given SAML IDP. This, coupled with existing LDAP support, makes it effortless for enterprise customers
-to integrate their own identity provider with Para and Scoold.</p>
-<p>The latest release of Scoold is <code>1.31.2</code>. The cookie security has been tightened with the addition of the new 
-<code>SameSite</code> flag which is supposed to completely mitigate the risk of a possible CSRF attack. For better protection
-against XSS attacks, we’ve also upgraded the template engine, Velocity, to 2.0. </p>
-<p>Scoold now comes in a WAR package as well. This makes it easy to deploy on a servlet container such as Apache Tomcat.
-The JAR package is more appropriate for deploying Scoold to hosts without a servlet container, as it includes an
-instance of the embedded Jetty server. This is the case for Heroku, for example.</p>
-<p>Apart from Heroku, we’ve added support and documentation for lots of other deployment options — AWS, Azure, 
-DigitalOcean and Google App Engine. Not only that, but we’ve added a new <code>helm/</code> folder with a Helm chart for those
-of you who want to deploy Scoold to a Kubernetes cluster with a single command:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">helm install --name my-scoold ./scoold</span><br></pre></td></tr></table></figure>
-
-<p>Read the <a href="https://github.com/Erudika/scoold/tree/master/helm" target="_blank" rel="noopener">Scoold chart README</a> for more details on how to 
-configure the pod.</p>
-<p>Para does not yet include a Helm chart because it has lots of different database combinations and it’s hard to choose
-the best option for everyone. It is available on Docker Hub and so is Scoold. To run a Para server locally with
-Docker, simply run:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti -p 8080:8080 --rm -v para-data:/para/data \</span><br><span class="line">  -v $(pwd)/application.conf:/para/application.conf \</span><br><span class="line">  -e JAVA_OPTS=&quot;-Dconfig.file=/para/application.conf&quot; erudikaltd/para</span><br></pre></td></tr></table></figure>
-
-<p>To run just Scoold locally, try:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti -p 8000:8000 --rm -v $(pwd)/application.conf:/scoold/application.conf \</span><br><span class="line">  -e JAVA_OPTS=&quot;-Dconfig.file=/scoold/application.conf&quot; erudikaltd/scoold</span><br></pre></td></tr></table></figure>
-
-<p>Or, to run both Para and Scoold locally with Docker use the <code>docker-compose</code> command from inside the Scoold folder:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
-
-<p>Each release of Para and Scoold has a tag and that tag is reflected on Docker Hub. So you can fetch a particular tag and
-run that, or use the <code>:latest</code> tag which contains the most recent updates from the <code>master</code> branch. You can see all the 
-containers available on <a href="https://hub.docker.com/u/erudikaltd" target="_blank" rel="noopener">our Docker Hub page</a>, which includes all the Para plugins
-as well.</p>
-<h2 id="Lucene-S3-Directory"><a href="#Lucene-S3-Directory" class="headerlink" title="Lucene S3 Directory"></a>Lucene S3 Directory</h2><p>Finally, we’d like to announce the availability of a new experimental project called 
-<a href="https://github.com/albogdano/lucene-s3directory" target="_blank" rel="noopener">lucene-s3directory</a>. It’s a <code>Directory</code> implementation for Apache
-Lucene which allows you to store your indices directly on AWS S3. This has been attempted before by Shay Banon (creator 
-of Elasticsearch and Compass) but he later abandoned the project because S3 didn’t have support for locks back then.
-Since late 2018, S3 now supports two different types of locks on objects - legal hold locks and retention periods. 
-The <code>S3Directory</code> implementation uses legal hold locks on <code>write.lock</code> files. </p>
-<p>The project passes the integration tests but it might still contain some bugs. We’d really appreciate it if you take it
-for a spin and report any issues on <a href="https://github.com/albogdano/lucene-s3directory/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-
-      
-    </div>
-    <div class="article-footer">
-      
-				<a href="https://twitter.com/albogdano" target="_blank" rel="noopener">
-					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
-				</a>
-      
-
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/helm/" rel="tag">helm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/kubernetes/" rel="tag">kubernetes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/lucene/" rel="tag">lucene</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/para/" rel="tag">para</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/release/" rel="tag">release</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/scoold/" rel="tag">scoold</a></li></ul>
-
-    </div>
+			
+				<p>Our backend-as-a-service <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> continued to grow over the past few months and now it’s hosting 
+over 450 active apps. We have about 10 paid customers from different parts of the globe - USA, Japan, Europe. 
+Previously, the hosted Para service was available from a single AWS region - Ireland, EU. This meant that clients 
+connecting from another continent would experience high latency for all requests to the backend, which would make
+Para applications feel slow. It was time to address this problem.</p>
+				
+					<p class="article-more-link">
+						<a href="/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/#more">Read More</a>
+					</p>
+				
+			
+		</div>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Webhooks implemented in Para and Scoold
-        
-      </div>
-    </a>
-  
-  
-    <a href="/blog/2018/12/30/Top-5-open-source-Q-A-platforms/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Top 5 open source Q&amp;A platforms for 2020</div>
-    </a>
-  
-</nav>
-
-  
 </article>
-
+  
+  
+    </div></section>
+  
 </section>
 				</div>
 				<footer>

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://erudika.com/blog/"/>
-  <updated>2020-09-29T11:42:02.928Z</updated>
+  <updated>2021-02-01T10:53:48.457Z</updated>
   <id>https://erudika.com/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Status update - Para goes global, pricing changes</title>
+    <link href="https://erudika.com/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/"/>
+    <id>https://erudika.com/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/</id>
+    <published>2021-02-01T08:38:27.000Z</published>
+    <updated>2021-02-01T10:53:48.457Z</updated>
+    
+    <content type="html"><![CDATA[<p>Our backend-as-a-service <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> continued to grow over the past few months and now it’s hosting over 450 active apps. We have about 10 paid customers from different parts of the globe - USA, Japan, Europe. Previously, the hosted Para service was available from a single AWS region - Ireland, EU. This meant that clients connecting from another continent would experience high latency for all requests to the backend, which would makePara applications feel slow. It was time to address this problem.</p><a id="more"></a><p><img src="/assets/img/blogpost_media17.png" alt=""></p><p>Over the past month we expanded operations to two more regions - Tokyo, Japan and California, USA. This means that Para is now a globally available backend service with high availability and on-demand scalability. This is reallyexciting news because we are the only independent BaaS provider to offer such level of service with simple and predictable pricing. </p><p>Para relies heavily on AWS DynamoDB for data storage and benefits from its immense scalability and replication features. We use global tables to replicate data across the three regions and on-demand scaling is enabled for each app table. Not only do we replicate the tables of paid apps, but even the free apps’ data is globally replicated.</p><p>But what is cross-region replication? Each Para app stores data in a dedicated DynamoDB table in a single region.When a request comes in from the same region or a nearby region (same continent), the latency is very good (&lt; 200ms).But if a request from a far away region comes in, the latency can increase to about 800ms which is terrible.This is where cross-region replication comes in. The table from region A is replicated to regions B and C and we have carbon copies of that data in to more locations around the globe. Now, if a read request comes from region C,it fetches the data from that region locally. Similarly, a write request from region B is written to region B but alsoreplicated to regions A and C in real time. This type of replication is also know as <a href="https://en.wikipedia.org/wiki/Multi-master_replication" target="_blank" rel="noopener">multi-master replication</a>.</p><p>This all sounds great, but what about the full-text search indexes? Para offers full-text search on all objects in the database which requires that data to be indexed and reindexed on each write request. Keeping the search indices in sync across all active regions is a challenge. We decided to keep operations as simple as possible andmanaged to synchronize the indices without complicating the architecture. With the help of AWS Simple Queue Service,Para sends special messages on each write request to a queue in each of the other active regions. Then each regionalinstance of Para pulls those messages from the queue and updates its local search index by fetching the updated datafrom the local DynamoDB table. The process is simple, fast and scalable.</p><h2 id="Simplified-scaling"><a href="#Simplified-scaling" class="headerlink" title="Simplified scaling"></a>Simplified scaling</h2><p>The hosted Para service used capacity credits to allow users to scale their app. Each pricing plan included a numberof read and write credits and additional credits were available for purchase. If your Para app started to get moretraffic, you could buy more capacity credits and increase its throughput. </p><p>Now, there is a better way to scale Para apps, thanks to the on-demand scaling feature in DynamoDB. It gives usfaster and automatic scaling of tables. We’ve enabled on-demand scaling for all existing apps, including all free apps.With this change there is no need for capacity credits any more so we’ll remove that feature from Para.So you don’t have to do anything to accommodate more traffic - your app simply scales automatically!</p><h2 id="Pricing-changes"><a href="#Pricing-changes" class="headerlink" title="Pricing changes"></a>Pricing changes</h2><p>Finally, we’ve decided that it’s time to simplify our pricing. There will be a single pricing plan which will cost€25 per app. The new pricing will be in effect soon for new customers. Old customers will be charged the same prices as before.</p><p>The free plan is still available and lots of people use it for prototyping and building applications. The only changeto this plan will be the new restriction of 10000 objects per app. Apps with more than 10K objects will be disableduntil they upgrade to the paid plan.</p><p><em>Hey, I’m Alexander - an indie solo developer working on <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> BaaS in the open. Follow my bootstrapping journey on <a href="https://www.indiehackers.com/albogdano" target="_blank" rel="noopener">Indie Hackers</a>. Questions? Chat with me <a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>!</em></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Our backend-as-a-service &lt;a href=&quot;https://paraio.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Para&lt;/a&gt; continued to grow over the past few months and now it’s hosting 
+over 450 active apps. We have about 10 paid customers from different parts of the globe - USA, Japan, Europe. 
+Previously, the hosted Para service was available from a single AWS region - Ireland, EU. This meant that clients 
+connecting from another continent would experience high latency for all requests to the backend, which would make
+Para applications feel slow. It was time to address this problem.&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="para" scheme="https://erudika.com/blog/tags/para/"/>
+    
+      <category term="baas" scheme="https://erudika.com/blog/tags/baas/"/>
+    
+      <category term="hosting" scheme="https://erudika.com/blog/tags/hosting/"/>
+    
+  </entry>
   
   <entry>
     <title>Announcing Scoold Cloud</title>
