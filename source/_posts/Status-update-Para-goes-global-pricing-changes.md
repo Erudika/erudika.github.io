@@ -32,7 +32,7 @@ each app table. Not only do we replicate the tables of paid apps, but even the f
 When a request comes in from the same region or a nearby region (same continent), the latency is very good (< 200ms).
 But if a request from a far away region comes in, the latency can increase to about 800ms which is terrible.
 This is where cross-region replication comes in. The table from region A is replicated to regions B and C and we 
-have carbon copies of that data in to more locations around the globe. Now, if a read request comes from region C,
+have carbon copies of that data in two more locations around the globe. Now, if a read request comes from region C,
 it fetches the data from that region locally. Similarly, a write request from region B is written to region B but also
 replicated to regions A and C in real time. This type of replication is also know as 
 [multi-master replication](https://en.wikipedia.org/wiki/Multi-master_replication).
