@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Top 5 open source Q&A platforms for 2020
+title: Top 5 open source Q&A platforms for 2021
 date: 2018-12-30 11:51:40
 tags: [scoold, open-source, stackoverflow]
 author: alex@erudika.com
