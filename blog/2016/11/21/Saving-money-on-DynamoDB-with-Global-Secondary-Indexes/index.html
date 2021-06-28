@@ -1,0 +1,380 @@
+<!--
+                      _ _ _
+   ___ _ __ _   _  __| (_) | ____ _
+  / _ \ '__| | | |/ _` | | |/ / _` |
+ |  __/ |  | |_| | (_| | |   < (_| |
+  \___|_|   \__,_|\__,_|_|_|\_\__,_|
+             a tiny software company
+
+-->
+<!DOCTYPE html>
+<html lang="en-us" class="nojs">
+  <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="The official Erudika blog - we write about backend and frontend technologies
+					like Java and JavaScript, IoT, mobile and Para.">
+		<meta name="author" content="erudika.com">
+		<meta property="fb:app_id" content="119564591416126">
+    
+		<title>Saving money on DynamoDB with Global Secondary Indexes | Erudika Blog</title>
+		<meta name="description" content="Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Saving money on DynamoDB with Global Secondary Indexes">
+<meta property="og:url" content="https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/index.html">
+<meta property="og:site_name" content="Erudika Blog">
+<meta property="og:description" content="Amazon’s DynamoDB is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advan">
+<meta property="og:image" content="https://erudika.com/assets/img/blogpost_media7.png">
+<meta property="article:published_time" content="2016-11-21T15:39:07.000Z">
+<meta property="article:modified_time" content="2017-01-31T20:16:48.490Z">
+<meta property="article:author" content="Alexander B.">
+<meta property="article:tag" content="aws">
+<meta property="article:tag" content="dynamodb">
+<meta property="article:tag" content="tips">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media7.png">
+<meta name="twitter:creator" content="@para_io">
+<meta property="fb:app_id" content="119564591416126">
+		
+    <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
+		
+
+		<link rel="canonical" href="https://erudika.com/blog" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+		<script type="application/ld+json">
+			[{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Sofia, Bulgaria",
+			"postalCode": "1618",
+			"streetAddress": "4 Lelinska chuka Street"
+			},
+			"email": "contact(at)erudika.com",
+			"vatID": "BG-200368755",
+			"name": "Erudika",
+			"url": "https://erudika.com",
+			"logo": "https://www.erudika.com/assets/img/erudika.png",
+			"sameAs": [
+			"https://twitter.com/erudika",
+			"https://www.linkedin.com/company/erudika",
+			"https://github.com/Erudika"
+			]
+			},
+			{
+			"@context": "http://schema.org",
+			"@type": "Blog",
+			"name": "Erudika | Blog",
+			"url": "https://erudika.com/blog",
+			"genre": "technology/technical writing",
+			"headline": "Saving money on DynamoDB with Global Secondary Indexes"
+			}]
+		</script>
+		<!-- Google Analytics	 -->
+		
+<!-- Analytics -->
+
+<!-- End Analytics -->
+
+
+  <meta name="generator" content="Hexo 4.2.1"></head>
+
+	<body>
+		<div id="container">
+			<div id="wrap">
+				<header id="header">
+					<div class="navbar navbar-default">
+						<div class="container">
+							<div class="navbar-header">
+								<a href="/">
+									<img src="/assets/img/erudika.svg" width="256" height="66" alt="logo" class="erudika-logo"/>
+								</a>
+							</div>
+							<ul class="nav navbar-nav navbar-right hidden-xs">
+								<li class=""><a href="/blog"><span style="color: black;">Blog</span></a></li>
+								<li class=""><a href="/#projects">Projects</a></li>
+								<li class=""><a href="/#support">Support</a></li>
+								<li class=""><a href="/#contact">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="banner" style="background: url('/assets/img/img9.jpg') center #000;
+							 -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;"></div>
+					
+					<div id="header-outer" class="outer">
+						<div id="header-title" class="inner">
+							<h1 id="logo-wrap">
+								<span id="logo">Blog</span>
+							</h1>
+							
+						</div>
+					</div>
+				</header>
+
+				<div class="outer">
+					<!--		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>-->
+					<input type="text" id="search-box" class="search-form mt" value="" placeholder="Search" />
+					<small class="right">powered by
+						<a href="https://paraio.com" target="_blank">
+							<img src="/assets/img/para_logo.svg" width="60" alt="Para"/>
+						</a>
+					</small>
+				</div>
+
+				<div class="outer">
+					<section id="main"><article id="post-Saving-money-on-DynamoDB-with-Global-Secondary-Indexes" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/" class="article-date">
+  <time datetime="2016-11-21T15:39:07.000Z" itemprop="datePublished">21 Nov 2016</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+		
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Saving money on DynamoDB with Global Secondary Indexes
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Amazon’s DynamoDB</strong> is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI).</p>
+<p>We migrated from Cassandra to DynamoDB a while back. This decision was taken mainly because of the tunable performance and also because it’s a managed service and we had one less thing to maintain. Later we found out that global indexes could help us save a lot of extra costs and so we implemented a simple solution, which we call “shared tables”.</p>
+<a id="more"></a>
+
+<p><img src="https://erudika.com/assets/img/blogpost_media7.png" alt></p>
+<p>Our solution is applicable to cases where you have a large number of Dynamo tables but each of these has a low utilization. For example, it may contain a few hundred items and have low throughput capacity of 1 read and 1 write per second. The idea is to combine those tables into one and save some money. First, let’s look at this neat ASCII diagram of what we have so far.</p>
+<pre>
+
+ +-----+ +-----+ +-----+     +-----+
+ | id1 | | id3 | | id5 |     | idX |
+ +-----+ +-----+ +-----+ ... +-----+
+ | id2 | | id4 | | id6 |     | idY |
+ +-----+ +-----+ +-----+     +-----+
+ Table 1 Table 2 Table 3     Table N
+
+</pre>
+
+<p>We are going to create a new table called <code>shared</code> and also we’ll have to create the global secondary index to that table which is treated like a separate table. We can do this through the console or by calling the AWS SDK.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">createSharedTable</span><span class="params">(String sharedTableName, <span class="keyword">long</span> readCapacity, <span class="keyword">long</span> writeCapacity)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (existsTable(sharedTableName)) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// build the GSI request</span></span><br><span class="line">    GlobalSecondaryIndex secIndex = <span class="keyword">new</span> GlobalSecondaryIndex().</span><br><span class="line">        withIndexName(sharedTableName + <span class="string">"-index"</span>).</span><br><span class="line">        withProvisionedThroughput(<span class="keyword">new</span> ProvisionedThroughput().</span><br><span class="line">            withReadCapacityUnits(<span class="number">1L</span>).</span><br><span class="line">            withWriteCapacityUnits(<span class="number">1L</span>)).</span><br><span class="line">        withProjection(<span class="keyword">new</span> Projection().withProjectionType(ProjectionType.ALL)).</span><br><span class="line">        withKeySchema(<span class="keyword">new</span> KeySchemaElement().withAttributeName(<span class="string">"tableID"</span>).withKeyType(KeyType.HASH),</span><br><span class="line">            <span class="keyword">new</span> KeySchemaElement().withAttributeName(<span class="string">"timestamp"</span>).withKeyType(KeyType.RANGE));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// create the shared table with the above GSI attached</span></span><br><span class="line">    getClient().createTable(<span class="keyword">new</span> CreateTableRequest().withTableName(sharedTableName).</span><br><span class="line">        withKeySchema(<span class="keyword">new</span> KeySchemaElement(Config._KEY, KeyType.HASH)).</span><br><span class="line">        withAttributeDefinitions(<span class="keyword">new</span> AttributeDefinition(Config._KEY, ScalarAttributeType.S),</span><br><span class="line">            <span class="keyword">new</span> AttributeDefinition(<span class="string">"tableID"</span>, ScalarAttributeType.S),</span><br><span class="line">            <span class="keyword">new</span> AttributeDefinition(<span class="string">"timestamp"</span>, ScalarAttributeType.S)).</span><br><span class="line">        withGlobalSecondaryIndexes(secIndex).</span><br><span class="line">        withProvisionedThroughput(<span class="keyword">new</span> ProvisionedThroughput(readCapacity, writeCapacity)));</span><br><span class="line">  &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    logger.error(<span class="string">"Failed to create shared table."</span>, e);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>First we make a GSI request object by specifying its throughput — 1 read/1 write is sufficient as a starting point. This setting is determined by the number of queries (per second) to the database. Then we specify the attributes which will be copied over to the secondary index (all in this case). This allows us to retrieve the data from the index directly instead of getting just the <code>id</code> from the index then reading the actual object from the <code>shared</code> table as a second request. Finally, and most importantly, we need to set the attributes on which the index is defined — these will be <code>tableID</code> and <code>timestamp</code>. Going back to the first diagram, each table name will correspond to a <code>tableID</code> in the <code>shared</code> table. This will be the attribute which splits up the big table into smaller subtables (i.e. views). The <code>timestamp</code> field is used for sorting and is the so called “range” component of our index.</p>
+<p>The result of the above request is going to be the table <code>shared</code> and the index <code>shared-index</code>.</p>
+<pre>
+
+  WRITE TO +          READ FROM ^
+           |                    |
+  +--------v---+      +---------+--+
+  | table1_id1 |      | table1_id1 |
+  +------------+      +------------+
+  | table2_id3 |      | table1_id2 |
+  +------------+      +------------+
+  | table3_id5 |      | table2_id3 |
+  +------------+      +------------+
+  | table1_id2 |      | table2_id4 |
+  +------------+      +------------+
+  | table2_id4 +------+ table3_id5 |
+  +------------+      +------------+
+  | table3_id6 |      | table3_id6 |
+  +------------+      +------------+
+  |   . . .    |      |   . . .    |
+  +------------+      +------------+
+  | tableN_idX |      | tableN_idX |
+  +------------+      +------------+
+  | tableN_idY |      | tableN_idY |
+  +------------+      +------------+
+      shared           shared-index
+
+</pre>
+
+<p>The next important decision will be the format of the primary key in the <code>shared</code> table. We’ve decided to go for <code>tableID_objectID</code> — each object key is prefixed by the name of the table it belongs to. It’s a simple and effective way to avoid key collisions and make sure that a request coming from “table1” cannot read the objects in “table2”, for example.</p>
+<p>Now, we have to modify our code to be able to make requests to the new shared table and to do that we wrote a simple “routing” function which gives us the correct key to an object in a shared table:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getKeyForTableID</span><span class="params">(String key, String tableID)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// if table is shared return the composite key</span></span><br><span class="line">  <span class="keyword">if</span> (isSharedTable(tableID)) &#123;</span><br><span class="line">    <span class="keyword">return</span> tableID + <span class="string">"_"</span> + key;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> key;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>So, if we had a read function in our code called <code>readObject(key, table)</code> this will have to be changed to <code>readObject(getKeyForTableID(key, table))</code>. Thus we can not only read from standard tables but also we can read object from our <code>shared</code> table. Finally, if we want to query multiple objects (pages of objects) from <code>shared</code> we do a scan operation on the global index instead of the original table.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">readPageFromSharedTable</span><span class="params">(String tableID, String fromKey, List&lt;Page&lt;Item, QueryOutcome&gt;&gt; results)</span> </span>&#123;</span><br><span class="line">  ValueMap valueMap = <span class="keyword">new</span> ValueMap().withString(<span class="string">":tid"</span>, tableID);</span><br><span class="line">  valueMap.put(<span class="string">":ts"</span>, fromKey);</span><br><span class="line">  Index index = getSharedIndex(tableID);</span><br><span class="line"></span><br><span class="line">  QuerySpec spec = <span class="keyword">new</span> QuerySpec().withMaxPageSize(<span class="number">100</span>).withMaxResultSize(<span class="number">100</span>).</span><br><span class="line">      withKeyConditionExpression(<span class="string">"tableID = :tid and timestamp &gt; :ts"</span>).</span><br><span class="line">      withValueMap(valueMap);</span><br><span class="line"></span><br><span class="line">  Page&lt;Item, QueryOutcome&gt; items = index.query(spec);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (items.hasNextPage()) &#123;</span><br><span class="line">    results.add(items.firstPage());</span><br><span class="line">    <span class="comment">// return last key as a start key to next page</span></span><br><span class="line">    <span class="keyword">return</span> items.getLowLevelResult().getQueryResult().getLastEvaluatedKey().get(<span class="string">"timestamp"</span>).getS();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let’s do some simple calculations. At the time of writing, a table with 1/1 throughput costs <strong>$0.66/month</strong>. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we’d have to pay <strong>(100 * 0.66) = $66 per month</strong>. That’s a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere <strong>$1.32/month</strong> for the minimum capacity of 1 read/s and 1 write/s. That’s a <em>50x</em> cost reduction — good job!</p>
+<p><em>If you liked this post, you should check out <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> - our backend service for busy developers. Also, chat with us <a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>!</em></p>
+
+      
+    </div>
+    <div class="article-footer">
+      
+				<a href="https://twitter.com/albogdano" target="_blank" rel="noopener">
+					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
+				</a>
+      
+
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/aws/" rel="tag">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/dynamodb/" rel="tag">dynamodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/tips/" rel="tag">tips</a></li></ul>
+
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Implementing full-text search for your static site
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">An open source backend for the Internet of Things</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+				</div>
+				<footer>
+	<div class="container">
+		
+			<div class="row">
+	<div class="col-md-6">
+		
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents
+			
+				<a href="/blog/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a>
+			
+		</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/">Status update - Para goes global, pricing changes</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/09/22/Announcing-Scoold-Cloud/">Announcing Scoold Cloud</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/">Status update - Python client, Scoold API, integrations and more</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/">Building a full stack application from scratch with React</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/">Webhooks implemented in Para and Scoold</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2019/01/28/Status-update-containers-Java-11-and-more/">Status update - containers, Java 11 and more</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/12/30/Top-5-open-source-Q-A-platforms/">Top 5 open source Q&amp;A platforms for 2021</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/10/15/Announcing-Scoold-Pro/">Announcing Scoold Pro</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/">Introducing Scoold - an open source Q&amp;A platform</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/">Implementing full-text search for your static site</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+	</div>
+	<div class="col-md-3">
+		
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/API/" style="font-size: 13.33px;">API</a> <a href="/blog/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 13.33px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 13.33px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/hosting/" style="font-size: 13.33px;">hosting</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 13.33px;">jprime</a> <a href="/blog/tags/jsx/" style="font-size: 10px;">jsx</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mattermost/" style="font-size: 10px;">mattermost</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/python/" style="font-size: 10px;">python</a> <a href="/blog/tags/react/" style="font-size: 10px;">react</a> <a href="/blog/tags/release/" style="font-size: 16.67px;">release</a> <a href="/blog/tags/saas/" style="font-size: 10px;">saas</a> <a href="/blog/tags/scoold/" style="font-size: 16.67px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/slack/" style="font-size: 10px;">slack</a> <a href="/blog/tags/stackoverflow/" style="font-size: 13.33px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 13.33px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/webhooks/" style="font-size: 10px;">webhooks</a>
+    </div>
+  </div>
+
+	</div>
+	<div class="col-md-3">
+		<div class="widget-wrap">
+	<div class="widget">
+		<a class="twitter-timeline" data-lang="en" data-width="290" data-height="300" data-theme="light" href="https://twitter.com/erudika" target="_blank" rel="noopener">
+			Tweets by erudika</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
+
+
+	</div>
+
+<!--	<div>
+		<div id="search-form-wrap"><form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://erudika.com/blog"></form></div>
+	</div>-->
+</div>
+
+		
+		<div class="row">
+				<div class="col-xs-6">
+					<i class="fa fa-creative-commons" title="Creative Commons Attribution, Share-Alike License"></i>
+					2021 Erudika
+				</div>
+				<div class="col-xs-6 text-right">
+					<a href="https://github.com/Erudika/erudika.github.io" target="_blank">Powered by Hexo.</a>
+					<strong>
+						Images courtesy of <a href="http://nos.twnsnd.co" target="_blank">New Old Stock</a>.
+					</strong>
+				</div>
+		</div>
+	</div>
+</footer>
+			</div>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script>
+	if (!Modernizr.svg) { $("img.erudika-logo").attr("src", "/assets/img/erudika.png"); }
+</script>
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+		</div>
+	</body>
+</html>
