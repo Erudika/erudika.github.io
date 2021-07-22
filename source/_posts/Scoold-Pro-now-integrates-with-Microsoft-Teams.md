@@ -8,7 +8,7 @@ comments: false
 img: img19.jpg
 ---
 
-I'm happy to announce that Scoold Pro is now integrated with Microsoft Teams! Everyone who owns an active Scoold Pro
+**I'm happy to announce that Scoold Pro is now integrated with Microsoft Teams!** Everyone who owns an active Scoold Pro
 license will get the new feature in the next release. All instances running on [Scoold Cloud](https://cloud.scoold.com) 
 will also be updated and will benefit from the new integration. This was a highly-requested feature and it honestly
 took more time than I anticipated but the end result is great. Teams is the third enterprise chat application which 
@@ -70,7 +70,7 @@ and answers.
 You can easily find any question, person or tag on Scoold without leaving the Teams chat window. Embedding content from Scoold
 is also supported, as well as link unfurling.
 
-![](/assets/img/teams_intro2.png)
+![](/assets/img/teams_intro3.png)
 
 ## Easy installation
 
