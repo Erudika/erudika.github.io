@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://erudika.com/blog</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2021/07/23/Scoold-Pro-now-integrates-with-Microsoft-Teams/</loc>
+        <lastmod>2021-07-22T23:48:26.386Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
+        <lastmod>2021-06-12T16:31:49.046Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/</loc>
+        <lastmod>2021-04-12T20:00:36.662Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/</loc>
+        <lastmod>2021-02-08T20:16:54.879Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
+        <lastmod>2021-01-19T14:18:33.506Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2020/09/22/Announcing-Scoold-Cloud/</loc>
+        <lastmod>2020-09-29T11:42:02.928Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
+        <lastmod>2020-04-02T13:59:11.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/</loc>
+        <lastmod>2019-08-14T22:46:13.025Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
+        <lastmod>2019-08-14T21:24:55.195Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/</loc>
+        <lastmod>2019-07-04T22:06:48.211Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/</loc>
+        <lastmod>2019-01-31T21:37:11.810Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2018/10/15/Announcing-Scoold-Pro/</loc>
+        <lastmod>2018-11-02T08:33:04.208Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/12/12/Implementing-full-text-search-for-your-static-site/</loc>
+        <lastmod>2017-12-07T14:15:46.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/01/05/para-1-17-released/</loc>
+        <lastmod>2017-09-30T20:53:28.901Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/06/01/jPrime-roundup-Para-client-iOS-Swift/</loc>
+        <lastmod>2017-09-30T20:52:49.602Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2015/10/16/hello-world/</loc>
+        <lastmod>2017-01-31T20:16:48.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/11/21/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes/</loc>
+        <lastmod>2017-01-31T20:16:48.490Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/03/25/Para-Web-Console-the-admin-UI-for-your-backend/</loc>
+        <lastmod>2017-01-31T20:16:48.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/03/06/Para-v1-18-released-new-site-and-jPrime/</loc>
+        <lastmod>2017-01-31T20:16:48.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2016/08/12/An-open-source-backend-for-the-Internet-of-Things/</loc>
+        <lastmod>2017-01-31T20:16:48.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->
