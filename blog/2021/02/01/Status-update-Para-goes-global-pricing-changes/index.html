@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Our backend-as-a-service (BaaS) Para continued to grow over the past few months and now it’s hosting over 450 active apps. We have about 10 paid customers from different parts of the globe - USA, Japa">
 <meta property="og:locale">
-<meta property="og:image" content="https://erudika.com/assets/img/blogpost_media17.png">
+<meta property="og:image" content="https://erudika.com/blog/assets/img/blogpost_media17.png">
 <meta property="article:published_time" content="2021-02-01T08:38:27.000Z">
 <meta property="article:modified_time" content="2021-02-08T20:16:54.879Z">
 <meta property="article:author" content="Alexander B.">
@@ -34,7 +34,7 @@
 <meta property="article:tag" content="hosting">
 <meta property="article:tag" content="baas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media17.png">
+<meta name="twitter:image" content="https://erudika.com/blog/assets/img/blogpost_media17.png">
 <meta name="twitter:creator" content="@para_io">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
@@ -170,14 +170,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Our backend-as-a-service (BaaS) <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> continued to grow over the past few months and now it’s
+        <p>Our backend-as-a-service (BaaS) <a href="https://paraio.com/">Para</a> continued to grow over the past few months and now it’s
 hosting over 450 active apps. We have about 10 paid customers from different parts of the globe - USA, Japan, Europe.
 Previously, the hosted Para service was available from a single AWS region - Ireland, EU. This meant that clients
 connecting from another continent would experience high latency for all requests to the backend, which would make
 Para applications feel slow. It was time to address this problem.</p>
-<a id="more"></a>
+<span id="more"></span>
 
-<p><img src="/assets/img/blogpost_media17.png" alt=""></p>
+<p><img src="/blog/assets/img/blogpost_media17.png"></p>
 <p><strong>Over the past month we expanded operations to two more regions - Tokyo, Japan and California, USA.</strong> This means that
 Para is now a globally available backend service with high availability and on-demand scalability. This is really
 exciting news because we are the only independent BaaS provider to offer such level of service with simple and
@@ -192,7 +192,7 @@ This is where cross-region replication comes in. The table from region A is repl
 have carbon copies of that data in two more locations around the globe. Now, if a read request comes from region C,
 it fetches the data from that region locally. Similarly, a write request from region B is written to region B but also
 replicated to regions A and C in real time. This type of replication is also know as
-<a href="https://en.wikipedia.org/wiki/Multi-master_replication" target="_blank" rel="noopener">multi-master replication</a>.</p>
+<a href="https://en.wikipedia.org/wiki/Multi-master_replication">multi-master replication</a>.</p>
 <p><strong>This all sounds great, but what about the full-text search indexes?</strong> Para offers full-text search on all objects
 in the database which requires that data to be indexed and reindexed on each write request. Keeping the search
 indices in sync across all active regions is a challenge. We decided to keep operations as simple as possible and
@@ -213,9 +213,9 @@ prices as before. The currency is also changed from US Dollars to Euros because 
 <p>The free plan is still available and lots of people use it for prototyping and building applications. The only change
 to this plan will be the new restriction of 10000 objects per app. Apps with more than 10K objects will be disabled
 until they upgrade to the paid plan.</p>
-<p><em>Hey, I’m Alexander - an indie solo developer working on <a href="https://paraio.com" target="_blank" rel="noopener">Para</a> BaaS in the open. Follow my
-bootstrapping journey on <a href="https://www.indiehackers.com/albogdano" target="_blank" rel="noopener">Indie Hackers</a>.
-Questions? Ask me anything about Para <a href="https://gitter.im/Erudika/para" target="_blank" rel="noopener">on Gitter</a>!</em></p>
+<p><em>Hey, I’m Alexander - an indie solo developer working on <a href="https://paraio.com/">Para</a> BaaS in the open. Follow my
+bootstrapping journey on <a href="https://www.indiehackers.com/albogdano">Indie Hackers</a>.
+Questions? Ask me anything about Para <a href="https://gitter.im/Erudika/para">on Gitter</a>!</em></p>
 
       
     </div>
@@ -322,7 +322,7 @@ Questions? Ask me anything about Para <a href="https://gitter.im/Erudika/para" t
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/API/" style="font-size: 12.5px;">API</a> <a href="/blog/tags/angular/" style="font-size: 12.5px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 12.5px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 12.5px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/hosting/" style="font-size: 12.5px;">hosting</a> <a href="/blog/tags/integration/" style="font-size: 10px;">integration</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 12.5px;">jprime</a> <a href="/blog/tags/jsx/" style="font-size: 10px;">jsx</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mattermost/" style="font-size: 10px;">mattermost</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ms-teams/" style="font-size: 10px;">ms teams</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/python/" style="font-size: 10px;">python</a> <a href="/blog/tags/react/" style="font-size: 10px;">react</a> <a href="/blog/tags/release/" style="font-size: 15px;">release</a> <a href="/blog/tags/saas/" style="font-size: 10px;">saas</a> <a href="/blog/tags/scoold/" style="font-size: 17.5px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/slack/" style="font-size: 10px;">slack</a> <a href="/blog/tags/stackoverflow/" style="font-size: 12.5px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 12.5px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/webhooks/" style="font-size: 10px;">webhooks</a>
+      <a href="/blog/tags/API/" style="font-size: 12.5px;">API</a> <a href="/blog/tags/angular/" style="font-size: 12.5px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 12.5px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/hosting/" style="font-size: 12.5px;">hosting</a> <a href="/blog/tags/integration/" style="font-size: 10px;">integration</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 12.5px;">jprime</a> <a href="/blog/tags/jsx/" style="font-size: 10px;">jsx</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mattermost/" style="font-size: 10px;">mattermost</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ms-teams/" style="font-size: 10px;">ms teams</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/python/" style="font-size: 10px;">python</a> <a href="/blog/tags/react/" style="font-size: 10px;">react</a> <a href="/blog/tags/release/" style="font-size: 15px;">release</a> <a href="/blog/tags/saas/" style="font-size: 10px;">saas</a> <a href="/blog/tags/scoold/" style="font-size: 17.5px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/slack/" style="font-size: 10px;">slack</a> <a href="/blog/tags/stackoverflow/" style="font-size: 12.5px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 12.5px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/webhooks/" style="font-size: 10px;">webhooks</a>
     </div>
   </div>
 
