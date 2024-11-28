@@ -79,3 +79,5 @@ deploy:
 marked:
   gfm: true
   breaks: false
+
+# google_analytics: motomo

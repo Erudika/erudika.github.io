@@ -25,10 +25,11 @@
 <meta property="og:url" content="https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/index.html">
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="Over the past year or so we’ve added a number of new features and integrations to Scoold and Para. In particular,  Scoold has received hundreds of bug fixes and dozens of pull requests on GitHub. The">
+<meta property="og:locale">
 <meta property="og:image" content="https://erudika.com/assets/img/blogpost_media15.png">
 <meta property="og:image" content="https://erudika.com/assets/img/dark_mode.png">
 <meta property="article:published_time" content="2020-03-22T20:41:38.000Z">
-<meta property="article:modified_time" content="2020-04-02T13:59:11.683Z">
+<meta property="article:modified_time" content="2020-09-22T17:12:30.689Z">
 <meta property="article:author" content="Alexander B.">
 <meta property="article:tag" content="para">
 <meta property="article:tag" content="scoold">
@@ -39,7 +40,6 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media15.png">
 <meta name="twitter:creator" content="@para_io">
-<meta property="fb:app_id" content="119564591416126">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
 		
@@ -83,12 +83,24 @@
 		</script>
 		<!-- Google Analytics	 -->
 		
-<!-- Analytics -->
+		<!-- Analytics -->
+		<script>
+			var _paq = window._paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//matomo.fixproperty.eu/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '1']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<!-- End Analytics -->
 
-<!-- End Analytics -->
 
-
-  <meta name="generator" content="Hexo 4.2.1"></head>
+  <meta name="generator" content="Hexo 7.3.0"></head>
 
 	<body>
 		<div id="container">
@@ -225,7 +237,7 @@ our fully managed backend service, supporting multiple Scoold instances. Questio
     </div>
     <div class="article-footer">
       
-				<a href="https://twitter.com/albogdano" target="_blank" rel="noopener">
+				<a href="https://twitter.com/albogdano">
 					<img class="img-circle" src="https://www.gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=60" width="30" height="30" alt="author"/>&nbsp; Alex B.
 				</a>
       
@@ -326,7 +338,7 @@ our fully managed backend service, supporting multiple Scoold instances. Questio
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/API/" style="font-size: 12.5px;">API</a> <a href="/blog/tags/angular/" style="font-size: 12.5px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 12.5px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 10px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/hosting/" style="font-size: 12.5px;">hosting</a> <a href="/blog/tags/integration/" style="font-size: 10px;">integration</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 12.5px;">jprime</a> <a href="/blog/tags/jsx/" style="font-size: 10px;">jsx</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mattermost/" style="font-size: 10px;">mattermost</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ms-teams/" style="font-size: 10px;">ms teams</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/python/" style="font-size: 10px;">python</a> <a href="/blog/tags/react/" style="font-size: 10px;">react</a> <a href="/blog/tags/release/" style="font-size: 15px;">release</a> <a href="/blog/tags/saas/" style="font-size: 10px;">saas</a> <a href="/blog/tags/scoold/" style="font-size: 17.5px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/slack/" style="font-size: 10px;">slack</a> <a href="/blog/tags/stackoverflow/" style="font-size: 12.5px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 12.5px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/webhooks/" style="font-size: 10px;">webhooks</a>
+      <a href="/blog/tags/API/" style="font-size: 12.5px;">API</a> <a href="/blog/tags/angular/" style="font-size: 12.5px;">angular</a> <a href="/blog/tags/aws/" style="font-size: 10px;">aws</a> <a href="/blog/tags/baas/" style="font-size: 12.5px;">baas</a> <a href="/blog/tags/backend/" style="font-size: 12.5px;">backend</a> <a href="/blog/tags/blog/" style="font-size: 10px;">blog</a> <a href="/blog/tags/clone/" style="font-size: 10px;">clone</a> <a href="/blog/tags/devices/" style="font-size: 10px;">devices</a> <a href="/blog/tags/docker/" style="font-size: 10px;">docker</a> <a href="/blog/tags/dynamodb/" style="font-size: 10px;">dynamodb</a> <a href="/blog/tags/enterprise/" style="font-size: 10px;">enterprise</a> <a href="/blog/tags/frameworks/" style="font-size: 10px;">frameworks</a> <a href="/blog/tags/frontend/" style="font-size: 10px;">frontend</a> <a href="/blog/tags/general/" style="font-size: 12.5px;">general</a> <a href="/blog/tags/helm/" style="font-size: 10px;">helm</a> <a href="/blog/tags/hosting/" style="font-size: 12.5px;">hosting</a> <a href="/blog/tags/integration/" style="font-size: 10px;">integration</a> <a href="/blog/tags/ios/" style="font-size: 10px;">ios</a> <a href="/blog/tags/iot/" style="font-size: 10px;">iot</a> <a href="/blog/tags/jprime/" style="font-size: 12.5px;">jprime</a> <a href="/blog/tags/jsx/" style="font-size: 10px;">jsx</a> <a href="/blog/tags/kubernetes/" style="font-size: 10px;">kubernetes</a> <a href="/blog/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/blog/tags/mattermost/" style="font-size: 10px;">mattermost</a> <a href="/blog/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/blog/tags/ms-teams/" style="font-size: 10px;">ms teams</a> <a href="/blog/tags/ng-admin/" style="font-size: 10px;">ng-admin</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/para/" style="font-size: 20px;">para</a> <a href="/blog/tags/para-cli/" style="font-size: 10px;">para-cli</a> <a href="/blog/tags/python/" style="font-size: 10px;">python</a> <a href="/blog/tags/react/" style="font-size: 10px;">react</a> <a href="/blog/tags/release/" style="font-size: 15px;">release</a> <a href="/blog/tags/saas/" style="font-size: 10px;">saas</a> <a href="/blog/tags/scoold/" style="font-size: 17.5px;">scoold</a> <a href="/blog/tags/search/" style="font-size: 10px;">search</a> <a href="/blog/tags/slack/" style="font-size: 10px;">slack</a> <a href="/blog/tags/stackoverflow/" style="font-size: 12.5px;">stackoverflow</a> <a href="/blog/tags/swift/" style="font-size: 10px;">swift</a> <a href="/blog/tags/tips/" style="font-size: 10px;">tips</a> <a href="/blog/tags/tutorial/" style="font-size: 12.5px;">tutorial</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/webhooks/" style="font-size: 10px;">webhooks</a>
     </div>
   </div>
 
@@ -334,7 +346,7 @@ our fully managed backend service, supporting multiple Scoold instances. Questio
 	<div class="col-md-3">
 		<div class="widget-wrap">
 	<div class="widget">
-		<a class="twitter-timeline" data-lang="en" data-width="290" data-height="300" data-theme="light" href="https://twitter.com/erudika" target="_blank" rel="noopener">
+		<a class="twitter-timeline" data-lang="en" data-width="290" data-height="300" data-theme="light" href="https://twitter.com/erudika">
 			Tweets by erudika</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 </div>
@@ -351,7 +363,7 @@ our fully managed backend service, supporting multiple Scoold instances. Questio
 		<div class="row">
 				<div class="col-xs-6">
 					<i class="fa fa-creative-commons" title="Creative Commons Attribution, Share-Alike License"></i>
-					2023 Erudika
+					2024 Erudika
 				</div>
 				<div class="col-xs-6 text-right">
 					<a href="https://github.com/Erudika/erudika.github.io" target="_blank">Powered by Hexo.</a>

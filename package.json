@@ -1,27 +1,27 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "4.2.1"
+    "version": "7.3.0"
   },
   "dependencies": {
-    "acorn": "*",
-    "ejs": "^*",
-    "hexo": "*",
-    "hexo-generator-archive": "*",
-    "hexo-generator-category": "*",
-    "hexo-generator-feed": "*",
-    "hexo-generator-index": "*",
-    "hexo-generator-seo-friendly-sitemap": "*",
-    "hexo-generator-tag": "*",
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-marked": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-server": "*",
-    "lodash": "*",
-    "marked": "*",
-    "minimist": "*",
-    "uglify-js": "*"
+    "acorn": "^8.14.0",
+    "ejs": "^3.1.10",
+    "hexo": "^7.3.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-seo-friendly-sitemap": "^0.2.1",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^6.3.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "lodash": "^4.17.21",
+    "marked": "^15.0.2",
+    "minimist": "^1.2.8",
+    "uglify-js": "^3.19.3"
   }
 }

@@ -2,10 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://erudika.com/blog</loc>
+        <loc>https://erudika.com/blog/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
+
 
     <url>
         <loc>https://erudika.com/blog/2021/07/23/Scoold-Pro-now-integrates-with-Microsoft-Teams/</loc>
@@ -57,7 +58,7 @@
 
     <url>
         <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
-        <lastmod>2020-04-02T13:59:11.683Z</lastmod>
+        <lastmod>2020-09-22T17:12:30.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
