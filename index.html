@@ -54,6 +54,25 @@
 				"url": "https://erudika.com"
 			}]
 		</script>
+		<!-- Matomo -->
+		<script>
+			var _paq = window._paq = window._paq || [];
+			/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+			_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+			_paq.push(["setDoNotTrack", true]);
+			_paq.push(["disableCookies"]);
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			(function() {
+				var u="//matomo.fixproperty.eu/";
+				_paq.push(['setTrackerUrl', u+'matomo.php']);
+				_paq.push(['setSiteId', '1']);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+				g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="//matomo.fixproperty.eu/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+		<!-- End Matomo Code -->
   </head>
 
   <body>
@@ -146,8 +165,8 @@
 				<div class="row mt">
 					<div class="col-md-6">
 						<a href="https://robotranslator.ai"><img src="assets/img/robotranslator.svg" class="lazy" height="110" alt="Robo Translator"></a>
-						<p class="lead mt"><strong><a href="https://robotranslator.ai">Robo Translator</a></strong> will simplify the way you localize content, 
-						any content - documents, audio, video or software applications. It is an easy-to-use machine translation service 
+						<p class="lead mt"><strong><a href="https://robotranslator.ai">Robo Translator</a></strong> will simplify the way you localize content,
+						any content - documents, audio, video or software applications. It is an easy-to-use machine translation service
 						without subscripions or hidden costs.</p>
 					</div>
 				</div>
@@ -284,7 +303,7 @@
 							2023 Erudika
 						</div>
 						<div class="col-xs-6 text-right">
-							<a href="https://github.com/Erudika/erudika.github.io">Hosted on GitHub.</a> &bull; 
+							<a href="https://github.com/Erudika/erudika.github.io">Hosted on GitHub.</a> &bull;
 							<a href="https://status.erudika.com"><b>Status Page</b></a>
 						</div>
 					</div>
@@ -304,17 +323,6 @@
 					return false;
 				});
 			});
-			var _paq = window._paq = window._paq || [];
-			  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-			  _paq.push(['trackPageView']);
-			  _paq.push(['enableLinkTracking']);
-			  (function() {
-			    var u="//matomo.fixproperty.eu/";
-			    _paq.push(['setTrackerUrl', u+'matomo.php']);
-			    _paq.push(['setSiteId', '1']);
-			    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-			    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-			  })();
 		</script>
   </body>
 </html>
