@@ -16,7 +16,7 @@ gets an offical Scoold integration, after Slack and Mattermost. All three suppor
 
 <!-- more -->
 
-![](/assets/img/blogpost_media18.png)
+![](../assets/img/blogpost_media18.png)
 
 The Teams integration is implemented with the offical Bot Framework SDK for Java from Microsoft. Teams has a number of
 integration points - tabs, personal app, message extensions, connectors and bots. Working with the platform is certainly
@@ -65,12 +65,12 @@ which is yet another page for managing bots (there are a total of 3 different wa
 Message extensions allow you to search for content on Scoold and also give you a couple of shortcuts for creating questions
 and answers.
 
-![](/assets/img/teams_intro1.png)
+![](../assets/img/teams_intro1.png)
 
 You can easily find any question, person or tag on Scoold without leaving the Teams chat window. Embedding content from Scoold
 is also supported, as well as link unfurling.
 
-![](/assets/img/teams_intro3.png)
+![](../assets/img/teams_intro3.png)
 
 ## Easy installation
 

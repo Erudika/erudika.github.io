@@ -15,7 +15,7 @@ like `create`, `update` and `delete` for any object type you choose.
 
 <!-- more -->
 
-![](/assets/img/blogpost_media13.png)
+![](../assets/img/blogpost_media13.png)
 
 Webhooks are essentially `POST` requests made from Para to a destination URL of your choice. The destination has to
 be able to process the request and return `200 OK`. This is a much more efficient way of communication and is well
@@ -66,7 +66,7 @@ POST /v1/webhooks
 
 If you don't want to use the API, simply open the web console and register your webhook with the simple user interface.
 
-![](/assets/img/para_webhooks1.png)
+![](../assets/img/para_webhooks1.png)
 
 Of course, Para allows you to register multiple destination URLs so you can essentially receive identical event at two
 different places. You can also register webhooks which are subscribed to all events on all types in Para:

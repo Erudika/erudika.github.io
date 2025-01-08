@@ -15,7 +15,7 @@ requests with translations from our awesome contributors. It is now available in
 
 <!-- more -->
 
-![](/assets/img/blogpost_media12.png)
+![](../assets/img/blogpost_media12.png)
 
 Last year came the release of Java 11 and we're quite happy to announce that both Scoold and Para are fully 
 compatible with JDK 11. This required that we upgrade most of the dependencies like Spring and Guice, for 

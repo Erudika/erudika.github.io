@@ -26,17 +26,17 @@
 <meta property="og:site_name" content="Erudika Blog">
 <meta property="og:description" content="With the release of Para 1.32.0 we’ve introduced support for webhooks for all apps. This feature is available now  on ParaIO.com as well. This is very good news for everyone who wants to integrate Par">
 <meta property="og:locale">
-<meta property="og:image" content="https://erudika.com/blog/assets/img/blogpost_media13.png">
-<meta property="og:image" content="https://erudika.com/blog/assets/img/para_webhooks1.png">
+<meta property="og:image" content="https://erudika.com/assets/img/blogpost_media13.png">
+<meta property="og:image" content="https://erudika.com/assets/img/para_webhooks1.png">
 <meta property="article:published_time" content="2019-07-04T19:30:14.000Z">
-<meta property="article:modified_time" content="2019-07-04T22:06:48.211Z">
+<meta property="article:modified_time" content="2025-01-08T13:30:52.535Z">
 <meta property="article:author" content="Alexander B.">
 <meta property="article:tag" content="release">
 <meta property="article:tag" content="para">
 <meta property="article:tag" content="scoold">
 <meta property="article:tag" content="webhooks">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://erudika.com/blog/assets/img/blogpost_media13.png">
+<meta name="twitter:image" content="https://erudika.com/assets/img/blogpost_media13.png">
 <meta name="twitter:creator" content="@para_io">
 		
     <link rel="alternative" href="/blog/atom.xml" title="Erudika Blog" type="application/atom+xml">
@@ -178,7 +178,7 @@ external services. It makes Para even more flexible and enables you to have near
 like <code>create</code>, <code>update</code> and <code>delete</code> for any object type you choose.</p>
 <span id="more"></span>
 
-<p><img src="/blog/assets/img/blogpost_media13.png"></p>
+<p><img src="/blog/../assets/img/blogpost_media13.png"></p>
 <p>Webhooks are essentially <code>POST</code> requests made from Para to a destination URL of your choice. The destination has to
 be able to process the request and return <code>200 OK</code>. This is a much more efficient way of communication and is well
 summarized by the phrase <strong>Don’t call us, we’ll call you!</strong>.</p>
@@ -214,7 +214,7 @@ updated <code>user</code> objects. So we can register a new webhook like so:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">POST /v1/webhooks</span><br><span class="line">&#123;</span><br><span class="line">  &quot;urlEncoded&quot;: true,</span><br><span class="line">  &quot;update&quot;: true,</span><br><span class="line">  &quot;targetUrl&quot;: &quot;https://destination.url&quot;,</span><br><span class="line">  &quot;secret&quot;: &quot;secret&quot;,</span><br><span class="line">  &quot;typeFilter&quot;:&quot;user&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>If you don’t want to use the API, simply open the web console and register your webhook with the simple user interface.</p>
-<p><img src="/blog/assets/img/para_webhooks1.png"></p>
+<p><img src="/blog/../assets/img/para_webhooks1.png"></p>
 <p>Of course, Para allows you to register multiple destination URLs so you can essentially receive identical event at two
 different places. You can also register webhooks which are subscribed to all events on all types in Para:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">POST /v1/webhooks</span><br><span class="line">&#123;</span><br><span class="line">  &quot;active&quot;: true,</span><br><span class="line">  &quot;urlEncoded&quot;: true,</span><br><span class="line">  &quot;update&quot;: true,</span><br><span class="line">  &quot;create&quot;: true,</span><br><span class="line">  &quot;delete&quot;: true,</span><br><span class="line">  &quot;updateAll&quot;: true,</span><br><span class="line">  &quot;createAll&quot;: true,</span><br><span class="line">  &quot;deleteAll&quot;: true,</span><br><span class="line">  &quot;targetUrl&quot;: &quot;https://destination.url&quot;,</span><br><span class="line">  &quot;secret&quot;: &quot;secret&quot;,</span><br><span class="line">  &quot;typeFilter&quot;:&quot;*&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -378,7 +378,7 @@ our fully managed backend service for busy developers. Also, chat with us <a hre
 		<div class="row">
 				<div class="col-xs-6">
 					<i class="fa fa-creative-commons" title="Creative Commons Attribution, Share-Alike License"></i>
-					2024 Erudika
+					2025 Erudika
 				</div>
 				<div class="col-xs-6 text-right">
 					<a href="https://github.com/Erudika/erudika.github.io" target="_blank">Powered by Hexo.</a>

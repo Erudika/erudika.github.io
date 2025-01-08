@@ -9,8 +9,16 @@
 
 
     <url>
-        <loc>https://erudika.com/blog/2021/07/23/Scoold-Pro-now-integrates-with-Microsoft-Teams/</loc>
-        <lastmod>2021-07-22T23:53:45.400Z</lastmod>
+        <loc>https://erudika.com/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/</loc>
+        <lastmod>2025-01-08T13:30:52.535Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/</loc>
+        <lastmod>2025-01-08T13:30:52.534Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +26,39 @@
 
     <url>
         <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
-        <lastmod>2021-06-12T16:31:49.046Z</lastmod>
+        <lastmod>2025-01-08T13:30:52.534Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/</loc>
+        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
+        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2020/09/22/Announcing-Scoold-Cloud/</loc>
+        <lastmod>2025-01-08T13:30:52.532Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2021/07/23/Scoold-Pro-now-integrates-with-Microsoft-Teams/</loc>
+        <lastmod>2025-01-08T13:30:52.532Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -33,32 +73,8 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/</loc>
-        <lastmod>2021-02-08T20:16:54.879Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/</loc>
         <lastmod>2021-01-19T14:18:33.506Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2020/09/22/Announcing-Scoold-Cloud/</loc>
-        <lastmod>2020-09-29T11:42:02.928Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
-        <lastmod>2020-09-22T17:12:30.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -75,22 +91,6 @@
     <url>
         <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
         <lastmod>2019-08-14T21:24:55.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/</loc>
-        <lastmod>2019-07-04T22:06:48.211Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2019/01/28/Status-update-containers-Java-11-and-more/</loc>
-        <lastmod>2019-01-31T21:37:11.810Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

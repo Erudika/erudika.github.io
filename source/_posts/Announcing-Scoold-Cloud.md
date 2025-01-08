@@ -16,7 +16,7 @@ solution for knowledge sharing within your organization, with zero maintainance.
 
 <!-- more -->
 
-![](/assets/img/blogpost_media16.png)
+![](../assets/img/blogpost_media16.png)
 
 ## Deploy Scoold Pro in minutes
 
@@ -76,7 +76,7 @@ on your local machine, Scoold Cloud will not be able to connect and your Scoold 
 
 ## Subscription plans
 
-![](/assets/img/scooldcloud_pricing.png)
+![](../assets/img/scooldcloud_pricing.png)
 
 Scoold Cloud pricing starts from &euro;49/month for a single node deployment. For a load-balanced cluster of two nodes
 with high availability and failover, the price per month is &euro;79/month. For larger installations you can deploy a
