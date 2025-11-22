@@ -3,36 +3,85 @@
 
 
     <url>
-        <loc>https://erudika.com/blog/tags/webhooks/</loc>
-        <lastmod>2025-01-08T13:30:52.535Z</lastmod>
+        <loc>https://erudika.com/blog/tags/python/</loc>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/mattermost/</loc>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/slack/</loc>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/API/</loc>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/scoold/</loc>
-        <lastmod>2025-01-08T13:30:52.535Z</lastmod>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/para/</loc>
-        <lastmod>2025-01-08T13:30:52.535Z</lastmod>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/clone/</loc>
+        <lastmod>2025-11-22T18:43:06.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
+        <lastmod>2025-11-22T18:43:06.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/enterprise/</loc>
+        <lastmod>2025-11-22T18:42:56.248Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/release/</loc>
-        <lastmod>2025-01-08T13:30:52.535Z</lastmod>
+        <lastmod>2025-11-22T18:42:56.248Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://erudika.com/blog/tags/open-source/</loc>
-        <lastmod>2025-01-08T13:30:52.534Z</lastmod>
+        <lastmod>2025-11-22T18:42:48.257Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/webhooks/</loc>
+        <lastmod>2025-01-08T13:30:52.535Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -61,41 +110,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/docker/</loc>
         <lastmod>2025-01-08T13:30:52.534Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
-        <lastmod>2025-01-08T13:30:52.534Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/python/</loc>
-        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/mattermost/</loc>
-        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/slack/</loc>
-        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/API/</loc>
-        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -131,13 +145,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/saas/</loc>
         <lastmod>2025-01-08T13:30:52.532Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/clone/</loc>
-        <lastmod>2021-04-12T20:00:36.662Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -187,13 +194,6 @@
     <url>
         <loc>https://erudika.com/blog/tags/angular/</loc>
         <lastmod>2019-08-14T21:24:55.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/enterprise/</loc>
-        <lastmod>2018-11-02T08:33:04.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

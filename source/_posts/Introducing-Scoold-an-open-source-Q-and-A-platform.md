@@ -61,7 +61,7 @@ Scoold needs to know the location of a Para server, and to connect, you need you
 
 [![ click here to deploy ](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Erudika/scoold)
 
-**The website of the project is [https://scoold.com](https://scoold.com), and the live demo is at [https://live.scoold.com](https://live.scoold.com).**
+**The website of the project is [https://scoold.com](https://scoold.com), and the live demo is at [https://demo.scoold.com](https://demo.scoold.com).**
 
 
 *You can follow Scoold [on Twitter](https://twitter.com/getscoold) or chat with us about it [on Gitter](https://gitter.im/Erudika/scoold).*

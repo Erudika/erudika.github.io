@@ -9,6 +9,38 @@
 
 
     <url>
+        <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
+        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/</loc>
+        <lastmod>2025-11-22T18:43:06.714Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2018/10/15/Announcing-Scoold-Pro/</loc>
+        <lastmod>2025-11-22T18:42:56.248Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
+        <lastmod>2025-11-22T18:42:48.257Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/2019/07/04/Webhooks-implemented-in-Para-and-Scoold/</loc>
         <lastmod>2025-01-08T13:30:52.535Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,23 +57,7 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/2018/12/30/Top-5-open-source-Q-A-platforms/</loc>
-        <lastmod>2025-01-08T13:30:52.534Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/2021/02/01/Status-update-Para-goes-global-pricing-changes/</loc>
-        <lastmod>2025-01-08T13:30:52.533Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2020/03/22/Status-update-Python-client-Scoold-API-integrations-and-more/</loc>
         <lastmod>2025-01-08T13:30:52.533Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -59,14 +75,6 @@
     <url>
         <loc>https://erudika.com/blog/2021/07/23/Scoold-Pro-now-integrates-with-Microsoft-Teams/</loc>
         <lastmod>2025-01-08T13:30:52.532Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2017/04/27/Introducing-Scoold-an-open-source-Q-and-A-platform/</loc>
-        <lastmod>2021-04-12T20:00:36.662Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -91,14 +99,6 @@
     <url>
         <loc>https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/</loc>
         <lastmod>2019-08-14T21:24:55.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/2018/10/15/Announcing-Scoold-Pro/</loc>
-        <lastmod>2018-11-02T08:33:04.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

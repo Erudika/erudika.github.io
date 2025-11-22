@@ -77,4 +77,4 @@ Scoold has had a strict Content Security Policy and reports since the very begin
 Scoold Pro is available for purchase from [scoold.com](https://scoold.com). It's *299 EUR, one-time fee* so you can buy it once and host it on one of your servers indefinitely. You're also eligible for free updates and fixes for a period of 1 year. Buying Pro would also support the development of Scoold in general. Cheers!
 
 
-*Want to give Scoold a try? Go to [live.scoold.com](https://live.scoold.com)*
+*Want to give Scoold a try? Go to [demo.scoold.com](https://demo.scoold.com)*

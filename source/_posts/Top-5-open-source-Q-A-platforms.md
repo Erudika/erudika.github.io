@@ -38,7 +38,7 @@ in mind that **the list is not ordered in any way**.
 **Database:** Any (database agnostic)<br>
 **License:** Apache 2.0<br>
 **Commercial support:** [Yes](https://erudika.com)<br>
-**Demo:** [https://live.scoold.com](https://live.scoold.com)<br>
+**Demo:** [https://demo.scoold.com](https://demo.scoold.com)<br>
 
 ## Askbot - [<i class="fa fa-github-square"></i>](https://github.com/ASKBOT/askbot-devel)
 
