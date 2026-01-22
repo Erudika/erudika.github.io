@@ -54,7 +54,6 @@ para_access_key = "app:scoold"
 para_secret_key = "*****************"
 para_fb_app_id = "123456789"
 para_fb_secret = "***********************"
-para_gmaps_api_key = "********************************"
 para_google_client_id = "********************************
 ```
 Scoold needs to know the location of a Para server, and to connect, you need your app's access key and secret key (see [Para docs](https://paraio.org/docs)).

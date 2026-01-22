@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://erudika.com/blog/tags/clone/</loc>
+        <lastmod>2025-12-04T18:18:45.009Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
+        <lastmod>2025-12-04T18:18:45.009Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://erudika.com/blog/tags/scoold/</loc>
+        <lastmod>2025-12-04T18:18:45.009Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://erudika.com/blog/tags/python/</loc>
         <lastmod>2025-11-22T18:43:15.394Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,29 +52,8 @@
     </url>
 
     <url>
-        <loc>https://erudika.com/blog/tags/scoold/</loc>
-        <lastmod>2025-11-22T18:43:15.394Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://erudika.com/blog/tags/para/</loc>
         <lastmod>2025-11-22T18:43:15.394Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/clone/</loc>
-        <lastmod>2025-11-22T18:43:06.714Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://erudika.com/blog/tags/stackoverflow/</loc>
-        <lastmod>2025-11-22T18:43:06.714Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
