@@ -1,0 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: latest_stable
+description: Para - the backend for busy developers
+home: https://paraio.org
+icon: https://paraio.org/img/logo.png
+keywords:
+- - backend
+- - para
+- - database
+- - storage
+- - json
+- - baas
+name: para
+sources:
+- - https://github.com/Erudika/para
+type: application
+version: 0.3.0
+
+...
+files:
+  para-0.3.0.tgz: sha256:1187a7357ab5165bbacb36f8ba073f8249563dfb5804c7ea46746fd25c18ff1f
+-----BEGIN PGP SIGNATURE-----
+
+wsBcBAEBCgAQBQJpeHI5CRCZoj6FpV27EwAA9+AIAN0lflTrZAHMv6t9mUkORP6l
+U/k9Ma6n7slfXp2B9oEE0KYPAuRFBZnx/hZ8dF1r1QZNtZAnJU4YKaI0IZds4/kH
+DnXMNCdC2BnGsE3riethGcEps6I8xban8r0UjhocsKbB3PPngHNNzdvUTT63qHdQ
++5L+oSZWhhmBbXUy/UrQ9npZ/fCIWfhA/8TTfAnZqI30Qt1SnBZ69EcBY68kv9/v
+8w7V8VEeyQbRQkpqYhTz27vS0hE/yQYZHjK65lIGwZpouUC3XGNZTpc/Pt518dhC
+pdELB6iSoeW57jUlvxPsBRZ4r+7oWg5BbaoBMB29VVRA0e6BI99gxCf3mDCUuxw=
+=YEU0
+-----END PGP SIGNATURE-----
