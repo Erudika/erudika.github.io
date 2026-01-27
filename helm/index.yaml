@@ -1,8 +1,8 @@
 apiVersion: v1
 entries:
   scoold:
-    - created: 2026-01-26T16:23:20.499814565-06:00
-      description: Scoold, the open-source Q&A platform
+    - created: 2026-01-26T16:24:20.499814565-06:00
+      description: Scoold - the open-source Q&A platform
       digest: 38ba59b5018cb978990a4317c654ac1299dc4f00d620882a03a527d579017f6a
       home: https://scoold.com
       name: scoold
@@ -12,7 +12,7 @@ entries:
       - https://erudika.com/helm/scoold-0.3.0.tgz
       version: 0.3.0
   scoold-pro:
-    - created: 2026-01-26T16:23:20.499814565-06:00
+    - created: 2026-01-26T16:24:20.499814565-06:00
       description: Scoold Pro - The knowledge sharing platform for teams
       digest: 51247860fd986232f3f27b46c3ed851e7d92c458737963e1319dff2c454c12f3
       home: https://scoold.com
@@ -23,7 +23,7 @@ entries:
       - https://erudika.com/helm/scoold-pro-0.3.0.tgz
       version: 0.3.0
   para:
-    - created: 2026-01-26T16:23:20.499814565-06:00
+    - created: 2026-01-26T16:24:20.499814565-06:00
       description: Para - the backend for busy developers
       digest: 1187a7357ab5165bbacb36f8ba073f8249563dfb5804c7ea46746fd25c18ff1f
       home: https://paraio.org
@@ -33,4 +33,4 @@ entries:
       urls:
       - https://erudika.com/helm/para-0.3.0.tgz
       version: 0.3.0
-generated: 2026-01-26T16:23:20.499029981-06:00
+generated: 2026-01-26T16:24:20.499029981-06:00
