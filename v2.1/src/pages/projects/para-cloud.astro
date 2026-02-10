@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectDetail from "../../components/ProjectDetail.astro";
+---
+
+<BaseLayout
+  title="Para Cloud | Erudika"
+  description="Para Cloud delivers managed Para clusters with EU and US regions."
+  canonical="https://erudika.com/projects/para-cloud"
+>
+  <ProjectDetail
+    name="Para Cloud"
+    subtitle="Fully managed Para clusters with uptime guarantees."
+    description="Let Erudika handle provisioning, monitoring, and upgrades so your team can focus on building."
+    features={[
+      "EU/US regions with data residency options",
+      "SLA-backed availability and automated upgrades",
+      "Private support channel with architecture reviews"
+    ]}
+    audience="Teams that want Para with managed hosting and compliance-ready setups."
+    docs="https://paraio.org/docs/"
+    repo="https://github.com/erudika/para"
+    ctaLabel="Request Para Cloud"
+    ctaHref="mailto:contact@erudika.com"
+    logo="/old-website-assets/img/para_cloud.png"
+  />
+</BaseLayout>

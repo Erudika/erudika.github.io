@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectDetail from "../../components/ProjectDetail.astro";
+---
+
+<BaseLayout
+  title="Scoold Pro | Erudika"
+  description="Scoold Pro adds enterprise authentication, i18n, and advanced controls."
+  canonical="https://erudika.com/projects/scoold-pro"
+>
+  <ProjectDetail
+    name="Scoold Pro"
+    subtitle="Enterprise-ready Scoold with advanced security and i18n."
+    description="Scoold Pro adds SAML, MFA, compliance tooling, and multilingual support for regulated teams."
+    features={[
+      "SAML + MFA with custom identity providers",
+      "Internationalization and localization tooling",
+      "Extended moderation, audit logs, and policies"
+    ]}
+    audience="Enterprises and regulated teams that need secure knowledge sharing."
+    docs="https://scoold.com/docs"
+    repo="https://github.com/erudika/scoold"
+    ctaLabel="Talk to sales"
+    ctaHref="mailto:contact@erudika.com"
+    logo="/old-website-assets/img/scoold_pro.png"
+  />
+</BaseLayout>

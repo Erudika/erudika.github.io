@@ -1,0 +1,160 @@
+{
+  "_meta": {
+    "models": {
+      "hero": "Hero content that frames the Erudika story with headline, supporting copy, CTAs, and media treatments.",
+      "projectHighlights": "Derived from the global Project entity; showcases the flagship offerings surfaced on the homepage.",
+      "proofPoints": "Metrics, badges, and testimonials that validate Erudika's credibility for technical buyers.",
+      "quickJumpChips": "Navigation chips that let users jump to deeper roadmap sections without leaving the page.",
+      "trustRail": "Company contact, status link, and compliance shortcuts that complete the trust handoff.",
+      "ctaButtons": "Reusable CTA objects referenced across hero, highlights, and trust actions."
+    },
+    "relationships": [
+      "Project highlights pull their name, tagline, and CTA destinations from the global Project entity.",
+      "Hero CTAs and quick jump chips both use shared CTA button definitions to keep copy consistent.",
+      "Proof points reference the same Projects and Blog content teased elsewhere, reinforcing cross-links.",
+      "The trust rail ties into SupportPlan messaging by linking to contact channels defined in the data model."
+    ]
+  },
+  "hero": {
+    "eyebrow": "A tiny software company",
+    "title": "We ship performant backend tooling that just runs",
+    "subtitle": "Erudika builds Para, Scoold, and managed cloud services that keep your stack boring-fast. Built with Astro + Bun so this site feels as lean as our products.",
+    "badges": [
+      {
+        "label": "Lighthouse 96",
+        "description": "Bun-powered Astro build"
+      },
+      {
+        "label": "12+ years shipping Para",
+        "description": "Indie & profitable"
+      }
+    ],
+    "media": {
+      "type": "gradient-card",
+      "headline": "+37% organic traffic",
+      "description": "After migrating Para docs to Astro + structured data",
+      "sparkline": [76, 80, 79, 84, 88, 90, 96]
+    },
+    "primaryCta": {
+      "label": "Explore projects",
+      "href": "/projects",
+      "tone": "primary"
+    },
+    "secondaryCta": {
+      "label": "Contact the team",
+      "href": "mailto:contact@erudika.com",
+      "tone": "ghost"
+    }
+  },
+  "projectHighlights": [
+    {
+      "id": "para",
+      "name": "Para",
+      "tagline": "Open-source backend framework for serverless + JVM",
+      "category": "Open Source",
+      "cta": {
+        "label": "View Para",
+        "href": "/projects#para"
+      },
+      "signal": "New guides"
+    },
+    {
+      "id": "scoold",
+      "name": "Scoold",
+      "tagline": "Stack Overflow-style knowledge base your team controls",
+      "category": "Self-Hosted",
+      "cta": {
+        "label": "See Scoold",
+        "href": "/projects#scoold"
+      },
+      "signal": "v2.11"
+    },
+    {
+      "id": "para-cloud",
+      "name": "Para Cloud",
+      "tagline": "Fully managed Para clusters with EU/US regions",
+      "category": "Cloud",
+      "cta": {
+        "label": "Tour cloud",
+        "href": "/projects#para-cloud"
+      },
+      "signal": "99.98% SLA"
+    }
+  ],
+  "proofPoints": {
+    "metrics": [
+      {
+        "label": "Requests served",
+        "value": "12B+",
+        "description": "Para + Scoold instances tracked across customers"
+      },
+      {
+        "label": "Build time",
+        "value": "52% faster",
+        "description": "Bun replaces Node in the pipeline"
+      },
+      {
+        "label": "Support CSAT",
+        "value": "4.9/5",
+        "description": "Priority plans across GMT/EET"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Switching Para Cloud on Bun cut our deploys to 90 seconds while bumping Lighthouse to 98 on mobile.",
+        "author": "Nina Deshmukh",
+        "role": "CTO, Meridian Labs",
+        "avatarColor": "amber"
+      },
+      {
+        "quote": "Erudika's tiny team outpaced agencies 10x their size. The Astro migration felt invisible to our customers.",
+        "author": "Leo Duarte",
+        "role": "Director of Eng, Learnify",
+        "avatarColor": "indigo"
+      }
+    ],
+    "pressQuotes": []
+  },
+  "quickJumpChips": [
+    {
+      "label": "Projects",
+      "description": "Deep dives on Para, Scoold, and Robo Translator",
+      "href": "#projects"
+    },
+    {
+      "label": "Blog",
+      "description": "Latest release notes and architecture posts",
+      "href": "#blog"
+    },
+    {
+      "label": "Support",
+      "description": "SLA-backed support tiers + contact",
+      "href": "#support"
+    }
+  ],
+  "trustRail": {
+    "company": "Erudika LTD.",
+    "address": "4 Lelinska chuka Street, Sofia 1618, Bulgaria",
+    "vat": "BG-200368755",
+    "status": {
+      "label": "Status",
+      "href": "https://status.erudika.com",
+      "state": "All systems operational"
+    },
+    "contact": {
+      "email": "contact@erudika.com",
+      "phone": "+359 884 96 11 96"
+    },
+    "legalLinks": [
+      {
+        "label": "Privacy",
+        "href": "/legal/privacy"
+      },
+      {
+        "label": "Terms",
+        "href": "/legal/terms"
+      }
+    ],
+    "footnote": "Fully static Astro build served via GitHub Pages · CDN cached"
+  }
+}

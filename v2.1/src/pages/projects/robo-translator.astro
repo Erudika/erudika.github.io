@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectDetail from "../../components/ProjectDetail.astro";
+---
+
+<BaseLayout
+  title="Robo Translator | Erudika"
+  description="Robo Translator streamlines multilingual content workflows."
+  canonical="https://erudika.com/projects/robo-translator"
+>
+  <ProjectDetail
+    name="Robo Translator"
+    subtitle="Translation workflows built for teams with fast-moving content."
+    description="Robo Translator helps teams localize content quickly with flexible review stages."
+    features={[
+      "Structured translation workflows",
+      "Collaboration-ready review queues",
+      "Integrations for content systems"
+    ]}
+    audience="Product teams that need consistent multilingual experiences."
+    docs="mailto:contact@erudika.com"
+    repo="mailto:contact@erudika.com"
+    ctaLabel="Ask about Robo Translator"
+    ctaHref="mailto:contact@erudika.com"
+    logo="/old-website-assets/img/robotranslator.svg"
+  />
+</BaseLayout>

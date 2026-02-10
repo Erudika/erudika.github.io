@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectDetail from "../../components/ProjectDetail.astro";
+---
+
+<BaseLayout
+  title="Para | Erudika"
+  description="Para is an open-source backend framework for serverless and JVM workloads."
+  canonical="https://erudika.com/projects/para"
+>
+  <ProjectDetail
+    name="Para"
+    subtitle="Open-source backend framework for serverless + JVM."
+    description="Para helps teams ship backend features quickly with fast persistence, flexible auth, and scalable APIs."
+    features={[
+      "Serverless-friendly architecture with JVM compatibility",
+      "Integrated auth, permissions, and persistence layers",
+      "Built-in dashboarding and admin tooling"
+    ]}
+    audience="Backend teams that need a production-ready foundation without vendor lock-in."
+    docs="https://paraio.org/docs/"
+    repo="https://github.com/erudika/para"
+    ctaLabel="Talk to us about Para"
+    ctaHref="mailto:contact@erudika.com"
+    logo="/old-website-assets/img/para_logo.png"
+  />
+</BaseLayout>

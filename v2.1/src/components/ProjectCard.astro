@@ -1,0 +1,21 @@
+---
+const { name, tagline, category, cta, logo, signal } = Astro.props;
+---
+
+<div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      {logo && <img src={logo} alt={name} class="h-9 w-9" loading="lazy" />}
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">{category}</p>
+        <h3 class="text-lg font-semibold text-slate-900">{name}</h3>
+      </div>
+    </div>
+    {signal && <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-900">{signal}</span>}
+  </div>
+  <p class="mt-4 text-sm text-slate-600">{tagline}</p>
+  <a href={cta?.href} class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-indigo-700">
+    {cta?.label ?? "Learn more"}
+    <span aria-hidden="true">→</span>
+  </a>
+</div>

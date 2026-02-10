@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectDetail from "../../components/ProjectDetail.astro";
+---
+
+<BaseLayout
+  title="Scoold Cloud | Erudika"
+  description="Scoold Cloud is the managed hosted version of Scoold."
+  canonical="https://erudika.com/projects/scoold-cloud"
+>
+  <ProjectDetail
+    name="Scoold Cloud"
+    subtitle="Managed Scoold instances with SSO, backups, and upgrades."
+    description="Scoold Cloud keeps your knowledge base online with managed hosting and priority support."
+    features={[
+      "SSO and enterprise-ready authentication",
+      "Automatic backups and security updates",
+      "Branded domains and custom theming"
+    ]}
+    audience="Product teams who want a hosted, always-on knowledge base."
+    docs="https://scoold.com/docs"
+    repo="https://github.com/erudika/scoold"
+    ctaLabel="Request Scoold Cloud"
+    ctaHref="mailto:contact@erudika.com"
+    logo="/old-website-assets/img/scoold_cloud.png"
+  />
+</BaseLayout>

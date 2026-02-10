@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects = [
+  {
+    id: "para",
+    name: "Para",
+    tagline: "Open-source backend framework for serverless + JVM.",
+    category: "Open Source",
+    cta: { label: "Explore Para", href: "/projects/para" },
+    logo: "/old-website-assets/img/para_logo.png"
+  },
+  {
+    id: "scoold",
+    name: "Scoold",
+    tagline: "Stack Overflow-style knowledge base for teams and communities.",
+    category: "Self-Hosted",
+    cta: { label: "Explore Scoold", href: "/projects/scoold" },
+    logo: "/old-website-assets/img/scoold_logo.png"
+  },
+  {
+    id: "para-cloud",
+    name: "Para Cloud",
+    tagline: "Managed Para clusters with EU/US regions and fast rollout cycles.",
+    category: "Cloud",
+    cta: { label: "Explore Para Cloud", href: "/projects/para-cloud" },
+    logo: "/old-website-assets/img/para_cloud.png"
+  },
+  {
+    id: "scoold-cloud",
+    name: "Scoold Cloud",
+    tagline: "Managed Scoold instances with SSO, backups, and upgrades handled.",
+    category: "Cloud",
+    cta: { label: "Explore Scoold Cloud", href: "/projects/scoold-cloud" },
+    logo: "/old-website-assets/img/scoold_cloud.png"
+  },
+  {
+    id: "scoold-pro",
+    name: "Scoold Pro",
+    tagline: "Enterprise-ready Scoold with SAML, i18n, and advanced auth flows.",
+    category: "Enterprise",
+    cta: { label: "Explore Scoold Pro", href: "/projects/scoold-pro" },
+    logo: "/old-website-assets/img/scoold_pro.png"
+  },
+  {
+    id: "robo-translator",
+    name: "Robo Translator",
+    tagline: "Human-friendly translation workflows for growing multilingual content.",
+    category: "Tools",
+    cta: { label: "Explore Robo Translator", href: "/projects/robo-translator" },
+    logo: "/old-website-assets/img/robotranslator.svg"
+  }
+];
+---
+
+<BaseLayout
+  title="Erudika Projects"
+  description="Explore Para, Scoold, and Erudika's managed cloud services."
+  canonical="https://erudika.com/projects"
+>
+  <section class="py-16">
+    <div class="section-shell">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Projects</p>
+      <h1 class="mt-3 text-4xl font-semibold text-slate-900">Open source, cloud services, and enterprise tooling</h1>
+      <p class="mt-4 max-w-2xl text-lg text-slate-600">
+        Each product is built to keep backend stacks stable, observable, and easy to extend. Pick your starting point
+        and we will handle the rest.
+      </p>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {projects.map((project) => (
+          <ProjectCard {...project} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

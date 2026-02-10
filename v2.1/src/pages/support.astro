@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const plans = [
+  {
+    name: "Starter",
+    price: "Contact us",
+    summary: "Best for pilots and community deployments.",
+    features: ["Email support", "Business hours coverage", "Architecture review"]
+  },
+  {
+    name: "Priority",
+    price: "Custom",
+    summary: "For production teams needing fast response times.",
+    features: ["SLA-backed response", "Dedicated support lead", "Quarterly roadmap sync"]
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    summary: "For regulated teams and large migrations.",
+    features: ["Migration planning", "Security assessments", "Executive escalation path"]
+  }
+];
+---
+
+<BaseLayout
+  title="Support | Erudika"
+  description="Support plans for Para and Scoold with SLA-backed response times."
+  canonical="https://erudika.com/support"
+>
+  <section class="py-16">
+    <div class="section-shell">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Support</p>
+      <h1 class="mt-3 text-4xl font-semibold text-slate-900">SLA-backed support that scales with your team</h1>
+      <p class="mt-4 max-w-2xl text-lg text-slate-600">
+        Priority support keeps your Para and Scoold deployments healthy with shared success metrics.
+      </p>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {plans.map((plan) => (
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="text-xs font-semibold uppercase tracking-widest text-slate-500">{plan.name}</div>
+            <div class="mt-2 text-2xl font-semibold text-slate-900">{plan.price}</div>
+            <p class="mt-3 text-sm text-slate-600">{plan.summary}</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              {plan.features.map((feature) => (
+                <li>• {feature}</li>
+              ))}
+            </ul>
+            <a href="mailto:contact@erudika.com" class="btn btn-primary mt-6 w-full text-white">Talk to support</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

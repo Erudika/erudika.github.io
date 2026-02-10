@@ -1,0 +1,34 @@
+---
+const links = [
+  { label: "Projects", href: "/projects" },
+  { label: "Support", href: "/support" },
+  { label: "Blog", href: "/blog" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" }
+];
+---
+
+<footer class="border-t border-slate-200 bg-slate-950 text-slate-200">
+  <div class="section-shell grid gap-10 py-12 md:grid-cols-[1.4fr_1fr]">
+    <div class="space-y-4">
+      <div class="flex items-center gap-3">
+        <img src="/old-website-assets/img/erudika.svg" alt="Erudika" class="h-8 w-8" loading="lazy" />
+        <span class="font-heading text-lg font-semibold">Erudika</span>
+      </div>
+      <p class="max-w-md text-sm text-slate-300">
+        We build cloud and open-source tooling that keeps your backend boring-fast. Small team, big throughput.
+      </p>
+      <div class="text-sm text-slate-400">
+        Erudika LTD. · 4 Lelinska chuka Street, Sofia 1618, Bulgaria · VAT BG-200368755
+      </div>
+      <div class="text-xs text-slate-500">Status: <a class="underline" href="https://status.erudika.com">All systems operational</a></div>
+    </div>
+
+    <div class="grid gap-3 text-sm">
+      {links.map((link) => (
+        <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
+      ))}
+      <a href="mailto:contact@erudika.com" class="text-slate-300 hover:text-white">contact@erudika.com</a>
+    </div>
+  </div>
+</footer>
