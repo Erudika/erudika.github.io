@@ -69,19 +69,19 @@
   "proofPoints": {
     "metrics": [
       {
-        "label": "Requests served",
-        "value": "12B+",
-        "description": "Para + Scoold instances tracked across customers"
+        "label": "In Production",
+        "value": "1000+",
+        "description": "Para and Scoold instances deployed successuflly"
       },
       {
-        "label": "Build time",
-        "value": "52% faster",
-        "description": "Bun replaces Node in the pipeline"
+        "label": "Uptime",
+        "value": "99.98%",
+        "description": "Para Cloud and Scoold Cloud are reliable and cost-effective."
       },
       {
         "label": "Support CSAT",
         "value": "4.9/5",
-        "description": "Priority plans across GMT/EET"
+        "description": "Hundreds of happy customers and developers."
       }
     ],
     "testimonials": [
@@ -260,9 +260,9 @@
         "projectsTitle": "Flagship products, avaliable on-premises.",
         "projectsBody": "Deploy on-premises or choose a fully managed cloud solution - we support both models seamlessly.",
         "projectsCta": "View all projects \u2192",
-        "proofLabel": "Proof points",
-        "proofTitle": "Small team. Enterprise solution.",
-        "proofBody": "We are a tiny company with outsized impact because everything we build is performance-first and support-driven.",
+        "proofLabel": "Meta Data",
+        "proofTitle": "Small team. Serious software.",
+        "proofBody": "As a small, independent company, we are deeply committed to delivering exceptional support to our clients. We believe this level of dedication is our strongest differentiator.",
         "blogLabel": "Blog",
         "blogTitle": "Latest shipping notes and deep dives",
         "blogBody": "Release notes, architecture write-ups, and tooling insights from the Erudika team.",

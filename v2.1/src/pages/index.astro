@@ -11,7 +11,7 @@ const { home } = marketing.site.pages;
 
 const blogTeasers = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 2)
+  .slice(0, 3)
   .map((post) => ({
     title: post.data.title,
     excerpt: post.data.excerpt,
@@ -124,7 +124,7 @@ const websiteJsonLd = {
         ))}
       </div>
     </div>
-    <div class="section-shell mt-10 grid gap-6 md:grid-cols-2">
+    <!-- <div class="section-shell mt-10 grid gap-6 md:grid-cols-2">
       {proofPoints.testimonials.map((testimonial) => (
         <div class="rounded-[3px] border border-base-300 bg-base-200 p-6">
           <p class="text-sm text-base-content/80">“{testimonial.quote}”</p>
@@ -132,7 +132,7 @@ const websiteJsonLd = {
           <div class="text-sm text-base-content/70">{testimonial.role}</div>
         </div>
       ))}
-    </div>
+    </div> -->
   </section>
 
   <section id="blog" class="py-16">
@@ -145,7 +145,7 @@ const websiteJsonLd = {
         </div>
         <a href="/blog" class="text-sm font-semibold text-sky-700">{home.blogCta}</a>
       </div>
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
         {blogTeasers.map((post) => (
           <BlogCard {...post} />
         ))}
