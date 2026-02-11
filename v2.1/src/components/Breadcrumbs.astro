@@ -1,0 +1,19 @@
+---
+import marketing from "../data/site-data.json";
+
+const { breadcrumbs } = marketing.site.components;
+const { items = [] } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="text-xs uppercase tracking-widest text-slate-500">
+  <ol class="flex flex-wrap items-center gap-2">
+    {items.map((item, index) => (
+      <li class="flex items-center gap-2">
+        {index > 0 && <span class="text-slate-300">{breadcrumbs.separator}</span>}
+        <a href={item.href} class="hover:text-sky-700">
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ol>
+</nav>

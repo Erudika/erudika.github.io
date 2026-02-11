@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import { getCollection } from "astro:content";
+import marketing from "../../../data/site-data.json";
+
+const { blogTags } = marketing.site.pages;
+const { breadcrumbs } = marketing.site.components;
+const baseUrl = marketing.site.organization.url;
+
+const toSlug = (tag) => tag.toLowerCase().replace(/\s+/g, "-");
+const posts = await getCollection("blog");
+const tagMap = new Map();
+
+posts.forEach((post) => {
+  post.data.tags.forEach((tag) => {
+    const slug = toSlug(tag);
+    if (!tagMap.has(slug)) {
+      tagMap.set(slug, { label: tag, count: 0 });
+    }
+    tagMap.get(slug).count += 1;
+  });
+});
+
+const tags = Array.from(tagMap.entries())
+  .map(([slug, data]) => ({ slug, ...data }))
+  .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: breadcrumbs.tags, item: `${baseUrl}/blog/tags` }
+  ]
+};
+---
+
+<BaseLayout
+  title={marketing.site.meta.blogTags.title}
+  description={marketing.site.meta.blogTags.description}
+  canonical={marketing.site.meta.blogTags.canonical}
+  jsonLd={breadcrumbJsonLd}
+>
+  <section class="py-16">
+    <div class="section-shell">
+      <Breadcrumbs items={[{ label: breadcrumbs.home, href: "/" }, { label: breadcrumbs.tags, href: "/blog/tags" }]} />
+      <h1 class="mt-6 text-4xl font-semibold text-base-content">{blogTags.title}</h1>
+      <p class="mt-4 max-w-2xl text-lg text-base-content/70">{blogTags.body}</p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        {tags.map((tag) => (
+          <a href={`/blog/tags/${tag.slug}`} class="chip">
+            {tag.label} <span class="ml-2 text-xs text-slate-400">{tag.count}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,34 +1,70 @@
 ---
-const links = [
-  { label: "Projects", href: "/projects" },
-  { label: "Support", href: "/support" },
-  { label: "Blog", href: "/blog" },
-  { label: "Privacy", href: "/privacy" },
-  { label: "Terms", href: "/terms" }
-];
+import marketing from "../data/site-data.json";
+
+const { footer } = marketing.site;
+const links = footer.links;
+const socialLinks = footer.social;
 ---
 
-<footer class="border-t border-slate-200 bg-slate-950 text-slate-200">
-  <div class="section-shell grid gap-10 py-12 md:grid-cols-[1.4fr_1fr]">
-    <div class="space-y-4">
-      <div class="flex items-center gap-3">
-        <img src="/old-website-assets/img/erudika.svg" alt="Erudika" class="h-8 w-8" loading="lazy" />
-        <span class="font-heading text-lg font-semibold">Erudika</span>
+<footer class="border-t border-base-300 bg-slate-950 text-slate-200">
+  <div class="section-shell">
+    <div class="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr]">
+      <div class="space-y-4">
+        <div class="flex items-center">
+          <span class="logo-frame h-10 w-30">
+            <img src="/old-website-assets/img/erudika-dark.svg" alt={footer.logoAlt} class="logo-img" loading="lazy" />
+          </span>
+        </div>
+        <p class="max-w-sm text-sm text-slate-300">{footer.companyBlurb}</p>
       </div>
-      <p class="max-w-md text-sm text-slate-300">
-        We build cloud and open-source tooling that keeps your backend boring-fast. Small team, big throughput.
-      </p>
-      <div class="text-sm text-slate-400">
-        Erudika LTD. · 4 Lelinska chuka Street, Sofia 1618, Bulgaria · VAT BG-200368755
+
+      <div class="space-y-3">
+        <div class="text-xs uppercase tracking-widest text-slate-500">{footer.mapLabel}</div>
+        <a href="https://goo.gl/maps/QGRjd" aria-label={footer.mapLinkLabel}>
+          <img
+            src="/old-website-assets/img/erudika_map_dark.png"
+            alt={footer.mapAlt}
+            class="w-full rounded-[3px] border border-slate-500 shadow-soft"
+            loading="lazy"
+          />
+        </a>
       </div>
-      <div class="text-xs text-slate-500">Status: <a class="underline" href="https://status.erudika.com">All systems operational</a></div>
+
+      <div class="space-y-4 text-sm text-slate-300">
+        <div class="text-xs uppercase tracking-widest text-slate-500">{footer.addressLabel}</div>
+        {footer.addressLines.map((line, index) => (
+          index === footer.addressLines.length - 1 ? (
+            <div><a class="underline" href={`mailto:${line}`}>{line}</a></div>
+          ) : (
+            <div>{line}</div>
+          )
+        ))}
+      </div>
+
+      <div class="grid content-start gap-3 text-sm lg:justify-self-end lg:text-right">
+        <div class="text-xs uppercase tracking-widest text-slate-500">{footer.linksLabel}</div>
+        {links.map((link) => (
+          <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
+        ))}
+      </div>
     </div>
 
-    <div class="grid gap-3 text-sm">
-      {links.map((link) => (
-        <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
-      ))}
-      <a href="mailto:contact@erudika.com" class="text-slate-300 hover:text-white">contact@erudika.com</a>
+    <div class="flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 py-6 text-xs text-slate-400">
+      <div class="flex items-center gap-3">
+        <span class="text-xs uppercase tracking-widest text-slate-500">{footer.themeLabel}</span>
+        <button
+          id="theme-toggle"
+          class="btn btn-xs border border-slate-700 bg-slate-900 text-slate-200 hover:border-slate-500"
+          type="button"
+        >
+          {footer.themeDefault}
+        </button>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        {socialLinks.map((link) => (
+          <a href={link.href} class="text-slate-400 hover:text-white">{link.label}</a>
+        ))}
+      </div>
     </div>
   </div>
 </footer>

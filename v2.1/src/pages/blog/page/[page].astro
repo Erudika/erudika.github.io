@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BlogCard from "../../../components/BlogCard.astro";
+import Pagination from "../../../components/Pagination.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import { getCollection } from "astro:content";
+import marketing from "../../../data/site-data.json";
+
+const { blogPage } = marketing.site.pages;
+const { breadcrumbs } = marketing.site.components;
+const baseUrl = marketing.site.organization.url;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const pageSize = 6;
+  const totalPages = Math.max(1, Math.ceil(posts.length / pageSize));
+
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: String(i + 1) },
+    props: { page: i + 1, totalPages, pageSize }
+  }));
+}
+
+const { page, totalPages, pageSize } = Astro.props;
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const start = (page - 1) * pageSize;
+const pagePosts = posts.slice(start, start + pageSize).map((post) => ({
+  title: post.data.title,
+  excerpt: post.data.excerpt,
+  date: post.data.date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "2-digit"
+  }),
+  tags: post.data.tags,
+  href: `/blog/${post.slug}`
+}));
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: breadcrumbs.blog, item: `${baseUrl}/blog` },
+    { "@type": "ListItem", position: 3, name: `${breadcrumbs.pagePrefix} ${page}`, item: `${baseUrl}/blog/page/${page}` }
+  ]
+};
+---
+
+<BaseLayout
+  title={marketing.site.meta.blogPage.titleTemplate.replace("{page}", String(page))}
+  description={marketing.site.meta.blogPage.description}
+  canonical={`${marketing.site.meta.blogPage.canonicalBase}/${page}`}
+  jsonLd={breadcrumbJsonLd}
+>
+  <section class="py-16">
+    <div class="section-shell">
+      <Breadcrumbs items={[
+        { label: breadcrumbs.home, href: "/" },
+        { label: breadcrumbs.blog, href: "/blog" },
+        { label: `${breadcrumbs.pagePrefix} ${page}`, href: `/blog/page/${page}` }
+      ]} />
+      <h1 class="mt-6 text-4xl font-semibold text-base-content">{blogPage.title}</h1>
+      <p class="mt-4 max-w-2xl text-lg text-base-content/70">{blogPage.body}</p>
+      <div class="mt-4">
+        <a href="/blog/tags" class="text-sm font-semibold text-sky-700">{blogPage.tagsCta}</a>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {pagePosts.map((post) => (
+          <BlogCard {...post} />
+        ))}
+      </div>
+      <Pagination currentPage={page} totalPages={totalPages} />
+    </div>
+  </section>
+</BaseLayout>

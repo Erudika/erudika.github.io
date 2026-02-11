@@ -1,27 +1,50 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectDetail from "../../components/ProjectDetail.astro";
+import marketing from "../../data/site-data.json";
+
+const { paraCloud } = marketing.site.projects;
+const baseUrl = marketing.site.organization.url;
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: paraCloud.name,
+  description: paraCloud.subtitle,
+  brand: {
+    "@type": "Organization",
+    name: marketing.site.organization.name
+  },
+  url: "https://erudika.com/projects/para-cloud"
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: marketing.site.components.breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.projects, item: `${baseUrl}/projects` },
+    { "@type": "ListItem", position: 3, name: paraCloud.name, item: `${baseUrl}/projects/para-cloud` }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Para Cloud | Erudika"
-  description="Para Cloud delivers managed Para clusters with EU and US regions."
-  canonical="https://erudika.com/projects/para-cloud"
+  title={marketing.site.meta.projects.paraCloud.title}
+  description={marketing.site.meta.projects.paraCloud.description}
+  canonical={marketing.site.meta.projects.paraCloud.canonical}
+  jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
   <ProjectDetail
-    name="Para Cloud"
-    subtitle="Fully managed Para clusters with uptime guarantees."
-    description="Let Erudika handle provisioning, monitoring, and upgrades so your team can focus on building."
-    features={[
-      "EU/US regions with data residency options",
-      "SLA-backed availability and automated upgrades",
-      "Private support channel with architecture reviews"
-    ]}
-    audience="Teams that want Para with managed hosting and compliance-ready setups."
-    docs="https://paraio.org/docs/"
-    repo="https://github.com/erudika/para"
-    ctaLabel="Request Para Cloud"
-    ctaHref="mailto:contact@erudika.com"
-    logo="/old-website-assets/img/para_cloud.png"
+    name={paraCloud.name}
+    subtitle={paraCloud.subtitle}
+    description={paraCloud.description}
+    features={paraCloud.features}
+    audience={paraCloud.audience}
+    docs={paraCloud.docs}
+    repo={paraCloud.repo}
+    ctaLabel={paraCloud.ctaLabel}
+    ctaHref={paraCloud.ctaHref}
+    logo={paraCloud.logo}
   />
 </BaseLayout>

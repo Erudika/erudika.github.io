@@ -1,4 +1,7 @@
 ---
+import marketing from "../data/site-data.json";
+
+const { projectDetail } = marketing.site.components;
 const { name, subtitle, description, features, audience, docs, repo, ctaLabel, ctaHref, logo } = Astro.props;
 ---
 
@@ -7,30 +10,30 @@ const { name, subtitle, description, features, audience, docs, repo, ctaLabel, c
     <div>
       <div class="flex items-center gap-3">
         {logo && <img src={logo} alt={name} class="h-10 w-10" loading="lazy" />}
-        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Project</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{projectDetail.eyebrow}</p>
       </div>
-      <h1 class="mt-4 text-4xl font-semibold text-slate-900">{name}</h1>
-      <p class="mt-3 text-lg text-slate-600">{subtitle}</p>
-      <p class="mt-4 text-slate-600">{description}</p>
+      <h1 class="mt-4 text-4xl font-semibold text-base-content">{name}</h1>
+      <p class="mt-3 text-lg text-base-content/70">{subtitle}</p>
+      <p class="mt-4 text-base-content/70">{description}</p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a href={ctaHref} class="btn btn-primary text-white">{ctaLabel}</a>
         {docs && (
-          <a href={docs} class="btn btn-ghost border border-slate-300">Documentation</a>
+          <a href={docs} class="btn btn-ghost border border-slate-300">{projectDetail.docsLabel}</a>
         )}
         {repo && (
-          <a href={repo} class="btn btn-ghost border border-slate-300">GitHub</a>
+          <a href={repo} class="btn btn-ghost border border-slate-300">{projectDetail.githubLabel}</a>
         )}
       </div>
     </div>
-    <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-      <h2 class="text-xl font-semibold text-slate-900">Key features</h2>
-      <ul class="mt-4 space-y-3 text-sm text-slate-600">
-        {features.map((feature) => (
-          <li>• {feature}</li>
-        ))}
-      </ul>
-      <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Who it is for</h3>
-      <p class="mt-3 text-sm text-slate-600">{audience}</p>
-    </div>
+      <div class="rounded-[3px] border border-base-300 bg-base-100 p-8 shadow-soft">
+        <h2 class="text-xl font-semibold text-base-content">{projectDetail.keyFeatures}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-base-content/70">
+          {features.map((feature) => (
+            <li>• {feature}</li>
+          ))}
+        </ul>
+        <h3 class="mt-6 text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{projectDetail.whoFor}</h3>
+        <p class="mt-3 text-sm text-base-content/70">{audience}</p>
+      </div>
   </div>
 </section>

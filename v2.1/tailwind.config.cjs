@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        heading: ["Rubik", ...defaultTheme.fontFamily.sans],
         body: ["Inter", ...defaultTheme.fontFamily.sans],
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono]
       },
@@ -28,11 +28,11 @@ module.exports = {
     themes: [
       {
         erudika: {
-          "primary": "#4338CA",
-          "primary-content": "#EEF2FF",
+          "primary": "#3399CC",
+          "primary-content": "#FFFFFF",
           "secondary": "#F59E0B",
           "secondary-content": "#3B2F00",
-          "accent": "#0EA5E9",
+          "accent": "#3399CC",
           "neutral": "#0F172A",
           "base-100": "#F8FAFC",
           "base-200": "#E2E8F0",
@@ -41,7 +41,31 @@ module.exports = {
           "info": "#0EA5E9",
           "success": "#10B981",
           "warning": "#F59E0B",
-          "error": "#EF4444"
+          "error": "#EF4444",
+          "--rounded-box": "3px",
+          "--rounded-btn": "3px",
+          "--rounded-badge": "3px"
+        }
+      },
+      {
+        "erudika-dark": {
+          "primary": "#3399CC",
+          "primary-content": "#FFFFFF",
+          "secondary": "#FBBF24",
+          "secondary-content": "#3B2F00",
+          "accent": "#3399CC",
+          "neutral": "#0F172A",
+          "base-100": "#0B1220",
+          "base-200": "#111827",
+          "base-300": "#1F2937",
+          "base-content": "#E2E8F0",
+          "info": "#38BDF8",
+          "success": "#22C55E",
+          "warning": "#FBBF24",
+          "error": "#F87171",
+          "--rounded-box": "3px",
+          "--rounded-btn": "3px",
+          "--rounded-badge": "3px"
         }
       }
     ]

@@ -1,27 +1,50 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectDetail from "../../components/ProjectDetail.astro";
+import marketing from "../../data/site-data.json";
+
+const { para } = marketing.site.projects;
+const baseUrl = marketing.site.organization.url;
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: para.name,
+  description: para.subtitle,
+  brand: {
+    "@type": "Organization",
+    name: marketing.site.organization.name
+  },
+  url: "https://erudika.com/projects/para"
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: marketing.site.components.breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.projects, item: `${baseUrl}/projects` },
+    { "@type": "ListItem", position: 3, name: para.name, item: `${baseUrl}/projects/para` }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Para | Erudika"
-  description="Para is an open-source backend framework for serverless and JVM workloads."
-  canonical="https://erudika.com/projects/para"
+  title={marketing.site.meta.projects.para.title}
+  description={marketing.site.meta.projects.para.description}
+  canonical={marketing.site.meta.projects.para.canonical}
+  jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
   <ProjectDetail
-    name="Para"
-    subtitle="Open-source backend framework for serverless + JVM."
-    description="Para helps teams ship backend features quickly with fast persistence, flexible auth, and scalable APIs."
-    features={[
-      "Serverless-friendly architecture with JVM compatibility",
-      "Integrated auth, permissions, and persistence layers",
-      "Built-in dashboarding and admin tooling"
-    ]}
-    audience="Backend teams that need a production-ready foundation without vendor lock-in."
-    docs="https://paraio.org/docs/"
-    repo="https://github.com/erudika/para"
-    ctaLabel="Talk to us about Para"
-    ctaHref="mailto:contact@erudika.com"
-    logo="/old-website-assets/img/para_logo.png"
+    name={para.name}
+    subtitle={para.subtitle}
+    description={para.description}
+    features={para.features}
+    audience={para.audience}
+    docs={para.docs}
+    repo={para.repo}
+    ctaLabel={para.ctaLabel}
+    ctaHref={para.ctaHref}
+    logo={para.logo}
   />
 </BaseLayout>

@@ -4,7 +4,6 @@
       "hero": "Hero content that frames the Erudika story with headline, supporting copy, CTAs, and media treatments.",
       "projectHighlights": "Derived from the global Project entity; showcases the flagship offerings surfaced on the homepage.",
       "proofPoints": "Metrics, badges, and testimonials that validate Erudika's credibility for technical buyers.",
-      "quickJumpChips": "Navigation chips that let users jump to deeper roadmap sections without leaving the page.",
       "trustRail": "Company contact, status link, and compliance shortcuts that complete the trust handoff.",
       "ctaButtons": "Reusable CTA objects referenced across hero, highlights, and trust actions."
     },
@@ -115,23 +114,6 @@
     ],
     "pressQuotes": []
   },
-  "quickJumpChips": [
-    {
-      "label": "Projects",
-      "description": "Deep dives on Para, Scoold, and Robo Translator",
-      "href": "#projects"
-    },
-    {
-      "label": "Blog",
-      "description": "Latest release notes and architecture posts",
-      "href": "#blog"
-    },
-    {
-      "label": "Support",
-      "description": "SLA-backed support tiers + contact",
-      "href": "#support"
-    }
-  ],
   "trustRail": {
     "company": "Erudika LTD.",
     "address": "4 Lelinska chuka Street, Sofia 1618, Bulgaria",

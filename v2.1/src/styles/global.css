@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Rubik:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,8 +7,8 @@
 @layer base {
   html {
     font-family: "Inter", system-ui, sans-serif;
-    background-color: #f8fafc;
-    color: #0f172a;
+    background-color: hsl(var(--b1));
+    color: hsl(var(--bc));
     scroll-behavior: smooth;
   }
 
@@ -18,7 +18,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-family: "Rubik", system-ui, sans-serif;
     letter-spacing: -0.02em;
   }
 
@@ -41,10 +41,63 @@
   .hero-grid {
     background: radial-gradient(circle at top left, rgba(67, 56, 202, 0.18), transparent 45%),
       radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.18), transparent 40%),
-      #f8fafc;
+      hsl(var(--b1));
   }
 
   .chip {
-    @apply rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 shadow-sm transition hover:border-indigo-400 hover:text-indigo-700;
+    @apply rounded-[3px] border border-base-300 bg-base-100 px-4 py-2 text-sm font-medium text-base-content/70 shadow-sm transition hover:border-indigo-400 hover:text-indigo-700;
   }
+
+  .btn-primary {
+    background-image: linear-gradient(135deg, #3399cc 0%, #2d88b8 100%);
+    border-color: #2d88b8;
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.05);
+  }
+}
+
+
+.logo-frame {
+  display: inline-block;
+  overflow: hidden;  
+}
+
+.logo-img {
+  display: block;
+  object-fit: cover;
+  object-position: left center;
+  height: 2rem;
+}
+
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+[data-theme="erudika-dark"] .logo-light {
+  display: none;
+}
+
+[data-theme="erudika-dark"] .logo-dark {
+  display: block;
+}
+
+[data-theme="erudika-dark"] .glass-panel {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.65));
+  border: 1px solid rgba(51, 65, 85, 0.7);
+}
+
+[data-theme="erudika-dark"] .hero-grid {
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.22), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.16), transparent 40%),
+    hsl(var(--b1));
+}
+
+[data-theme="erudika-dark"] .chip {
+  @apply border-base-300 bg-base-200 text-base-content hover:border-indigo-400 hover:text-indigo-300;
 }

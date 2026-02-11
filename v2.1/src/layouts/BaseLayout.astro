@@ -2,9 +2,11 @@
 import SEOHead from "../components/SEOHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import marketing from "../data/site-data.json";
 import "../styles/global.css";
 
-const { title, description, canonical, image } = Astro.props;
+const { title, description, canonical, image, jsonLd } = Astro.props;
+const { theme } = marketing.site;
 ---
 
 <!doctype html>
@@ -12,14 +14,65 @@ const { title, description, canonical, image } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <SEOHead title={title} description={description} canonical={canonical} image={image} />
-    <link rel="icon" type="image/svg+xml" href="/old-website-assets/img/erudika.svg" />
+    <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
+    <link rel="manifest" href="/manifest.json" />
   </head>
-  <body class="min-h-screen bg-brand-mist text-slate-900">
+  <body class="min-h-screen bg-base-100 text-base-content">
     <Header />
     <main>
       <slot />
     </main>
     <Footer />
+    <script define:vars={{ theme }}>
+      const themeConfig = theme;
+
+      const themeToggle = document.getElementById("theme-toggle");
+
+      const getPreferredTheme = () => {
+        const stored = localStorage.getItem(themeConfig.storageKey);
+        if (stored === themeConfig.light || stored === themeConfig.dark) {
+          return stored;
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? themeConfig.dark
+          : themeConfig.light;
+      };
+
+      const applyTheme = (nextTheme, label) => {
+        document.documentElement.setAttribute("data-theme", nextTheme);
+        if (themeToggle) {
+          themeToggle.textContent = label;
+        }
+      };
+
+      const syncTheme = () => {
+        const nextTheme = getPreferredTheme();
+        const label = localStorage.getItem(themeConfig.storageKey)
+          ? nextTheme === themeConfig.dark
+            ? themeConfig.labelDark
+            : themeConfig.labelLight
+          : themeConfig.labelSystem;
+        applyTheme(nextTheme, label);
+      };
+
+      syncTheme();
+
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        if (!localStorage.getItem(themeConfig.storageKey)) {
+          syncTheme();
+        }
+      });
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme") || themeConfig.light;
+          const nextTheme = current === themeConfig.dark ? themeConfig.light : themeConfig.dark;
+          localStorage.setItem(themeConfig.storageKey, nextTheme);
+          applyTheme(nextTheme, nextTheme === themeConfig.dark ? themeConfig.labelDark : themeConfig.labelLight);
+        });
+      }
+    </script>
   </body>
 </html>

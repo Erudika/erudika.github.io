@@ -94,7 +94,6 @@ export interface MarketingFoundationData {
   hero: HeroContent
   projectHighlights: ProjectHighlight[]
   proofPoints: ProofPoints
-  quickJumpChips: QuickJumpChip[]
   trustRail: TrustRail
 }
 

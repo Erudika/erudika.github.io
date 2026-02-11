@@ -1,27 +1,50 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectDetail from "../../components/ProjectDetail.astro";
+import marketing from "../../data/site-data.json";
+
+const { scooldCloud } = marketing.site.projects;
+const baseUrl = marketing.site.organization.url;
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: scooldCloud.name,
+  description: scooldCloud.subtitle,
+  brand: {
+    "@type": "Organization",
+    name: marketing.site.organization.name
+  },
+  url: "https://erudika.com/projects/scoold-cloud"
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: marketing.site.components.breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.projects, item: `${baseUrl}/projects` },
+    { "@type": "ListItem", position: 3, name: scooldCloud.name, item: `${baseUrl}/projects/scoold-cloud` }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Scoold Cloud | Erudika"
-  description="Scoold Cloud is the managed hosted version of Scoold."
-  canonical="https://erudika.com/projects/scoold-cloud"
+  title={marketing.site.meta.projects.scooldCloud.title}
+  description={marketing.site.meta.projects.scooldCloud.description}
+  canonical={marketing.site.meta.projects.scooldCloud.canonical}
+  jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
   <ProjectDetail
-    name="Scoold Cloud"
-    subtitle="Managed Scoold instances with SSO, backups, and upgrades."
-    description="Scoold Cloud keeps your knowledge base online with managed hosting and priority support."
-    features={[
-      "SSO and enterprise-ready authentication",
-      "Automatic backups and security updates",
-      "Branded domains and custom theming"
-    ]}
-    audience="Product teams who want a hosted, always-on knowledge base."
-    docs="https://scoold.com/docs"
-    repo="https://github.com/erudika/scoold"
-    ctaLabel="Request Scoold Cloud"
-    ctaHref="mailto:contact@erudika.com"
-    logo="/old-website-assets/img/scoold_cloud.png"
+    name={scooldCloud.name}
+    subtitle={scooldCloud.subtitle}
+    description={scooldCloud.description}
+    features={scooldCloud.features}
+    audience={scooldCloud.audience}
+    docs={scooldCloud.docs}
+    repo={scooldCloud.repo}
+    ctaLabel={scooldCloud.ctaLabel}
+    ctaHref={scooldCloud.ctaHref}
+    logo={scooldCloud.logo}
   />
 </BaseLayout>

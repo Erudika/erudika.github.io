@@ -9,11 +9,11 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/rss": "^4.2.0",
-    "astro": "^4.15.0",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/tailwind": "6.0.2",
+    "@tailwindcss/typography": "^0.5.13",
+    "astro": "5.17.1",
     "daisyui": "^4.12.10",
-    "tailwindcss": "^3.4.10",
-    "@tailwindcss/typography": "^0.5.13"
+    "tailwindcss": "^3.4.10"
   }
 }

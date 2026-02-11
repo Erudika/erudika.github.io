@@ -1,0 +1,676 @@
+{
+  "hero": {
+    "eyebrow": "A tiny software company",
+    "title": "We ship performant software that runs in the cloud.",
+    "subtitle": "Erudika is an independent, bootstrapped company focused on backend and serverless technologies. We design and build scalable cloud-native systems, with a strong commitment to open-source software.",
+    "badges": [
+      {
+        "label": "🏆 17+ years in the business",
+        "description": "Indie & profitable"
+      },
+      {
+        "label": "💯 Mad about support",
+        "description": "Aiming for 100% client satisfaction"
+      },
+      {
+        "label": "🤝 Pragmatic solutions",
+        "description": "Security & cloud-native oriented"
+      }
+    ],
+    "primaryCta": {
+      "label": "Explore projects",
+      "href": "/projects",
+      "tone": "primary"
+    },
+    "secondaryCta": {
+      "label": "Read the blog",
+      "href": "/blog",
+      "tone": "ghost"
+    }
+  },
+  "projectHighlights": [
+    {
+      "id": "scoold",
+      "name": "Scoold",
+      "tagline": "Knowledge sharing for your team, inspired by the Stack Exchange platform",
+      "category": "Self-Hosted",
+      "cta": {
+        "label": "See Scoold",
+        "href": "/projects#scoold"
+      },
+      "signal": "open-source"
+    },
+    {
+      "id": "para",
+      "name": "Para",
+      "tagline": "The open-source backend server for busy developers",
+      "category": "Self-Hosted",
+      "cta": {
+        "label": "View Para",
+        "href": "/projects#para"
+      },
+      "signal": "open-source"
+    },
+    {
+      "id": "para-cloud",
+      "name": "Para Cloud",
+      "tagline": "Fully managed Backend-as-a-Service (BaaS) with global availability.",
+      "category": "Cloud",
+      "cta": {
+        "label": "Tour cloud",
+        "href": "/projects#para-cloud"
+      },
+      "signal": "99.98% uptime"
+    }
+  ],
+  "proofPoints": {
+    "metrics": [
+      {
+        "label": "Requests served",
+        "value": "12B+",
+        "description": "Para + Scoold instances tracked across customers"
+      },
+      {
+        "label": "Build time",
+        "value": "52% faster",
+        "description": "Bun replaces Node in the pipeline"
+      },
+      {
+        "label": "Support CSAT",
+        "value": "4.9/5",
+        "description": "Priority plans across GMT/EET"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Switching Para Cloud on Bun cut our deploys to 90 seconds while bumping Lighthouse to 98 on mobile.",
+        "author": "Nina Deshmukh",
+        "role": "CTO, Meridian Labs",
+        "avatarColor": "amber"
+      },
+      {
+        "quote": "Erudika's tiny team outpaced agencies 10x their size. The Astro migration felt invisible to our customers.",
+        "author": "Leo Duarte",
+        "role": "Director of Eng, Learnify",
+        "avatarColor": "indigo"
+      }
+    ],
+    "pressQuotes": []
+  },
+  "trustRail": {
+    "company": "Erudika LTD.",
+    "address": "4 Lelinska chuka Street, Sofia 1618, Bulgaria",
+    "vat": "BG-200368755",
+    "status": {
+      "label": "Status",
+      "href": "https://status.erudika.com",
+      "state": "All systems operational"
+    },
+    "contact": {
+      "email": "contact@erudika.com",
+      "phone": "+359 884 96 11 96"
+    },
+    "legalLinks": [
+      {
+        "label": "Privacy",
+        "href": "/legal/privacy"
+      },
+      {
+        "label": "Terms",
+        "href": "/legal/terms"
+      }
+    ],
+    "footnote": "Fully static Astro build served via GitHub Pages \u00b7 CDN cached",
+    "labels": {
+      "vat": "VAT",
+      "email": "Email",
+      "phone": "Phone",
+      "status": "Status"
+    }
+  },
+  "site": {
+    "header": {
+      "nav": [
+        {
+          "label": "Projects",
+          "href": "/projects"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        },
+        {
+          "label": "Support",
+          "href": "/support"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        }
+      ],
+      "tagsLabel": "Tags",
+      "ctaLabel": "Contact Support",
+      "menuLabel": "Menu",
+      "logoAlt": "Erudika"
+    },
+    "footer": {
+      "companyBlurb": "We build cloud and open-source tooling that keeps your backend boring-fast. Small team, big throughput.",
+      "mapLabel": "Map",
+      "addressLabel": "Address",
+      "addressLines": [
+        "Erudika LTD.",
+        "4 Lelinska chuka Street",
+        "Sofia 1618, Bulgaria",
+        "VAT BG-200368755",
+        "Phone: +359 884 96 11 96",
+        "contact@erudika.com"
+      ],
+      "linksLabel": "Links",
+      "links": [
+        {
+          "label": "Projects",
+          "href": "/projects"
+        },
+        {
+          "label": "Support",
+          "href": "/support"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        },
+        {
+          "label": "Status Page",
+          "href": "https://status.erudika.com"
+        },
+        {
+          "label": "Privacy",
+          "href": "/privacy"
+        },
+        {
+          "label": "Terms",
+          "href": "/terms"
+        }
+      ],
+      "themeLabel": "Theme",
+      "themeDefault": "System",
+      "social": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/Erudika"
+        },
+        {
+          "label": "X.com",
+          "href": "https://x.com/erudika"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/company/erudika"
+        }
+      ],
+      "logoAlt": "Erudika",
+      "mapAlt": "Erudika office map",
+      "mapLinkLabel": "Open Erudika office location in Google Maps"
+    },
+    "components": {
+      "projectDetail": {
+        "eyebrow": "Project",
+        "keyFeatures": "Key features",
+        "whoFor": "Who it is for",
+        "docsLabel": "Documentation",
+        "githubLabel": "GitHub"
+      },
+      "projectCard": {
+        "fallbackCta": "Learn more"
+      },
+      "blogCard": {
+        "readMore": "Read more"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "breadcrumbs": {
+        "separator": "/",
+        "home": "Home",
+        "blog": "Blog",
+        "tags": "Tags",
+        "pagePrefix": "Page",
+        "projects": "Projects"
+      }
+    },
+    "pages": {
+      "home": {
+        "projectsLabel": "Projects",
+        "projectsTitle": "Flagship products, avaliable on-premises.",
+        "projectsBody": "Deploy on-premises or choose a fully managed cloud solution - we support both models seamlessly.",
+        "projectsCta": "View all projects \u2192",
+        "proofLabel": "Proof points",
+        "proofTitle": "Small team. Enterprise outcomes.",
+        "proofBody": "We are a tiny company with outsized impact because everything we build is performance-first and support-driven.",
+        "blogLabel": "Blog",
+        "blogTitle": "Latest shipping notes and deep dives",
+        "blogBody": "Release notes, architecture write-ups, and tooling insights from the Erudika team.",
+        "blogCta": "Visit the blog \u2192",
+        "supportLabel": "Support",
+        "supportTitle": "Priority support that ships with your roadmap",
+        "supportBody": "SLA-backed response times, architecture reviews, and help with migrations. We cover GMT/EET and US hours.",
+        "supportCtaPrimary": "Premium Support Pricing",
+        "supportCtaSecondary": "Contact Support",
+        "contactLabel": "Contact"
+      },
+      "about": {
+        "eyebrow": "About",
+        "title": "A tiny software company with a big backend footprint",
+        "body1": "Erudika is an independent team in Sofia, Bulgaria. We build Para, Scoold, and managed cloud services so engineering teams can ship faster without re-platforming.",
+        "body2": "We focus on performance, privacy, and shipping quality releases. The same care we put into our products shows up in this site: static, Bun-powered, and SEO-first.",
+        "detailsTitle": "Company details",
+        "details": [
+          {
+            "label": "Legal entity",
+            "value": "Erudika LTD."
+          },
+          {
+            "label": "Address",
+            "value": "4 Lelinska chuka Street, Sofia 1618, Bulgaria"
+          },
+          {
+            "label": "VAT",
+            "value": "BG-200368755"
+          },
+          {
+            "label": "Founder",
+            "value": "Alexander Bogdanovski"
+          }
+        ]
+      },
+      "projectsIndex": {
+        "eyebrow": "Projects",
+        "title": "Open source, cloud services, and enterprise tooling",
+        "body": "Each product is built to keep backend stacks stable, observable, and easy to extend. Pick your starting point and we will handle the rest.",
+        "items": [
+          {
+            "id": "para",
+            "name": "Para",
+            "tagline": "Open-source backend framework for serverless + JVM.",
+            "category": "Open Source",
+            "cta": {
+              "label": "Explore Para",
+              "href": "/projects/para"
+            },
+            "logo": "/old-website-assets/img/para_logo.png"
+          },
+          {
+            "id": "scoold",
+            "name": "Scoold",
+            "tagline": "Stack Overflow-style knowledge base for teams and communities.",
+            "category": "Self-Hosted",
+            "cta": {
+              "label": "Explore Scoold",
+              "href": "/projects/scoold"
+            },
+            "logo": "/old-website-assets/img/scoold_logo.png"
+          },
+          {
+            "id": "para-cloud",
+            "name": "Para Cloud",
+            "tagline": "Managed Para clusters with EU/US regions and fast rollout cycles.",
+            "category": "Cloud",
+            "cta": {
+              "label": "Explore Para Cloud",
+              "href": "/projects/para-cloud"
+            },
+            "logo": "/old-website-assets/img/para_cloud.png"
+          },
+          {
+            "id": "scoold-cloud",
+            "name": "Scoold Cloud",
+            "tagline": "Managed Scoold instances with SSO, backups, and upgrades handled.",
+            "category": "Cloud",
+            "cta": {
+              "label": "Explore Scoold Cloud",
+              "href": "/projects/scoold-cloud"
+            },
+            "logo": "/old-website-assets/img/scoold_cloud.png"
+          },
+          {
+            "id": "scoold-pro",
+            "name": "Scoold Pro",
+            "tagline": "Enterprise-ready Scoold with SAML, i18n, and advanced auth flows.",
+            "category": "Enterprise",
+            "cta": {
+              "label": "Explore Scoold Pro",
+              "href": "/projects/scoold-pro"
+            },
+            "logo": "/old-website-assets/img/scoold_pro.png"
+          },
+          {
+            "id": "robo-translator",
+            "name": "Robo Translator",
+            "tagline": "Human-friendly translation workflows for growing multilingual content.",
+            "category": "Tools",
+            "cta": {
+              "label": "Explore Robo Translator",
+              "href": "/projects/robo-translator"
+            },
+            "logo": "/old-website-assets/img/robotranslator.svg"
+          }
+        ]
+      },
+      "support": {
+        "eyebrow": "Support",
+        "title": "SLA-backed support that scales with your team",
+        "body": "Priority support keeps your Para and Scoold deployments healthy with shared success metrics.",
+        "plans": [
+          {
+            "name": "Starter",
+            "price": "Contact us",
+            "summary": "Best for pilots and community deployments.",
+            "features": [
+              "Contact Support",
+              "Business hours coverage",
+              "Architecture review"
+            ],
+            "cta": "Talk to support"
+          },
+          {
+            "name": "Priority",
+            "price": "Custom",
+            "summary": "For production teams needing fast response times.",
+            "features": [
+              "SLA-backed response",
+              "Dedicated support lead",
+              "Quarterly roadmap sync"
+            ],
+            "cta": "Talk to support"
+          },
+          {
+            "name": "Enterprise",
+            "price": "Custom",
+            "summary": "For regulated teams and large migrations.",
+            "features": [
+              "Migration planning",
+              "Security assessments",
+              "Executive escalation path"
+            ],
+            "cta": "Talk to support"
+          }
+        ]
+      },
+      "contact": {
+        "eyebrow": "Contact",
+        "title": "Get in touch with us",
+        "body": "We respond quickly across GMT/EET and US hours. Reach out for product questions, trials, or support.",
+        "address": "4 Lelinska chuka Street, Sofia 1618, Bulgaria",
+        "phone": "+359 884 96 11 96",
+        "email": "contact@erudika.com",
+        "formTitle": "Start a conversation",
+        "formBody": "Prefer email? We answer within one business day.",
+        "formNote": "Form is a visual placeholder. Use mailto or Formspree for production.",
+        "formFields": {
+          "name": "Name",
+          "email": "Email",
+          "message": "How can we help?",
+          "submit": "Send message"
+        },
+        "labels": {
+          "email": "Email",
+          "phone": "Phone",
+          "address": "Address"
+        }
+      },
+      "blogIndex": {
+        "eyebrow": "Blog",
+        "title": "Engineering notes and product updates",
+        "body": "Long-form posts about Para, Scoold, and the infrastructure that powers them.",
+        "tagsCta": "Browse by tag \u2192"
+      },
+      "blogPage": {
+        "eyebrow": "Blog",
+        "title": "Engineering notes and product updates",
+        "body": "Long-form posts about Para, Scoold, and the infrastructure that powers them.",
+        "tagsCta": "Browse by tag \u2192"
+      },
+      "blogTags": {
+        "eyebrow": "Tags",
+        "title": "Browse by topic",
+        "body": "Quick entry points into Para, Scoold, cloud, and release updates."
+      },
+      "blogTag": {
+        "eyebrow": "Tag",
+        "body": "Posts tagged with {tag}. Explore the full blog for more updates."
+      },
+      "privacy": {
+        "eyebrow": "Privacy",
+        "title": "Privacy Policy",
+        "body": "This policy explains how Erudika collects, uses, and protects information. Replace with the official policy text or link to your legal document when ready.",
+        "points": [
+          "We only collect necessary information for product support and communication.",
+          "We do not sell personal data to third parties.",
+          "Contact us at contact@erudika.com for any privacy questions."
+        ]
+      },
+      "terms": {
+        "eyebrow": "Terms",
+        "title": "Terms of Service",
+        "body": "These terms govern access to Erudika products and services. Replace with the official terms when ready.",
+        "points": [
+          "Usage must comply with applicable laws and acceptable use guidelines.",
+          "Support tiers are defined per contract or statement of work.",
+          "For questions, contact contact@erudika.com."
+        ]
+      }
+    },
+    "meta": {
+      "home": {
+        "title": "Erudika | A tiny software company",
+        "description": "Erudika builds Para, Scoold, and managed cloud services that keep your stack boring-fast.",
+        "canonical": "https://erudika.com"
+      },
+      "about": {
+        "title": "About Erudika",
+        "description": "Learn about Erudika, a tiny software company building Para, Scoold, and cloud services.",
+        "canonical": "https://erudika.com/about"
+      },
+      "projectsIndex": {
+        "title": "Erudika Projects",
+        "description": "Explore Para, Scoold, and Erudika's managed cloud services.",
+        "canonical": "https://erudika.com/projects"
+      },
+      "support": {
+        "title": "Support | Erudika",
+        "description": "Support plans for Para and Scoold with SLA-backed response times.",
+        "canonical": "https://erudika.com/support"
+      },
+      "contact": {
+        "title": "Contact Erudika",
+        "description": "Contact Erudika for product questions, support, and partnerships.",
+        "canonical": "https://erudika.com/contact"
+      },
+      "blogIndex": {
+        "title": "Erudika Blog",
+        "description": "Release notes, architecture deep dives, and backend insights from Erudika.",
+        "canonical": "https://erudika.com/blog"
+      },
+      "privacy": {
+        "title": "Privacy Policy | Erudika",
+        "description": "Erudika privacy policy and data handling practices.",
+        "canonical": "https://erudika.com/privacy"
+      },
+      "terms": {
+        "title": "Terms of Service | Erudika",
+        "description": "Erudika terms of service and usage guidelines.",
+        "canonical": "https://erudika.com/terms"
+      },
+      "projects": {
+        "para": {
+          "title": "Para | Erudika",
+          "description": "Para is an open-source backend framework for serverless and JVM workloads.",
+          "canonical": "https://erudika.com/projects/para"
+        },
+        "scoold": {
+          "title": "Scoold | Erudika",
+          "description": "Scoold is a Stack Overflow-style knowledge base for teams and communities.",
+          "canonical": "https://erudika.com/projects/scoold"
+        },
+        "paraCloud": {
+          "title": "Para Cloud | Erudika",
+          "description": "Para Cloud delivers managed Para clusters with EU and US regions.",
+          "canonical": "https://erudika.com/projects/para-cloud"
+        },
+        "scooldCloud": {
+          "title": "Scoold Cloud | Erudika",
+          "description": "Scoold Cloud is the managed hosted version of Scoold.",
+          "canonical": "https://erudika.com/projects/scoold-cloud"
+        },
+        "scooldPro": {
+          "title": "Scoold Pro | Erudika",
+          "description": "Scoold Pro adds enterprise authentication, i18n, and advanced controls.",
+          "canonical": "https://erudika.com/projects/scoold-pro"
+        },
+        "roboTranslator": {
+          "title": "Robo Translator | Erudika",
+          "description": "Robo Translator streamlines multilingual content workflows.",
+          "canonical": "https://erudika.com/projects/robo-translator"
+        }
+      },
+      "blogPage": {
+        "titleTemplate": "Erudika Blog Page {page}",
+        "description": "Release notes, architecture deep dives, and backend insights from Erudika.",
+        "canonicalBase": "https://erudika.com/blog/page"
+      },
+      "blogTags": {
+        "title": "Blog Tags | Erudika",
+        "description": "Explore Erudika blog posts by tag.",
+        "canonical": "https://erudika.com/blog/tags"
+      },
+      "blogTag": {
+        "titleTemplate": "{tag} Articles | Erudika",
+        "descriptionTemplate": "Posts tagged {tag}.",
+        "canonicalBase": "https://erudika.com/blog/tags"
+      }
+    },
+    "projects": {
+      "para": {
+        "name": "Para",
+        "subtitle": "Open-source backend framework for serverless + JVM.",
+        "description": "Para helps teams ship backend features quickly with fast persistence, flexible auth, and scalable APIs.",
+        "features": [
+          "Serverless-friendly architecture with JVM compatibility",
+          "Integrated auth, permissions, and persistence layers",
+          "Built-in dashboarding and admin tooling"
+        ],
+        "audience": "Backend teams that need a production-ready foundation without vendor lock-in.",
+        "docs": "https://paraio.org/docs/",
+        "repo": "https://github.com/erudika/para",
+        "ctaLabel": "Talk to us about Para",
+        "ctaHref": "mailto:contact@erudika.com",
+        "logo": "/old-website-assets/img/para_logo.png"
+      },
+      "scoold": {
+        "name": "Scoold",
+        "subtitle": "Knowledge sharing platform you can host and brand.",
+        "description": "Scoold delivers a polished Q&A experience with full ownership of your data, branding, and roadmap.",
+        "features": [
+          "Customizable themes and layouts",
+          "Advanced search and tagging",
+          "Moderation tools for communities"
+        ],
+        "audience": "Teams that want a managed knowledge base or public support forum they control.",
+        "docs": "https://scoold.com/docs",
+        "repo": "https://github.com/erudika/scoold",
+        "ctaLabel": "Launch Scoold",
+        "ctaHref": "mailto:contact@erudika.com",
+        "logo": "/old-website-assets/img/scoold_logo.png"
+      },
+      "paraCloud": {
+        "name": "Para Cloud",
+        "subtitle": "Fully managed Para clusters with uptime guarantees.",
+        "description": "Let Erudika handle provisioning, monitoring, and upgrades so your team can focus on building.",
+        "features": [
+          "EU/US regions with data residency options",
+          "SLA-backed availability and automated upgrades",
+          "Private support channel with architecture reviews"
+        ],
+        "audience": "Teams that want Para with managed hosting and compliance-ready setups.",
+        "docs": "https://paraio.org/docs/",
+        "repo": "https://github.com/erudika/para",
+        "ctaLabel": "Request Para Cloud",
+        "ctaHref": "mailto:contact@erudika.com",
+        "logo": "/old-website-assets/img/para_cloud.png"
+      },
+      "scooldCloud": {
+        "name": "Scoold Cloud",
+        "subtitle": "Managed Scoold instances with SSO, backups, and upgrades.",
+        "description": "Scoold Cloud keeps your knowledge base online with managed hosting and priority support.",
+        "features": [
+          "SSO and enterprise-ready authentication",
+          "Automatic backups and security updates",
+          "Branded domains and custom theming"
+        ],
+        "audience": "Product teams who want a hosted, always-on knowledge base.",
+        "docs": "https://scoold.com/docs",
+        "repo": "https://github.com/erudika/scoold",
+        "ctaLabel": "Request Scoold Cloud",
+        "ctaHref": "mailto:contact@erudika.com",
+        "logo": "/old-website-assets/img/scoold_cloud.png"
+      },
+      "scooldPro": {
+        "name": "Scoold Pro",
+        "subtitle": "Enterprise-ready Scoold with advanced security and i18n.",
+        "description": "Scoold Pro adds SAML, MFA, compliance tooling, and multilingual support for regulated teams.",
+        "features": [
+          "SAML + MFA with custom identity providers",
+          "Internationalization and localization tooling",
+          "Extended moderation, audit logs, and policies"
+        ],
+        "audience": "Enterprises and regulated teams that need secure knowledge sharing.",
+        "docs": "https://scoold.com/docs",
+        "repo": "https://github.com/erudika/scoold",
+        "ctaLabel": "Talk to sales",
+        "ctaHref": "mailto:contact@erudika.com",
+        "logo": "/old-website-assets/img/scoold_pro.png"
+      },
+      "roboTranslator": {
+        "name": "Robo Translator",
+        "subtitle": "Translation workflows built for teams with fast-moving content.",
+        "description": "Robo Translator helps teams localize content quickly with flexible review stages.",
+        "features": [
+          "Structured translation workflows",
+          "Collaboration-ready review queues",
+          "Integrations for content systems"
+        ],
+        "audience": "Product teams that need consistent multilingual experiences.",
+        "docs": "mailto:contact@erudika.com",
+        "repo": "mailto:contact@erudika.com",
+        "ctaLabel": "Ask about Robo Translator",
+        "ctaHref": "mailto:contact@erudika.com",
+        "logo": "/old-website-assets/img/robotranslator.svg"
+      }
+    },
+    "organization": {
+      "name": "Erudika",
+      "url": "https://erudika.com",
+      "logo": "https://erudika.com/old-website-assets/img/erudika.png",
+      "email": "contact@erudika.com",
+      "address": {
+        "street": "4 Lelinska chuka Street",
+        "locality": "Sofia",
+        "postalCode": "1618",
+        "country": "BG"
+      }
+    },
+    "theme": {
+      "storageKey": "erudika-theme",
+      "light": "erudika",
+      "dark": "erudika-dark",
+      "labelLight": "Light",
+      "labelDark": "Dark",
+      "labelSystem": "System"
+    }
+  }
+}

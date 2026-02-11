@@ -1,24 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import marketing from "../data/site-data.json";
+
+const { privacy } = marketing.site.pages;
 ---
 
 <BaseLayout
-  title="Privacy Policy | Erudika"
-  description="Erudika privacy policy and data handling practices."
-  canonical="https://erudika.com/privacy"
+  title={marketing.site.meta.privacy.title}
+  description={marketing.site.meta.privacy.description}
+  canonical={marketing.site.meta.privacy.canonical}
 >
   <section class="py-16">
     <div class="section-shell">
-      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Privacy</p>
-      <h1 class="mt-3 text-4xl font-semibold text-slate-900">Privacy Policy</h1>
-      <p class="mt-4 text-slate-600">
-        This policy explains how Erudika collects, uses, and protects information. Replace with the official policy text
-        or link to your legal document when ready.
-      </p>
-      <div class="mt-6 space-y-4 text-sm text-slate-600">
-        <p>We only collect necessary information for product support and communication.</p>
-        <p>We do not sell personal data to third parties.</p>
-        <p>Contact us at contact@erudika.com for any privacy questions.</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{privacy.eyebrow}</p>
+      <h1 class="mt-3 text-4xl font-semibold text-base-content">{privacy.title}</h1>
+      <p class="mt-4 text-base-content/70">{privacy.body}</p>
+      <div class="mt-6 space-y-4 text-sm text-base-content/70">
+        {privacy.points.map((point) => (
+          <p>{point}</p>
+        ))}
       </div>
     </div>
   </section>

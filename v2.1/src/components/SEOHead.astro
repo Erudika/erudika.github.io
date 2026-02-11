@@ -1,10 +1,15 @@
 ---
+import marketing from "../data/site-data.json";
+
 const {
-  title = "Erudika | A tiny software company",
-  description = "Erudika builds Para, Scoold, and managed cloud services that keep your stack boring-fast.",
-  canonical = "https://erudika.com",
-  image = "/old-website-assets/img/erudika.png"
+  title = marketing.site.meta.home.title,
+  description = marketing.site.meta.home.description,
+  canonical = marketing.site.meta.home.canonical,
+  image = marketing.site.organization.logo,
+  jsonLd = []
 } = Astro.props;
+
+const jsonLdList = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 ---
 
 <title>{title}</title>
@@ -21,3 +26,9 @@ const {
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
+
+{jsonLdList
+  .filter(Boolean)
+  .map((entry) => (
+    <script type="application/ld+json" set:html={JSON.stringify(entry)} />
+  ))}

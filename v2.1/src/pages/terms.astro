@@ -1,23 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import marketing from "../data/site-data.json";
+
+const { terms } = marketing.site.pages;
 ---
 
 <BaseLayout
-  title="Terms of Service | Erudika"
-  description="Erudika terms of service and usage guidelines."
-  canonical="https://erudika.com/terms"
+  title={marketing.site.meta.terms.title}
+  description={marketing.site.meta.terms.description}
+  canonical={marketing.site.meta.terms.canonical}
 >
   <section class="py-16">
     <div class="section-shell">
-      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Terms</p>
-      <h1 class="mt-3 text-4xl font-semibold text-slate-900">Terms of Service</h1>
-      <p class="mt-4 text-slate-600">
-        These terms govern access to Erudika products and services. Replace with the official terms when ready.
-      </p>
-      <div class="mt-6 space-y-4 text-sm text-slate-600">
-        <p>Usage must comply with applicable laws and acceptable use guidelines.</p>
-        <p>Support tiers are defined per contract or statement of work.</p>
-        <p>For questions, contact contact@erudika.com.</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{terms.eyebrow}</p>
+      <h1 class="mt-3 text-4xl font-semibold text-base-content">{terms.title}</h1>
+      <p class="mt-4 text-base-content/70">{terms.body}</p>
+      <div class="mt-6 space-y-4 text-sm text-base-content/70">
+        {terms.points.map((point) => (
+          <p>{point}</p>
+        ))}
       </div>
     </div>
   </section>
