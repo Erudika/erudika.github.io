@@ -8,7 +8,7 @@ const { name, tagline, category, cta, logo, signal } = Astro.props;
 <div class="rounded-[3px] border border-base-300 bg-base-100 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
   <div class="flex items-center justify-between">
     <div class="flex items-center gap-3">
-      {logo && <img src={logo} alt={name} class="h-9 w-9" loading="lazy" />}
+      {logo && <img src={logo} alt={name} class="h-9 w-auto" loading="lazy" />}
       <div>
         <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">{category}</p>
         <h3 class="text-lg font-semibold text-base-content">{name}</h3>

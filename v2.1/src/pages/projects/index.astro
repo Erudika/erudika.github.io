@@ -12,10 +12,18 @@ const projects = projectsIndex.items;
   description={marketing.site.meta.projectsIndex.description}
   canonical={marketing.site.meta.projectsIndex.canonical}
 >
+  <div class="bg-[url('/old-website-assets/img/img9.jpg')] bg-cover bg-center">
+    <div class="section-shell py-24">
+      <div class="inline-flex max-w-3xl flex-col gap-3 rounded-[3px] bg-base-100/85 p-6 shadow-soft ring-1 ring-base-300/60 backdrop-blur-sm">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{projectsIndex.eyebrow}</p>
+        <h1 class="text-4xl font-semibold text-base-content">{projectsIndex.title}</h1>
+      </div>
+    </div>
+  </div>
   <section class="py-16">
     <div class="section-shell">
-      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{projectsIndex.eyebrow}</p>
-      <h1 class="mt-3 text-4xl font-semibold text-base-content">{projectsIndex.title}</h1>
+      <!-- <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{projectsIndex.eyebrow}</p>
+      <h1 class="mt-3 text-4xl font-semibold text-base-content">{projectsIndex.title}</h1> -->
       <p class="mt-4 max-w-2xl text-lg text-base-content/70">{projectsIndex.body}</p>
       <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
