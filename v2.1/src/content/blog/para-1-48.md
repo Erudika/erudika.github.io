@@ -4,7 +4,7 @@ date: 2025-11-03
 tags: ["Para", "Release"]
 excerpt: "A faster data layer, revised guides, and a few quality-of-life upgrades."
 canonical: "https://erudika.com/blog/para-1-48"
-og:image: "/old-website-assets/img/para_logo.png"
+og:image: "/src/images/para_logo.png"
 ---
 
 Para 1.48 brings lower read latencies, refreshed docs, and more reliable storage migrations. The release is built

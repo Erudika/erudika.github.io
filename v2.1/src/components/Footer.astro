@@ -1,5 +1,8 @@
 ---
 import marketing from "../data/site-data.json";
+import { Image } from 'astro:assets';
+import erudikaMap from "../images/erudika_map_dark.png"
+import erudikaDark from "../images/erudika-dark.svg"
 
 const { footer } = marketing.site;
 const links = footer.links;
@@ -11,8 +14,8 @@ const socialLinks = footer.social;
     <div class="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr]">
       <div class="space-y-4">
         <div class="flex items-center">
-          <span class="logo-frame h-10 w-30">
-            <img src="/old-website-assets/img/erudika-dark.svg" alt={footer.logoAlt} class="logo-img" loading="lazy" />
+          <span class="logo-frame h-[40px] w-[130px]">
+            <Image src={erudikaDark} alt={footer.logoAlt}/>
           </span>
         </div>
         <p class="max-w-sm text-sm text-slate-300">{footer.companyBlurb}</p>
@@ -21,11 +24,10 @@ const socialLinks = footer.social;
       <div class="space-y-3">
         <div class="text-xs uppercase tracking-widest text-slate-500">{footer.mapLabel}</div>
         <a href="https://goo.gl/maps/QGRjd" aria-label={footer.mapLinkLabel}>
-          <img
-            src="/old-website-assets/img/erudika_map_dark.png"
+          <Image
+            src={erudikaMap}
             alt={footer.mapAlt}
             class="w-full rounded-[3px] border border-slate-500 shadow-soft"
-            loading="lazy"
           />
         </a>
       </div>

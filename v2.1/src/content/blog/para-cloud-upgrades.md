@@ -4,7 +4,7 @@ date: 2026-01-12
 tags: ["Cloud", "Release"]
 excerpt: "How we cut cold start latencies while keeping clusters evergreen."
 canonical: "https://erudika.com/blog/para-cloud-upgrades"
-og:image: "/old-website-assets/img/para_cloud.png"
+og:image: "/src/images/para_cloud.png"
 ---
 
 Para Cloud now rolls out upgrades with zero downtime across EU and US regions. We tuned the upgrade pipeline to keep

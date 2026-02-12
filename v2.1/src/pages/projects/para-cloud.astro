@@ -1,16 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectDetail from "../../components/ProjectDetail.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
 import marketing from "../../data/site-data.json";
 
-const { paraCloud } = marketing.site.projects;
+const paraCloud = marketing.site.pages.projectsIndex.items[2];
 const baseUrl = marketing.site.organization.url;
 
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: paraCloud.name,
-  description: paraCloud.subtitle,
+  description: paraCloud.tagline,
   brand: {
     "@type": "Organization",
     name: marketing.site.organization.name
@@ -35,16 +35,5 @@ const breadcrumbJsonLd = {
   canonical={marketing.site.meta.projects.paraCloud.canonical}
   jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
-  <ProjectDetail
-    name={paraCloud.name}
-    subtitle={paraCloud.subtitle}
-    description={paraCloud.description}
-    features={paraCloud.features}
-    audience={paraCloud.audience}
-    docs={paraCloud.docs}
-    repo={paraCloud.repo}
-    ctaLabel={paraCloud.ctaLabel}
-    ctaHref={paraCloud.ctaHref}
-    logo={paraCloud.logo}
-  />
+  <ProjectPage project={paraCloud} />
 </BaseLayout>

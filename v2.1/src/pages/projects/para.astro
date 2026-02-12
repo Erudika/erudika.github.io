@@ -1,16 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectDetail from "../../components/ProjectDetail.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
 import marketing from "../../data/site-data.json";
 
-const { para } = marketing.site.projects;
+const para = marketing.site.pages.projectsIndex.items[1];;
 const baseUrl = marketing.site.organization.url;
 
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: para.name,
-  description: para.subtitle,
+  description: para.tagline,
   brand: {
     "@type": "Organization",
     name: marketing.site.organization.name
@@ -35,16 +35,5 @@ const breadcrumbJsonLd = {
   canonical={marketing.site.meta.projects.para.canonical}
   jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
-  <ProjectDetail
-    name={para.name}
-    subtitle={para.subtitle}
-    description={para.description}
-    features={para.features}
-    audience={para.audience}
-    docs={para.docs}
-    repo={para.repo}
-    ctaLabel={para.ctaLabel}
-    ctaHref={para.ctaHref}
-    logo={para.logo}
-  />
+  <ProjectPage project={para} />
 </BaseLayout>

@@ -1,16 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectDetail from "../../components/ProjectDetail.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
 import marketing from "../../data/site-data.json";
 
-const { scooldCloud } = marketing.site.projects;
+const scooldCloud = marketing.site.pages.projectsIndex.items[3];
 const baseUrl = marketing.site.organization.url;
 
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
   name: scooldCloud.name,
-  description: scooldCloud.subtitle,
+  description: scooldCloud.tagline,
   brand: {
     "@type": "Organization",
     name: marketing.site.organization.name
@@ -35,16 +35,5 @@ const breadcrumbJsonLd = {
   canonical={marketing.site.meta.projects.scooldCloud.canonical}
   jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
-  <ProjectDetail
-    name={scooldCloud.name}
-    subtitle={scooldCloud.subtitle}
-    description={scooldCloud.description}
-    features={scooldCloud.features}
-    audience={scooldCloud.audience}
-    docs={scooldCloud.docs}
-    repo={scooldCloud.repo}
-    ctaLabel={scooldCloud.ctaLabel}
-    ctaHref={scooldCloud.ctaHref}
-    logo={scooldCloud.logo}
-  />
+  <ProjectPage project={scooldCloud} />
 </BaseLayout>

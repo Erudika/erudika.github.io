@@ -1,16 +1,19 @@
 ---
 import marketing from "../data/site-data.json";
+import { Image } from 'astro:assets';
+import erudikaDark from "../images/erudika-dark.svg"
+import erudikaLight from "../images/erudika-light.svg"
 
 const { header } = marketing.site;
 const navLinks = header.nav;
 ---
 
 <header class="sticky top-0 z-30 border-b border-base-300 bg-base-100/90 backdrop-blur">
-  <div class="section-shell flex h-16 items-center justify-between gap-6">
+  <div class="section-shell flex h-20 items-center justify-between gap-6">
     <a href="/" class="flex items-center text-base-content">
-      <span class="logo-frame h-8 w-40">
-        <img src="/old-website-assets/img/erudika-light.svg" alt={header.logoAlt} class="logo-light logo-img" loading="eager" />
-        <img src="/old-website-assets/img/erudika-dark.svg" alt={header.logoAlt} class="logo-dark logo-img" loading="eager" />
+      <span class="logo-frame h-[50px] w-[140px] py-2">
+        <Image src={erudikaLight} alt={header.logoAlt} class="logo-light" loading="eager" />
+        <Image src={erudikaDark} alt={header.logoAlt} class="logo-dark" loading="eager" />
       </span>
     </a>
 
