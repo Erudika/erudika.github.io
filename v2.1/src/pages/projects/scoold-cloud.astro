@@ -3,14 +3,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectPage from "../../components/ProjectPage.astro";
 import marketing from "../../data/site-data.json";
 
-const scooldCloud = marketing.site.pages.projectsIndex.items[3];
+const project = marketing.site.pages.projectsIndex.items.find((item) => item.id == "scoold-cloud");
 const baseUrl = marketing.site.organization.url;
 
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: scooldCloud.name,
-  description: scooldCloud.tagline,
+  name: project.name,
+  description: project.page.shortDescription,
   brand: {
     "@type": "Organization",
     name: marketing.site.organization.name
@@ -24,7 +24,7 @@ const breadcrumbJsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: marketing.site.components.breadcrumbs.home, item: baseUrl },
     { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.projects, item: `${baseUrl}/projects` },
-    { "@type": "ListItem", position: 3, name: scooldCloud.name, item: `${baseUrl}/projects/scoold-cloud` }
+    { "@type": "ListItem", position: 3, name: project.name, item: `${baseUrl}/projects/scoold-cloud` }
   ]
 };
 ---
@@ -35,5 +35,5 @@ const breadcrumbJsonLd = {
   canonical={marketing.site.meta.projects.scooldCloud.canonical}
   jsonLd={[productJsonLd, breadcrumbJsonLd]}
 >
-  <ProjectPage project={scooldCloud} />
+  <ProjectPage project={project} />
 </BaseLayout>

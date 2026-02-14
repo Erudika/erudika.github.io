@@ -6,20 +6,25 @@ const { projectCard } = marketing.site.components;
 const { name, tagline, category, cta, logo, signal } = Astro.props;
 ---
 
-<a href={cta?.href} class="block rounded-[3px] border border-base-300 bg-base-100 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
-  <div class="flex items-center justify-between">
+<div class="block isolate relative bg-base-100 shadow-sm hover:shadow-soft p-6 border border-base-300 rounded-[3px] transition hover:-translate-y-1">
+  <div class="flex justify-between items-center">
     <div class="flex items-center gap-3">
-      {logo && <Image src={import(logo)} alt={name} class="h-9 w-auto" />}
+      {logo && <Image src={import(`../images/${logo}.svg`)} alt={name} class="w-auto h-9" />}
       <div>
-        <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">{category}</p>
-        <h3 class="text-lg font-semibold text-base-content">{name}</h3>
+        <p class="font-semibold text-slate-500 text-xs uppercase tracking-widest">{category}</p>
+        <h3 class="font-semibold text-base-content text-lg">
+          <a href={cta?.href} class="text-base-content">
+            <span class="z-10 absolute inset-0"></span>
+            {name}
+          </a>
+        </h3>
       </div>
     </div>
-    {signal && <span class="rounded-[3px] bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-900">{signal}</span>}
+    {signal && <span class="bg-amber-100 px-3 py-1 rounded-[3px] font-semibold text-amber-900 text-xs">{signal}</span>}
   </div>
   <p class="mt-4 text-sm text-base-content/70">{tagline}</p>
-  <div class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-sky-700">
+  <div class="inline-flex items-center gap-2 mt-6 font-semibold text-sky-700 text-sm">
     {cta?.label ?? projectCard.fallbackCta}
     <span aria-hidden="true">→</span>
   </div>
-</a>
+</div>

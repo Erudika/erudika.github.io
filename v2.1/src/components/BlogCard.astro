@@ -5,18 +5,23 @@ const { blogCard } = marketing.site.components;
 const { title, excerpt, date, tags, href } = Astro.props;
 ---
 
-<article class="rounded-[3px] border border-base-300 bg-base-100 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
-  <div class="text-xs uppercase tracking-widest text-slate-500">{date}</div>
-  <h3 class="mt-3 text-lg font-semibold text-base-content">{title}</h3>
+<article class="isolate relative bg-base-100 shadow-sm hover:shadow-soft p-6 border border-base-300 rounded-[3px] transition hover:-translate-y-1">
+  <div class="text-slate-500 text-xs uppercase tracking-widest">{date}</div>
+  <h3 class="mt-3 font-semibold text-base-content text-lg">
+    <a href={href} class="text-base-content">
+      <span class="z-10 absolute inset-0"></span>
+      {title}
+    </a>
+  </h3>
   <p class="mt-3 text-sm text-base-content/70">{excerpt}</p>
   {tags && (
-    <div class="mt-4 flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2 mt-4">
       {tags.map((tag) => (
-        <span class="rounded-[3px] bg-base-200 px-3 py-1 text-xs font-medium text-base-content/70">{tag}</span>
+        <span class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70">{tag}</span>
       ))}
     </div>
   )}
-  <a href={href} class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-sky-700">
+  <a href={href} class="inline-flex items-center gap-2 mt-5 font-semibold text-sky-700 text-sm">
     {blogCard.readMore} <span aria-hidden="true">→</span>
   </a>
 </article>

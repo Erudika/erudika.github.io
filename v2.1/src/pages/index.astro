@@ -6,8 +6,9 @@ import MetricCard from "../components/MetricCard.astro";
 import marketing from "../data/site-data.json";
 import { getCollection } from "astro:content";
 
-const { hero, projectHighlights, proofPoints, quickJumpChips, trustRail } = marketing;
+const { hero, proofPoints, trustRail } = marketing;
 const { home } = marketing.site.pages;
+const projects = marketing.site.pages.projectsIndex.items;
 
 const blogTeasers = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -97,7 +98,7 @@ const websiteJsonLd = {
         <a href="/projects" class="text-sm font-semibold text-sky-700">{home.projectsCta}</a>
       </div>
       <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {projectHighlights.map((project) => (
+        {projects.slice(0, 3).map((project) => (
           <ProjectCard
             name={project.name}
             tagline={project.tagline}
@@ -169,7 +170,7 @@ const websiteJsonLd = {
           <table class="table">
             <thead>
               <tr>
-                <th></th>
+                <th class="min-w-[140px]"></th>
                 <th>Basic Support</th>
                 <th>Priority Support</th>
               </tr>
@@ -177,23 +178,23 @@ const websiteJsonLd = {
             <tbody>
               <tr>
                 <td>Response time</td>
-                <td class="text-orange-700">within 24h</td>
-                <td class="text-green-700">within 3h</td>
+                <td class="text-orange-700 text-center">within 24h</td>
+                <td class="text-green-700 text-center">within 3h</td>
               </tr>
               <tr>
                 <td>Email</td>
-                <td class="text-green-700">✔</td>
-                <td class="text-green-700">✔</td>
+                <td class="text-green-700 text-center">✔</td>
+                <td class="text-green-700 text-center">✔</td>
               </tr>
               <tr>
                 <td>Support Chat</td>
-                <td class="text-green-700">✔</td>
-                <td class="text-green-700">✔</td>
+                <td class="text-green-700 text-center">✔</td>
+                <td class="text-green-700 text-center">✔</td>
               </tr>
               <tr>
                 <td>GitHub Issues</td>
-                <td class="text-green-700">✔</td>
-                <td class="text-green-700">✔</td>
+                <td class="text-green-700 text-center">✔</td>
+                <td class="text-green-700 text-center">✔</td>
               </tr>
             </tbody>
           </table>

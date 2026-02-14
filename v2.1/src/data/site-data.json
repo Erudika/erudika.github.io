@@ -2,7 +2,7 @@
   "hero": {
     "eyebrow": "A tiny software company",
     "title": "We ship performant software that runs in the cloud.",
-    "subtitle": "Erudika is an independent, bootstrapped company focused on backend and serverless technologies. We design and build scalable cloud-native systems, with a strong commitment to open-source software.",
+    "subtitle": "Erudika is an independent software company specializing in backend and serverless technologies. We design and build scalable cloud-native systems, with a strong commitment to open-source software.",
     "badges": [
       {
         "label": "\ud83c\udfc6 17+ years in the industry",
@@ -28,44 +28,6 @@
       "tone": "ghost"
     }
   },
-  "projectHighlights": [
-    {
-      "id": "scoold",
-      "name": "Scoold",
-      "tagline": "Knowledge sharing for your team, inspired by the Stack Exchange platform",
-      "category": "Open Source",
-      "cta": {
-        "label": "Explore Scoold",
-        "href": "/projects/scoold"
-      },
-      "signal": "open-source",
-      "logo": "/src/images/scoold.svg"
-    },
-    {
-      "id": "para",
-      "name": "Para",
-      "tagline": "The open-source backend server for busy developers",
-      "category": "Open Source",
-      "cta": {
-        "label": "Explore Para",
-        "href": "/projects/para"
-      },
-      "signal": "open-source",
-      "logo": "/src/images/para.svg"
-    },
-    {
-      "id": "para-cloud",
-      "name": "Para Cloud",
-      "tagline": "Fully managed Backend-as-a-Service (BaaS) with global availability.",
-      "category": "Cloud",
-      "cta": {
-        "label": "Explore Para BaaS",
-        "href": "/projects/para-cloud"
-      },
-      "signal": "99.98% uptime",
-      "logo": "/src/images/para_cloud.svg"
-    }
-  ],
   "proofPoints": {
     "metrics": [
       {
@@ -350,10 +312,10 @@
               "href": "/projects/scoold"
             },
             "website": "https://scoold.com",
-            "logo": "../images/scoold.svg",
+            "logo": "scoold",
             "page":
             {
-                "screenshot": "../images/scoold3.png",
+                "screenshot": "scoold3",
                 "techStack": "Java, Spring, Para Client, Velocity",
                 "pricing": "Free",
                 "supportLinks":
@@ -368,9 +330,9 @@
                     "Support Forum",
                     "Q&A",
                     "Internal Support"
-                ],
-                "longDescription": "Scoold delivers a polished Q&A experience with full ownership of your data, branding, and roadmap. Perfect for internal knowledge bases or community support."
-            } 
+                ]
+            },
+            "signal": "self-hosted"
           },
           {
             "id": "para",
@@ -382,15 +344,14 @@
               "href": "/projects/para"
             },
             "website": "https://paraio.org",
-            "logo": "/src/images/para.svg",
+            "logo": "para",
             "page":
             {
-                "screenshot": "/src/images/pwc1.png",
+                "screenshot": "pwc1",
                 "techStack": "Java, Spring, Lucene, ElasticSearch",
                 "pricing": "Free",
                 "supportLinks":
                 {
-                    "support": "mailto:contact@erudika.com",
                     "github": "https://github.com/erudika/para",
                     "docker": "https://hub.docker.com/r/erudikaltd/para"
                 },
@@ -400,9 +361,9 @@
                     "Backend",
                     "API server",
                     "JSON store"
-                ],
-                "longDescription": "Para helps teams build scalable backend services with a fast data layer, flexible auth, and production-ready tooling. It is designed to be cloud-native, portable, and easy to extend."
-            }
+                ]
+            },
+            "signal": "self-hosted"
           },
           {
             "id": "para-cloud",
@@ -413,8 +374,26 @@
               "label": "Explore Para BaaS",
               "href": "/projects/para-cloud"
             },
-            "website": "",
-            "logo": "/src/images/para_cloud.svg"
+            "website": "https://paraio.com",
+            "logo": "para_cloud",
+            "page":
+            {
+                "screenshot": "para_cloud_screenshot",
+                "techStack": "Java, Spring, Lucene, DynamoDB, AWS",
+                "pricing": "Paid Subscription",
+                "supportLinks":
+                {
+                    "pricing": "https://paraio.com/#pricing"
+                },
+                "categories":
+                [
+                    "Cloud",
+                    "Managed Service",
+                    "BaaS",
+                    "Backend"
+                ]
+            },
+            "signal": "99.98% uptime"
           },
           {
             "id": "scoold-cloud",
@@ -425,8 +404,27 @@
               "label": "Explore Scoold Cloud",
               "href": "/projects/scoold-cloud"
             },
-            "website": "",
-            "logo": "/src/images/scoold_cloud.svg"
+            "website": "https://cloud.scoold.com",
+            "logo": "scoold_cloud",
+            "page":
+            {
+                "screenshot": "scoold_cloud_screenshot",
+                "techStack": "Java, Quarkus, AWS",
+                "pricing": "Paid",
+                "supportLinks":
+                {
+                    "pricing": "https://cloud.scoold.com/#pricing"
+                },
+                "categories":
+                [
+                    "Cloud",
+                    "Managed Service",
+                    "Support Forum",
+                    "Q&A",
+                    "Knowledge Base",
+                    "Internal Support"
+                ]
+            }
           },
           {
             "id": "scoold-pro",
@@ -437,8 +435,27 @@
               "label": "Explore Scoold Pro",
               "href": "/projects/scoold-pro"
             },
-            "website": "",
-            "logo": "/src/images/scoold_pro.svg"
+            "website": "https://scoold.com",
+            "logo": "scoold_pro",
+            "page":
+            {
+                "screenshot": "scoold3",
+                "techStack": "Java, Spring, Para Client, Velocity",
+                "pricing": "Paid",
+                "supportLinks":
+                {
+                    "pricing": "https://paraio.com/scoold-pro",
+                    "github": "https://github.com/erudika/scoold-pro"
+                },
+                "categories":
+                [
+                    "For Teams",
+                    "Support Forum",
+                    "Q&A",
+                    "Knowledge Base",
+                    "Internal Support"
+                ]
+            }
           },
           {
             "id": "robo-translator",
@@ -449,8 +466,26 @@
               "label": "Explore Robo Translator",
               "href": "/projects/robo-translator"
             },
-            "website": "",
-            "logo": "/src/images/robotranslator.svg"
+            "website": "https://robotranslator.ai",
+            "logo": "robotranslator",
+            "page":
+            {
+                "screenshot": "robotranslator_screenshot",
+                "techStack": "Java, Quarkus, AWS",
+                "pricing": "Paid",
+                "supportLinks":
+                {
+                    "pricing": "https://robotranslator.ai/#pricing"
+                },
+                "categories":
+                [
+                    "Localization",
+                    "Productivity",
+                    "Translation",
+                    "Content Creation"
+                ]
+            },
+            "signal": "self-hosted"
           }
         ]
       },
@@ -568,6 +603,10 @@
           {
             "label": "Docker Hub page",
             "type": "docker"
+          },
+          {
+            "label": "See pricing",
+            "type": "pricing"
           }
         ],
         "categoriesLabel": "Keywords"

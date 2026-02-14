@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../data/site-data.json";
+import Prose from '../../components/Prose.astro';
 
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
@@ -64,14 +65,14 @@ const breadcrumbJsonLd = {
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
   <article class="py-16">
-    <div class="section-shell max-w-3xl">
+    <div class="max-w-3xl section-shell">
       <Breadcrumbs items={[
         { label: breadcrumbs.home, href: "/" },
         { label: breadcrumbs.blog, href: "/blog" },
         { label: post.data.title, href: `/blog/${post.slug}` }
       ]} />
-      <h1 class="mt-6 text-4xl font-semibold text-base-content">{post.data.title}</h1>
-      <div class="mt-4 flex flex-wrap gap-3 text-sm text-slate-500">
+      <h1 class="mt-6 font-semibold text-base-content text-4xl">{post.data.title}</h1>
+      <div class="flex flex-wrap gap-3 mt-4 text-slate-500 text-sm">
         <span>
           {post.data.date.toLocaleDateString("en-US", {
             year: "numeric",
@@ -82,15 +83,15 @@ const breadcrumbJsonLd = {
         <span>•</span>
         <div class="flex flex-wrap gap-2">
           {post.data.tags.map((tag) => (
-            <a href={`/blog/tags/${toSlug(tag)}`} class="rounded-[3px] bg-base-200 px-3 py-1 text-xs font-medium text-base-content/70">
+            <a href={`/blog/tags/${toSlug(tag)}`} class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70">
               {tag}
             </a>
           ))}
         </div>
       </div>
-      <div class="prose prose-slate mt-8 max-w-none">
+      <Prose>
         <Content />
-      </div>
+      </Prose>
     </div>
   </article>
 </BaseLayout>
