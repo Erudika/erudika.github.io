@@ -1,10 +1,12 @@
 ---
-title: "'Status update - Python client, Scoold API, integrations and more'"
+title: "Status update - Python client, Scoold API, integrations and more"
 date: 2020-03-22
 tags: ["scoold", "para", "API", "slack", "mattermost", "python"]
-excerpt: "Over the past year or so we've added a number of new features and integrations to Scoold and Para. In particular, Scoold has received hundreds of bug fixes and dozens of pull requests on GitHub."
-canonical: "https://erudika.com/blog/Status-update-Python-client-Scoold-API-integrations-and-more"
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img16.jpg"
 ---
+
 
 Over the past year or so we've added a number of new features and integrations to Scoold and Para. In particular,
 Scoold has received hundreds of bug fixes and dozens of pull requests on GitHub. The community has been quite
@@ -103,3 +105,4 @@ stylesheet from scratch.
 
 *You can download Scoold from [Scoold.com](https://scoold.com) and sign up for a free account on [Para](https://paraio.com) -
 our fully managed backend service, supporting multiple Scoold instances. Questions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+

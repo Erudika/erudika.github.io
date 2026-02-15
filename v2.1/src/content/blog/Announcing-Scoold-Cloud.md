@@ -2,8 +2,9 @@
 title: "Announcing Scoold Cloud"
 date: 2020-09-22
 tags: ["scoold", "saas", "hosting"]
-excerpt: "We're happy to announce the availability of Scoold Cloud - the official hosting for Scoold Pro. We've been working on it for the past few months and we can't wait for you to try it out."
-canonical: "https://erudika.com/blog/Announcing-Scoold-Cloud"
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img17.jpg"
 ---
 
 We're happy to announce the availability of Scoold Cloud - the official hosting for Scoold Pro. We've been working

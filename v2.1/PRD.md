@@ -27,7 +27,7 @@ Replace the existing Erudika website (https://erudika.com) with a modern, SEO-fi
 #### Content & Pages
 - Homepage: headline, short company description, projects list (Open Source, Cloud Services, Self-Hosted), priority support summary, blog teasers, contact info and address. Use content from existing site as starting copy.
 - Projects Page: detail cards with logos, descriptions, links to each project (Para, Scoold, Para Cloud, Scoold Cloud, Robo Translator, Scoold Pro).
-- Blog: collection of Markdown files with frontmatter (title, date, tags, excerpt, og:image, canonical). Support pagination, tag pages, RSS/Atom feed, and preview cards.
+- Blog: collection of Markdown files with frontmatter (title, date, tags, excerpt, img, canonical). Support pagination, tag pages, RSS/Atom feed, and preview cards.
 - Support & Contact: contact form (optional static form via Formspree or mailto fallback), support pricing & hours as on current site.
 - Legal: Privacy Policy, Terms (static pages or links to existing policies).
 - Status: link to existing status page (status.erudika.com)

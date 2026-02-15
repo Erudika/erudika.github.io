@@ -4,6 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../data/site-data.json";
 import Prose from '../../components/Prose.astro';
+import { Image } from "astro:assets";
 
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
@@ -21,6 +22,11 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 const postUrl = `${baseUrl}/blog/${post.slug}`;
+const heroImageUrl = post.data.img
+  ? post.data.img.startsWith("/") || post.data.img.startsWith("http")
+    ? post.data.img
+    : `/src/images/${post.data.img}`
+  : "/src/images/erudika.png";
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -42,7 +48,7 @@ const articleJsonLd = {
     }
   },
   mainEntityOfPage: postUrl,
-  image: [post.data["og:image"] ?? marketing.site.organization.logo],
+  image: [post.data.img ?? marketing.site.organization.logo],
   url: postUrl
 };
 
@@ -61,26 +67,30 @@ const breadcrumbJsonLd = {
   title={`${post.data.title} | Erudika`}
   description={post.data.excerpt}
   canonical={post.data.canonical ?? postUrl}
-  image={post.data["og:image"] ?? "/src/images/erudika.png"}
+  image={post.data.img ?? "/src/images/erudika.png"}
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
-  <article class="py-16">
+  <div class="bg-cover bg-center" style={`background-image: url('${heroImageUrl}')`}>
+    <div class="py-24 section-shell">
+      <div class="inline-flex flex-col gap-3 p-6 rounded-[3px] max-w-3xl">&nbsp;
+      </div>
+    </div>
+  </div>
+  <article class="py-12">
     <div class="max-w-3xl section-shell">
+      <span class="float-right text-xs text-base-400">
+        {post.data.date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "2-digit"
+        })}
+      </span>
       <Breadcrumbs items={[
         { label: breadcrumbs.home, href: "/" },
-        { label: breadcrumbs.blog, href: "/blog" },
-        { label: post.data.title, href: `/blog/${post.slug}` }
+        { label: breadcrumbs.blog, href: "/blog" }
       ]} />
       <h1 class="mt-6 font-semibold text-base-content text-4xl">{post.data.title}</h1>
-      <div class="flex flex-wrap gap-3 mt-4 text-slate-500 text-sm">
-        <span>
-          {post.data.date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "2-digit"
-          })}
-        </span>
-        <span>•</span>
+      <div class="flex flex-wrap gap-3 mt-4 pb-10 text-slate-500 text-sm">
         <div class="flex flex-wrap gap-2">
           {post.data.tags.map((tag) => (
             <a href={`/blog/tags/${toSlug(tag)}`} class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70">

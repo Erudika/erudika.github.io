@@ -1,22 +1,10 @@
 ---
-title: "jPrime roundup Para client iOS Swift"
-date: 2020-01-01
-tags: []
-excerpt: "Last week was [jPrime 2016](http://jprime.io), the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days.\" canonical: \"https://erudika.com/blog/jPrime-roundup-Para-client-iOS-Swift\" --- layout: post title: jPrime roundup, Para client for iOS and Swift date: 2016-06-01 13:40:20 tags: [para, ios, swift, jprime, release] author: alex@erudika.com comments: false img: img6.jpg --- Last week was [jPrime 2016](http://jprime.io), the biggest Java conference on the Balkans."
-canonical: "https://erudika.com/blog/jPrime-roundup-Para-client-iOS-Swift"
----
-
-Last week was [jPrime 2016](http://jprime.io), the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days."
-canonical: "https://erudika.com/blog/jPrime-roundup-Para-client-iOS-Swift"
----
-
-layout: post
-title: jPrime roundup, Para client for iOS and Swift
-date: 2016-06-01 13:40:20
-tags: [para, ios, swift, jprime, release]
-author: alex@erudika.com
-comments: false
-img: img6.jpg
+title: "jPrime roundup, Para client for iOS and Swift"
+date: 2016-06-01
+tags: ["para", "ios", "swift", "jprime", "release"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img6.jpg"
 ---
 
 Last week was [jPrime 2016](http://jprime.io), the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was *"Java - 21 and legally drunk"* and the two main themes were **microservices** and **reactive programming** with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.

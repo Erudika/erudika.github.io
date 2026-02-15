@@ -30,14 +30,7 @@
           },
           "default": []
         },
-        "excerpt": {
-          "type": "string"
-        },
-        "canonical": {
-          "type": "string",
-          "format": "uri"
-        },
-        "og:image": {
+        "img": {
           "type": "string"
         },
         "$schema": {
@@ -46,8 +39,7 @@
       },
       "required": [
         "title",
-        "date",
-        "excerpt"
+        "date"
       ],
       "additionalProperties": false
     }

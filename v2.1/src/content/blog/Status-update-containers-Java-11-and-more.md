@@ -1,9 +1,10 @@
 ---
-title: "'Status update - containers, Java 11 and more'"
+title: "Status update - containers, Java 11 and more"
 date: 2019-01-28
 tags: ["scoold", "para", "docker", "kubernetes", "helm", "lucene", "release"]
-excerpt: "Over the past couple of months we've been busy maintaining [Para](https://paraio.org) and [Scoold](https://scoold.com) and a few patches have been released. The changes are minor and are mostly related to dependency upgrades."
-canonical: "https://erudika.com/blog/Status-update-containers-Java-11-and-more"
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img14.jpg"
 ---
 
 Over the past couple of months we've been busy maintaining [Para](https://paraio.org) and 
@@ -86,3 +87,7 @@ The `S3Directory` implementation uses legal hold locks on `write.lock` files.
 
 The project passes the integration tests but it might still contain some bugs. We'd really appreciate it if you take it
 for a spin and report any issues on [GitHub](https://github.com/albogdano/lucene-s3directory/issues).
+
+
+
+

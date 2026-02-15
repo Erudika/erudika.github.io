@@ -1,9 +1,10 @@
 ---
-title: "'Status update - Para goes global, pricing changes'"
+title: "Status update - Para goes global, pricing changes"
 date: 2021-02-01
 tags: ["para", "baas", "hosting"]
-excerpt: "Our backend-as-a-service (BaaS) [Para](https://paraio.com) continued to grow over the past few months and now it's hosting over 450 active apps. We have about 10 paid customers from different parts of the globe - USA, Japan, Europe."
-canonical: "https://erudika.com/blog/Status-update-Para-goes-global-pricing-changes"
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img18.jpg"
 ---
 
 Our backend-as-a-service (BaaS) [Para](https://paraio.com) continued to grow over the past few months and now it's

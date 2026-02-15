@@ -1,21 +1,10 @@
 ---
-title: "hello world"
-date: 2020-01-01
-tags: []
-excerpt: "Hey there!\" canonical: \"https://erudika.com/blog/hello-world\" --- title: Hello World! tags: general comments: false img: img1.jpg date: 2015-10-16 author: alex@erudika.com --- Hey there!"
-canonical: "https://erudika.com/blog/hello-world"
----
-
-Hey there!"
-canonical: "https://erudika.com/blog/hello-world"
----
-
-title: Hello World!
-tags: general
-comments: false
-img: img1.jpg
+title: "Hello World!"
+tags: ["general"]
+excerpt: "excerpt-123"
+img: "img1.jpg"
 date: 2015-10-16
-author: alex@erudika.com
+author: "alex@erudika.com"
 ---
 
 Hey there! We are Erudika and this is our blog. Here, we'll share information about our current projects and
@@ -31,3 +20,4 @@ is live! Our backend service is in public beta. We&#39;ve got API clients for Ja
 dev accounts!</p>&mdash; Para (@para_io) <a href="https://twitter.com/para_io/status/616873230599647232">July 3, 2015</a>
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+

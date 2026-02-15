@@ -1,22 +1,10 @@
 ---
-title: "Para Web Console the admin UI for your backend"
-date: 2020-01-01
-tags: []
-excerpt: "We've released a simple web management console for Para. It's open source, client-side only and lets you connect to any of your Para servers and manage your objects easily through the web interface.\" canonical: \"https://erudika.com/blog/Para-Web-Console-the-admin-UI-for-your-backend\" --- layout: post title: Para Web Console - the admin UI for your backend date: 2016-03-25 01:02:02 tags: [para, ng-admin, angular, frontend] author: alex@erudika.com comments: false img: img5.jpg --- We've released a simple web management console for Para."
-canonical: "https://erudika.com/blog/Para-Web-Console-the-admin-UI-for-your-backend"
----
-
-We've released a simple web management console for Para. It's open source, client-side only and lets you connect to any of your Para servers and manage your objects easily through the web interface."
-canonical: "https://erudika.com/blog/Para-Web-Console-the-admin-UI-for-your-backend"
----
-
-layout: post
-title: Para Web Console - the admin UI for your backend
-date: 2016-03-25 01:02:02
-tags: [para, ng-admin, angular, frontend]
-author: alex@erudika.com
-comments: false
-img: img5.jpg
+title: "Para Web Console - the admin UI for your backend"
+date: 2016-03-25
+tags: ["para", "ng-admin", "angular", "frontend"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img5.jpg"
 ---
 
 
@@ -61,3 +49,4 @@ It has all the features of the web console and more - backup and restore, simple
 and scalability controls. And we offer free accounts for developers!
 
 *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+

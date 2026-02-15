@@ -64,7 +64,7 @@
     - report regressions via GitHub Issues or Slack
 
 [INTERFACES]
-- Content -> MarkdownIndexer: Frontmatter YAML with title, date, tags, excerpt, canonical, og:image
+- Content -> MarkdownIndexer: Frontmatter YAML with title, date, tags, excerpt, canonical, img
 - BuildAgent -> DeployAgent: artifact path (dist/) and build hash
 - Site -> Analytics: consent-first analytics only (serverless or static-friendly)
 

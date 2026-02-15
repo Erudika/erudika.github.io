@@ -1,22 +1,10 @@
 ---
-title: "Building the stack from scratch with Angular 2"
-date: 2020-01-01
-tags: []
-excerpt: "**UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](http://www.erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/).\" canonical: \"https://erudika.com/blog/Building-the-stack-from-scratch-with-Angular-2\" --- layout: post title: Building a full stack application from scratch with Angular date: 2016-06-09 14:37:12 tags: [angular, para, tutorial, typescript] author: alex@erudika.com comments: false img: img7.jpg --- **UPDATE:** This article and its associated code have been updated for Angular 8.x."
-canonical: "https://erudika.com/blog/Building-the-stack-from-scratch-with-Angular-2"
----
-
-**UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](http://www.erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/)."
-canonical: "https://erudika.com/blog/Building-the-stack-from-scratch-with-Angular-2"
----
-
-layout: post
-title: Building a full stack application from scratch with Angular
-date: 2016-06-09 14:37:12
-tags: [angular, para, tutorial, typescript]
-author: alex@erudika.com
-comments: false
-img: img7.jpg
+title: "Building a full stack application from scratch with Angular"
+date: 2016-06-09
+tags: ["angular", "para", "tutorial", "typescript"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img7.jpg"
 ---
 
 **UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](http://www.erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/).
@@ -512,3 +500,4 @@ I've deployed the same code to GitHub pages as a [live demo](http://albogdano.gi
 is powered by our [cloud-based Para service](https://paraio.com).
 
  *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+

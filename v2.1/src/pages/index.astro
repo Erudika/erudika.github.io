@@ -21,6 +21,7 @@ const blogTeasers = (await getCollection("blog"))
       month: "short",
       day: "2-digit"
     }),
+    img: post.data.img,
     tags: post.data.tags,
     href: `/blog/${post.slug}`
   }));

@@ -1,9 +1,10 @@
 ---
-title: "'Scoold Pro now integrates with Microsoft Teams'"
+title: "Scoold Pro now integrates with Microsoft Teams"
 date: 2021-07-23
-tags: ["scoold", "ms teams", "integration"]
-excerpt: "**I'm happy to announce that Scoold Pro is now integrated with Microsoft Teams!** Everyone who owns an active Scoold Pro license will get the new feature in the next release. All instances running on [Scoold Cloud](https://cloud.scoold.com) will also be updated and will benefit from the new integration."
-canonical: "https://erudika.com/blog/Scoold-Pro-now-integrates-with-Microsoft-Teams"
+tags: ["scoold", "ms-teams", "integration"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img19.jpg"
 ---
 
 **I'm happy to announce that Scoold Pro is now integrated with Microsoft Teams!** Everyone who owns an active Scoold Pro

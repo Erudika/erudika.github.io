@@ -1,22 +1,10 @@
 ---
-title: "Para v1 18 released new site and jPrime"
-date: 2020-01-01
-tags: []
-excerpt: "This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, fixed many bugs, released the [Android client for Para](https://github.com/Erudika/para-client-android) and a new plugin for MongoDB. The number one request for this version was support for plugins and MongoDB.\" canonical: \"https://erudika.com/blog/Para-v1-18-released-new-site-and-jPrime\" --- layout: post title: 'Para v1.18 released, new site and jPrime' date: 2016-03-06 23:46:35 tags: [para, release, mongodb, jprime] author: alex@erudika.com comments: false img: img4.jpg --- This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, fixed many bugs, released the [Android client for Para](https://github.com/Erudika/para-client-android) and a new plugin for MongoDB."
-canonical: "https://erudika.com/blog/Para-v1-18-released-new-site-and-jPrime"
----
-
-This past month was interesting and quite busy for us - we got valuable feedback and contributions from our clients, fixed many bugs, released the [Android client for Para](https://github.com/Erudika/para-client-android) and a new plugin for MongoDB. The number one request for this version was support for plugins and MongoDB."
-canonical: "https://erudika.com/blog/Para-v1-18-released-new-site-and-jPrime"
----
-
-layout: post
-title: 'Para v1.18 released, new site and jPrime'
-date: 2016-03-06 23:46:35
-tags: [para, release, mongodb, jprime]
-author: alex@erudika.com
-comments: false
-img: img4.jpg
+title: "Para v1.18 released, new site and jPrime"
+date: 2016-03-06
+tags: ["para", "release", "mongodb", "jprime"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img4.jpg"
 ---
 
 

@@ -1,22 +1,10 @@
 ---
-title: "backend frameworks usergrid loopback para baasbox deployd telepat"
-date: 2020-01-01
-tags: []
-excerpt: "Let's compare some modern open source backend frameworks that are available today. These frameworks handle the server-side operations of your website or app.\" canonical: \"https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat\" --- layout: post title: Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat date: 2015-10-21 14:17:19 tags: [backend, baas, frameworks, para, API] author: alex@erudika.com comments: false img: img2.jpg --- Let's compare some modern open source backend frameworks that are available today."
-canonical: "https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat"
----
-
-Let's compare some modern open source backend frameworks that are available today. These frameworks handle the server-side operations of your website or app."
-canonical: "https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat"
----
-
-layout: post
-title: Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat
-date: 2015-10-21 14:17:19
-tags: [backend, baas, frameworks, para, API]
-author: alex@erudika.com
-comments: false
-img: img2.jpg
+title: "Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat"
+date: 2015-10-21
+tags: ["backend", "baas", "frameworks", "para", "API"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img2.jpg"
 ---
 
 Let's compare some modern open source backend frameworks that are available today.
@@ -235,3 +223,4 @@ client library for your specific platform and language - C#, Java, Javascript, e
 locally on your development machine and give it a try.
 
 Happy coding!
+

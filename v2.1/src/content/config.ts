@@ -6,9 +6,9 @@ const blog = defineCollection({
     title: z.string(),
     date: z.date(),
     tags: z.array(z.string()).default([]),
-    excerpt: z.string(),
-    canonical: z.string().url().optional(),
-    "og:image": z.string().optional()
+    // excerpt: z.string(),
+    // canonical: z.string().url().optional(),
+    img: z.string().optional()
   })
 });
 

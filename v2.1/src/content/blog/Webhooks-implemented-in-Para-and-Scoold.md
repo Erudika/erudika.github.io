@@ -2,8 +2,9 @@
 title: "Webhooks implemented in Para and Scoold"
 date: 2019-07-04
 tags: ["scoold", "para", "webhooks", "release"]
-excerpt: "With the release of Para `1.32.0` we've introduced support for webhooks for all apps. This feature is available now on [ParaIO.com](https://paraio.com) as well."
-canonical: "https://erudika.com/blog/Webhooks-implemented-in-Para-and-Scoold"
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img15.jpg"
 ---
 
 With the release of Para `1.32.0` we've introduced support for webhooks for all apps. This feature is available now 
@@ -113,3 +114,6 @@ events on the `question` type, for example, to get notified when somebody asks a
 
 *You can start playing with webhooks right away, by signing up for a free account on [Para](https://paraio.com) - 
 our fully managed backend service for busy developers. Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+
+
+

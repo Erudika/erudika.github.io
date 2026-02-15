@@ -1,22 +1,10 @@
 ---
-title: "Implementing full text search for your static site"
-date: 2020-01-01
-tags: []
-excerpt: "**Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites. They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless” technology.\" canonical: \"https://erudika.com/blog/Implementing-full-text-search-for-your-static-site\" --- layout: post title: Implementing full-text search for your static site date: 2016-12-12 16:48:29 tags: [search, blog, para-cli] author: alex@erudika.com comments: false img: img10.jpg --- **Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites."
-canonical: "https://erudika.com/blog/Implementing-full-text-search-for-your-static-site"
----
-
-**Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites. They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless” technology."
-canonical: "https://erudika.com/blog/Implementing-full-text-search-for-your-static-site"
----
-
-layout: post
-title: Implementing full-text search for your static site
-date: 2016-12-12 16:48:29
-tags: [search, blog, para-cli]
-author: alex@erudika.com
-comments: false
-img: img10.jpg
+title: "Implementing full-text search for your static site"
+date: 2016-12-12
+tags: ["search", "blog", "para-cli"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img10.jpg"
 ---
 
 **Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites.

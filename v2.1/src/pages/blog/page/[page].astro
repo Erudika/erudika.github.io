@@ -35,6 +35,7 @@ const pagePosts = posts.slice(start, start + pageSize).map((post) => ({
     month: "short",
     day: "2-digit"
   }),
+  img: post.data.img,
   tags: post.data.tags,
   href: `/blog/${post.slug}`
 }));
@@ -63,12 +64,12 @@ const breadcrumbJsonLd = {
         { label: breadcrumbs.blog, href: "/blog" },
         { label: `${breadcrumbs.pagePrefix} ${page}`, href: `/blog/page/${page}` }
       ]} />
-      <h1 class="mt-6 text-4xl font-semibold text-base-content">{blogPage.title}</h1>
-      <p class="mt-4 max-w-2xl text-lg text-base-content/70">{blogPage.body}</p>
+      <h1 class="mt-6 font-semibold text-base-content text-4xl">{blogPage.title}</h1>
+      <p class="mt-4 max-w-2xl text-base-content/70 text-lg">{blogPage.body}</p>
       <div class="mt-4">
-        <a href="/blog/tags" class="text-sm font-semibold text-sky-700">{blogPage.tagsCta}</a>
+        <a href="/blog/tags" class="font-semibold text-sky-700 text-sm">{blogPage.tagsCta}</a>
       </div>
-      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div class="gap-6 grid md:grid-cols-2 xl:grid-cols-3 mt-10">
         {pagePosts.map((post) => (
           <BlogCard {...post} />
         ))}

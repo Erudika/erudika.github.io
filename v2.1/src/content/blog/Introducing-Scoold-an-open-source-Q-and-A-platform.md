@@ -1,22 +1,10 @@
 ---
-title: "Introducing Scoold an open source Q and A platform"
-date: 2020-01-01
-tags: []
-excerpt: "Have you ever wanted to have a Q&A section on your website with the functionality of Stack Overflow? Well, this one is for you!\" canonical: \"https://erudika.com/blog/Introducing-Scoold-an-open-source-Q-and-A-platform\" --- layout: post title: Introducing Scoold - an open source Q&A platform date: 2017-04-27 08:48:28 tags: [scoold, stackoverflow, clone] author: alex@erudika.com comments: false img: img11.jpg --- Have you ever wanted to have a Q&A section on your website with the functionality of Stack Overflow?"
-canonical: "https://erudika.com/blog/Introducing-Scoold-an-open-source-Q-and-A-platform"
----
-
-Have you ever wanted to have a Q&A section on your website with the functionality of Stack Overflow? Well, this one is for you!"
-canonical: "https://erudika.com/blog/Introducing-Scoold-an-open-source-Q-and-A-platform"
----
-
-layout: post
-title: Introducing Scoold - an open source Q&A platform
-date: 2017-04-27 08:48:28
-tags: [scoold, stackoverflow, clone]
-author: alex@erudika.com
-comments: false
-img: img11.jpg
+title: "Introducing Scoold - an open source Q&A platform"
+date: 2017-04-27
+tags: ["scoold", "stackoverflow", "clone"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img11.jpg"
 ---
 
 Have you ever wanted to have a Q&A section on your website with the functionality of Stack Overflow? Well, this one is for you! Scoold is a cloud-ready Stack Overflow clone, powered by our Para backend. It's a real-world application, showcasing the Para technology and how it can be utilized to get a project off the ground quickly. Scoold is a lightweight (~4000 LOC) web application written in Java -- it runs great on the smallest Heroku dyno and doesn't require a database.

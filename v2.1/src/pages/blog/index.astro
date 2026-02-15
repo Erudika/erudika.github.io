@@ -22,6 +22,7 @@ const pagePosts = posts.slice(0, PAGE_SIZE).map((post) => ({
     month: "short",
     day: "2-digit"
   }),
+  img: post.data.img,
   tags: post.data.tags,
   href: `/blog/${post.slug}`
 }));
@@ -44,19 +45,19 @@ const breadcrumbJsonLd = {
 >
   <section class="pb-16">
     <div class="bg-[url('/src/images/banner.jpg')] bg-cover bg-center">
-      <div class="section-shell py-12">
-        <div class="inline-flex max-w-3xl flex-col gap-3 rounded-[3px] bg-base-100/85 p-6 shadow-soft ring-1 ring-base-300/60 backdrop-blur-sm">
-          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{blogIndex.eyebrow}</p>
-          <h1 class="text-4xl font-semibold text-base-content">{blogIndex.title}</h1>
-          <p class="text-lg text-base-content/70">{blogIndex.body}</p>
+      <div class="py-12 section-shell">
+        <div class="inline-flex flex-col gap-3 bg-base-100/85 shadow-soft backdrop-blur-sm p-6 rounded-[3px] ring-1 ring-base-300/60 max-w-3xl">
+          <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{blogIndex.eyebrow}</p>
+          <h1 class="font-semibold text-base-content text-4xl">{blogIndex.title}</h1>
+          <p class="text-base-content/70 text-lg">{blogIndex.body}</p>
           <div>
-            <a href="/blog/tags" class="text-sm font-semibold text-sky-700">{blogIndex.tagsCta}</a>
+            <a href="/blog/tags" class="font-semibold text-sky-700 text-sm">{blogIndex.tagsCta}</a>
           </div>
         </div>
       </div>
     </div>
     <div class="section-shell">
-      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div class="gap-6 grid md:grid-cols-2 xl:grid-cols-3 mt-10">
         {pagePosts.map((post) => (
           <BlogCard {...post} />
         ))}

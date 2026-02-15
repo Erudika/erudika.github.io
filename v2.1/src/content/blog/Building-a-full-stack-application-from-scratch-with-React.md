@@ -2,8 +2,9 @@
 title: "Building a full stack application from scratch with React"
 date: 2019-08-14
 tags: ["react", "para", "tutorial", "jsx"]
-excerpt: "**Note:** This article is a clone of [another one written for Angular](https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/). In this tutorial we're going to build a simple single-page application with **React** (v16 and above)."
-canonical: "https://erudika.com/blog/Building-a-full-stack-application-from-scratch-with-React"
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img7.jpg"
 ---
 
 **Note:** This article is a clone of [another one written for Angular](https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/).
@@ -533,3 +534,4 @@ I've deployed the same code to GitHub pages as a [live demo](http://albogdano.gi
 is powered by our [cloud-based Para service](https://paraio.com).
 
  *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*
+

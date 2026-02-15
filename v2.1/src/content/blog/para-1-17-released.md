@@ -1,22 +1,10 @@
 ---
-title: "para 1 17 released"
-date: 2020-01-01
-tags: []
-excerpt: "We're happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it's also deployed on [ParaIO.com](https://paraio.com), our hosted backend service.\" canonical: \"https://erudika.com/blog/para-1-17-released\" --- layout: post title: Para v1.17 released date: 2016-01-05 18:20:27 tags: [backend, para, release] author: alex@erudika.com comments: false img: img3.jpg --- We're happy to announce the release of Para v1.17."
-canonical: "https://erudika.com/blog/para-1-17-released"
----
-
-We're happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it's also deployed on [ParaIO.com](https://paraio.com), our hosted backend service."
-canonical: "https://erudika.com/blog/para-1-17-released"
----
-
-layout: post
-title: Para v1.17 released
-date: 2016-01-05 18:20:27
-tags: [backend, para, release]
-author: alex@erudika.com
-comments: false
-img: img3.jpg
+title: "Para v1.17 released"
+date: 2016-01-05
+tags: ["backend", "para", "release"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img3.jpg"
 ---
 
 We're happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it's also

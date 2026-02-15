@@ -1,22 +1,10 @@
 ---
 title: "Saving money on DynamoDB with Global Secondary Indexes"
-date: 2020-01-01
-tags: []
-excerpt: "**Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries.\" canonical: \"https://erudika.com/blog/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes\" --- layout: post title: Saving money on DynamoDB with Global Secondary Indexes date: 2016-11-21 17:39:07 tags: [aws, dynamodb, tips] author: alex@erudika.com comments: false img: img9.jpg --- **Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast."
-canonical: "https://erudika.com/blog/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes"
----
-
-**Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries."
-canonical: "https://erudika.com/blog/Saving-money-on-DynamoDB-with-Global-Secondary-Indexes"
----
-
-layout: post
-title: Saving money on DynamoDB with Global Secondary Indexes
-date: 2016-11-21 17:39:07
-tags: [aws, dynamodb, tips]
-author: alex@erudika.com
-comments: false
-img: img9.jpg
+date: 2016-11-21
+tags: ["aws", "dynamodb", "tips"]
+author: "alex@erudika.com"
+excerpt: "excerpt-123"
+img: "img9.jpg"
 ---
 
 **Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI).
