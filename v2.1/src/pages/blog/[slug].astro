@@ -4,6 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../data/site-data.json";
 import Prose from '../../components/Prose.astro';
+import PersonCard from "../../components/PersonCard.astro";
 import { Image } from "astro:assets";
 
 const { breadcrumbs } = marketing.site.components;
@@ -102,6 +103,13 @@ const breadcrumbJsonLd = {
       <Prose>
         <Content />
       </Prose>
+
+      <div class="mt-10 text-center section-shell">
+        <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{marketing.site.pages.blogPage.author}</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          <PersonCard email={post.data.author} />
+        </div>
+      </div>
     </div>
   </article>
 </BaseLayout>

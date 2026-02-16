@@ -30,6 +30,9 @@
           },
           "default": []
         },
+        "author": {
+          "type": "string"
+        },
         "img": {
           "type": "string"
         },
@@ -39,7 +42,8 @@
       },
       "required": [
         "title",
-        "date"
+        "date",
+        "author"
       ],
       "additionalProperties": false
     }

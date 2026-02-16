@@ -1,10 +1,13 @@
-export async function GET({ site }: { site?: URL }) {
-  const siteUrl = (site?.toString() ?? "https://erudika.com").replace(/\/$/, "");
-  const body = `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`;
+import type { APIRoute } from 'astro';
 
-  return new Response(body, {
-    headers: {
-      "Content-Type": "text/plain; charset=UTF-8"
-    }
-  });
-}
+const getRobotsTxt = (sitemapURL: URL) => `\
+User-agent: *
+Allow: /
+
+Sitemap: ${sitemapURL.href}
+`;
+
+export const GET: APIRoute = ({ site }) => {
+  const sitemapURL = new URL('sitemap-index.xml', site);
+  return new Response(getRobotsTxt(sitemapURL));
+};

@@ -27,7 +27,7 @@ Some BaaS frameworks are designed with focus on mobile app development (mBaaS) a
 anything from websites to desktop software or games. The ones that target mobile apps usually have features like
 realtime push, notifications support and client libraries for Android and iOS. We'll cover both types of frameworks here.
 
-## [UserGrid](http://usergrid.apache.org) - [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
+## [UserGrid](https://usergrid.apache.org) - [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
 <img src="/src/images/usergrid.png">
 
 **Multitenant:** yes <br>
@@ -60,7 +60,7 @@ Usergrid is an excellent choice if you are building a mobile application or an e
 your organization. It is used in production by quite a few companies.
 
 
-## [LoopBack](http://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
+## [LoopBack](https://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
 <img src="/src/images/loopback.png">
 
 **Multitenant:** no <br>
@@ -161,7 +161,7 @@ features are excellent - you have social login, friendship/followers API and use
 files and assets API, push notifications and a plugin system.
 
 
-## [Deployd](http://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
+## [Deployd](https://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
 <img src="/src/images/deployd.png" style="border: 1px solid #CCCCCC">
 
 **Multitenant:** no <br>

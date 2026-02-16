@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { author } from "hexo/dist/hexo/default_config";
 
 const blog = defineCollection({
   type: "content",
@@ -6,6 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     date: z.date(),
     tags: z.array(z.string()).default([]),
+    author: z.string(),
     // excerpt: z.string(),
     // canonical: z.string().url().optional(),
     img: z.string().optional()

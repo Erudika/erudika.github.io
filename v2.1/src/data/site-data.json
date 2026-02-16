@@ -62,37 +62,6 @@
     ],
     "pressQuotes": []
   },
-  "trustRail": {
-    "company": "Erudika LTD.",
-    "address": "4 Lelinska chuka Street, Sofia 1618, Bulgaria",
-    "vat": "BG-200368755",
-    "status": {
-      "label": "Status",
-      "href": "https://status.erudika.com",
-      "state": "All systems operational"
-    },
-    "contact": {
-      "email": "contact@erudika.com",
-      "phone": "+359 886 000 995"
-    },
-    "legalLinks": [
-      {
-        "label": "Privacy",
-        "href": "/legal/privacy"
-      },
-      {
-        "label": "Terms",
-        "href": "/legal/terms"
-      }
-    ],
-    "footnote": "Fully static Astro build served via GitHub Pages \u00b7 CDN cached",
-    "labels": {
-      "vat": "VAT",
-      "email": "Email",
-      "phone": "Phone",
-      "status": "Status"
-    }
-  },
   "site": {
     "header": {
       "nav": [
@@ -130,7 +99,7 @@
         "Erudika LTD.",
         "4 Lelinska chuka Street",
         "Sofia 1618, Bulgaria",
-        "VAT BG-200368755",
+        "VAT# BG-200368755",
         "Phone: +359 886 000 995",
         "support@erudika.com"
       ],
@@ -226,8 +195,8 @@
         "proofTitle": "Small team. Serious software.",
         "proofBody": "As a small, independent company, we are deeply committed to delivering exceptional support to our clients. We believe this level of dedication is our strongest differentiator.",
         "blogLabel": "Blog",
-        "blogTitle": "Latest shipping notes and deep dives",
-        "blogBody": "Release notes, architecture write-ups, and tooling insights from the Erudika team.",
+        "blogTitle": "Latest articles from our blog",
+        "blogBody": "Release notes, architecture write-ups, and insights.",
         "blogCta": "Visit the blog \u2192",
         "supportLabel": "Support",
         "supportTitle": "Priority support that gives you peace of mind",
@@ -292,6 +261,7 @@
             {
               "name": "Alexander Bogdanovski",
               "role": "Founder & Indie Hacker",
+              "email": "alex@erudika.com",
               "avatar": "https://gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=400&d=robohash&r=x"
             }
           ]
@@ -530,7 +500,7 @@
         "email": "support@erudika.com",
         "formTitle": "Start a conversation",
         "formBody": "Prefer email? We answer within one business day.",
-        "formNote": "Hey, this form is handled by our backend server Para!",
+        "formNote": "By the way, this form is handled by our backend server Para!",
         "formNote2": "It's super easy and free to integrate it in your website.",
         "formFields": {
           "name": "Name",
@@ -554,7 +524,8 @@
         "eyebrow": "Blog",
         "title": "Engineering notes and product updates",
         "body": "Long-form posts about Para, Scoold, and the infrastructure that powers them.",
-        "tagsCta": "Browse by tag \u2192"
+        "tagsCta": "Browse by tag \u2192",
+        "author": "About the author"
       },
       "blogTags": {
         "eyebrow": "Tags",
@@ -661,7 +632,7 @@
         },
         "scoold": {
           "title": "Scoold | Erudika",
-          "description": "Scoold is open source and works great as a questions-and-answer platfor, forum, knowledge base or customer support system. Self-hosted and open source.",
+          "description": "Scoold is open source and works great as a questions-and-answer platform, forum, knowledge base or customer support system. Self-hosted and open source.",
           "canonical": "https://erudika.com/projects/scoold"
         },
         "paraCloud": {

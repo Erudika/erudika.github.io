@@ -7,7 +7,7 @@ excerpt: "excerpt-123"
 img: "img7.jpg"
 ---
 
-**Note:** This article is a clone of [another one written for Angular](https://erudika.com/blog/2016/06/09/Building-the-stack-from-scratch-with-Angular-2/).
+**Note:** This article is a clone of [another one written for Angular](/blog/building-the-stack-from-scratch-with-angular-2).
 
 In this tutorial we're going to build a simple single-page application with **React** (v16 and above). This is intended
 for developers unfamiliar with the new framework or having some experience with React. First of all, I got
@@ -489,7 +489,7 @@ handleInputChange(event, recipe, index) {
 ```
 
 And we're done! Here's final result of our **Recipe Manager**
-(check out [the live demo](http://albogdano.github.io/react-para/)):
+(check out [the live demo](https://albogdano.github.io/react-para/)):
 
 ![](/src/images/rman_6.png)
 
@@ -530,7 +530,7 @@ messages are clear and understandable.
 - didn't define a schema for the "recipe" type on the server side
 
 The complete code for this tutorial is on GitHub at [albogdano/react-para](https://github.com/albogdano/react-para).
-I've deployed the same code to GitHub pages as a [live demo](http://albogdano.github.io/react-para/) which
+I've deployed the same code to GitHub pages as a [live demo](https://albogdano.github.io/react-para/) which
 is powered by our [cloud-based Para service](https://paraio.com).
 
  *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*

@@ -56,7 +56,7 @@ that more web and mobile developers will find [Para](https://paraio.com) useful 
 
 ## Meet us at the jPrime conference
 
-We'll be sponsoring [jPrime](http://jprime.io/) - a local conference with talks on Java, the JVM, mobile, web and best
+We'll be sponsoring [jPrime](https://jprime.io/) - a local conference with talks on Java, the JVM, mobile, web and best
 practices, which will be held on **May 26-27th, 2016** in Sofia, Bulgaria. It's run by the
 [Bulgarian Java User Group](https://jug.bg/en/) and backed by the biggest software companies in the city. If you're in
 the area and into Java, you should definitely come to jPrime. Send us an email and we'll arrange for you some Para

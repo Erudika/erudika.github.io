@@ -15,7 +15,7 @@ We're busy developing and running our own backend SaaS called Para (https://para
 looking for a simple and scalable backend service, make sure you follow us and try our developer plan - it's free!
 <!-- more -->
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">
-<a href="http://t.co/4ybIZHeniM">http://t.co/4ybIZHeniM</a>
+<a href="https://t.co/4ybIZHeniM">https://t.co/4ybIZHeniM</a>
 is live! Our backend service is in public beta. We&#39;ve got API clients for JavaScript, Java &amp; PHP + free
 dev accounts!</p>&mdash; Para (@para_io) <a href="https://twitter.com/para_io/status/616873230599647232">July 3, 2015</a>
 </blockquote>

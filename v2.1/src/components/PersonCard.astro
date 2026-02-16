@@ -1,0 +1,18 @@
+---
+import marketing from "../data/site-data.json";
+import { Image } from "astro:assets";
+
+const { email } = Astro.props;
+const { person = marketing.site.pages.about.keyPeople.people.filter((p) => p.email === email)[0] } = Astro.props;
+
+---
+<div class="flex items-center gap-3 bg-base-100 px-4 py-4 border border-base-300 rounded-[10px]">
+    <div>
+        <Image src={person.avatar} inferSize alt="Avatar" class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"/>
+    </div>
+    <div class="font-semibold text-sm text-base-content">{person.name} 
+        <br> 
+        <span class="text-xs">{person.role}</span>
+    </div>
+</div>
+    

@@ -7,7 +7,7 @@ excerpt: "excerpt-123"
 img: "img7.jpg"
 ---
 
-**UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](http://www.erudika.com/blog/2019/08/14/Building-a-full-stack-application-from-scratch-with-React/).
+**UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](/blog/building-a-full-stack-application-from-scratch-with-react/).
 
 In this tutorial we're going to build a simple single-page application with **Angular** (v8 and above). This is intended
 for developers unfamiliar with the new framework or having some experience with AngularJS. First of all, I got
@@ -455,7 +455,7 @@ Finally, we add the search box in the template below the heading:
 ```
 
 And we're done! Here's final result of our **Recipe Manager**
-(check out [the live demo](http://albogdano.github.io/angular2-para/)):
+(check out [the live demo](https://albogdano.github.io/angular2-para/)):
 
 ![](/src/images/rman_6.png)
 
@@ -496,7 +496,7 @@ the TypeScript syntax is clean, the app is well structured and the error message
 - didn't define a schema for the "recipe" type on the server side
 
 The complete code for this tutorial is on GitHub at [albogdano/angular2-para](https://github.com/albogdano/angular2-para).
-I've deployed the same code to GitHub pages as a [live demo](http://albogdano.github.io/angular2-para/) which
+I've deployed the same code to GitHub pages as a [live demo](https://albogdano.github.io/angular2-para/) which
 is powered by our [cloud-based Para service](https://paraio.com).
 
  *Have questions or suggestions? Chat with us [on Gitter](https://gitter.im/Erudika/para)!*

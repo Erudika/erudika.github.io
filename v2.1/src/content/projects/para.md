@@ -6,7 +6,7 @@ multiple applications and clients connecting to it.
 The name "pára" means "steam" in Bulgarian. And just like steam is used to power stuff, you can use
 Para to power your mobile or web application backend.
 
-See how **Para** [compares to other open source backend frameworks](https://erudika.com/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/).
+See how **Para** [compares to other open source backend frameworks](/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/).
 
 ### Features
 
