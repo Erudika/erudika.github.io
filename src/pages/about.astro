@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import marketing from "../data/site-data.json";
 import { Image } from 'astro:assets';
 import PersonCard from "../components/PersonCard.astro";
+import optimizedBackground from "../images/img7.jpg";
 
 const { about } = marketing.site.pages;
 ---
@@ -13,7 +14,7 @@ const { about } = marketing.site.pages;
   canonical={marketing.site.meta.about.canonical}
 >
 
-  <div class="bg-[url('/src/images/img7.jpg')] bg-cover bg-center">
+  <div class="bg-cover bg-center" style={`background-image: url(${optimizedBackground.src});`}>
     <div class="py-24 section-shell">
       <div class="inline-flex flex-col gap-3 bg-base-100/85 shadow-soft backdrop-blur-sm p-6 rounded-[3px] ring-1 ring-base-300/60 max-w-3xl">
         <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{about.eyebrow}</p>
