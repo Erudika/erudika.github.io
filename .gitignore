@@ -37,4 +37,6 @@ db.json
 .deploy*/
 sprite.png
 
+bun.lock
+.vscode
 old_website/
