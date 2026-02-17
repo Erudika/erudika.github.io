@@ -6,7 +6,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   integrations: [sitemap()],
   site: "https://erudika.com",
-  outDir: './docs',
   vite: {
     plugins: [tailwindcss()]
   }
