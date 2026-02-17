@@ -11,11 +11,11 @@ img: "img12.jpg"
 
 <!-- more -->
 
-![](/src/images/blogpost_media10.png)
+![Blog media](../../images/blogpost_media10.png)
 
 Scoold was launched more than a year ago and so far has been quite successful as Stack Overflow clone. It quickly became one of the [top open source SO clones out there](https://meta.stackexchange.com/questions/2267/stack-exchange-clones).
 
-![](/src/images/pro_i18n.png)
+![Blog media](../../images/pro_i18n.png)
 
 People from all around the world deploying Scoold in production and it got a few hundred stars on GitHub (thanks!). Also our generous contributors have translated Scoold in more than 10 languages, including Chinese and Hindi.
 
@@ -31,7 +31,7 @@ So, let's go over the Pro features.
 
 ## Sticky / Favorite posts
 
-![](/src/images/pro_favs.png)
+![Blog media](../../images/pro_favs.png)
 
 
 These are two small features so we combined them into one. Sticky posts are a useful little feature which allows you to highlight important questions and announcements. This feature is typically found in forum software and basically "pins" a post to the top of the page. You can also "like" any question which adds it to your favorites so that you can later go back to that question quickly.
@@ -39,7 +39,7 @@ These are two small features so we combined them into one. Sticky posts are a us
 
 ## SAML support
 
-![](/src/images/pro_saml.png)
+![Blog media](../../images/pro_saml.png)
 
 
 This is an enterprise feature allow Scoold to talk to your corporate identity servers enabling people to login with SAML. Scoold acts as a service provider (SP) for your identity provider (IDP). There are quite a few options to configure here so you must know what you're doing.
@@ -59,7 +59,7 @@ You are no longer limited to a single admin user. Administrators can also promot
 
 ## Advanced syntax highlighting
 
-![](/src/images/pro_syntax.png)
+![Blog media](../../images/pro_syntax.png)
 
 
 The syntax highlighting of code snippets has been enhanced and supports additional languages like LaTeX, Velocity, WebAssembly, JSX/TSX and PL/SQL. MathJax integration is also available by turning on its feature flag.

@@ -11,7 +11,7 @@ Have you ever wanted to have a Q&A section on your website with the functionalit
 
 <!-- more -->
 
-![](/src/images/blogpost_media9.png)
+![Blog media](../../images/blogpost_media9.png)
 
 # A brief history of Scoold
 
@@ -24,15 +24,15 @@ So, for the past few years I was busy developing Para, while Scoold just sat the
 So, what can you do on Scoold? It implements most the SO features -- you can ask and answer questions, upvote and downvote posts, earn badges and reputation. Each edit creates an new revision, making it easy to follow the history of edits. The posts can be written in Markdown, which is then rendered by Para to HTML.
 The reputation system is simple but effective. People are awarded reputation points for good questions and answers, as well as various badges for their achievements on the site. Not all badges found on SO are implemented, though.
 
-![](/src/images/scoold.png)
+![Blog media](../../images/scoold.png)
 
 When posting a question, you can attach a location to it -- a nifty feature which is *not* implemented on Stack Overflow. This allows you to filter questions based on their location, making it easy to find those that have been asked in your region. Geolocation queries are implemented through the Elasticsearch `geo_point` data type.
 
-![](/src/images/scoold1.png)
+![Blog media](../../images/scoold1.png)
 
 You can search for anything on Scoold because each post is indexed and analyzed by Elasticsearch -- a powerful search engine. You can easily find users, questions and answers from the search bar on top. The search results are paginated, each page showing 30 results (this can be changed in the config file).
 
-![](/src/images/scoold2.png)
+![Blog media](../../images/scoold2.png)
 
 I really wanted to keep things simple on the frontend -- a classic, light frontend with jQuery works fine. Scoold used jQuery from the very beginning, and the trusted JavaScript library is still very useful today. It takes care of all theAJAX requests and toggles a bunch of elements on the screen, nothing more. Everything is rendered on the server, just like in the good old days. The content is easily crawlable by search engines which is great for SEO and the URLs are pretty tidy, too.
 

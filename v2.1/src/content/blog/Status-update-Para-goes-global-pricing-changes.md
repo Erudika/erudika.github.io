@@ -15,7 +15,7 @@ Para applications feel slow. It was time to address this problem.
 
 <!-- more -->
 
-![](/src/images/blogpost_media17.png)
+![Blog media](../../images/blogpost_media17.png)
 
 
 **Over the past month we expanded operations to two more regions - Tokyo, Japan and California, USA.** This means that

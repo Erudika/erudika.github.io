@@ -8,7 +8,11 @@ const { person = marketing.site.pages.about.keyPeople.people.filter((p) => p.ema
 ---
 <div class="flex items-center gap-3 bg-base-100 px-4 py-4 border border-base-300 rounded-[10px]">
     <div>
-        <Image src={person.avatar} inferSize alt="Avatar" class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"/>
+        <Image src={person.avatar}
+        inferSize 
+        alt="Avatar"
+        loading="eager"
+        class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"/>
     </div>
     <div class="font-semibold text-sm text-base-content">{person.name} 
         <br> 

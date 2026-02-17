@@ -11,7 +11,7 @@ img: "img8.jpg"
 
 <!-- more -->
 
-![](/src/images/blogpost_media6.png)
+![Blog media](../../images/blogpost_media6.png)
 
 There are several key players in terms of IoT cloud platforms, but we chose to focus on two — **AWS** and **Azure**. In Para `1.20.0` we've implemented basic support for both platforms which allows you to keep your devices in sync between your backend and the cloud. There's a new object called `Thing` which holds all the information about your device — the state of the device, the security credentials for the cloud and other important data. When a `Thing` is created, Para automatically calls the cloud provider and sets it up, returning all the information you need to connect your device to that cloud. It can then start pushing state changes and messages to the cloud containing any sensory data or other data of interest. In the case of AWS, Para would check for state changes on every read request and in the case of Azure it runs a separate thread for listening to cloud-to-device messages and updates `Thing` objects in the background. If you prefer one of these two approaches, we'd love to hear your feedback. 
 

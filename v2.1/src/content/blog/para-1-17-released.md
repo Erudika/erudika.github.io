@@ -27,7 +27,7 @@ Updated design & added features to web console
 
 ## JSON Web Tokens support
 
-![](/src/images/blogpost_media2.png)
+![Blog media](../../images/blogpost_media2.png)
 
 [JSON Web Tokens](https://jwt.io/) are a new standard for authenticating clients and users. Think of them as
 'Cookies 2.0'. They are simply a signed JSON object containing some data about the authenticated user. The cool thing

@@ -16,7 +16,7 @@ like Cisco, IBM and DBS Bank, who have successfully deployed it in production.
 
 <!-- more -->
 
-![](/src/images/blogpost_media15.png)
+![Blog media](../../images/blogpost_media15.png)
 
 ## Python Client for Para
 
@@ -98,7 +98,7 @@ to do a partial restore of some of the objects.
 And finally, we've improved the customizabitly of Scoold with support for custom theming and 5 ready-to-use themes.
 There's also a new dark mode. Take a look:
 
-![](/src/images/dark_mode.png)
+![Blog media](../../images/dark_mode.png)
 
 Scoold administrators can create custom themes by modifying the CSS of an existing theme or by creating a custom
 stylesheet from scratch.

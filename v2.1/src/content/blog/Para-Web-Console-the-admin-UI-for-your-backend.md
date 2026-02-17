@@ -16,7 +16,7 @@ We'd appreciate any [pull requests on GitHub](https://github.com/erudika/para-ad
 
 <!-- more -->
 
-![](/src/images/pwc1.png)
+![Blog media](../../images/pwc1.png)
 
 Once you connect to Para with your access keys, you see the dashboard where you see some aggregated information about
 your app and server. On the left there is a list of object types. These include both core types defined in Java classes
@@ -24,13 +24,13 @@ and user-defined types created through the API. To create a custom type from the
 and edit the `Datatypes` field by adding your own type, then refresh the page and it will appear on the left. Also
 you can edit the resource permissions for your app.
 
-![](/src/images/pwc1_p1.png)
+![Blog media](../../images/pwc1_p1.png)
 
 All types, except Linker (read-only), support CRUD operations in the web console. You can create and edit objects
 easily and you can also do full-text search and browse through all the pages of results. We hope to add more
 improvements to the project soon, like address visualization on a map and automatic configuration of custom fields.
 
-![](/src/images/pwc1_p2.png)
+![Blog media](../../images/pwc1_p2.png)
 
 We've also updated Para to v1.18.3 to support the new type of tokens used by the web console. You can now generate
 JWTs on the client-side and create "super" tokens from your access keys. These tokens give you full-access to the

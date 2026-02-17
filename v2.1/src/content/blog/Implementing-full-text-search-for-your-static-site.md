@@ -18,7 +18,7 @@ you can also upgrade the search box on your blog or static site.
 
 <!-- more -->
 
-![](/src/images/blogpost_media8.png)
+![Blog media](../../images/blogpost_media8.png)
 
 So we have a bunch of HTML files generated for our site and we need them indexed somewhere so we can query them later.
 The search box will send AJAX requests to the search API and presents the results to the user — very simple setup.
@@ -51,7 +51,7 @@ Go over to [ParaIO.com](https://paraio.com/signin) and sign in to get a free acc
 Next, we’ll create a new app where we can store our blog posts. If you already have an existing app with some objects
 in it, you can still fit in the content of your site by using objects of a different type, like `blogpost`.
 
-![](/src/images/ftsearch1.png)
+![Blog media](../../images/ftsearch1.png)
 
 Take a note of your Para access and secret keys, we’ll need them for our CLI tool. Now it’s time to gather our HTML
 files and send them to Para for indexing.
@@ -60,7 +60,7 @@ files and send them to Para for indexing.
 $ para-cli create "blog/20*/**/*.html" --type "blogpost" --sanitize \
 --accessKey "app:myapp" --secretKey "[key]"
 ```
-![](/src/images/ftsearch2.png)
+![Blog media](../../images/ftsearch2.png)
 
 In our case, HTML files are located in a folder called ‘blog’ with subfolders for each year. The CLI tool will parse
 every HTML file and look for the these two tags:
@@ -80,7 +80,7 @@ This should return the results in as an array of JSON objects. Awesome! Now, in 
 widget to be able to be able to access the Para search API without a secret key, we’ll have to allow public access to
 the `blogposts` resource.
 
-![](/src/images/ftsearch3.png)
+![Blog media](../../images/ftsearch3.png)
 
 The search box in our case is implemented with good old jQuery and a plugin called
 [typehead.js](https://twitter.github.io/typeahead.js/). The code is very simple — it calls the search API and queries

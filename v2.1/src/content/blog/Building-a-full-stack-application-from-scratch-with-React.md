@@ -18,7 +18,7 @@ You'll also need to have **Git**, **Node.js** and **npm** installed.
 
 <!-- more -->
 
-![](/src/images/blogpost_media14.png)
+![Blog media](../../images/blogpost_media14.png)
 
 ## Step 0 (frontend)
 
@@ -91,7 +91,7 @@ This defines a single permission that allows `* - everyone` to access `/v1/recip
 in this case `* - all HTTP methods` and `? - anonymous access` is allowed. Thus, we're essentially making this resource
 publicly available. Click 'Save Changes'.
 
-![](/src/images/rman_1.png)
+![Blog media](../../images/rman_1.png)
 
 ## Step 2 - CRUD recipes
 
@@ -360,7 +360,7 @@ button.small { font-size: 12px; height: 30px; }
 .hide { display: none; }
 ```
 
-![](/src/images/rman_2.png)
+![Blog media](../../images/rman_2.png)
 
 So, we should now we able to add recipes and after we click "Add" the form should be cleared and closed.
 For this let's add a couple of methods in `Home.js` - one to initialize the form and one to reset the
@@ -382,7 +382,7 @@ closeForm(recipeId) {
 }
 ```
 
-![](/src/images/rman_3.png)
+![Blog media](../../images/rman_3.png)
 
 The variable `recipeId` will keep the value of the `id` when a recipe is being edited. When "Save" is clicked this
 `id` is passed to the service and the backend so it won't create a new object, just update an existing one.
@@ -422,7 +422,7 @@ static remove(id) {
 }
 ```
 
-![](/src/images/rman_4.png)
+![Blog media](../../images/rman_4.png)
 
 We can now add, edit and remove recipes but they aren't very pretty and the formatting of the text
 is lost. In the next step we'll make it possible to write the recipe text in Markdown and then render it in HTML.
@@ -452,7 +452,7 @@ In our render method in `Home.js` we'll replace `<div>{this.renderMD(recipe.text
 ```
 Now we render the text to HTML on the client and this allows us to write beautiful recipes like this:
 
-![](/src/images/rman_5.png)
+![Blog media](../../images/rman_5.png)
 
 ## Step 4 - Full-text search
 
@@ -491,7 +491,7 @@ handleInputChange(event, recipe, index) {
 And we're done! Here's final result of our **Recipe Manager**
 (check out [the live demo](https://albogdano.github.io/react-para/)):
 
-![](/src/images/rman_6.png)
+![Blog media](../../images/rman_6.png)
 
 ## Final touches
 
@@ -499,7 +499,7 @@ You can see the result in your browser by running `npm start`. Optionally, you c
 (PWA) by editing `index.js` and adding `serviceWorker.register();`. This will create a `manifest.json` and make the
 page available offline. Our code now passes the Lighthouse audit with flying colors!
 
-![](/src/images/rman_7.png)
+![Blog media](../../images/rman_7.png)
 
 All that is left is to build the project for production and deploy it:
 ```

@@ -9,7 +9,7 @@ const { name, tagline, category, cta, logo, signal } = Astro.props;
 <div class="block isolate relative bg-base-100 shadow-sm hover:shadow-soft p-6 border border-base-300 rounded-[3px] transition hover:-translate-y-1">
   <div class="flex justify-between items-center">
     <div class="flex items-center gap-3">
-      {logo && <Image src={import(`../images/${logo}.svg`)} alt={name} class="w-auto h-9" />}
+      {logo && <Image src={import(`../images/${logo}.svg`)} alt={name} class="w-auto h-9" loading="eager"/>}
       <div>
         <p class="font-semibold text-slate-500 text-xs uppercase tracking-widest">{category}</p>
         <h3 class="font-semibold text-base-content text-lg">

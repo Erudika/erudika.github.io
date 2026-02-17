@@ -15,11 +15,11 @@ in mind that **the list is not ordered in any way**.
 
 <!-- more -->
 
-![](/src/images/blogpost_media11.png)
+![Blog media](../../images/blogpost_media11.png)
 
 ## Discourse - [<i class="fa fa-github-square"></i>](https://github.com/discourse/discourse)
 
-![](/src/images/discourse.png)
+![Blog media](../../images/discourse.png)
 
 **Website:** [https://www.discourse.org](https://www.discourse.org)<br>
 **Language:** Ruby, Rails <br>
@@ -30,7 +30,7 @@ in mind that **the list is not ordered in any way**.
 
 ## Scoold - [<i class="fa fa-github-square"></i>](https://github.com/erudika/scoold)
 
-![](/src/images/scoold3.png)
+![Blog media](../../images/scoold3.png)
 
 **Website:** [https://scoold.com](https://scoold.com)<br>
 **Language:** Java, Spring<br>
@@ -41,7 +41,7 @@ in mind that **the list is not ordered in any way**.
 
 ## Askbot - [<i class="fa fa-github-square"></i>](https://github.com/ASKBOT/askbot-devel)
 
-![](/src/images/askbot.png)
+![Blog media](../../images/askbot.png)
 
 **Website:** [https://askbot.com](https://askbot.com)<br>
 **Language:** Python, Django <br>
@@ -52,7 +52,7 @@ in mind that **the list is not ordered in any way**.
 
 ## Vanilla - [<i class="fa fa-github-square"></i>](https://github.com/vanilla/vanilla)
 
-![](/src/images/vanilla.png)
+![Blog media](../../images/vanilla.png)
 
 **Website:** [https://open.vanillaforums.com](https://open.vanillaforums.com/)<br>
 **Language:** PHP <br>
@@ -63,7 +63,7 @@ in mind that **the list is not ordered in any way**.
 
 ## Question2Answer - [<i class="fa fa-github-square"></i>](https://github.com/q2a/question2answer)
 
-![](/src/images/q2a.png)
+![Blog media](../../images/q2a.png)
 
 **Website:** [https://www.question2answer.org](https://www.question2answer.org)<br>
 **Language:** PHP <br>

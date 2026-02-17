@@ -9,31 +9,32 @@ const links = footer.links;
 const socialLinks = footer.social;
 ---
 
-<footer class="border-t border-base-300 bg-slate-950 text-slate-200">
+<footer class="bg-slate-950 border-base-300 border-t text-slate-200">
   <div class="section-shell">
-    <div class="grid gap-10 py-12 md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr]">
+    <div class="gap-10 grid md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr] py-12">
       <div class="space-y-4">
         <div class="flex items-center">
-          <span class="logo-frame h-[40px] w-[130px]">
-            <Image src={erudikaDark} alt={footer.logoAlt}/>
+          <span class="w-[130px] h-[40px] logo-frame">
+            <Image src={erudikaDark} alt={footer.logoAlt} loading="lazy"/>
           </span>
         </div>
-        <p class="max-w-sm text-sm text-slate-300">{footer.companyBlurb}</p>
+        <p class="max-w-sm text-slate-300 text-sm">{footer.companyBlurb}</p>
       </div>
 
       <div class="space-y-3">
-        <div class="text-xs uppercase tracking-widest text-slate-500">{footer.mapLabel}</div>
+        <div class="text-slate-500 text-xs uppercase tracking-widest">{footer.mapLabel}</div>
         <a href="https://goo.gl/maps/QGRjd" aria-label={footer.mapLinkLabel}>
           <Image
             src={erudikaMap}
             alt={footer.mapAlt}
-            class="w-full rounded-[3px] border border-slate-500 shadow-soft"
+            loading="lazy"
+            class="shadow-soft border border-slate-500 rounded-[3px] w-full"
           />
         </a>
       </div>
 
-      <div class="space-y-4 text-sm text-slate-300">
-        <div class="text-xs uppercase tracking-widest text-slate-500">{footer.addressLabel}</div>
+      <div class="space-y-4 text-slate-300 text-sm">
+        <div class="text-slate-500 text-xs uppercase tracking-widest">{footer.addressLabel}</div>
         {footer.addressLines.map((line, index) => (
           index === footer.addressLines.length - 1 ? (
             <div><a class="underline" href={`mailto:${line}`}>{line}</a></div>
@@ -43,20 +44,20 @@ const socialLinks = footer.social;
         ))}
       </div>
 
-      <div class="grid content-start gap-3 text-sm lg:justify-self-end lg:text-right">
-        <div class="text-xs uppercase tracking-widest text-slate-500">{footer.linksLabel}</div>
+      <div class="lg:justify-self-end content-start gap-3 grid text-sm lg:text-right">
+        <div class="text-slate-500 text-xs uppercase tracking-widest">{footer.linksLabel}</div>
         {links.map((link) => (
           <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
         ))}
       </div>
     </div>
 
-    <div class="flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 py-6 text-xs text-slate-400">
+    <div class="flex flex-wrap justify-between items-center gap-4 py-6 border-slate-800 border-t text-slate-400 text-xs">
       <div class="flex items-center gap-3">
-        <span class="text-xs uppercase tracking-widest text-slate-500">{footer.themeLabel}</span>
+        <span class="text-slate-500 text-xs uppercase tracking-widest">{footer.themeLabel}</span>
         <button
           id="theme-toggle"
-          class="btn btn-xs border border-slate-700 bg-slate-900 text-slate-200 hover:border-slate-500"
+          class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 btn btn-xs"
           type="button"
         >
           {footer.themeDefault}
