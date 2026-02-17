@@ -1,0 +1,22 @@
+{
+  "name": "Erudika",
+  "short_name": "Erudika",
+  "description": "Erudika builds Para, Scoold, and managed cloud services.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#4338CA",
+  "icons": [
+    {
+      "src": "/apple-touch-icon-precomposed.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

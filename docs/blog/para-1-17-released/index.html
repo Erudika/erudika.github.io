@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en" data-theme="erudika"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Para v1.17 released | Erudika</title><meta name="description" content="A tiny EU-based software company, building backend and serverless solutions."><link rel="canonical" href="https://erudika.com/blog/para-1-17-released"><meta property="og:type" content="website"><meta property="og:title" content="Para v1.17 released | Erudika"><meta property="og:description" content="A tiny EU-based software company, building backend and serverless solutions."><meta property="og:url" content="https://erudika.com/blog/para-1-17-released"><meta property="og:image" content="/src/images/img3.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Para v1.17 released | Erudika"><meta name="twitter:description" content="A tiny EU-based software company, building backend and serverless solutions."><meta name="twitter:image" content="/src/images/img3.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Para v1.17 released","datePublished":"2016-01-05T00:00:00.000Z","dateModified":"2016-01-05T00:00:00.000Z","author":{"@type":"Organization","name":"Erudika"},"publisher":{"@type":"Organization","name":"Erudika","logo":{"@type":"ImageObject","url":"https://erudika.com/src/images/erudika-light.svg"}},"mainEntityOfPage":"https://erudika.com/blog/para-1-17-released","image":["img3"],"url":"https://erudika.com/blog/para-1-17-released"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://erudika.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://erudika.com/blog"},{"@type":"ListItem","position":3,"name":"Para v1.17 released","item":"https://erudika.com/blog/para-1-17-released"}]}</script><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/_astro/about.BonHaEuI.css"></head> <body class="bg-base-100 min-h-screen text-base-content"> <div class="flex flex-col min-h-screen"> <header class="top-0 z-30 sticky bg-base-100/90 backdrop-blur border-base-300 border-b"> <div class="flex justify-between items-center gap-6 h-20 section-shell"> <a href="/" class="flex items-center text-base-content"> <span class="py-2 w-[140px] h-[50px] logo-frame"> <img src="/_astro/erudika-light.BVBbeAf1_1nUxeR.svg" alt="Erudika" loading="eager" decoding="async" fetchpriority="auto" width="463" height="107" class="logo-light"> <img src="/_astro/erudika-dark.4BCOIL6a_1nUxeR.svg" alt="Erudika" loading="eager" decoding="async" fetchpriority="auto" width="463" height="107" class="logo-dark"> </span> </a> <nav class="hidden md:flex items-center gap-6"> <a href="/projects" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Projects </a><a href="/blog" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Blog </a><a href="/support" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Support </a><a href="/contact" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Contact </a><a href="/about" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> About </a> </nav> <div class="flex items-center gap-3"> <button class="btn btn-ghost btn-sm" onclick="site_search_modal.showModal()" aria-label="Open search" title="Search '/' or Ctrl+K"> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="7"></circle> <path d="M20 20l-3.5-3.5"></path> </svg> </button> <a href="mailto:contact@erudika.com" class="hidden md:flex text-white btn btn-primary btn-sm">Contact Support</a> <div class="md:hidden dropdown dropdown-end"> <label tabindex="0" class="btn btn-ghost btn-sm"> Menu </label> <ul tabindex="0" class="bg-base-100 shadow mt-3 p-2 rounded-box w-auto menu dropdown-content"> <li class="flex content-end"><a href="/projects">Projects</a></li><li class="flex content-end"><a href="/blog">Blog</a></li><li class="flex content-end"><a href="/support">Support</a></li><li class="flex content-end"><a href="/contact">Contact</a></li><li class="flex content-end"><a href="/about">About</a></li> </ul> </div> </div> </div> </header> <dialog id="site_search_modal" class="modal"> <div class="top-24 absolute xs:w-full sm:w-10/12 md:w-6/12 max-w-3xl modal-box"> <!-- <div class="float-right flex justify-between items-center">
+      <h3 class="font-semibold text-base-content text-lg">Search</h3>
+      <label for="site_search_modal" class="btn btn-ghost btn-sm" aria-label="Close search">
+        ✕
+      </label>
+    </div> --> <div class="mt-1"> <div class="flex items-center gap-2 w-full input input-bordered"> <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="7"></circle> <path d="M20 20l-3.5-3.5"></path> </svg> <input id="site-search-input" type="search" list="options" class="grow" placeholder="Search…" role="combobox" aria-controls="searchbox" aria-expanded="true" aria-autocomplete="list"> </div> </div> <ul id="site-search-results" class="space-y-2 mt-3 text-sm"></ul> <div class="flex pt-4 text-xs"> <span class="grow"> <kbd class="kbd kbd-sm">▲</kbd> <kbd class="kbd kbd-sm">▼</kbd> <kbd class="kbd kbd-sm">Enter</kbd> to select,
+<kbd class="kbd kbd-sm">Esc</kbd> to close
+</span> <strong class="justify-end text-right"> <a href="https://paraio.com" target="_blank" class="text-base-content">
+Search powered by <img src="/_astro/para.DRFwQDWW_ZiFrDU.webp" alt="Para" loading="eager" decoding="async" fetchpriority="auto" width="242" height="78" class="inline-block max-w-16"></a> </strong> </div> </div> <form method="dialog" class="modal-backdrop"> <button>close</button> </form> </dialog> <script type="module">const i=document.getElementById("site_search_modal"),l=document.getElementById("site-search-input"),n=document.getElementById("site-search-results"),u="<li>No Results</li>";let a,c,s=-1;const m=()=>{i&&i.showModal()},h=e=>{n&&(n.innerHTML=e.length===0?u:"",s=-1,e.forEach(t=>{const r=document.createElement("li"),o=document.createElement("a");o.href=t.url,o.textContent=t.name,o.className="block rounded-[3px] px-3 py-3",r.className="border border-base-300 hover:border-sky-700 rounded-[3px]",r.appendChild(o),n.appendChild(r)}))},d=e=>{if(!n)return;Array.from(n.querySelectorAll("li")).forEach((r,o)=>{o===e?r.classList.add("border-sky-700","bg-base-200"):r.classList.remove("border-sky-700","bg-base-200")})},f=async e=>{if(!n)return;const t=e.trim();if(!t){n.innerHTML="";return}a&&a.abort(),a=new AbortController;try{const r=await fetch(`https://paraio.com/v1/blogposts?limit=6&q=${encodeURIComponent(t||"*")}`,{signal:a.signal,headers:{Authorization:"Anonymous app:albogdano"}});if(!r.ok)return;const o=await r.json();h(Array.isArray(o.items)?o.items:[])}catch(r){r.name!=="AbortError"&&(n.innerHTML="")}};l&&(l.addEventListener("input",e=>{const t=e.target.value;clearTimeout(c),c=setTimeout(()=>{f(t)},250)}),l.addEventListener("keydown",e=>{if(!n)return;const t=Array.from(n.querySelectorAll("a"));t.length!==0&&(e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,d(s)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,d(s)):e.key==="Enter"&&s>=0&&(e.preventDefault(),t[s].click()))}));window.addEventListener("keydown",e=>{const t=e.key;if(t==="/"||t.toLowerCase()==="k"&&e.ctrlKey){e.preventDefault(),m();return}});</script> <main class="flex-1">  <div class="bg-cover bg-center" style="background-image: url('/src/images/img3.jpg')"> <div class="py-24 section-shell"> <div class="inline-flex flex-col gap-3 p-6 rounded-[3px] max-w-3xl">&nbsp;
+</div> </div> </div> <article class="py-12"> <div class="max-w-3xl section-shell"> <span class="float-right text-xs text-base-400"> January 05, 2016 </span> <nav aria-label="Breadcrumb" class="text-xs uppercase tracking-widest text-slate-500"> <ol class="flex flex-wrap items-center gap-2"> <li class="flex items-center gap-2">  <a href="/" class="hover:text-sky-700"> Home </a> </li><li class="flex items-center gap-2"> <span class="text-slate-300">/</span> <a href="/blog" class="hover:text-sky-700"> Blog </a> </li> </ol> </nav> <h1 class="mt-6 font-semibold text-base-content text-4xl">Para v1.17 released</h1> <div class="flex flex-wrap gap-3 mt-4 pb-10 text-slate-500 text-sm"> <div class="flex flex-wrap gap-2"> <a href="/blog/tags/backend" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> backend </a><a href="/blog/tags/para" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> para </a><a href="/blog/tags/release" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> release </a> </div> </div> <div class="dark:prose-invert prose-img:rounded-xl max-w-none prose-h1:font-bold prose-a:text-primary prose-h1:text-xl prose-p:text-justify prose">  <p>We’re happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it’s also
+deployed on <a href="https://paraio.com">ParaIO.com</a>, our hosted backend service.</p>
+<!-- more -->
+<p>We’ve worked hard during the holidays to bring you several new features that will enable you to integrate Para in
+projects that are client-side only like static web pages or mobile applications.</p>
+<p>Here are all the new features in Para v1.17:</p>
+<!--
+Added JSON Web Tokens support
+Added methods to grant and revoke permissions for users
+Fixed Maven's JAR and WAR assembly - there's a single 'fat' executable WAR now
+Updated Elasticsearch to v2.1.1
+Updated design & added features to web console
+-->
+<h2 id="json-web-tokens-support">JSON Web Tokens support</h2>
+<p><img alt="Blog media" loading="lazy" decoding="async" fetchpriority="auto" width="1280" height="720" src="/_astro/blogpost_media2.tXke38YX_1miEuv.webp" ></p>
+<p><a href="https://jwt.io/">JSON Web Tokens</a> are a new standard for authenticating clients and users. Think of them as
+‘Cookies 2.0’. They are simply a signed JSON object containing some data about the authenticated user. The cool thing
+about JWTs is that they are stateless and can be stored anywhere - cookies, local storage, memory, etc. They can securely
+store information and claims about the user and that information is signed and cannot be tampered with.</p>
+<p>Originally, Para supported only cookies and allowed users to sign in only to the server running Para.
+This was quite limiting. Now with JWTs users can be authenticated and created per app
+(see <a href="https://paraio.org/docs/#011-apps">the docs for apps</a>) through the API.
+Cookies are still supported but using web tokens is recommended. For example, to sign in a user with
+Facebook you have to make a request like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#79B8FF">POST</span><span style="color:#F97583"> /</span><span style="color:#E1E4E8">jwt_auth</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">  "appid"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"app:myapp"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">  "provider"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"facebook"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">  "token"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"eyJhbGciOiJIUzI1NiJ9.eWIiO..."</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>The token above is a Facebook access token which is exchanged for a Para access token in the form of JWT.
+If that request succeeds, the access token for Para is returned and that user is now authenticated with <code>app:myapp</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">  "jwt"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "access_token"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"eyJhbGciOiJIUzI1NiJ9.eyJ..."</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "expires"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1450137214490</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "refresh"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1450137216490</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#9ECBFF">  "user"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "id"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"user1"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "timestamp"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1399721289987</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "type"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"user"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">    "appid"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"myapp"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">    ...</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>That’s it - there’s no need to register the user. And this request can come from any client not just the backend.
+An good use case would be an AngularJS app running on its own as a static single page app (SPA). The frontend code would
+use our JavaScript client library to call <code>signIn()</code> to the Para backend server. Another use case could be a mobile app
+running native Android code. The app’s code, even though compiled, is not trusted and thus must not contain any
+API access credentials like a <code>secret_key</code> for Para. In this case JWT is ideal because it gives that app (untrusted client)
+temporary access to the API. Para access tokens are valid for one week, by default.</p>
+<p>Special thanks to the guys at <a href="https://connect2id.com/products/nimbus-jose-jwt">Connect2ID</a> for their excellent JWT
+library for Java which we use in Para.</p>
+<h2 id="resource-permissions">Resource permissions</h2>
+<p>Soon after we decided to add JWT support, we realized that once a user has been authenticated with an app we need to
+specify what that user can do, so we implemented basic resource permissions. By default users are not trusted and every
+new app has zero permissions - the default policy is <code>deny all</code>. This is in contrast to the normal API access using a
+<code>secret_key</code> for apps, in which case apps have full permissions and privileged access.</p>
+<p>Resource permissions affect only users with JWT tokens and are stored in each app object. A permission has three parts -
+a <code>subject_id</code>, a <code>resource_name</code> and a list of <code>methods</code>. It looks like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">  "user2"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "posts"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"GET"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"POST"</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>This gives a subject with id <code>user2</code> permissions to access resource <code>posts</code> using HTTP methods <code>GET</code> and <code>POST</code> only.
+The <code>posts</code> resource is just an example an is part of the API and is located at <code>/v1/posts</code>. Wildcards <code>*</code> are also
+supported. So the following permission would give everyone full access to all resources for a given app:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="js"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#9ECBFF">  "*"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">    "*"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"*"</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Permissions can be granted and revoked through the API. There’s also a method for checking permissions:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="txt"><code><span class="line"><span>GET /v1/_permissions/{subjectid}/{resource}/{method}</span></span></code></pre>
+<h2 id="support-for-elasticsearch-2x">Support for Elasticsearch 2.x</h2>
+<p>Elasticseach is a key component of the Para backend server and we use it since version 0.13. With version 2.0 come many
+new features and changes. We’ve modified and tested the code to be compatible with the new version.</p>
+<p>You can <a href="https://github.com/Erudika/para/releases/">download the latest WAR file from GitHub</a>.
+To run it just type <code>java -jar para-war.war</code> and it will start.</p>
+<p>** We hope you will like the new features and feel free to try Para online at <a href="https://paraio.com">paraio.com</a>.
+No need to install anything and it’s free.**</p>  </div> <div class="mt-10 text-center section-shell"> <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">About the author</p> <div class="flex flex-wrap justify-center gap-4 mt-6"> <div class="flex items-center gap-3 bg-base-100 px-4 py-4 border border-base-300 rounded-[10px]"> <div> <img src="https://gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=400&d=robohash&r=x" alt="Avatar" loading="lazy" decoding="async" fetchpriority="auto" width="400" height="400" class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"> </div> <div class="font-semibold text-sm text-base-content">Alexander Bogdanovski <br> <span class="text-xs">Founder &amp; Indie Hacker</span> </div> </div> </div> </div> </div> </article>  </main> <footer class="bg-slate-950 border-base-300 border-t text-slate-200"> <div class="section-shell"> <div class="gap-10 grid md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr] py-12"> <div class="space-y-4"> <div class="flex items-center"> <span class="w-[130px] h-[40px] logo-frame"> <img src="/_astro/erudika-dark.4BCOIL6a_1nUxeR.svg" alt="Erudika" loading="lazy" decoding="async" fetchpriority="auto" width="463" height="107"> </span> </div> <p class="max-w-sm text-slate-300 text-sm">A tiny EU-based software company, building backend and serverless solutions.</p> </div> <div class="space-y-3"> <div class="text-slate-500 text-xs uppercase tracking-widest">Location</div> <a href="https://goo.gl/maps/QGRjd" aria-label="Open Erudika office location in Google Maps"> <img src="/_astro/erudika_map_dark.C1f1c8Db_Zji672.webp" alt="Erudika Office Location" loading="lazy" decoding="async" fetchpriority="auto" width="791" height="506" class="shadow-soft border border-slate-500 rounded-[3px] w-full"> </a> </div> <div class="space-y-4 text-slate-300 text-sm"> <div class="text-slate-500 text-xs uppercase tracking-widest">Address</div> <div>Erudika LTD.</div><div>4 Lelinska chuka Street</div><div>Sofia 1618, Bulgaria</div><div>VAT# BG-200368755</div><div>Phone: +359 886 000 995</div><div><a class="underline" href="mailto:support@erudika.com">support@erudika.com</a></div> </div> <div class="lg:justify-self-end content-start gap-3 grid text-sm lg:text-right"> <div class="text-slate-500 text-xs uppercase tracking-widest">Links</div> <a href="/projects" class="text-slate-300 hover:text-white">Projects</a><a href="/blog" class="text-slate-300 hover:text-white">Blog</a><a href="/support" class="text-slate-300 hover:text-white">Support</a><a href="/contact" class="text-slate-300 hover:text-white">Contact</a><a href="/about" class="text-slate-300 hover:text-white">About</a><a href="/privacy" class="text-slate-300 hover:text-white">Privacy</a><a href="https://status.erudika.com" class="text-slate-300 hover:text-white">🟢 Status Page</a> </div> </div> <div class="flex flex-wrap justify-between items-center gap-4 py-6 border-slate-800 border-t text-slate-400 text-xs"> <div class="flex items-center gap-3"> <span class="text-slate-500 text-xs uppercase tracking-widest">Theme</span> <button id="theme-toggle" class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 btn btn-xs" type="button"> System </button> </div> <div class="flex flex-wrap items-center gap-4"> <a href="https://github.com/Erudika" class="text-slate-400 hover:text-white">GitHub</a><a href="https://hub.docker.com/u/erudikaltd" class="text-slate-400 hover:text-white">Docker Hub</a><a href="https://x.com/erudika" class="text-slate-400 hover:text-white">X.com</a><a href="https://www.linkedin.com/company/erudika" class="text-slate-400 hover:text-white">LinkedIn</a> </div> </div> </div> </footer> </div> <script>(function(){const theme = {"storageKey":"erudika-theme","light":"corporate","dark":"business","labelLight":"Light","labelDark":"Dark","labelSystem":"System"};
+
+      const themeConfig = theme;
+
+      const themeToggle = document.getElementById("theme-toggle");
+
+      const getPreferredTheme = () => {
+        const stored = localStorage.getItem(themeConfig.storageKey);
+        if (stored === themeConfig.light || stored === themeConfig.dark) {
+          return stored;
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? themeConfig.dark
+          : themeConfig.light;
+      };
+
+      const applyTheme = (nextTheme, label) => {
+        document.documentElement.setAttribute("data-theme", nextTheme);
+        if (themeToggle) {
+          themeToggle.textContent = label;
+        }
+      };
+
+      const syncTheme = () => {
+        const nextTheme = getPreferredTheme();
+        const label = localStorage.getItem(themeConfig.storageKey)
+          ? nextTheme === themeConfig.dark
+            ? themeConfig.labelDark
+            : themeConfig.labelLight
+          : themeConfig.labelSystem;
+        applyTheme(nextTheme, label);
+      };
+
+      syncTheme();
+
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        if (!localStorage.getItem(themeConfig.storageKey)) {
+          syncTheme();
+        }
+      });
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme") || themeConfig.light;
+          const nextTheme = current === themeConfig.dark ? themeConfig.light : themeConfig.dark;
+          localStorage.setItem(themeConfig.storageKey, nextTheme);
+          applyTheme(nextTheme, nextTheme === themeConfig.dark ? themeConfig.labelDark : themeConfig.labelLight);
+        });
+      }
+    })();</script> </body> </html>

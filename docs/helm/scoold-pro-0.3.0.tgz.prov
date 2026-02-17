@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: 1.66.0
+description: Scoold Pro - Knowledge sharing for your team
+home: https://scoold.com
+icon: https://scoold.com/logosq.png
+keywords:
+- - qa
+- - q-and-a
+- - knowledge-base
+- - scoold
+- - stackoverflow
+- - forum
+- - questions
+- - answers
+name: scoold-pro
+sources:
+- - https://github.com/Erudika/scoold-pro
+type: application
+version: 0.3.0
+
+...
+files:
+  scoold-pro-0.3.0.tgz: sha256:51247860fd986232f3f27b46c3ed851e7d92c458737963e1319dff2c454c12f3
+-----BEGIN PGP SIGNATURE-----
+
+wsBcBAEBCgAQBQJpeHD1CRCZoj6FpV27EwAArroIAGo8u8TX3M0Br+WDNapbu+B4
+rYz6xU0VITOkK+sN1TNkeW6se9jGsElfRPHT2GbEeWya1SCAb/LcEKUdYm/+44gO
+WHDSFn77MM3LQMynYosY7u6HCqmpGnXTrD/vWTu67qOYFepU/c9GArsGxgWgZb8C
+mGj9spRQJAcf1nZP4zL8XlBlVxAuLMvwmecUEhWxZmngb1g2X6fRgX2+ChiRffFE
+gCXg9KQ1gowFMHzprrJMjbsNKxcYjz31A6+6lekH2KschWaAQFGC2Oct7amQTsw8
+8fIO7uc7kjpg3thLpz3vSCbcq2UxlO02pmJtmoxFfjM8czcKgsiQLyL0jmctTwM=
+=oKOF
+-----END PGP SIGNATURE-----

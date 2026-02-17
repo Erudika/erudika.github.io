@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="en" data-theme="erudika"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Status update - Python client, Scoold API, integrations and more | Erudika</title><meta name="description" content="A tiny EU-based software company, building backend and serverless solutions."><link rel="canonical" href="https://erudika.com/blog/status-update-python-client-scoold-api-integrations-and-more"><meta property="og:type" content="website"><meta property="og:title" content="Status update - Python client, Scoold API, integrations and more | Erudika"><meta property="og:description" content="A tiny EU-based software company, building backend and serverless solutions."><meta property="og:url" content="https://erudika.com/blog/status-update-python-client-scoold-api-integrations-and-more"><meta property="og:image" content="/src/images/img16.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Status update - Python client, Scoold API, integrations and more | Erudika"><meta name="twitter:description" content="A tiny EU-based software company, building backend and serverless solutions."><meta name="twitter:image" content="/src/images/img16.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Status update - Python client, Scoold API, integrations and more","datePublished":"2020-03-22T00:00:00.000Z","dateModified":"2020-03-22T00:00:00.000Z","author":{"@type":"Organization","name":"Erudika"},"publisher":{"@type":"Organization","name":"Erudika","logo":{"@type":"ImageObject","url":"https://erudika.com/src/images/erudika-light.svg"}},"mainEntityOfPage":"https://erudika.com/blog/status-update-python-client-scoold-api-integrations-and-more","image":["img16"],"url":"https://erudika.com/blog/status-update-python-client-scoold-api-integrations-and-more"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://erudika.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://erudika.com/blog"},{"@type":"ListItem","position":3,"name":"Status update - Python client, Scoold API, integrations and more","item":"https://erudika.com/blog/status-update-python-client-scoold-api-integrations-and-more"}]}</script><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/_astro/about.BonHaEuI.css"></head> <body class="bg-base-100 min-h-screen text-base-content"> <div class="flex flex-col min-h-screen"> <header class="top-0 z-30 sticky bg-base-100/90 backdrop-blur border-base-300 border-b"> <div class="flex justify-between items-center gap-6 h-20 section-shell"> <a href="/" class="flex items-center text-base-content"> <span class="py-2 w-[140px] h-[50px] logo-frame"> <img src="/_astro/erudika-light.BVBbeAf1_1nUxeR.svg" alt="Erudika" loading="eager" decoding="async" fetchpriority="auto" width="463" height="107" class="logo-light"> <img src="/_astro/erudika-dark.4BCOIL6a_1nUxeR.svg" alt="Erudika" loading="eager" decoding="async" fetchpriority="auto" width="463" height="107" class="logo-dark"> </span> </a> <nav class="hidden md:flex items-center gap-6"> <a href="/projects" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Projects </a><a href="/blog" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Blog </a><a href="/support" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Support </a><a href="/contact" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Contact </a><a href="/about" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> About </a> </nav> <div class="flex items-center gap-3"> <button class="btn btn-ghost btn-sm" onclick="site_search_modal.showModal()" aria-label="Open search" title="Search '/' or Ctrl+K"> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="7"></circle> <path d="M20 20l-3.5-3.5"></path> </svg> </button> <a href="mailto:contact@erudika.com" class="hidden md:flex text-white btn btn-primary btn-sm">Contact Support</a> <div class="md:hidden dropdown dropdown-end"> <label tabindex="0" class="btn btn-ghost btn-sm"> Menu </label> <ul tabindex="0" class="bg-base-100 shadow mt-3 p-2 rounded-box w-auto menu dropdown-content"> <li class="flex content-end"><a href="/projects">Projects</a></li><li class="flex content-end"><a href="/blog">Blog</a></li><li class="flex content-end"><a href="/support">Support</a></li><li class="flex content-end"><a href="/contact">Contact</a></li><li class="flex content-end"><a href="/about">About</a></li> </ul> </div> </div> </div> </header> <dialog id="site_search_modal" class="modal"> <div class="top-24 absolute xs:w-full sm:w-10/12 md:w-6/12 max-w-3xl modal-box"> <!-- <div class="float-right flex justify-between items-center">
+      <h3 class="font-semibold text-base-content text-lg">Search</h3>
+      <label for="site_search_modal" class="btn btn-ghost btn-sm" aria-label="Close search">
+        ✕
+      </label>
+    </div> --> <div class="mt-1"> <div class="flex items-center gap-2 w-full input input-bordered"> <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="7"></circle> <path d="M20 20l-3.5-3.5"></path> </svg> <input id="site-search-input" type="search" list="options" class="grow" placeholder="Search…" role="combobox" aria-controls="searchbox" aria-expanded="true" aria-autocomplete="list"> </div> </div> <ul id="site-search-results" class="space-y-2 mt-3 text-sm"></ul> <div class="flex pt-4 text-xs"> <span class="grow"> <kbd class="kbd kbd-sm">▲</kbd> <kbd class="kbd kbd-sm">▼</kbd> <kbd class="kbd kbd-sm">Enter</kbd> to select,
+<kbd class="kbd kbd-sm">Esc</kbd> to close
+</span> <strong class="justify-end text-right"> <a href="https://paraio.com" target="_blank" class="text-base-content">
+Search powered by <img src="/_astro/para.DRFwQDWW_ZiFrDU.webp" alt="Para" loading="eager" decoding="async" fetchpriority="auto" width="242" height="78" class="inline-block max-w-16"></a> </strong> </div> </div> <form method="dialog" class="modal-backdrop"> <button>close</button> </form> </dialog> <script type="module">const i=document.getElementById("site_search_modal"),l=document.getElementById("site-search-input"),n=document.getElementById("site-search-results"),u="<li>No Results</li>";let a,c,s=-1;const m=()=>{i&&i.showModal()},h=e=>{n&&(n.innerHTML=e.length===0?u:"",s=-1,e.forEach(t=>{const r=document.createElement("li"),o=document.createElement("a");o.href=t.url,o.textContent=t.name,o.className="block rounded-[3px] px-3 py-3",r.className="border border-base-300 hover:border-sky-700 rounded-[3px]",r.appendChild(o),n.appendChild(r)}))},d=e=>{if(!n)return;Array.from(n.querySelectorAll("li")).forEach((r,o)=>{o===e?r.classList.add("border-sky-700","bg-base-200"):r.classList.remove("border-sky-700","bg-base-200")})},f=async e=>{if(!n)return;const t=e.trim();if(!t){n.innerHTML="";return}a&&a.abort(),a=new AbortController;try{const r=await fetch(`https://paraio.com/v1/blogposts?limit=6&q=${encodeURIComponent(t||"*")}`,{signal:a.signal,headers:{Authorization:"Anonymous app:albogdano"}});if(!r.ok)return;const o=await r.json();h(Array.isArray(o.items)?o.items:[])}catch(r){r.name!=="AbortError"&&(n.innerHTML="")}};l&&(l.addEventListener("input",e=>{const t=e.target.value;clearTimeout(c),c=setTimeout(()=>{f(t)},250)}),l.addEventListener("keydown",e=>{if(!n)return;const t=Array.from(n.querySelectorAll("a"));t.length!==0&&(e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,d(s)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,d(s)):e.key==="Enter"&&s>=0&&(e.preventDefault(),t[s].click()))}));window.addEventListener("keydown",e=>{const t=e.key;if(t==="/"||t.toLowerCase()==="k"&&e.ctrlKey){e.preventDefault(),m();return}});</script> <main class="flex-1">  <div class="bg-cover bg-center" style="background-image: url('/src/images/img16.jpg')"> <div class="py-24 section-shell"> <div class="inline-flex flex-col gap-3 p-6 rounded-[3px] max-w-3xl">&nbsp;
+</div> </div> </div> <article class="py-12"> <div class="max-w-3xl section-shell"> <span class="float-right text-xs text-base-400"> March 22, 2020 </span> <nav aria-label="Breadcrumb" class="text-xs uppercase tracking-widest text-slate-500"> <ol class="flex flex-wrap items-center gap-2"> <li class="flex items-center gap-2">  <a href="/" class="hover:text-sky-700"> Home </a> </li><li class="flex items-center gap-2"> <span class="text-slate-300">/</span> <a href="/blog" class="hover:text-sky-700"> Blog </a> </li> </ol> </nav> <h1 class="mt-6 font-semibold text-base-content text-4xl">Status update - Python client, Scoold API, integrations and more</h1> <div class="flex flex-wrap gap-3 mt-4 pb-10 text-slate-500 text-sm"> <div class="flex flex-wrap gap-2"> <a href="/blog/tags/scoold" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> scoold </a><a href="/blog/tags/para" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> para </a><a href="/blog/tags/api" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> API </a><a href="/blog/tags/slack" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> slack </a><a href="/blog/tags/mattermost" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> mattermost </a><a href="/blog/tags/python" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> python </a> </div> </div> <div class="dark:prose-invert prose-img:rounded-xl max-w-none prose-h1:font-bold prose-a:text-primary prose-h1:text-xl prose-p:text-justify prose">  <p>Over the past year or so we’ve added a number of new features and integrations to Scoold and Para. In particular,
+Scoold has received hundreds of bug fixes and dozens of pull requests on GitHub. The community has been quite
+active with feature requests and suggestions.
+We’re also happy to report that profits from Scoold Pro are increasing and we’re proud to have several large clients,
+like Cisco, IBM and DBS Bank, who have successfully deployed it in production.</p>
+<!-- more -->
+<p><img alt="Blog media" loading="lazy" decoding="async" fetchpriority="auto" width="1280" height="720" src="/_astro/blogpost_media15.DKGY4u30_2jtSO7.webp" ></p>
+<h2 id="python-client-for-para">Python Client for Para</h2>
+<p>The big news around Para is the availability of the new Para client written in Python. This has been a feature request
+for a while now and we finally shipped it in February of 2020. The Python ecosystem is evergrowing and we’re happy
+to support one of the most popular programming environments out there.</p>
+<p>You can quickly install the Python client from PyPi by executing the following command:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">$</span><span style="color:#9ECBFF"> pip3</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> paraclient</span></span></code></pre>
+<p>Then you import the library like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> paraclient </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> ParaClient</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">paraclient </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> ParaClient(</span><span style="color:#9ECBFF">'ACCESS_KEY'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'SECRET_KEY'</span><span style="color:#E1E4E8">)</span><span style="color:#FDAEB7;font-style:italic">;</span></span></code></pre>
+<p>Pull requests and bug reports are more than welcome on the <a href="https://github.com/Erudika/para-client-python">project’s page on GitHub</a>.</p>
+<h2 id="scoold-pro-integrated-with-slack-and-mattermost">Scoold Pro integrated with Slack and Mattermost</h2>
+<p>First we added integration between Scoold Pro and Slack in version <code>1.33.0</code> last summer. It allows you to connect
+Scoold Pro to a number of Slack teams and channels. You can directly map Slack channels to Scoold spaces.
+Once you authorize the selected channels, Scoold Pro will start sending in-chat notifications for key events
+like the creation of a new question or answer, or whenever somebody on your team was mentioned in a Scoold post.</p>
+<p>Not only that, but you can ask and answer questions directly from Slack, using the <code>/scoold</code> slash command.
+Asking a question on Slack is as easy as writing <code>/scoold ask How do I do X?</code>. To answer, simply type in
+<code>/scoold answer [question URL] Here's my answer...</code>. You can also turn any chat message into a Scoold question
+or answer by using the special message actions. If you wish to compose a longer post you can open up a special
+dialog box, where you can write longer text.</p>
+<p>Approving questions and answers without leaving the channel is another handy feature for moderators who wish to
+keep an eye on new posts on Scoold. If new posts require explicit approval from moderators, Scoold Pro will notify
+the chat by presenting the option to “Approve” or “Delete” the newly created post.</p>
+<p>Then, around Xmas 2019 we released the Mattermost integration. Mattermost is the open source Slack alternative which
+can be self-hosted and is used by a huge number of companies. Scoold Pro integrates with Mattermost in exactly the
+the same way as with Slack and the two integrations have identical features. The only difference is that the
+integration with Mattermost is part of Scoold Pro rather than Para. This means that Scoold can be installed behind
+a firewall and still connect to a local instance of Mattermost even if the Para backend is hosted elsewhere on
+a public cloud.</p>
+<p>There are lots of other nice features so be sure to check out the <a href="https://scoold.com/slack.html">Scoold Pro + Slack</a>
+and <a href="https://scoold.com/mattermost.html">Scoold Pro + Mattermost</a> web pages for more information.</p>
+<h2 id="scoold-api">Scoold API</h2>
+<p>The long-awaited RESTful API is finally available in Scoold <code>1.38.0</code> (for both OSS and Pro). I has been in development
+for a few months now and was long overdue. You can check out the <a href="https://demo.scoold.com/apidocs">Swagger documentation</a>
+for the full list of API resources. There are no API clients at the moment but you can easily generate one from
+the <a href="https://demo.scoold.com/api.json">API schema</a>, using <a href="https://swagger.io/tools/swagger-codegen/">Swagger Codegen</a>.</p>
+<p>This is a fully-fledged API, meaning you can execute all read and write operations in Scoold programmatically. It is
+much easier to call the Scoold API and create a new question, for example, than to call the Para API and construct
+the question object manually. This is because there are extra steps and logic behind each and every Scoold task, like
+creating a new post or user.</p>
+<p>When combined with webhooks, the Scoold API allows you to create complex and powerful integrations for the needs of
+your organization. See the <a href="https://github.com/Erudika/scoold#rest-api">README</a> to learn more.</p>
+<h2 id="backup-and-restore">Backup and restore</h2>
+<p>Another important new feature has landed in Scoold <code>1.37.0</code> and that is the ability to create full copies of the Scoold
+database which can later be restored. Scoold administrators can download zipped copies of the data from the
+“Administration” page. Each ZIP archive contains a number of JSON files which contain the data extracted from Para for
+the corrsponding Scoold application.</p>
+<p>To restore a previously created backup, simply select a ZIP archive and click the “Import” button. You can also
+import a single JSON file containing one or more Para objects. This is useful in situations where you only want
+to do a partial restore of some of the objects.</p>
+<h2 id="themes">Themes</h2>
+<p>And finally, we’ve improved the customizabitly of Scoold with support for custom theming and 5 ready-to-use themes.
+There’s also a new dark mode. Take a look:</p>
+<p><img alt="Blog media" loading="lazy" decoding="async" fetchpriority="auto" width="1332" height="548" src="/_astro/dark_mode.Zp3pDPES_1hrPam.webp" ></p>
+<p>Scoold administrators can create custom themes by modifying the CSS of an existing theme or by creating a custom
+stylesheet from scratch.</p>
+<p><em>You can download Scoold from <a href="https://scoold.com">Scoold.com</a> and sign up for a free account on <a href="https://paraio.com">Para</a> -
+our fully managed backend service, supporting multiple Scoold instances. Questions? Chat with us <a href="https://gitter.im/Erudika/para">on Gitter</a>!</em></p>  </div> <div class="mt-10 text-center section-shell"> <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">About the author</p> <div class="flex flex-wrap justify-center gap-4 mt-6"> <div class="flex items-center gap-3 bg-base-100 px-4 py-4 border border-base-300 rounded-[10px]"> <div> <img src="https://gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=400&d=robohash&r=x" alt="Avatar" loading="lazy" decoding="async" fetchpriority="auto" width="400" height="400" class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"> </div> <div class="font-semibold text-sm text-base-content">Alexander Bogdanovski <br> <span class="text-xs">Founder &amp; Indie Hacker</span> </div> </div> </div> </div> </div> </article>  </main> <footer class="bg-slate-950 border-base-300 border-t text-slate-200"> <div class="section-shell"> <div class="gap-10 grid md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr] py-12"> <div class="space-y-4"> <div class="flex items-center"> <span class="w-[130px] h-[40px] logo-frame"> <img src="/_astro/erudika-dark.4BCOIL6a_1nUxeR.svg" alt="Erudika" loading="lazy" decoding="async" fetchpriority="auto" width="463" height="107"> </span> </div> <p class="max-w-sm text-slate-300 text-sm">A tiny EU-based software company, building backend and serverless solutions.</p> </div> <div class="space-y-3"> <div class="text-slate-500 text-xs uppercase tracking-widest">Location</div> <a href="https://goo.gl/maps/QGRjd" aria-label="Open Erudika office location in Google Maps"> <img src="/_astro/erudika_map_dark.C1f1c8Db_Zji672.webp" alt="Erudika Office Location" loading="lazy" decoding="async" fetchpriority="auto" width="791" height="506" class="shadow-soft border border-slate-500 rounded-[3px] w-full"> </a> </div> <div class="space-y-4 text-slate-300 text-sm"> <div class="text-slate-500 text-xs uppercase tracking-widest">Address</div> <div>Erudika LTD.</div><div>4 Lelinska chuka Street</div><div>Sofia 1618, Bulgaria</div><div>VAT# BG-200368755</div><div>Phone: +359 886 000 995</div><div><a class="underline" href="mailto:support@erudika.com">support@erudika.com</a></div> </div> <div class="lg:justify-self-end content-start gap-3 grid text-sm lg:text-right"> <div class="text-slate-500 text-xs uppercase tracking-widest">Links</div> <a href="/projects" class="text-slate-300 hover:text-white">Projects</a><a href="/blog" class="text-slate-300 hover:text-white">Blog</a><a href="/support" class="text-slate-300 hover:text-white">Support</a><a href="/contact" class="text-slate-300 hover:text-white">Contact</a><a href="/about" class="text-slate-300 hover:text-white">About</a><a href="/privacy" class="text-slate-300 hover:text-white">Privacy</a><a href="https://status.erudika.com" class="text-slate-300 hover:text-white">🟢 Status Page</a> </div> </div> <div class="flex flex-wrap justify-between items-center gap-4 py-6 border-slate-800 border-t text-slate-400 text-xs"> <div class="flex items-center gap-3"> <span class="text-slate-500 text-xs uppercase tracking-widest">Theme</span> <button id="theme-toggle" class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 btn btn-xs" type="button"> System </button> </div> <div class="flex flex-wrap items-center gap-4"> <a href="https://github.com/Erudika" class="text-slate-400 hover:text-white">GitHub</a><a href="https://hub.docker.com/u/erudikaltd" class="text-slate-400 hover:text-white">Docker Hub</a><a href="https://x.com/erudika" class="text-slate-400 hover:text-white">X.com</a><a href="https://www.linkedin.com/company/erudika" class="text-slate-400 hover:text-white">LinkedIn</a> </div> </div> </div> </footer> </div> <script>(function(){const theme = {"storageKey":"erudika-theme","light":"corporate","dark":"business","labelLight":"Light","labelDark":"Dark","labelSystem":"System"};
+
+      const themeConfig = theme;
+
+      const themeToggle = document.getElementById("theme-toggle");
+
+      const getPreferredTheme = () => {
+        const stored = localStorage.getItem(themeConfig.storageKey);
+        if (stored === themeConfig.light || stored === themeConfig.dark) {
+          return stored;
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? themeConfig.dark
+          : themeConfig.light;
+      };
+
+      const applyTheme = (nextTheme, label) => {
+        document.documentElement.setAttribute("data-theme", nextTheme);
+        if (themeToggle) {
+          themeToggle.textContent = label;
+        }
+      };
+
+      const syncTheme = () => {
+        const nextTheme = getPreferredTheme();
+        const label = localStorage.getItem(themeConfig.storageKey)
+          ? nextTheme === themeConfig.dark
+            ? themeConfig.labelDark
+            : themeConfig.labelLight
+          : themeConfig.labelSystem;
+        applyTheme(nextTheme, label);
+      };
+
+      syncTheme();
+
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        if (!localStorage.getItem(themeConfig.storageKey)) {
+          syncTheme();
+        }
+      });
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme") || themeConfig.light;
+          const nextTheme = current === themeConfig.dark ? themeConfig.light : themeConfig.dark;
+          localStorage.setItem(themeConfig.storageKey, nextTheme);
+          applyTheme(nextTheme, nextTheme === themeConfig.dark ? themeConfig.labelDark : themeConfig.labelLight);
+        });
+      }
+    })();</script> </body> </html>

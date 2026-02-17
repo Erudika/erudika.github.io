@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en" data-theme="erudika"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat | Erudika</title><meta name="description" content="A tiny EU-based software company, building backend and serverless solutions."><link rel="canonical" href="https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat"><meta property="og:type" content="website"><meta property="og:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat | Erudika"><meta property="og:description" content="A tiny EU-based software company, building backend and serverless solutions."><meta property="og:url" content="https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat"><meta property="og:image" content="/src/images/img2.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat | Erudika"><meta name="twitter:description" content="A tiny EU-based software company, building backend and serverless solutions."><meta name="twitter:image" content="/src/images/img2.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat","datePublished":"2015-10-21T00:00:00.000Z","dateModified":"2015-10-21T00:00:00.000Z","author":{"@type":"Organization","name":"Erudika"},"publisher":{"@type":"Organization","name":"Erudika","logo":{"@type":"ImageObject","url":"https://erudika.com/src/images/erudika-light.svg"}},"mainEntityOfPage":"https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat","image":["img2"],"url":"https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://erudika.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://erudika.com/blog"},{"@type":"ListItem","position":3,"name":"Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat","item":"https://erudika.com/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat"}]}</script><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/_astro/about.BonHaEuI.css"></head> <body class="bg-base-100 min-h-screen text-base-content"> <div class="flex flex-col min-h-screen"> <header class="top-0 z-30 sticky bg-base-100/90 backdrop-blur border-base-300 border-b"> <div class="flex justify-between items-center gap-6 h-20 section-shell"> <a href="/" class="flex items-center text-base-content"> <span class="py-2 w-[140px] h-[50px] logo-frame"> <img src="/_astro/erudika-light.BVBbeAf1_1nUxeR.svg" alt="Erudika" loading="eager" decoding="async" fetchpriority="auto" width="463" height="107" class="logo-light"> <img src="/_astro/erudika-dark.4BCOIL6a_1nUxeR.svg" alt="Erudika" loading="eager" decoding="async" fetchpriority="auto" width="463" height="107" class="logo-dark"> </span> </a> <nav class="hidden md:flex items-center gap-6"> <a href="/projects" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Projects </a><a href="/blog" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Blog </a><a href="/support" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Support </a><a href="/contact" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> Contact </a><a href="/about" class="font-medium hover:text-sky-700 text-base text-base-content/70 transition"> About </a> </nav> <div class="flex items-center gap-3"> <button class="btn btn-ghost btn-sm" onclick="site_search_modal.showModal()" aria-label="Open search" title="Search '/' or Ctrl+K"> <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="7"></circle> <path d="M20 20l-3.5-3.5"></path> </svg> </button> <a href="mailto:contact@erudika.com" class="hidden md:flex text-white btn btn-primary btn-sm">Contact Support</a> <div class="md:hidden dropdown dropdown-end"> <label tabindex="0" class="btn btn-ghost btn-sm"> Menu </label> <ul tabindex="0" class="bg-base-100 shadow mt-3 p-2 rounded-box w-auto menu dropdown-content"> <li class="flex content-end"><a href="/projects">Projects</a></li><li class="flex content-end"><a href="/blog">Blog</a></li><li class="flex content-end"><a href="/support">Support</a></li><li class="flex content-end"><a href="/contact">Contact</a></li><li class="flex content-end"><a href="/about">About</a></li> </ul> </div> </div> </div> </header> <dialog id="site_search_modal" class="modal"> <div class="top-24 absolute xs:w-full sm:w-10/12 md:w-6/12 max-w-3xl modal-box"> <!-- <div class="float-right flex justify-between items-center">
+      <h3 class="font-semibold text-base-content text-lg">Search</h3>
+      <label for="site_search_modal" class="btn btn-ghost btn-sm" aria-label="Close search">
+        ✕
+      </label>
+    </div> --> <div class="mt-1"> <div class="flex items-center gap-2 w-full input input-bordered"> <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="11" cy="11" r="7"></circle> <path d="M20 20l-3.5-3.5"></path> </svg> <input id="site-search-input" type="search" list="options" class="grow" placeholder="Search…" role="combobox" aria-controls="searchbox" aria-expanded="true" aria-autocomplete="list"> </div> </div> <ul id="site-search-results" class="space-y-2 mt-3 text-sm"></ul> <div class="flex pt-4 text-xs"> <span class="grow"> <kbd class="kbd kbd-sm">▲</kbd> <kbd class="kbd kbd-sm">▼</kbd> <kbd class="kbd kbd-sm">Enter</kbd> to select,
+<kbd class="kbd kbd-sm">Esc</kbd> to close
+</span> <strong class="justify-end text-right"> <a href="https://paraio.com" target="_blank" class="text-base-content">
+Search powered by <img src="/_astro/para.DRFwQDWW_ZiFrDU.webp" alt="Para" loading="eager" decoding="async" fetchpriority="auto" width="242" height="78" class="inline-block max-w-16"></a> </strong> </div> </div> <form method="dialog" class="modal-backdrop"> <button>close</button> </form> </dialog> <script type="module">const i=document.getElementById("site_search_modal"),l=document.getElementById("site-search-input"),n=document.getElementById("site-search-results"),u="<li>No Results</li>";let a,c,s=-1;const m=()=>{i&&i.showModal()},h=e=>{n&&(n.innerHTML=e.length===0?u:"",s=-1,e.forEach(t=>{const r=document.createElement("li"),o=document.createElement("a");o.href=t.url,o.textContent=t.name,o.className="block rounded-[3px] px-3 py-3",r.className="border border-base-300 hover:border-sky-700 rounded-[3px]",r.appendChild(o),n.appendChild(r)}))},d=e=>{if(!n)return;Array.from(n.querySelectorAll("li")).forEach((r,o)=>{o===e?r.classList.add("border-sky-700","bg-base-200"):r.classList.remove("border-sky-700","bg-base-200")})},f=async e=>{if(!n)return;const t=e.trim();if(!t){n.innerHTML="";return}a&&a.abort(),a=new AbortController;try{const r=await fetch(`https://paraio.com/v1/blogposts?limit=6&q=${encodeURIComponent(t||"*")}`,{signal:a.signal,headers:{Authorization:"Anonymous app:albogdano"}});if(!r.ok)return;const o=await r.json();h(Array.isArray(o.items)?o.items:[])}catch(r){r.name!=="AbortError"&&(n.innerHTML="")}};l&&(l.addEventListener("input",e=>{const t=e.target.value;clearTimeout(c),c=setTimeout(()=>{f(t)},250)}),l.addEventListener("keydown",e=>{if(!n)return;const t=Array.from(n.querySelectorAll("a"));t.length!==0&&(e.key==="ArrowDown"?(e.preventDefault(),s=(s+1)%t.length,d(s)):e.key==="ArrowUp"?(e.preventDefault(),s=(s-1+t.length)%t.length,d(s)):e.key==="Enter"&&s>=0&&(e.preventDefault(),t[s].click()))}));window.addEventListener("keydown",e=>{const t=e.key;if(t==="/"||t.toLowerCase()==="k"&&e.ctrlKey){e.preventDefault(),m();return}});</script> <main class="flex-1">  <div class="bg-cover bg-center" style="background-image: url('/src/images/img2.jpg')"> <div class="py-24 section-shell"> <div class="inline-flex flex-col gap-3 p-6 rounded-[3px] max-w-3xl">&nbsp;
+</div> </div> </div> <article class="py-12"> <div class="max-w-3xl section-shell"> <span class="float-right text-xs text-base-400"> October 21, 2015 </span> <nav aria-label="Breadcrumb" class="text-xs uppercase tracking-widest text-slate-500"> <ol class="flex flex-wrap items-center gap-2"> <li class="flex items-center gap-2">  <a href="/" class="hover:text-sky-700"> Home </a> </li><li class="flex items-center gap-2"> <span class="text-slate-300">/</span> <a href="/blog" class="hover:text-sky-700"> Blog </a> </li> </ol> </nav> <h1 class="mt-6 font-semibold text-base-content text-4xl">Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat</h1> <div class="flex flex-wrap gap-3 mt-4 pb-10 text-slate-500 text-sm"> <div class="flex flex-wrap gap-2"> <a href="/blog/tags/backend" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> backend </a><a href="/blog/tags/baas" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> baas </a><a href="/blog/tags/frameworks" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> frameworks </a><a href="/blog/tags/para" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> para </a><a href="/blog/tags/api" class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70"> API </a> </div> </div> <div class="dark:prose-invert prose-img:rounded-xl max-w-none prose-h1:font-bold prose-a:text-primary prose-h1:text-xl prose-p:text-justify prose">  <p>Let’s compare some modern open source backend frameworks that are available today.
+These frameworks handle the server-side operations of your website or app. Developers use them to build and
+iterate on products faster than ever before by focusing on the “fun” part - the frontend (client-side).
+This blog post will be a comparison between open source frameworks only and does not aim to cover all backend
+services on the market.</p>
+<!-- more -->
+<p>The communication between your front-end code and the backend is usually done through HTTP(S) and the data is usually
+in the form of JSON objects that are sent back and forth. The details about the whole process should be well documented
+and part of the REST API documentation.</p>
+<p>So why use a backend framework instead of writing my own? The main good reason is that these frameworks are packaged
+as reusable components and are tried and tested by many developers. So instead of maintaining another piece of code -
+the one you wrote yourself - you can use a package that’s already out there and maintained for you.</p>
+<p>Some BaaS frameworks are designed with focus on mobile app development (mBaaS) and some are more generic for building
+anything from websites to desktop software or games. The ones that target mobile apps usually have features like
+realtime push, notifications support and client libraries for Android and iOS. We’ll cover both types of frameworks here.</p>
+<h2 id="usergrid--"><a href="https://usergrid.apache.org">UserGrid</a> - <a href="https://github.com/apache/usergrid"><i class="fa fa-github-square"></i></a></h2>
+<img src="/src/images/usergrid.png">
+<p><strong>Multitenant:</strong> yes <br>
+<strong>Language:</strong> Java <br>
+<strong>Database:</strong> Cassandra <br>
+<strong>Documentation:</strong> 7/10 <br>
+<strong>Client libraries:</strong> Android, iOS, JavaScript, Ruby, Java, .NET, PHP <br>
+<strong>Status:</strong> Active</p>
+<p>Usergrid is an Apache backend-as-a-service project built with Java. It’s been around since 2011 and is actively
+developed and maintained. The new version 2.0 is yet to be released and will require both Cassandra and Elasticsearch
+in addition to a queue system like AWS SQS.</p>
+<p>The project is very well documented but getting started involves quite a few steps. First you need to install Cassandra
+and a servlet container like Tomcat. Then you deploy the WAR file to Tomcat and call a special URL to create a superuser
+account which gives you access to the web-based console.</p>
+<p>The API allows you to create and run multiple apps, which is a good thing because you might want to have a couple of
+apps sharing the same backend and this also makes deployment easier. You also get all the basic CRUD functionality for
+working with collections and entities (JSON objects). There are several built-in entity types like <code>user</code>, <code>group</code> and
+<code>application</code>, for example. They all have <code>type</code> and <code>uuid</code> properties and the latter is an actual UUID string. Basic
+entity relationships are also supported. Usergrid has good support for user and file management and has a simple
+data model.</p>
+<p>Authentication is implemented through OAuth 2.0 and it makes a distinction between user and app roles. Social login
+is supported but it appears that only Facebook login works out-of-the-box. Other extra features include geolocation
+queries and push notifications (in v2.0).</p>
+<p>Usergrid is an excellent choice if you are building a mobile application or an enterprise-grade backend service in
+your organization. It is used in production by quite a few companies.</p>
+<h2 id="loopback--"><a href="https://loopback.io">LoopBack</a> - <a href="https://github.com/strongloop/loopback"><i class="fa fa-github-square"></i></a></h2>
+<img src="/src/images/loopback.png">
+<p><strong>Multitenant:</strong> no <br>
+<strong>Language:</strong> JavaScript <br>
+<strong>Database:</strong> agnostic <br>
+<strong>Documentation:</strong> 9/10 <br>
+<strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br>
+<strong>Status:</strong> Active</p>
+<p>LoopBack is a Node.js API framework by StrongLoop, part of IBM. It’s been around since 2013 and is actively developed
+and has great commercial support. It is focused on REST API development and provides a visual editor for editing and
+deploying apps. Mobile app developers will love the Android and iOS SDKs and the push system.</p>
+<p>The developer docs are extensive and clear but sometimes slow to navigate. Getting started is easy and there’s a
+Yeaoman-based scaffolding tool for generating new project skeletons. Developers have a great choice of database
+connectors for all major SQL databases and MongoDB. For development you can also use an in-memory db.</p>
+<p>The flexibility of JavaScript is great for quickly developing apps with less boilerplate code. LoopBack helps
+with that further by providing a handy model generator for building your classes quickly. These can be validated
+with the built-in validation methods. Entity relationships are very well supported. The security model is complex
+with user roles, principals and ACLs.</p>
+<p>Basic user authentication is part of the core and third-party login support can be implemented using Passport
+modules. There’s also a module for OAuth. Geolocation, push and file services are built-in. For anything else
+there’s <code>npm</code> and tons of modules on GitHub.</p>
+<p>LoopBack is great for REST API service generation and very rapid prototyping. Developers can get up and running in
+minutes by building a custom API using the given CLI tool. LoopBack is a very good fit for all projects written in
+JavaScript.</p>
+<h2 id="para--"><a href="https://paraio.com">Para</a> - <a href="https://github.com/Erudika/para"><i class="fa fa-github-square"></i></a></h2>
+<img src="/src/images/paraio.png" style="border: 1px solid #CCCCCC">
+<p><strong>Multitenant:</strong> yes <br>
+<strong>Language:</strong> Java <br>
+<strong>Database:</strong> agnostic <br>
+<strong>Documentation:</strong> 9/10 <br>
+<strong>Client libraries:</strong> Java, JavaScript, .NET, PHP, Python, Android, iOS <br>
+<strong>Status:</strong> Active</p>
+<p>Para is our own little backend framework. It is powered by Java and was released in early 2014. Out of the box, Para
+integrates with Elasticsearch and DynamoDB and Hazelcast but developers are not limited to using these defaults.
+The design is flexible enough so that anyone can implement the interfaces for search, persistence and caching functionality.
+Apart from DynamoDB, we have connectors for <a href="https://github.com/Erudika/para-dao-mongodb">MongoDB</a> and
+<a href="https://github.com/Erudika/para-dao-cassandra">Cassandra</a>. We’re planning to include support for PostgreSQL as well.</p>
+<p>Para is focused on simplicity and flexibility and it can host multiple apps on a single server. Although you can use
+it to power your mobile backend, we wanted to make the framework simpler by providing the core functionality and thus
+we created a general-purpose BaaS. Some of our clients are using it as an API server for their Angular frontend, while
+others use it as an alternative to Parse for their mobile development.</p>
+<p>The <a href="https://paraio.org/docs">documentation</a> is great, contained in a single webpage for easy navigation and API methods
+are described clearly. Getting started is pretty easy - download the executable WAR package and run it:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">$</span><span style="color:#9ECBFF"> java</span><span style="color:#79B8FF"> -jar</span><span style="color:#9ECBFF"> para-x.y.z.war</span></span>
+<span class="line"><span style="color:#B392F0">$</span><span style="color:#9ECBFF"> curl</span><span style="color:#9ECBFF"> localhost:8080/v1/_setup</span></span></code></pre>
+<p>This will give you the keys needed for making authenticated requests to the server using any of our API clients.
+If you wish to integrate Para with your own code, there’s a package on Maven central - just search for <code>para-server</code>.
+The WAR file can also be deployed to inside a servlet container like Tomcat.</p>
+<p>The core API consists of three main interfaces for searching, storing and caching object. Implement those and you
+have your own custom server. The data model is simple and all classes implement the <code>ParaObject</code> interface. This gives
+them some basic properties like <code>id</code>, <code>type</code> and <code>name</code>. Entities can link to other entities by forming one-to-one,
+one-to-many and many-to-many relationships. Basic constraint checkers, such as <code>required</code>, <code>min</code>, <code>max</code>, <code>regexp</code>,
+can be used to validate object properties. Full-text search is enabled by default for all objects.</p>
+<p>Authentication between clients and the server is not based on OAuth, <a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/">intentionally</a>.
+Instead we implement the simple and robust AWS Signature 4 algorithm for signed requests. User management, fine-grained
+permissions and support for JSON Web Tokens are available since version 1.17. Para also has built-in support for third-party
+authentication with Facebook, Twitter, Google, GitHub, LinkedIn, Microsoft, Slack, as well as any OAuth 2.0 server.
+It also supports LDAP, Active Directory and SAML.</p>
+<p>Para is a good choice if you are building a cloud-based web service and it’s great for rapid prototyping.
+It’s an easy-to-use and flexible platform that scales well. A backend for busy developers.</p>
+<h2 id="baasbox--">BaasBox - <a href="https://github.com/baasbox/baasbox"><i class="fa fa-github-square"></i></a></h2>
+<img src="/src/images/baasbox.png">
+<p><strong>Multitenant:</strong> yes, <a href="http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend">since v0.8.4</a> <br>
+<strong>Language:</strong> Java <br>
+<strong>Database:</strong> OrientDB <br>
+<strong>Documentation:</strong> 8/10 <br>
+<strong>Client libraries:</strong> Android/Java, iOS, JavaScript <br>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (last commit on GitHub was in Dec. 2015.)</p>
+<p>BaasBox is another mBaaS with a nice web-based admin console. It supports everything a mobile developer would
+need to run a backend server. It’s been around since early 2013. It provides good support for Android and iOS
+clients and JavaScript.</p>
+<p>The docs are very nice and detailed, very easy to navigate. Getting started is very easy - unzip the file and run
+the Bash/bat script and you open up the console on <code>localhost:9000/console</code>.  The server is running on top of OrientDB
+which is sort of a hybrid database and has a lot of cool features.</p>
+<p>BaasBox is easy to learn and has a nice REST API that speaks JSON. It’s got full support for CRUD operations on objects
+and collections of objects and also allows you to link them in one-to-many or many-to-many relationships. Social
+features are excellent - you have social login, friendship/followers API and user management. Other features include
+files and assets API, push notifications and a plugin system.</p>
+<h2 id="deployd--"><a href="https://deployd.com">Deployd</a> - <a href="https://github.com/deployd/deployd"><i class="fa fa-github-square"></i></a></h2>
+<img src="/src/images/deployd.png" style="border: 1px solid #CCCCCC">
+<p><strong>Multitenant:</strong> no <br>
+<strong>Language:</strong> JavaScript <br>
+<strong>Database:</strong> MongoDB <br>
+<strong>Documentation:</strong> 6/10 <br>
+<strong>Client libraries:</strong> none <br>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (last release was in April 2019)</p>
+<p>Deployd is an API building platform for Node.js and runs on top of MongoDB. It’s been around since 2012. The cool
+thing about it is its web dashboard and the CLI tool called <code>dpd</code>. The framework, it seems, was designed to be used
+as part of your project only, i.e. not as a standalone external API server, and has no client libraries available
+(tell me if I’m wrong!).</p>
+<p>The project is well documented and has plenty of examples and code. They have dedicated installers for Windows and Mac
+that will help you get started. To create a new project you run <code>$ dpd create my-app</code> and then start the server
+with <code>dpd -d</code>. That’s it.</p>
+<p>Deployd plays well with other JavaScript frameworks like AngularJS and Backbone.js. It has great support for
+collections (plain old JS objects) and events. Events can be emitted and processed easily. User management is
+built-in. Other functionality like social login support is provided by third-party modules.</p>
+<h2 id="telepat--"><a href="https://telepat.io">Telepat</a> - <a href="https://github.com/telepat-io/telepat-api"><i class="fa fa-github-square"></i></a></h2>
+<img src="/src/images/telepat.png">
+<p><strong>Multitenant:</strong> yes <br>
+<strong>Language:</strong> JavaScript <br>
+<strong>Database:</strong> agnostic <br>
+<strong>Documentation:</strong>  6/10 <br>
+<strong>Client libraries:</strong> Android, iOS, JavaScript <br>
+<strong>Status:</strong> <i class="fa fa-warning"></i> Unmaintained (last commit was in 2017)</p>
+<p>Telepat is the youngest framework of the bunch. It’s a realtime data sync solution for mobile and other applications.
+It’s fairly new -  first released in 2015. The framework is focused on realtime push and flexibility. It’s database
+agnostic but seems to be designed to work with NoSQL databases like Couchbase. Search is
+implemented on top of Elasticsearch.</p>
+<p>The documentation is a work in progress but looks great. The early stage of the project means that we should
+expect some changes to the API. Getting started requires you to launch Elasticsearch, Redis and Kafka servers
+first but they provide a nice Docker package that will help you with that.</p>
+<p>The API is simple with CRUD methods for users and applications. User management is supported and authentication is
+implemented with passwords and tokens.</p>
+<p>Telepat is really new but shows a lot of potential. Lots of new features are planned and others are almost finished
+like push notifications. It’s well worth checking out especially if you’re building realtime apps.</p>
+<h2 id="summary">Summary</h2>
+<p>We’ve shown how developers can leverage open source backend frameworks to accelerate time-to-market and enhance
+their products’ security and scalability. While some frameworks cater to mobile developers and make very specific
+choices in terms of technology stack, other try to have broader use cases and be database-agnostic.</p>
+<p>In order to decide which BaaS package is best for your project, start by defining its scope and platform - is it
+going to be a mobile app or a website, for example. Then choose the framework that has the best documentation and
+client library for your specific platform and language - C#, Java, Javascript, etc. Finally get the code and run it
+locally on your development machine and give it a try.</p>
+<p>Happy coding!</p>  </div> <div class="mt-10 text-center section-shell"> <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">About the author</p> <div class="flex flex-wrap justify-center gap-4 mt-6"> <div class="flex items-center gap-3 bg-base-100 px-4 py-4 border border-base-300 rounded-[10px]"> <div> <img src="https://gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=400&d=robohash&r=x" alt="Avatar" loading="lazy" decoding="async" fetchpriority="auto" width="400" height="400" class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"> </div> <div class="font-semibold text-sm text-base-content">Alexander Bogdanovski <br> <span class="text-xs">Founder &amp; Indie Hacker</span> </div> </div> </div> </div> </div> </article>  </main> <footer class="bg-slate-950 border-base-300 border-t text-slate-200"> <div class="section-shell"> <div class="gap-10 grid md:grid-cols-2 lg:grid-cols-[1.1fr_1.6fr_1fr_0.7fr] py-12"> <div class="space-y-4"> <div class="flex items-center"> <span class="w-[130px] h-[40px] logo-frame"> <img src="/_astro/erudika-dark.4BCOIL6a_1nUxeR.svg" alt="Erudika" loading="lazy" decoding="async" fetchpriority="auto" width="463" height="107"> </span> </div> <p class="max-w-sm text-slate-300 text-sm">A tiny EU-based software company, building backend and serverless solutions.</p> </div> <div class="space-y-3"> <div class="text-slate-500 text-xs uppercase tracking-widest">Location</div> <a href="https://goo.gl/maps/QGRjd" aria-label="Open Erudika office location in Google Maps"> <img src="/_astro/erudika_map_dark.C1f1c8Db_Zji672.webp" alt="Erudika Office Location" loading="lazy" decoding="async" fetchpriority="auto" width="791" height="506" class="shadow-soft border border-slate-500 rounded-[3px] w-full"> </a> </div> <div class="space-y-4 text-slate-300 text-sm"> <div class="text-slate-500 text-xs uppercase tracking-widest">Address</div> <div>Erudika LTD.</div><div>4 Lelinska chuka Street</div><div>Sofia 1618, Bulgaria</div><div>VAT# BG-200368755</div><div>Phone: +359 886 000 995</div><div><a class="underline" href="mailto:support@erudika.com">support@erudika.com</a></div> </div> <div class="lg:justify-self-end content-start gap-3 grid text-sm lg:text-right"> <div class="text-slate-500 text-xs uppercase tracking-widest">Links</div> <a href="/projects" class="text-slate-300 hover:text-white">Projects</a><a href="/blog" class="text-slate-300 hover:text-white">Blog</a><a href="/support" class="text-slate-300 hover:text-white">Support</a><a href="/contact" class="text-slate-300 hover:text-white">Contact</a><a href="/about" class="text-slate-300 hover:text-white">About</a><a href="/privacy" class="text-slate-300 hover:text-white">Privacy</a><a href="https://status.erudika.com" class="text-slate-300 hover:text-white">🟢 Status Page</a> </div> </div> <div class="flex flex-wrap justify-between items-center gap-4 py-6 border-slate-800 border-t text-slate-400 text-xs"> <div class="flex items-center gap-3"> <span class="text-slate-500 text-xs uppercase tracking-widest">Theme</span> <button id="theme-toggle" class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 btn btn-xs" type="button"> System </button> </div> <div class="flex flex-wrap items-center gap-4"> <a href="https://github.com/Erudika" class="text-slate-400 hover:text-white">GitHub</a><a href="https://hub.docker.com/u/erudikaltd" class="text-slate-400 hover:text-white">Docker Hub</a><a href="https://x.com/erudika" class="text-slate-400 hover:text-white">X.com</a><a href="https://www.linkedin.com/company/erudika" class="text-slate-400 hover:text-white">LinkedIn</a> </div> </div> </div> </footer> </div> <script>(function(){const theme = {"storageKey":"erudika-theme","light":"corporate","dark":"business","labelLight":"Light","labelDark":"Dark","labelSystem":"System"};
+
+      const themeConfig = theme;
+
+      const themeToggle = document.getElementById("theme-toggle");
+
+      const getPreferredTheme = () => {
+        const stored = localStorage.getItem(themeConfig.storageKey);
+        if (stored === themeConfig.light || stored === themeConfig.dark) {
+          return stored;
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? themeConfig.dark
+          : themeConfig.light;
+      };
+
+      const applyTheme = (nextTheme, label) => {
+        document.documentElement.setAttribute("data-theme", nextTheme);
+        if (themeToggle) {
+          themeToggle.textContent = label;
+        }
+      };
+
+      const syncTheme = () => {
+        const nextTheme = getPreferredTheme();
+        const label = localStorage.getItem(themeConfig.storageKey)
+          ? nextTheme === themeConfig.dark
+            ? themeConfig.labelDark
+            : themeConfig.labelLight
+          : themeConfig.labelSystem;
+        applyTheme(nextTheme, label);
+      };
+
+      syncTheme();
+
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        if (!localStorage.getItem(themeConfig.storageKey)) {
+          syncTheme();
+        }
+      });
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme") || themeConfig.light;
+          const nextTheme = current === themeConfig.dark ? themeConfig.light : themeConfig.dark;
+          localStorage.setItem(themeConfig.storageKey, nextTheme);
+          applyTheme(nextTheme, nextTheme === themeConfig.dark ? themeConfig.labelDark : themeConfig.labelLight);
+        });
+      }
+    })();</script> </body> </html>
