@@ -4,7 +4,7 @@ date: 2019-08-14
 tags: ["react", "para", "tutorial", "jsx"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img7.jpg"
+img: "img7"
 ---
 
 **Note:** This article is a clone of [another one written for Angular](/blog/building-the-stack-from-scratch-with-angular-2).

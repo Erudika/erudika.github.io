@@ -4,7 +4,7 @@ date: 2016-03-06
 tags: ["para", "release", "mongodb", "jprime"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img4.jpg"
+img: "img4"
 ---
 
 

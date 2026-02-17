@@ -4,7 +4,7 @@ date: 2020-03-22
 tags: ["scoold", "para", "API", "slack", "mattermost", "python"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img16.jpg"
+img: "img16"
 ---
 
 

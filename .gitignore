@@ -36,3 +36,5 @@ db.json
 *.log
 .deploy*/
 sprite.png
+
+old_website/

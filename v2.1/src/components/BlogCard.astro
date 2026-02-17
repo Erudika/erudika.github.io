@@ -4,22 +4,16 @@ import { Image } from "astro:assets";
 
 const { blogCard } = marketing.site.components;
 const { title, excerpt, date, tags, img, href } = Astro.props;
-const imageSrc = img
-  ? img.startsWith("/") || img.startsWith("http")
-    ? img
-    : `../images/${img}`
-  : null;
-  console.log(imageSrc)
 ---
 
 <article class="isolate relative bg-base-100 shadow-sm hover:shadow-soft border border-base-300 rounded-[3px] overflow-hidden transition hover:-translate-y-1">
-  {imageSrc && (
+  {img && (
     <a href={href} class="block">
       <Image
-        src={import(`${imageSrc}`)}
+        src={import(`../images/${img}.jpg`)} 
         alt={title}
         class="w-full h-30 object-cover"
-        loading="eager"
+        loading="lazy"
       />
     </a>
   )}

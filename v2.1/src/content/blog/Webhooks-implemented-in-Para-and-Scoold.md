@@ -4,7 +4,7 @@ date: 2019-07-04
 tags: ["scoold", "para", "webhooks", "release"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img15.jpg"
+img: "img15"
 ---
 
 With the release of Para `1.32.0` we've introduced support for webhooks for all apps. This feature is available now 

@@ -11,7 +11,7 @@ const { person = marketing.site.pages.about.keyPeople.people.filter((p) => p.ema
         <Image src={person.avatar}
         inferSize 
         alt="Avatar"
-        loading="eager"
+        loading="lazy"
         class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"/>
     </div>
     <div class="font-semibold text-sm text-base-content">{person.name} 

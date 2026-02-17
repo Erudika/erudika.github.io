@@ -4,7 +4,7 @@ date: 2016-08-12
 tags: ["release", "para", "iot", "devices"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img8.jpg"
+img: "img8"
 ---
 
 **Things** — those small, connected devices are now part of our daily lives. As we transition our focus from mobile to broader IoT development, the need for reliable and open source backend systems increases. There are so many applications for IoT — smart thermostats, air conditioning controllers, DIY home automation systems based on Raspberry Pi and Arduino, to name a few. We were planning to add IoT support to Para for a while now but it was only after a fellow developer's suggestion that we realized we should've done this sooner. 

@@ -12,7 +12,7 @@
   }
 
   a {
-    @apply text-sky-700
+    @apply text-sky-500
   }
 
   h1,
@@ -24,15 +24,6 @@
     font-family: "Open Sans", sans-serif, system-ui;
     letter-spacing: -0.02em;
   }
-
-  /* pre {
-    @apply px-5 py-5
-  }
-  code,
-  pre {
-    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    @apply rounded-md
-  } */
 }
 
 @layer components {

@@ -4,7 +4,7 @@ date: 2015-10-21
 tags: ["backend", "baas", "frameworks", "para", "API"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img2.jpg"
+img: "img2"
 ---
 
 Let's compare some modern open source backend frameworks that are available today.

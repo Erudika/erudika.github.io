@@ -4,7 +4,7 @@ date: 2016-03-25
 tags: ["para", "ng-admin", "angular", "frontend"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img5.jpg"
+img: "img5"
 ---
 
 

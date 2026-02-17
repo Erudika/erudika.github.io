@@ -4,7 +4,7 @@ date: 2016-06-09
 tags: ["angular", "para", "tutorial", "typescript"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img7.jpg"
+img: "img7"
 ---
 
 **UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](/blog/building-a-full-stack-application-from-scratch-with-react/).

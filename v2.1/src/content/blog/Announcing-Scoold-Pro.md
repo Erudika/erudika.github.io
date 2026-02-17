@@ -4,7 +4,7 @@ date: 2018-10-15
 tags: ["scoold", "enterprise", "release"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img12.jpg"
+img: "img12"
 ---
 
 **We are happy to announce the availability of Scoold Pro!** We've added a number of useful features to it and made it easier for integration with your existing infrastructure. Scoold Pro fits well inside an enterprise environment and can also be hosted on your company's intranet. SAML authentication allows for a faster onboarding and unlimited spaces give you the freedom to assign a separate space to each one of your teams within your organization.

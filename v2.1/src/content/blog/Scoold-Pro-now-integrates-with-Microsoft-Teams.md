@@ -4,7 +4,7 @@ date: 2021-07-23
 tags: ["scoold", "ms-teams", "integration"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img19.jpg"
+img: "img19"
 ---
 
 **I'm happy to announce that Scoold Pro is now integrated with Microsoft Teams!** Everyone who owns an active Scoold Pro

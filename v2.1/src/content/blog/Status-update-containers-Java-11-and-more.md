@@ -4,7 +4,7 @@ date: 2019-01-28
 tags: ["scoold", "para", "docker", "kubernetes", "helm", "lucene", "release"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img14.jpg"
+img: "img14"
 ---
 
 Over the past couple of months we've been busy maintaining [Para](https://paraio.org) and 

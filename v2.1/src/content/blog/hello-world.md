@@ -2,7 +2,7 @@
 title: "Hello World!"
 tags: ["general"]
 excerpt: "excerpt-123"
-img: "img1.jpg"
+img: "img1"
 date: 2015-10-16
 author: "alex@erudika.com"
 ---

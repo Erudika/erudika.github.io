@@ -4,7 +4,7 @@ date: 2016-01-05
 tags: ["backend", "para", "release"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img3.jpg"
+img: "img3"
 ---
 
 We're happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it's also

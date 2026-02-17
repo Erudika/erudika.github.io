@@ -35,14 +35,14 @@ const navLinks = header.nav;
           <path d="M20 20l-3.5-3.5"></path>
         </svg>
       </button>
-      <a href="mailto:contact@erudika.com" class="text-white btn btn-primary btn-sm">{header.ctaLabel}</a>
+      <a href="mailto:contact@erudika.com" class="hidden md:flex text-white btn btn-primary btn-sm">{header.ctaLabel}</a>
       <div class="md:hidden dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-sm">
           {header.menuLabel}
         </label>
-        <ul tabindex="0" class="bg-base-100 shadow mt-3 p-2 rounded-box w-52 menu dropdown-content">
+        <ul tabindex="0" class="bg-base-100 shadow mt-3 p-2 rounded-box w-auto menu dropdown-content">
           {navLinks.map((link) => (
-            <li><a href={link.href}>{link.label}</a></li>
+            <li class="flex content-end"><a href={link.href}>{link.label}</a></li>
           ))}
         </ul>
       </div>
@@ -51,7 +51,7 @@ const navLinks = header.nav;
 </header>
 
 <dialog id="site_search_modal" class="modal">
-  <div class="top-24 absolute w-6/12 max-w-3xl modal-box">
+  <div class="top-24 absolute xs:w-full sm:w-10/12 md:w-6/12 max-w-3xl modal-box">
     <!-- <div class="float-right flex justify-between items-center">
       <h3 class="font-semibold text-base-content text-lg">Search</h3>
       <label for="site_search_modal" class="btn btn-ghost btn-sm" aria-label="Close search">
@@ -64,15 +64,23 @@ const navLinks = header.nav;
           <circle cx="11" cy="11" r="7"></circle>
           <path d="M20 20l-3.5-3.5"></path>
         </svg>
-        <input type="search" list="options" class="grow" placeholder="Search…"
+        <input id="site-search-input" type="search" list="options" class="grow" placeholder="Search…"
           role="combobox" aria-controls="searchbox" aria-expanded="true" aria-autocomplete="list"/>
       </div>
     </div>
-    <strong class="float-end pt-4 text-xs">
-      <a href="https://paraio.com" target="_blank" class="text-base-content">
-        Search powered by <Image src={paraLogo} class="inline-block max-w-16" alt="Para" loading="eager">
-      </a>
-    </strong>
+    <ul id="site-search-results" class="space-y-2 mt-3 text-sm"></ul>
+    <div class="flex pt-4 text-xs">
+      <span class="grow">
+        <kbd class="kbd kbd-sm">▲</kbd> <kbd class="kbd kbd-sm">▼</kbd>
+        <kbd class="kbd kbd-sm">Enter</kbd> to select, 
+        <kbd class="kbd kbd-sm">Esc</kbd> to close
+      </span>
+      <strong class="justify-end text-right">
+        <a href="https://paraio.com" target="_blank" class="text-base-content">
+          Search powered by <Image src={paraLogo} class="inline-block max-w-16" alt="Para" loading="eager">
+        </a>
+      </strong>
+    </div>
   </div>
   <form method="dialog" class="modal-backdrop">
     <button>close</button>
@@ -81,7 +89,12 @@ const navLinks = header.nav;
 
 <script>
   const searchToggle = document.getElementById("site_search_modal");
-  const isMac = navigator.platform.toUpperCase().includes("MAC");
+  const searchInput = document.getElementById("site-search-input");
+  const resultsList = document.getElementById("site-search-results");
+  const noResults = "<li>No Results</li>";
+  let searchAbortController;
+  let searchDebounce;
+  let activeIndex = -1;
 
   const openSearch = () => {
     if (searchToggle) {
@@ -89,10 +102,93 @@ const navLinks = header.nav;
     }
   };
 
+  const renderResults = (items) => {
+    if (!resultsList) return;
+    resultsList.innerHTML = items.length === 0 ? noResults : "";
+    activeIndex = -1;
+    items.forEach((item) => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = item.url;
+      link.textContent = item.name;
+      link.className = "block rounded-[3px] px-3 py-3";
+      li.className = "border border-base-300 hover:border-sky-700 rounded-[3px]"
+      li.appendChild(link);
+      resultsList.appendChild(li);
+    });
+  };
+
+  const updateActiveResult = (index) => {
+    if (!resultsList) return;
+    const items = Array.from(resultsList.querySelectorAll("li"));
+    items.forEach((item, i) => {
+      if (i === index) {
+        item.classList.add("border-sky-700", "bg-base-200");
+      } else {
+        item.classList.remove("border-sky-700", "bg-base-200");
+      }
+    });
+  };
+
+  const search = async (query) => {
+    if (!resultsList) return;
+    const trimmed = query.trim();
+    if (!trimmed) {
+      resultsList.innerHTML = "";
+      return;
+    }
+    if (searchAbortController) {
+      searchAbortController.abort();
+    }
+    searchAbortController = new AbortController();
+    try {
+      const response = await fetch(`https://paraio.com/v1/blogposts?limit=6&q=${encodeURIComponent(trimmed || "*")}`, {
+        signal: searchAbortController.signal,
+        headers: {
+          "Authorization": 'Anonymous app:albogdano'
+        }
+      });
+      if (!response.ok) return;
+      const data = await response.json();
+      renderResults(Array.isArray(data.items) ? data.items : []);
+    } catch (error) {
+      if (error.name !== "AbortError") {
+        resultsList.innerHTML = "";
+      }
+    }
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (event) => {
+      const value = event.target.value;
+      clearTimeout(searchDebounce);
+      searchDebounce = setTimeout(() => {
+        search(value);
+      }, 250);
+    });
+
+    searchInput.addEventListener("keydown", (event) => {
+      if (!resultsList) return;
+      const items = Array.from(resultsList.querySelectorAll("a"));
+      if (items.length === 0) return;
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        activeIndex = (activeIndex + 1) % items.length;
+        updateActiveResult(activeIndex);
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        activeIndex = (activeIndex - 1 + items.length) % items.length;
+        updateActiveResult(activeIndex);
+      } else if (event.key === "Enter" && activeIndex >= 0) {
+        event.preventDefault();
+        items[activeIndex].click();
+      }
+    });
+  }
+
   window.addEventListener("keydown", (event) => {
     const key = event.key;
-    const isShortcut = key === "/" || (key.toLowerCase() === "k" && (isMac ? event.metaKey : event.ctrlKey));
-
+    const isShortcut = key === "/" || (key.toLowerCase() === "k" && event.ctrlKey);
     if (isShortcut) {
       event.preventDefault();
       openSearch();

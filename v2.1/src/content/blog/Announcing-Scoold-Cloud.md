@@ -4,7 +4,7 @@ date: 2020-09-22
 tags: ["scoold", "saas", "hosting"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img17.jpg"
+img: "img17"
 ---
 
 We're happy to announce the availability of Scoold Cloud - the official hosting for Scoold Pro. We've been working
@@ -34,7 +34,7 @@ have a Para app yet, check the "Use demo app for now" checkbox. This will connec
 example questions and answers.
 
 <video width="100%" autoplay loop>
-  <source src="/assets/vid/scooldcloud1.mp4" type="video/mp4">
+  <source src="/media/scooldcloud1.mp4" type="video/mp4">
 </video>
 
 Scoold Cloud runs on top of Amazon Web Services (AWS) and when you click "Deploy" it spins up one or multiple
@@ -43,7 +43,7 @@ to the internet by setting up your own `.cloud.scoold.com` subdomain with SSL en
 about 4-5 minutes.
 
 <video width="100%" autoplay loop>
-  <source src="/assets/vid/scooldcloud2.mp4" type="video/mp4">
+  <source src="/media/scooldcloud2.mp4" type="video/mp4">
 </video>
 
 You can view basic metrics in realtime like request count, response times and HTTP error count. You can also edit

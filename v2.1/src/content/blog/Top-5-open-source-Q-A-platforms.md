@@ -4,7 +4,7 @@ date: 2018-12-30
 tags: ["scoold", "open-source", "stackoverflow"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img13.jpg"
+img: "img13"
 ---
 
 I've assembled a list of the top open source Q&A platforms that are currently available. The list contains

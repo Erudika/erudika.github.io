@@ -4,7 +4,7 @@ date: 2016-12-12
 tags: ["search", "blog", "para-cli"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img10.jpg"
+img: "img10"
 ---
 
 **Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites.

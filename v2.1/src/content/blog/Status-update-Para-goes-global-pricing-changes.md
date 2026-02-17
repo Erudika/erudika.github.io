@@ -4,7 +4,7 @@ date: 2021-02-01
 tags: ["para", "baas", "hosting"]
 author: "alex@erudika.com"
 excerpt: "excerpt-123"
-img: "img18.jpg"
+img: "img18"
 ---
 
 Our backend-as-a-service (BaaS) [Para](https://paraio.com) continued to grow over the past few months and now it's
