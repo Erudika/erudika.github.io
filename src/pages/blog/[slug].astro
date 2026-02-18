@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import marketing from "../../data/site-data.json";
 import Prose from '../../components/Prose.astro';
 import PersonCard from "../../components/PersonCard.astro";
-import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
 
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 const postUrl = `${baseUrl}/blog/${post.slug}`;
-const heroImageUrl = `/src/images/${post.data.img}.jpg`;
+const heroImageUrl = await getImage({src: import(`../../images/${post.data.img}.jpg`)});
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -67,7 +67,7 @@ const breadcrumbJsonLd = {
   image={heroImageUrl}
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
-  <div class="bg-cover bg-center" style={`background-image: url('${heroImageUrl}')`}>
+  <div class="bg-cover bg-center" style={`background-image: url('${heroImageUrl.src}')`}>
     <div class="py-24 section-shell">
       <div class="inline-flex flex-col gap-3 p-6 rounded-[3px] max-w-3xl">&nbsp;
       </div>

@@ -12,6 +12,8 @@ const { title, excerpt, date, tags, img, href } = Astro.props;
       <Image
         src={import(`../images/${img}.jpg`)} 
         alt={title}
+        width={350}
+        height={125}
         class="w-full h-30 object-cover"
         loading="lazy"
       />
