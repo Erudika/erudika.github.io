@@ -60,19 +60,19 @@ const websiteJsonLd = {
   canonical={marketing.site.meta.home.canonical}
   jsonLd={[orgJsonLd, websiteJsonLd]}
 >
-  <section class="hero-grid py-20 border-base-300 border-b">
+  <section id="hero-section" class="hero-grid bg-cover bg-center py-20 border-base-300 border-b">
     <div class="section-shell">
       <div class="flex flex-col items-center mx-auto max-w-3xl text-center">
         <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{hero.eyebrow}</p>
         <div class="space-y-4 mt-6">
           <h1 class="font-semibold text-base-content text-4xl sm:text-5xl leading-tight">{hero.title}</h1>
-          <p class="text-base-content/70 text-lg">{hero.subtitle}</p>
+          <p class="text-base-content/80 text-lg">{hero.subtitle}</p>
         </div>
         <div class="flex flex-wrap justify-center gap-3 mt-6">
           {hero.badges.map((badge) => (
-            <div class="bg-sky-50 px-4 py-2 border border-sky-100 rounded-[3px] font-semibold text-sky-700 text-xs">
+            <div class="px-4 py-2 border border-sky-100 rounded-[3px] font-semibold text-sky-700 bg-accent-content">
               {badge.label}
-              <span class="block font-normal text-[11px] text-sky-500">{badge.description}</span>
+              <span class="block font-normal text-[12px] text-sky-700">{badge.description}</span>
             </div>
           ))}
         </div>
@@ -166,36 +166,36 @@ const websiteJsonLd = {
           <a href="mailto:contact@erudika.com" class="border border-slate-300 btn btn-ghost">{home.supportCtaSecondary}</a>
         </div>
       </div>
-      <div class="p-4 border border-base-300 rounded-[3px]">
+      <div class="p-1 border border-base-300 rounded-[3px]">
         <div class="overflow-x-auto">
-          <table class="table">
+          <table class="table table-md">
             <thead>
-              <tr>
-                <th class="min-w-[140px]"></th>
-                <th>Basic Support</th>
-                <th>Priority Support</th>
+              <tr class="text-xs text-center">
+                <th scope="col"></th>
+                <th scope="col" class="text-wrap">Basic Support</th>
+                <th scope="col" class="text-wrap">Priority Support</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Response time</td>
-                <td class="text-orange-700 text-center">within 24h</td>
-                <td class="text-green-700 text-center">within 3h</td>
+            <tbody class="text-xs text-center">
+              <tr >
+                <th class="text-nowrap">Response time</th>
+                <td class="text-orange-700">within 24h</td>
+                <td class="text-green-700">within 3h</td>
               </tr>
               <tr>
-                <td>Email</td>
-                <td class="text-green-700 text-center">✔</td>
-                <td class="text-green-700 text-center">✔</td>
+                <th scope="row">Email</th>
+                <td class="text-green-700">✔</td>
+                <td class="text-green-700">✔</td>
               </tr>
               <tr>
-                <td>Support Chat</td>
-                <td class="text-green-700 text-center">✔</td>
-                <td class="text-green-700 text-center">✔</td>
+                <th scope="row">Support Chat</th>
+                <td class="text-green-700">✔</td>
+                <td class="text-green-700">✔</td>
               </tr>
               <tr>
-                <td>GitHub Issues</td>
-                <td class="text-green-700 text-center">✔</td>
-                <td class="text-green-700 text-center">✔</td>
+                <th scope="row">GitHub Issues</th>
+                <td class="text-green-700">✔</td>
+                <td class="text-green-700">✔</td>
               </tr>
             </tbody>
           </table>

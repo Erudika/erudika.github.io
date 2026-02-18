@@ -22,7 +22,7 @@ const socialLinks = footer.social;
       </div>
 
       <div class="space-y-3">
-        <div class="text-slate-500 text-xs uppercase tracking-widest">{footer.mapLabel}</div>
+        <div class="text-slate-100 text-xs uppercase tracking-widest">{footer.mapLabel}</div>
         <a href="https://goo.gl/maps/QGRjd" aria-label={footer.mapLinkLabel}>
           <Image
             src={erudikaMap}
@@ -34,7 +34,7 @@ const socialLinks = footer.social;
       </div>
 
       <div class="space-y-4 text-slate-300 text-sm">
-        <div class="text-slate-500 text-xs uppercase tracking-widest">{footer.addressLabel}</div>
+        <div class="text-slate-100 text-xs uppercase tracking-widest">{footer.addressLabel}</div>
         {footer.addressLines.map((line, index) => (
           index === footer.addressLines.length - 1 ? (
             <div><a class="underline" href={`mailto:${line}`}>{line}</a></div>
@@ -45,7 +45,7 @@ const socialLinks = footer.social;
       </div>
 
       <div class="lg:justify-self-end content-start gap-3 grid text-sm lg:text-right">
-        <div class="text-slate-500 text-xs uppercase tracking-widest">{footer.linksLabel}</div>
+        <div class="text-slate-100 text-xs uppercase tracking-widest">{footer.linksLabel}</div>
         {links.map((link) => (
           <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
         ))}
@@ -54,10 +54,10 @@ const socialLinks = footer.social;
 
     <div class="flex flex-wrap justify-between items-center gap-4 py-6 border-slate-800 border-t text-slate-400 text-xs">
       <div class="flex items-center gap-3">
-        <span class="text-slate-500 text-xs uppercase tracking-widest">{footer.themeLabel}</span>
+        <span class="text-slate-100 text-xs uppercase tracking-widest">{footer.themeLabel}</span>
         <button
           id="theme-toggle"
-          class="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 btn btn-xs"
+          class="bg-slate-900 border border-slate-700 hover:border-slate-100 text-slate-200 btn btn-xs"
           type="button"
         >
           {footer.themeDefault}
@@ -65,7 +65,7 @@ const socialLinks = footer.social;
       </div>
       <div class="flex flex-wrap items-center gap-4">
         {socialLinks.map((link) => (
-          <a href={link.href} class="text-slate-400 hover:text-white">{link.label}</a>
+          <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
         ))}
       </div>
     </div>

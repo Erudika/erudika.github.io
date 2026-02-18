@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import marketing from "../data/site-data.json";
 import "../styles/global.css";
+import optimizedLightBackground from "../images/bannerbg.jpg";
+import optimizedDarkBackground from "../images/bannerbgdark.jpg";
 
 const { title, description, canonical, image, jsonLd } = Astro.props;
 const { theme } = marketing.site;
@@ -28,22 +30,32 @@ const { theme } = marketing.site;
       </main>
       <Footer />
     </div>
-    <script define:vars={{ theme }}>
+    <script define:vars={{ theme, optimizedLightBackground, optimizedDarkBackground }}>
       const themeConfig = theme;
-
       const themeToggle = document.getElementById("theme-toggle");
+      const hero = document.getElementById("hero-section");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      const switchHeroBG = (selectedTheme) => {
+        if (hero) {
+          if (selectedTheme === themeConfig.light || !prefersDark) {
+            hero.style = "background-image: url(" + optimizedLightBackground.src + ");";
+          } else if (selectedTheme === themeConfig.dark || prefersDark) {
+            hero.style = "background-image: url(" + optimizedDarkBackground.src + ");";
+          }
+        }
+      };
 
       const getPreferredTheme = () => {
         const stored = localStorage.getItem(themeConfig.storageKey);
         if (stored === themeConfig.light || stored === themeConfig.dark) {
           return stored;
         }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? themeConfig.dark
-          : themeConfig.light;
+        return prefersDark ? themeConfig.dark : themeConfig.light;
       };
 
       const applyTheme = (nextTheme, label) => {
+        switchHeroBG(nextTheme);
         document.documentElement.setAttribute("data-theme", nextTheme);
         if (themeToggle) {
           themeToggle.textContent = label;
