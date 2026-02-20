@@ -33,17 +33,17 @@
       {
         "label": "In Production",
         "value": "1000+",
-        "description": "Para and Scoold instances deployed successuflly"
+        "description": "Para and Scoold instances deployed successfully"
       },
       {
         "label": "Uptime",
         "value": "99.98%",
-        "description": "Para Cloud and Scoold Cloud are reliable and cost-effective."
+        "description": "Para Cloud and Scoold Cloud are reliable and cost-effective"
       },
       {
         "label": "Support CSAT",
         "value": "4.9/5",
-        "description": "Hundreds of happy customers and developers."
+        "description": "Hundreds of happy customers and developers"
       }
     ],
     "testimonials": [
