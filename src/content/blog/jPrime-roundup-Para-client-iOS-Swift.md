@@ -15,11 +15,12 @@ Last week was [jPrime 2016](https://jprime.io), the biggest Java conference on t
 
 I really liked the talk by Kees Jan Koster where he explained what it is that distracts us from coding and how we can focus on getting things done and not spend too much time in meetings. Later, Hrvoje Crnjak talked about RxJava and how it could be used to make our applications more reactive. And on the second day I really enjoyed the talk on Go by Stoyan Rachev.
 
-<img src="https://c7.staticflickr.com/8/7737/27107528510_d27d3dca9d_h.jpg" width="1600" height="983" alt="">
+![Blog media](../../images/jprime1.jpg)
 
-<img src="https://c2.staticflickr.com/8/7581/27312437601_f7021cbf45_h.jpg" width="1600" height="1034" alt="">
+![Blog media](../../images/jprime2.jpg)
 
-<img src="https://c4.staticflickr.com/8/7726/26776482963_dccfd6e904_h.jpg" width="1600" height="1060" alt="">
+![Blog media](../../images/jprime3.jpg)
+
 
 Just before jPrime, we released a [client library](https://github.com/Erudika/para-client-ios) for Para that works with iOS devices, including tvOS and OS X. It is written in Swift and is [published on CocoaPods](https://cocoadocs.org/docsets/ParaClient). We encountered [a lot of problems with Xcode and CocoaPods](https://stackoverflow.com/a/37374778/108758) along the way - unstable IDE, poor Objective-C interoperability and poor documentation were slowing us down. Personally, I liked Swift and this was my first time using it, but the overall programming experience with Xcode left in me a feeling of unstability and beta-ness. The developer tools for Java and Android are just superior in comparison, and in a way, I'm glad [Java won](https://arstechnica.com/tech-policy/2016/05/google-wins-trial-against-oracle-as-jury-finds-android-is-fair-use/).
 

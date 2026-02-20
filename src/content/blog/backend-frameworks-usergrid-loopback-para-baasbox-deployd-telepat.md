@@ -28,7 +28,7 @@ anything from websites to desktop software or games. The ones that target mobile
 realtime push, notifications support and client libraries for Android and iOS. We'll cover both types of frameworks here.
 
 ## [UserGrid](https://usergrid.apache.org) - [<i class="fa fa-github-square"></i>](https://github.com/apache/usergrid)
-<img src="/src/images/usergrid.png">
+![Blog media](../../images/usergrid.png)
 
 **Multitenant:** yes <br>
 **Language:** Java <br>
@@ -61,7 +61,7 @@ your organization. It is used in production by quite a few companies.
 
 
 ## [LoopBack](https://loopback.io) - [<i class="fa fa-github-square"></i>](https://github.com/strongloop/loopback)
-<img src="/src/images/loopback.png">
+![Blog media](../../images/loopback.png)
 
 **Multitenant:** no <br>
 **Language:** JavaScript <br>
@@ -92,7 +92,11 @@ minutes by building a custom API using the given CLI tool. LoopBack is a very go
 JavaScript.
 
 ## [Para](https://paraio.com) - [<i class="fa fa-github-square"></i>](https://github.com/Erudika/para)
-<img src="/src/images/paraio.png" style="border: 1px solid #CCCCCC">
+<div class="border-neutral border-1 rounded-2xl">
+
+![Blog media](../../images/paraio.png)
+
+</div>
 
 **Multitenant:** yes <br>
 **Language:** Java <br>
@@ -138,7 +142,7 @@ Para is a good choice if you are building a cloud-based web service and it's gre
 It's an easy-to-use and flexible platform that scales well. A backend for busy developers.
 
 ## BaasBox - [<i class="fa fa-github-square"></i>](https://github.com/baasbox/baasbox)
-<img src="/src/images/baasbox.png">
+![Blog media](../../images/baasbox.png)
 
 **Multitenant:** yes, [since v0.8.4](http://www.baasbox.com/the-importance-of-managing-multiple-apps-with-one-backend) <br>
 **Language:** Java <br>
@@ -162,7 +166,11 @@ files and assets API, push notifications and a plugin system.
 
 
 ## [Deployd](https://deployd.com) - [<i class="fa fa-github-square"></i>](https://github.com/deployd/deployd)
-<img src="/src/images/deployd.png" style="border: 1px solid #CCCCCC">
+<div class="border-neutral border-1 rounded-2xl">
+
+![Blog media](../../images/deployd.png)
+
+</div>
 
 **Multitenant:** no <br>
 **Language:** JavaScript <br>
@@ -186,7 +194,7 @@ built-in. Other functionality like social login support is provided by third-par
 
 
 ## [Telepat](https://telepat.io) - [<i class="fa fa-github-square"></i>](https://github.com/telepat-io/telepat-api)
-<img src="/src/images/telepat.png">
+![Blog media](../../images/telepat.png)
 
 **Multitenant:** yes <br>
 **Language:** JavaScript <br>
