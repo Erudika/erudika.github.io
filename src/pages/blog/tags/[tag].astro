@@ -60,7 +60,6 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogTag.titleTemplate.replace("{tag}", tag)}
   description={marketing.site.meta.blogTag.descriptionTemplate.replace("{tag}", tag)}
-  canonical={`${marketing.site.meta.blogTag.canonicalBase}/${toSlug(tag)}`}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="py-16">
@@ -70,11 +69,11 @@ const breadcrumbJsonLd = {
         { label: breadcrumbs.tags, href: "/blog/tags" },
         { label: tag, href: `/blog/tags/${toSlug(tag)}` }
       ]} />
-      <h1 class="mt-6 text-4xl font-semibold text-base-content">{tag}</h1>
-      <p class="mt-4 max-w-2xl text-lg text-base-content/70">
+      <h1 class="mt-6 font-semibold text-base-content text-4xl">{tag}</h1>
+      <p class="mt-4 max-w-2xl text-base-content/70 text-lg">
         {blogTag.body.replace("{tag}", tag)}
       </p>
-      <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div class="gap-6 grid md:grid-cols-2 xl:grid-cols-3 mt-10">
         {cards.map((post) => (
           <BlogCard {...post} />
         ))}

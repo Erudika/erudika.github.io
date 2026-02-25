@@ -2,13 +2,14 @@
 import SEOHead from "../components/SEOHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import marketing from "../data/site-data.json";
+import { site } from "../data/site-data.json";
 import "../styles/global.css";
 import optimizedLightBackground from "../images/bannerbg.jpg";
 import optimizedDarkBackground from "../images/bannerbgdark.jpg";
 
-const { title, description, canonical, image, jsonLd } = Astro.props;
-const { theme } = marketing.site;
+const { title, description, canonicalUrl, image, jsonLd } = Astro.props;
+const { theme } = site;
+const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.url).toString();
 ---
 
 <!doctype html>

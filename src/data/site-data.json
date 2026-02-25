@@ -262,7 +262,7 @@
               "name": "Alexander Bogdanovski",
               "role": "Founder & Indie Hacker",
               "email": "alex@erudika.com",
-              "avatar": "https://gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=400&d=robohash&r=x"
+              "avatar": "https://gravatar.com/avatar/6888890e3e742a7c7357a4c74be405b8?s=200&d=robohash&r=x"
             }
           ]
         }
@@ -586,96 +586,79 @@
     "meta": {
       "home": {
         "title": "Erudika | A tiny software company",
-        "description": "A tiny EU-based software company, building backend and serverless solutions.",
-        "canonical": "https://erudika.com"
+        "description": "A tiny EU-based software company, building backend and serverless solutions."
       },
       "about": {
         "title": "About Erudika",
-        "description": "Learn about Erudika, a tiny software company building Para, Scoold, and cloud services.",
-        "canonical": "https://erudika.com/about"
+        "description": "Learn about Erudika, a tiny software company building Para, Scoold, and cloud services."
       },
       "projectsIndex": {
         "title": "Erudika Projects",
-        "description": "Explore Para, Scoold, and Erudika's managed cloud services and open source projects.",
-        "canonical": "https://erudika.com/projects"
+        "description": "Explore Para, Scoold, and Erudika's managed cloud services and open source projects."
       },
       "support": {
         "title": "Support | Erudika",
-        "description": "Support plans for Para and Scoold with SLA-backed response times.",
-        "canonical": "https://erudika.com/support"
+        "description": "Support plans for Para and Scoold with SLA-backed response times."
       },
       "contact": {
         "title": "Contact Erudika",
-        "description": "Contact Erudika for product questions, support, and partnerships.",
-        "canonical": "https://erudika.com/contact"
+        "description": "Contact Erudika for product questions, support, and partnerships."
       },
       "blogIndex": {
         "title": "Erudika Blog",
-        "description": "Release notes, architecture deep-dives, engineering notes and insights from Erudika.",
-        "canonical": "https://erudika.com/blog"
+        "description": "Release notes, architecture deep-dives, engineering notes and insights from Erudika."
       },
       "privacy": {
         "title": "Privacy Policy | Erudika",
-        "description": "Erudika privacy policy and data handling practices.",
-        "canonical": "https://erudika.com/privacy"
+        "description": "Erudika privacy policy and data handling practices."
       },
       "terms": {
         "title": "Terms of Service | Erudika",
-        "description": "Erudika terms of service and usage guidelines.",
-        "canonical": "https://erudika.com/terms"
+        "description": "Erudika terms of service and usage guidelines."
       },
       "projects": {
         "para": {
           "title": "Para | Erudika",
-          "description": "Para helps teams prototype rapidly and ship internal tools and CRUD applications by providing a full-featured backend service.",
-          "canonical": "https://erudika.com/projects/para"
+          "description": "Para helps teams prototype rapidly and ship internal tools and CRUD applications by providing a full-featured backend service."
         },
         "scoold": {
           "title": "Scoold | Erudika",
-          "description": "Scoold is open source and works great as a questions-and-answer platform, forum, knowledge base or customer support system. Self-hosted and open source.",
-          "canonical": "https://erudika.com/projects/scoold"
+          "description": "Scoold is open source and works great as a questions-and-answer platform, forum, knowledge base or customer support system. Self-hosted and open source."
         },
         "paraCloud": {
           "title": "Para Cloud | Erudika",
-          "description": "Para Cloud is fully managed backend service with global availability and failover. It provides Para backend hosting with a generous free tier.",
-          "canonical": "https://erudika.com/projects/para-cloud"
+          "description": "Para Cloud is fully managed backend service with global availability and failover. It provides Para backend hosting with a generous free tier."
         },
         "scooldCloud": {
           "title": "Scoold Cloud | Erudika",
-          "description": "Scoold Cloud is the fully managed hosting service for Scoold Pro - the premium version of the popular q-and-a platform Scoold.",
-          "canonical": "https://erudika.com/projects/scoold-cloud"
+          "description": "Scoold Cloud is the fully managed hosting service for Scoold Pro - the premium version of the popular q-and-a platform Scoold."
         },
         "scooldPro": {
           "title": "Scoold Pro | Erudika",
-          "description": "Scoold Pro is the premium version of Scoold - a popular q-and-a platform and knowledge base for teams.",
-          "canonical": "https://erudika.com/projects/scoold-pro"
+          "description": "Scoold Pro is the premium version of Scoold - a popular q-and-a platform and knowledge base for teams."
         },
         "roboTranslator": {
           "title": "Robo Translator | Erudika",
-          "description": "Robo Translator is a cloud service tool for content localization, translation and transcription. It does text-to-speech, speech-to-text and closed captions.",
-          "canonical": "https://erudika.com/projects/robo-translator"
+          "description": "Robo Translator is a cloud service tool for content localization, translation and transcription. It does text-to-speech, speech-to-text and closed captions."
         }
       },
       "blogPage": {
         "titleTemplate": "Erudika Blog Page {page}",
-        "description": "Release notes, architecture deep dives, and backend insights from Erudika.",
-        "canonicalBase": "https://erudika.com/blog/page"
+        "description": "Release notes, architecture deep dives, and backend insights from Erudika."
       },
       "blogTags": {
         "title": "Blog Tags | Erudika",
-        "description": "Explore Erudika blog posts by tag.",
-        "canonical": "https://erudika.com/blog/tags"
+        "description": "Explore Erudika blog posts by tag."
       },
       "blogTag": {
         "titleTemplate": "{tag} Articles | Erudika",
-        "descriptionTemplate": "Posts tagged {tag}.",
-        "canonicalBase": "https://erudika.com/blog/tags"
+        "descriptionTemplate": "Posts tagged {tag}."
       }
     },
     "organization": {
       "name": "Erudika",
       "url": "https://erudika.com",
-      "logo": "https://erudika.com/src/images/erudika-light.svg",
+      "logo": "https://erudika.com/logo.png",
       "email": "support@erudika.com",
       "address": {
         "street": "4 Lelinska chuka Street",

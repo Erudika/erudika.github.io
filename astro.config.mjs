@@ -1,11 +1,11 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-
+import { site } from "./src/data/site-data.json"
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   integrations: [sitemap()],
-  site: "https://erudika.com",
+  site: site.organization.url,
   vite: {
     plugins: [tailwindcss()]
   },

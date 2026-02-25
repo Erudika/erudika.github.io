@@ -39,18 +39,17 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogTags.title}
   description={marketing.site.meta.blogTags.description}
-  canonical={marketing.site.meta.blogTags.canonical}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="py-16">
     <div class="section-shell">
       <Breadcrumbs items={[{ label: breadcrumbs.home, href: "/" }, { label: breadcrumbs.tags, href: "/blog/tags" }]} />
-      <h1 class="mt-6 text-4xl font-semibold text-base-content">{blogTags.title}</h1>
-      <p class="mt-4 max-w-2xl text-lg text-base-content/70">{blogTags.body}</p>
-      <div class="mt-10 flex flex-wrap gap-3">
+      <h1 class="mt-6 font-semibold text-base-content text-4xl">{blogTags.title}</h1>
+      <p class="mt-4 max-w-2xl text-base-content/70 text-lg">{blogTags.body}</p>
+      <div class="flex flex-wrap gap-3 mt-10">
         {tags.map((tag) => (
           <a href={`/blog/tags/${tag.slug}`} class="chip">
-            {tag.label} <span class="ml-2 text-xs text-slate-400">{tag.count}</span>
+            {tag.label} <span class="ml-2 text-slate-400 text-xs">{tag.count}</span>
           </a>
         ))}
       </div>

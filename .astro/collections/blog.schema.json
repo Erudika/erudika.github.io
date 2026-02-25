@@ -33,6 +33,9 @@
         "author": {
           "type": "string"
         },
+        "excerpt": {
+          "type": "string"
+        },
         "img": {
           "type": "string"
         },
@@ -43,7 +46,8 @@
       "required": [
         "title",
         "date",
-        "author"
+        "author",
+        "excerpt"
       ],
       "additionalProperties": false
     }

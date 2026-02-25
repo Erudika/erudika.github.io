@@ -7,7 +7,7 @@ const blog = defineCollection({
     date: z.date(),
     tags: z.array(z.string()).default([]),
     author: z.string(),
-    // excerpt: z.string(),
+    excerpt: z.string(),
     // canonical: z.string().url().optional(),
     img: z.string().optional()
   })
@@ -19,4 +19,4 @@ const projects = defineCollection({
   })
 });
 
-export const collections = { blog, projects };
+export const collections = { blog: blog, projects: projects };

@@ -63,7 +63,6 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={`${post.data.title} | Erudika`}
   description={post.data.excerpt}
-  canonical={post.data.canonical ?? postUrl}
   image={heroImageUrl}
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >

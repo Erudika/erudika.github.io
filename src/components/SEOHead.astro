@@ -4,7 +4,7 @@ import marketing from "../data/site-data.json";
 const {
   title = marketing.site.meta.home.title,
   description = marketing.site.meta.home.description,
-  canonical = marketing.site.meta.home.canonical,
+  canonical,
   image = marketing.site.organization.logo,
   jsonLd = []
 } = Astro.props;

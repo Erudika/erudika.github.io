@@ -49,12 +49,12 @@ const breadcrumbJsonLd = {
     { "@type": "ListItem", position: 3, name: `${breadcrumbs.pagePrefix} ${page}`, item: `${baseUrl}/blog/page/${page}` }
   ]
 };
+// const canonicalBase = marketing.site.meta.blogPage.canonicalBase + "/" + page;
 ---
 
 <BaseLayout
   title={marketing.site.meta.blogPage.titleTemplate.replace("{page}", String(page))}
   description={marketing.site.meta.blogPage.description}
-  canonical={`${marketing.site.meta.blogPage.canonicalBase}/${page}`}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="py-16">

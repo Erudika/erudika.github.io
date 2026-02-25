@@ -4,7 +4,6 @@ import BlogCard from "../../components/BlogCard.astro";
 import Pagination from "../../components/Pagination.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../data/site-data.json";
-import { getImage } from "astro:assets";
 import optimizedBackground from "../../images/banner.jpg";
 
 const { blogIndex } = marketing.site.pages;
@@ -42,7 +41,6 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogIndex.title}
   description={marketing.site.meta.blogIndex.description}
-  canonical={marketing.site.meta.blogIndex.canonical}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="pb-16">
