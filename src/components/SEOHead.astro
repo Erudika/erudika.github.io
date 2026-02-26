@@ -11,6 +11,7 @@ const {
 } = Astro.props;
 
 const jsonLdList = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+const imageUrl = new URL(image ? image : erudikaThumb.src, site.organization.url).toString();
 ---
 
 <title>{title}</title>
@@ -21,12 +22,12 @@ const jsonLdList = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:image" content={image ? image : new URL(erudikaThumb.src, site.organization.url).toString()} />
+<meta property="og:image" content={imageUrl} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={image ? image : new URL(erudikaThumb.src, site.organization.url).toString()} />
+<meta name="twitter:image" content={imageUrl} />
 
 {jsonLdList
   .filter(Boolean)

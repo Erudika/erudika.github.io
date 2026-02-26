@@ -5,6 +5,7 @@ tags: ["para", "ios", "swift", "jprime", "release"]
 author: "alex@erudika.com"
 excerpt: "jPrime 2016 was a major Java conference in the Balkans with 500+ attendees and themes of microservices and reactive programming. We sponsored the event to support the local Java community."
 img: "img6"
+thumb: "blogpost_media4"
 ---
 
 Last week was [jPrime 2016](https://jprime.io), the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was *"Java - 21 and legally drunk"* and the two main themes were **microservices** and **reactive programming** with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.

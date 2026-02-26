@@ -5,6 +5,7 @@ tags: ["react", "para", "tutorial", "jsx"]
 author: "alex@erudika.com"
 excerpt: "This React article is a clone of the Angular version. Read the Angular post for the original content."
 img: "img7"
+thumb: "blogpost_media14"
 ---
 
 **Note:** This article is a clone of [another one written for Angular](/blog/building-the-stack-from-scratch-with-angular-2).

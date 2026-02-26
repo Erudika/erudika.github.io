@@ -5,6 +5,7 @@ tags: ["angular", "para", "tutorial", "typescript"]
 author: "alex@erudika.com"
 excerpt: "This article and its code were updated for Angular 8.x. A React version is also available."
 img: "img7"
+thumb: "blogpost_media5"
 ---
 
 **UPDATE:** This article and its associated code have been updated for Angular 8.x. The same article is also [available for React](/blog/building-a-full-stack-application-from-scratch-with-react/).

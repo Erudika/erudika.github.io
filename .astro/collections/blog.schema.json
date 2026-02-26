@@ -39,6 +39,9 @@
         "img": {
           "type": "string"
         },
+        "thumb": {
+          "type": "string"
+        },
         "$schema": {
           "type": "string"
         }

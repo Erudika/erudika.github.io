@@ -5,6 +5,7 @@ tags: ["para", "ng-admin", "angular", "frontend"]
 author: "alex@erudika.com"
 excerpt: "We released an open-source, client-side web console for managing Para servers. Built with AngularJS, it connects to local or remote Para instances and is open to contributions."
 img: "img5"
+thumb: "pwc1"
 ---
 
 

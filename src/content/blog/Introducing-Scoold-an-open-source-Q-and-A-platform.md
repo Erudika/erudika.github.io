@@ -5,6 +5,7 @@ tags: ["scoold", "stackoverflow", "clone"]
 author: "alex@erudika.com"
 excerpt: "Scoold brings Stack Overflow-style Q&A to your site and showcases the Para backend. It's a lightweight, cloud-ready Java app that runs without a database."
 img: "img11"
+thumb: "blogpost_media9"
 ---
 
 Have you ever wanted to have a Q&A section on your website with the functionality of Stack Overflow? Well, this one is for you! Scoold is a cloud-ready Stack Overflow clone, powered by our Para backend. It's a real-world application, showcasing the Para technology and how it can be utilized to get a project off the ground quickly. Scoold is a lightweight (~4000 LOC) web application written in Java -- it runs great on the smallest Heroku dyno and doesn't require a database.

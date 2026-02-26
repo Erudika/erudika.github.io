@@ -5,6 +5,7 @@ tags: ["scoold", "para", "webhooks", "release"]
 author: "alex@erudika.com"
 excerpt: "Para 1.32.0 introduces webhooks for all apps, available on ParaIO.com. Webhooks enable near real-time notifications for create, update, and delete events."
 img: "img15"
+thumb: "blogpost_media13"
 ---
 
 With the release of Para `1.32.0` we've introduced support for webhooks for all apps. This feature is available now 

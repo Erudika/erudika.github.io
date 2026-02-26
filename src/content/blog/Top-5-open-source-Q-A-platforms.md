@@ -5,6 +5,7 @@ tags: ["scoold", "open-source", "stackoverflow"]
 author: "alex@erudika.com"
 excerpt: "This post lists top open-source Q&A platforms that are actively developed and have working demos. The projects are inspired by Stack Overflow and the list is unordered."
 img: "img13"
+thumb: "blogpost_media11"
 ---
 
 I've assembled a list of the top open source Q&A platforms that are currently available. The list contains

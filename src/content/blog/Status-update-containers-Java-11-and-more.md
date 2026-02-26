@@ -5,6 +5,7 @@ tags: ["scoold", "para", "docker", "kubernetes", "helm", "lucene", "release"]
 author: "alex@erudika.com"
 excerpt: "We've been maintaining Para and Scoold with minor dependency upgrades and bug fixes. Scoold also received translation contributions and now supports 12 languages."
 img: "img14"
+thumb: "blogpost_media12"
 ---
 
 Over the past couple of months we've been busy maintaining [Para](https://paraio.org) and 

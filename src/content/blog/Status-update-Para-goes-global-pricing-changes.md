@@ -5,6 +5,7 @@ tags: ["para", "baas", "hosting"]
 author: "alex@erudika.com"
 excerpt: "Para's hosted BaaS has grown to hundreds of active apps and paying customers worldwide. To reduce latency from a single EU region, we set out to make the service global."
 img: "img18"
+thumb: "blogpost_media17"
 ---
 
 Our backend-as-a-service (BaaS) [Para](https://paraio.com) continued to grow over the past few months and now it's

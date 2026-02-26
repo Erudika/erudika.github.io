@@ -5,6 +5,7 @@ tags: ["backend", "baas", "frameworks", "para", "API"]
 author: "alex@erudika.com"
 excerpt: "This post compares modern open-source backend frameworks that handle server-side app operations. It focuses only on open-source options and not the broader backend services market."
 img: "img2"
+thumb: "usergrid"
 ---
 
 Let's compare some modern open source backend frameworks that are available today.

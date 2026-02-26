@@ -5,6 +5,7 @@ tags: ["backend", "para", "release"]
 author: "alex@erudika.com"
 excerpt: "Para v1.17 is released and published to Maven. The update is already deployed on ParaIO.com."
 img: "img3"
+thumb: "blogpost_media2"
 ---
 
 We're happy to announce the release of Para v1.17. Last week we pushed the new version to Maven and now it's also

@@ -5,6 +5,7 @@ tags: ["aws", "dynamodb", "tips"]
 author: "alex@erudika.com"
 excerpt: "DynamoDB is a fully managed, scalable AWS database optimized for low-latency, write-heavy workloads. Its adjustable throughput and global secondary indexes are key advantages."
 img: "img9"
+thumb: "blogpost_media7"
 ---
 
 **Amazon's DynamoDB** is a fully managed database service running inside the AWS cloud which is super-scalable and fast. It is perfect for write-intensive workflows and low-latency queries. Its main advantages are the adjustable read and write performance and global secondary indexes (GSI).

@@ -5,6 +5,7 @@ tags: ["para", "release", "mongodb", "jprime"]
 author: "alex@erudika.com"
 excerpt: "The past month brought feedback, bug fixes, an Android client, and a MongoDB plugin, with plugins and MongoDB support as top requests. We also refreshed the Para docs and redesigned paraio.org for better mobile display."
 img: "img4"
+thumb: "blogpost_media3"
 ---
 
 

@@ -5,6 +5,7 @@ tags: ["search", "frontend", "open-source", "para"]
 author: "alex@erudika.com"
 excerpt: "Let's build a new version of our simple search box which uses our Para backend for indexing documents. The content is first ingested and processed by Para, then we use clientside code to query the data."
 img: "img10"
+thumb: "blogpost_media19"
 ---
 
 **Static site generators are great** because they allow us to ship quickly, deploy to a CDN, and forget about infrastructure. For blogs, documentation portals, and marketing sites, this model is hard to beat. However, once you need proper search, things get complicated. We’ve always felt that the search box on our static website could be improved and sending users off to Google was not an ideal solution. 

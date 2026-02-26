@@ -24,7 +24,8 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 const postUrl = `${baseUrl}/blog/${post.slug}`;
-const heroImageUrl = await getImage({src: import(`../../images/${post.data.img}.jpg`)});
+const heroImageUrl = (await getImage({src: import(`../../images/${post.data.img}.jpg`)})).rawOptions.src;
+const blogImageUrl = (await getImage({src: import(`../../images/${post.data.thumb}.png`)})).rawOptions.src;
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -46,7 +47,7 @@ const articleJsonLd = {
     }
   },
   mainEntityOfPage: postUrl,
-  image: [heroImageUrl.src ?? erudikaBlogThumb],
+  image: [blogImageUrl.src ?? erudikaBlogThumb.src],
   url: postUrl
 };
 
@@ -64,7 +65,7 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={`${post.data.title} | Erudika`}
   description={post.data.excerpt}
-  image={heroImageUrl.src}
+  image={blogImageUrl.src}
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
   <div class="bg-cover bg-center" style={`background-image: url('${heroImageUrl.src}')`}>

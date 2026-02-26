@@ -5,6 +5,7 @@ tags: ["search", "blog", "para-cli"]
 author: "alex@erudika.com"
 excerpt: "Static site generators make it easy to build and host sites, but static content makes search difficult. This post highlights the UX problem of not being able to quickly search static sites."
 img: "img10"
+thumb: "blogpost_media8"
 ---
 
 **Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites.
