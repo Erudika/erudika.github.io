@@ -89,7 +89,7 @@ const breadcrumbJsonLd = {
       <div class="flex flex-wrap gap-3 mt-4 pb-10 text-slate-500 text-sm">
         <div class="flex flex-wrap gap-2">
           {post.data.tags.map((tag) => (
-            <a href={`/blog/tags/${toSlug(tag)}`} class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content/70">
+            <a href={`/blog/tags/${toSlug(tag)}`} class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content">
               {tag}
             </a>
           ))}

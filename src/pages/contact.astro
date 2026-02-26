@@ -23,7 +23,7 @@ const businessHours = "Mon - Fri: 9:00 - 18:00 (EET)";
   <section class="py-16">
     <div class="gap-10 grid lg:grid-cols-[1.1fr_0.9fr] section-shell">
       <div>
-        <p class="mt-4 text-base-content/70 text-lg">{contact.body}</p>
+        <p class="mt-4 text-base-content text-lg">{contact.body}</p>
         <div class="bg-base-100 mt-8 p-8 border border-base-300 rounded-[3px]">
           <div class="space-y-6">
             <div class="flex items-start gap-4">
@@ -69,14 +69,14 @@ const businessHours = "Mon - Fri: 9:00 - 18:00 (EET)";
       </div>
       <div class="bg-base-100 shadow-soft p-8 border border-base-300 rounded-[3px]">
         <h2 class="font-semibold text-base-content text-xl">{contact.formTitle}</h2>
-        <p class="mt-2 text-sm text-base-content/70">{contact.formBody}</p>
+        <p class="mt-2 text-sm text-base-content">{contact.formBody}</p>
         <form class="space-y-4 mt-6">
           <input class="w-full input input-bordered" placeholder={contact.formFields.name} type="text" name="name" />
           <input class="w-full input input-bordered" placeholder={contact.formFields.email} type="email" name="email" />
           <textarea class="w-full textarea textarea-bordered" placeholder={contact.formFields.message} rows="4" name="message"></textarea>
           <button class="btn btn-primary" type="button">{contact.formFields.submit}</button>
         </form>
-        <p class="mt-3 text-xs text-base-content/60">{contact.formNote} <a href="#" class="text-sky-600 hover:text-sky-800 text-xs">{contact.formNote2}</a></p>
+        <p class="mt-3 text-xs text-base-content">{contact.formNote} <a href="#" class="text-sky-600 hover:text-sky-800 text-xs">{contact.formNote2}</a></p>
       </div>
     </div>
   </section>

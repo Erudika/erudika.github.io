@@ -14,11 +14,11 @@ const { privacy } = marketing.site.pages;
       <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{privacy.eyebrow}</p>
       <h1 class="mt-3 font-semibold text-base-content text-4xl">{privacy.title}</h1>
       <p class="mt-3 text-sm text-base-content/60">Effective date: {privacy.effectiveDate}</p>
-      <p class="mt-6 text-base-content/70">
+      <p class="mt-6 text-base-content">
         {privacy.intro}
       </p>
 
-      <div class="space-y-8 mt-8 text-sm text-base-content/70">
+      <div class="space-y-8 mt-8 text-sm text-base-content">
         {privacy.sections.map((section) => (
           <section>
             <h2 class="font-semibold text-base-content text-lg">{section.title}</h2>

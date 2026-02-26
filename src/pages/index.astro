@@ -65,7 +65,7 @@ const websiteJsonLd = {
         <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{hero.eyebrow}</p>
         <div class="space-y-4 mt-6">
           <h1 class="font-semibold text-base-content text-4xl sm:text-5xl leading-tight">{hero.title}</h1>
-          <p class="text-base-content/80 text-lg">{hero.subtitle}</p>
+          <p class="text-base-content text-lg">{hero.subtitle}</p>
         </div>
         <div class="flex flex-wrap justify-center gap-3 mt-6">
           {hero.badges.map((badge) => (
@@ -93,7 +93,7 @@ const websiteJsonLd = {
         <div>
           <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{home.projectsLabel}</p>
           <h2 class="mt-3 font-semibold text-base-content text-3xl">{home.projectsTitle}</h2>
-          <p class="mt-3 max-w-2xl text-base-content/70">{home.projectsBody}</p>
+          <p class="mt-3 max-w-2xl text-base-content">{home.projectsBody}</p>
         </div>
         <a href="/projects" class="font-semibold text-sky-700 text-sm">{home.projectsCta}</a>
       </div>
@@ -117,7 +117,7 @@ const websiteJsonLd = {
       <div>
         <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{home.proofLabel}</p>
         <h2 class="mt-3 font-semibold text-base-content text-3xl">{home.proofTitle}</h2>
-        <p class="mt-3 text-base-content/70">{home.proofBody}</p>
+        <p class="mt-3 text-base-content">{home.proofBody}</p>
       </div>
       <div class="gap-4 grid sm:grid-cols-3">
         {proofPoints.metrics.map((metric) => (
@@ -130,7 +130,7 @@ const websiteJsonLd = {
         <div class="bg-base-200 p-6 border border-base-300 rounded-[3px]">
           <p class="text-sm text-base-content/80">“{testimonial.quote}”</p>
           <div class="mt-4 font-semibold text-slate-500 text-xs uppercase tracking-widest">{testimonial.author}</div>
-          <div class="text-sm text-base-content/70">{testimonial.role}</div>
+          <div class="text-sm text-base-content">{testimonial.role}</div>
         </div>
       ))}
     </div> -->
@@ -142,7 +142,7 @@ const websiteJsonLd = {
         <div>
           <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{home.blogLabel}</p>
           <h2 class="mt-3 font-semibold text-base-content text-3xl">{home.blogTitle}</h2>
-          <p class="mt-3 max-w-2xl text-base-content/70">{home.blogBody}</p>
+          <p class="mt-3 max-w-2xl text-base-content">{home.blogBody}</p>
         </div>
         <a href="/blog" class="font-semibold text-sky-700 text-sm">{home.blogCta}</a>
       </div>
@@ -159,7 +159,7 @@ const websiteJsonLd = {
       <div>
         <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{home.supportLabel}</p>
         <h2 class="mt-3 font-semibold text-base-content text-3xl">{home.supportTitle}</h2>
-        <p class="mt-3 text-base-content/70">{home.supportBody}</p>
+        <p class="mt-3 text-base-content">{home.supportBody}</p>
         <div class="flex flex-wrap gap-4 mt-6">
           <a href="/support" class="text-white btn btn-primary">{home.supportCtaPrimary}</a>
           <a href="mailto:contact@erudika.com" class="border border-slate-300 btn btn-ghost">{home.supportCtaSecondary}</a>

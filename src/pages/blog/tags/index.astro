@@ -45,11 +45,11 @@ const breadcrumbJsonLd = {
     <div class="section-shell">
       <Breadcrumbs items={[{ label: breadcrumbs.home, href: "/" }, { label: breadcrumbs.tags, href: "/blog/tags" }]} />
       <h1 class="mt-6 font-semibold text-base-content text-4xl">{blogTags.title}</h1>
-      <p class="mt-4 max-w-2xl text-base-content/70 text-lg">{blogTags.body}</p>
+      <p class="mt-4 max-w-2xl text-base-content text-lg">{blogTags.body}</p>
       <div class="flex flex-wrap gap-3 mt-10">
         {tags.map((tag) => (
           <a href={`/blog/tags/${tag.slug}`} class="chip">
-            {tag.label} <span class="ml-2 text-slate-400 text-xs">{tag.count}</span>
+            {tag.label} <span class="ml-2 text-xs">{tag.count}</span>
           </a>
         ))}
       </div>

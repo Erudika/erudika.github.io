@@ -33,10 +33,10 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
 
         <div class="bg-base-100 p-6 border border-base-300 rounded-[6px] text-sm">
           <div class="font-semibold text-slate-500 text-xs uppercase tracking-widest">{projectPage.techStackLabel}</div>
-          <div class="mt-2 text-base-content/80">{project.page.techStack}</div>
+          <div class="mt-2 text-base-content">{project.page.techStack}</div>
 
           <div class="mt-5 font-semibold text-slate-500 text-xs uppercase tracking-widest">{projectPage.pricingLabel}</div>
-          <div class="mt-2 text-base-content/80">{project.page.pricing}</div>
+          <div class="mt-2 text-base-content">{project.page.pricing}</div>
 
           <div class="mt-5 font-semibold text-slate-500 text-xs uppercase tracking-widest">{projectPage.supportLabel}</div>
           <div class="space-y-2 mt-3">
@@ -57,7 +57,7 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
           <div class="font-semibold text-slate-500 text-xs uppercase tracking-widest">{projectPage.categoriesLabel}</div>
           <div class="flex flex-wrap gap-2 mt-3">
             {project.page.categories.map((category) => (
-              <span class="bg-base-200 px-3 py-1 border border-base-300 rounded-full text-xs text-base-content/70">
+              <span class="bg-base-200 px-3 py-1 border border-base-300 rounded-full text-xs text-base-content">
                 {category}
               </span>
             ))}
@@ -68,11 +68,11 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
       <div>
         <div class="flex flex-wrap items-center gap-4">
           <h1 class="font-semibold text-base-content text-3xl sm:text-4xl">{project.name}</h1>
-          <span class="bg-base-200 px-3 py-1 border border-base-300 rounded-full font-semibold text-xs text-base-content/70">
+          <span class="bg-base-200 px-3 py-1 border border-base-300 rounded-full font-semibold text-xs text-base-content">
             {project.category}
           </span>
         </div>
-        <p class="mt-3 text-base-content/70 text-lg">{project.tagline}</p>
+        <p class="mt-3 text-base-content text-lg">{project.tagline}</p>
 
         <div class="mt-6 tabs-border tabs">
           <!-- Description Tab -->
@@ -83,7 +83,7 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
                 <Image src={import(`../images/${project.page.screenshot}.png`)} alt={`${project.name} preview`} class="mx-auto rounded-[6px] w-auto max-h-100" />
               </div>
             )}
-            <div class="space-y-4 mt-6 text-base-content/80">
+            <div class="space-y-4 mt-6 text-base-content">
               {MarkdownContent ? <Prose><MarkdownContent /></Prose> : <p> </p>}
             </div>
           </div>
@@ -91,7 +91,7 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
           <!-- License Tab -->
           <input type="radio" name="project_tabs" class="pb-3 font-semibold tab" aria-label={projectPage.tabs[1]}/>
           <div class="bg-base-100 p-8 border border-base-300 rounded-md tab-content">
-            <p class="text-base-content/80">{MarkdownLicenseContent ? <MarkdownLicenseContent /> : <p>N/A</p>}</p>
+            <p class="text-base-content">{MarkdownLicenseContent ? <MarkdownLicenseContent /> : <p>N/A</p>}</p>
           </div>
         </div>
       </div>
