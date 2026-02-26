@@ -3,6 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../../data/site-data.json";
+import erudikaBlogThumb from "../../../images/erudika_blog.png";
 
 const { blogTags } = marketing.site.pages;
 const { breadcrumbs } = marketing.site.components;
@@ -39,6 +40,7 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogTags.title}
   description={marketing.site.meta.blogTags.description}
+  image={erudikaBlogThumb.src}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="py-16">

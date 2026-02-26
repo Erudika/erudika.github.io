@@ -5,6 +5,7 @@ import Pagination from "../../components/Pagination.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../data/site-data.json";
 import optimizedBackground from "../../images/banner.jpg";
+import erudikaBlogThumb from "../../images/erudika_blog.png";
 
 const { blogIndex } = marketing.site.pages;
 const baseUrl = marketing.site.organization.url;
@@ -41,6 +42,7 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogIndex.title}
   description={marketing.site.meta.blogIndex.description}
+  image={erudikaBlogThumb.src}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="pb-16">

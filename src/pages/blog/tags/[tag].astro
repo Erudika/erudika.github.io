@@ -6,6 +6,7 @@ import { getCollection } from "astro:content";
 import marketing from "../../../data/site-data.json";
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
+import erudikaBlogThumb from "../../../images/erudika_blog.png";
 
 export async function getStaticPaths() {
   const toSlug = (tag) => tag.toLowerCase().replace(/\s+/g, "-");
@@ -60,6 +61,7 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogTag.titleTemplate.replace("{tag}", tag)}
   description={marketing.site.meta.blogTag.descriptionTemplate.replace("{tag}", tag)}
+  image={erudikaBlogThumb.src}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="py-16">

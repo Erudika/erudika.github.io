@@ -5,6 +5,7 @@ import Pagination from "../../../components/Pagination.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
 import marketing from "../../../data/site-data.json";
+import erudikaBlogThumb from "../../../images/erudika_blog.png";
 
 const { blogPage } = marketing.site.pages;
 const { breadcrumbs } = marketing.site.components;
@@ -55,6 +56,7 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={marketing.site.meta.blogPage.titleTemplate.replace("{page}", String(page))}
   description={marketing.site.meta.blogPage.description}
+  image={erudikaBlogThumb.src}
   jsonLd={breadcrumbJsonLd}
 >
   <section class="py-16">

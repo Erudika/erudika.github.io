@@ -6,6 +6,7 @@ import marketing from "../../data/site-data.json";
 import Prose from '../../components/Prose.astro';
 import PersonCard from "../../components/PersonCard.astro";
 import { getImage } from "astro:assets";
+import erudikaBlogThumb from "../../images/erudika_blog.png";
 
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
@@ -45,7 +46,7 @@ const articleJsonLd = {
     }
   },
   mainEntityOfPage: postUrl,
-  image: [post.data.img ?? marketing.site.organization.logo],
+  image: [heroImageUrl.src ?? erudikaBlogThumb],
   url: postUrl
 };
 
@@ -63,7 +64,7 @@ const breadcrumbJsonLd = {
 <BaseLayout
   title={`${post.data.title} | Erudika`}
   description={post.data.excerpt}
-  image={heroImageUrl}
+  image={heroImageUrl.src}
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
 >
   <div class="bg-cover bg-center" style={`background-image: url('${heroImageUrl.src}')`}>
