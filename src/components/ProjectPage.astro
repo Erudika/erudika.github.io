@@ -74,25 +74,12 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
         </div>
         <p class="mt-3 text-base-content/70 text-lg">{project.tagline}</p>
 
-        <div class="mt-6 border-base-300 border-b font-semibold text-sm text-base-content/70" data-tabs>
-          <div role="tablist" class="tabs-border tabs">
-            {projectPage.tabs.map((tab, index) => (
-              <button
-                role="tab"
-                type="button"
-                data-tab={index}
-                class={`tab pb-3 ${index == 0 ? "tab-active" : ""}`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div class="bg-base-100 shadow-sm mt-8 p-8 border border-base-300 rounded-[6px]">
-          <div data-panel="0">
+        <div class="mt-6 tabs-border tabs">
+          <!-- Description Tab -->
+          <input type="radio" name="project_tabs" class="pb-3 font-semibold tab" aria-label={projectPage.tabs[0]} checked="checked"/>
+          <div class="bg-base-100 p-8 border border-base-300 rounded-[6px] tab-content">
             {project.page.screenshot && (
-              <div class="bg-base-100 p-1 border border-base-300 rounded-[6px]">
+              <div class="bg-base-100 p-1 border border-base-300 rounded-md">
                 <Image src={import(`../images/${project.page.screenshot}.png`)} alt={`${project.name} preview`} class="mx-auto rounded-[6px] w-auto max-h-100" />
               </div>
             )}
@@ -100,7 +87,10 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
               {MarkdownContent ? <Prose><MarkdownContent /></Prose> : <p> </p>}
             </div>
           </div>
-          <div data-panel="1" class="hidden">
+          
+          <!-- License Tab -->
+          <input type="radio" name="project_tabs" class="pb-3 font-semibold tab" aria-label={projectPage.tabs[1]}/>
+          <div class="bg-base-100 p-8 border border-base-300 rounded-md tab-content">
             <p class="text-base-content/80">{MarkdownLicenseContent ? <MarkdownLicenseContent /> : <p>N/A</p>}</p>
           </div>
         </div>
@@ -108,22 +98,3 @@ const MarkdownLicenseContent = markdownLicense ? await markdownLicense.Content :
     </div>
   </div>
 </section>
-
-<script>
-  const tabButtons = document.querySelectorAll("[data-tabs] [data-tab]");
-  const panels = document.querySelectorAll("[data-panel]");
-
-  const setActive = (index) => {
-    tabButtons.forEach((button) => {
-      const isActive = (button as HTMLElement).dataset.tab === String(index);
-      button.classList.toggle("tab-active", isActive);
-    });
-    panels.forEach((panel) => {
-      panel.classList.toggle("hidden", (panel as HTMLElement).dataset.panel !== String(index));
-    });
-  };
-
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", () => setActive((button as HTMLElement).dataset.tab));
-  });
-</script>
