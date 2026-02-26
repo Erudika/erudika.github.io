@@ -25,7 +25,7 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 const postUrl = `${baseUrl}/blog/${post.slug}`;
 const heroImageUrl = (await getImage({src: import(`../../images/${post.data.img}.jpg`)})).rawOptions.src;
-const blogImageUrl = post.data.thumb ? (await getImage({src: import(`../../images/${post.data.thumb}.png`)})).rawOptions.src : heroImageUrlg;
+const blogImageUrl = post.data.thumb ? (await getImage({src: import(`../../images/${post.data.thumb}.png`)})).rawOptions.src : heroImageUrl;
 
 const articleJsonLd = {
   "@context": "https://schema.org",
