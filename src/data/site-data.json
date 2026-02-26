@@ -539,11 +539,124 @@
       "privacy": {
         "eyebrow": "Privacy",
         "title": "Privacy Policy",
-        "body": "This policy explains how Erudika collects, uses, and protects information. Replace with the official policy text or link to your legal document when ready.",
-        "points": [
-          "We only collect necessary information for product support and communication.",
-          "We do not sell personal data to third parties.",
-          "Contact us at contact@erudika.com for any privacy questions."
+        "effectiveDate": "February 17, 2026",
+        "intro": "This Privacy Policy explains how Erudika Ltd. (\"Erudika\", \"we\", \"us\") collects, uses, and protects personal data when you visit erudika.com or contact us. We are committed to complying with the GDPR and applicable privacy laws.",
+        "sections": [
+          {
+            "title": "1. Data Controller",
+            "paragraphs": [
+              "Erudika Ltd., 4 Lelinska Chuka Street, Sofia 1618, Bulgaria.",
+              "Erudika Ltd. acts as the Data Controller for the purposes of Regulation (EU) 2016/679 (General Data Protection Regulation - GDPR)."
+            ],
+            "emailLabel": "Email",
+            "email": "contact@erudika.com"
+          },
+          {
+            "title": "2. Personal Data We Collect",
+            "paragraphs": ["We collect personal data directly from you when you contact us or use our services, and automatically through technical means when you visit our website."],
+            "items": [
+              "Contact details you provide (name, email, company, message).",
+              "Account or contract details when you request support or services.",
+              "Technical data such as IP address, browser type, and basic device information.",
+              "Usage data from analytics (pages visited, time on site, referral source)."
+            ]
+          },
+          {
+            "title": "3. Legal Bases for Processing",
+            "paragraphs": [
+              "Our legitimate interests include maintaining website security, preventing fraud, improving our services, and managing customer relationships. Where we rely on legitimate interests, we ensure that such interests are not overridden by your rights and freedoms.",
+              "Where personal data is required for contract performance, failure to provide such data may result in our inability to provide the requested services. Other reasons for collecting and processing data may include: "
+            ],
+            "items": [
+              "Consent (e.g., marketing emails, optional analytics).",
+              "Contract performance (e.g., providing support or services you request).",
+              "Legitimate interests (e.g., securing our site, improving our services).",
+              "Legal obligations (e.g., accounting and compliance requirements).",
+              "Technical information (e.g. server logs, cookies identifiers, communication records)"
+            ]
+          },
+          {
+            "title": "4. How We Use Your Data",
+            "items": [
+              "Respond to inquiries and provide support.",
+              "Deliver products or services you request.",
+              "Improve our website and user experience.",
+              "Maintain security, prevent fraud, and comply with legal obligations."
+            ]
+          },
+          {
+            "title": "5. Cookies and Analytics",
+            "paragraphs": [
+              "We use essential cookies for site functionality. We may use privacy-friendly analytics to understand site usage. Where required, we ask for consent before placing non-essential cookies.",
+              "We are committed to not using tracking cookies. For traffic analysis we use Motomo with the highest privacy settings."
+            ]
+          },
+          {
+            "title": "6. Sharing and International Transfers",
+            "paragraphs": [
+              "We share data only with service providers who process data on our behalf (e.g., hosting, email, analytics). If data is transferred outside the EEA, we use appropriate safeguards such as Standard Contractual Clauses.",
+              "Where personal data is transferred outside the European Economic Area (EEA), we ensure appropriate safeguards in accordance with Chapter V GDPR, including the use of Standard Contractual Clauses approved by the European Commission. You may request a copy of these safeguards by contacting us."
+            ]
+          },
+          {
+            "title": "7. Data Retention",
+            "paragraphs": [
+              "We retain personal data only as long as needed for the purposes described, or as required by law. We periodically review and delete data that is no longer necessary."
+            ], 
+            "items": [
+              "Contact inquiries: retained for up to 24 months after resolution.",
+              "Contractual data: retained for the duration of the contract plus applicable statutory limitation periods.",
+              "Accounting data: retained as required under Bulgarian accounting law (10 years).",
+              "Analytics data: retained for 12 months."
+            ]
+          },
+          {
+            "title": "8. Your Rights",
+            "paragraphs": [
+              "You have the right to lodge a complaint with the Bulgarian Commission for Personal Data Protection (КЗЛД) or your local supervisory authority within the EU."
+            ],
+            "items": [
+              "Access your personal data and request a copy.",
+              "Correct inaccurate or incomplete data.",
+              "Request deletion of your data (subject to legal requirements).",
+              "Object to processing or request restriction.",
+              "Data portability where applicable.",
+              "Withdraw consent at any time where processing is based on consent.",
+              "Lodge a complaint with your local data protection authority.",
+              "To exercise your rights, please contact us. We may request verification of your identity before responding."
+            ]
+          },
+          {
+            "title": "9. Security",
+            "paragraphs": [
+              "We implement appropriate technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure, or destruction."
+            ]
+          },
+          {
+            "title": "10. Children's Privacy",
+            "paragraphs": [
+              "Our services are not directed to children under 16, and we do not knowingly collect data from children. If you believe a child has provided us data, please contact us."
+            ]
+          },
+          {
+            "title": "11. Changes to This Policy",
+            "paragraphs": [
+              "We may update this Privacy Policy from time to time. We will post the updated version on this page and update the effective date above."
+            ]
+          },
+          {
+            "title": "12. Data Protection Officer",
+            "contactIntro": "Erudika Ltd. has appointed a Data Protection Officer in accordance with Article 37 of GDPR: Alexander Bogdanovski",
+            "email": "alex@erudika.com"
+          },
+          {
+            "title": "13. Mandatory disclosure under Article 13 (2) (e)",
+            "paragraphs": ["Providing certain personal data is necessary for entering into and performing a contract. Where data is required, we will indicate this. Failure to provide required data may prevent us from providing services."]
+          },
+          {
+            "title": "14. Automated Decision-Making Disclosure",
+            "paragraphs": ["We do not use personal data for automated decision-making or profiling that produces legal or similarly significant effects."]
+          }
         ]
       },
       "terms": {
