@@ -1,7 +1,7 @@
 ---
 title: "Hello World!"
 tags: ["general"]
-excerpt: "excerpt-123"
+excerpt: "Welcome to the Erudika blog where we'll share project updates and development news. Follow us on Twitter or GitHub to stay in the loop."
 img: "img1"
 date: 2015-10-16
 author: "alex@erudika.com"

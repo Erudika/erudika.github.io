@@ -3,7 +3,7 @@ title: "jPrime roundup, Para client for iOS and Swift"
 date: 2016-06-01
 tags: ["para", "ios", "swift", "jprime", "release"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "jPrime 2016 was a major Java conference in the Balkans with 500+ attendees and themes of microservices and reactive programming. We sponsored the event to support the local Java community."
 img: "img6"
 ---
 

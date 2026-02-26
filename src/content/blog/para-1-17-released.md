@@ -3,7 +3,7 @@ title: "Para v1.17 released"
 date: 2016-01-05
 tags: ["backend", "para", "release"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "Para v1.17 is released and published to Maven. The update is already deployed on ParaIO.com."
 img: "img3"
 ---
 

@@ -3,7 +3,7 @@ title: "Saving money on DynamoDB with Global Secondary Indexes"
 date: 2016-11-21
 tags: ["aws", "dynamodb", "tips"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "DynamoDB is a fully managed, scalable AWS database optimized for low-latency, write-heavy workloads. Its adjustable throughput and global secondary indexes are key advantages."
 img: "img9"
 ---
 

@@ -3,7 +3,7 @@ title: "Implementing full-text search for your static site"
 date: 2016-12-12
 tags: ["search", "blog", "para-cli"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "Static site generators make it easy to build and host sites, but static content makes search difficult. This post highlights the UX problem of not being able to quickly search static sites."
 img: "img10"
 ---
 

@@ -3,7 +3,7 @@ title: "Para v1.18 released, new site and jPrime"
 date: 2016-03-06
 tags: ["para", "release", "mongodb", "jprime"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "The past month brought feedback, bug fixes, an Android client, and a MongoDB plugin, with plugins and MongoDB support as top requests. We also refreshed the Para docs and redesigned paraio.org for better mobile display."
 img: "img4"
 ---
 

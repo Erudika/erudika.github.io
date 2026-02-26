@@ -3,7 +3,7 @@ title: "Status update - Para goes global, pricing changes"
 date: 2021-02-01
 tags: ["para", "baas", "hosting"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "Para's hosted BaaS has grown to hundreds of active apps and paying customers worldwide. To reduce latency from a single EU region, we set out to make the service global."
 img: "img18"
 ---
 

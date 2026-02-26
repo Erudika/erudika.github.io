@@ -3,7 +3,7 @@ title: "Status update - containers, Java 11 and more"
 date: 2019-01-28
 tags: ["scoold", "para", "docker", "kubernetes", "helm", "lucene", "release"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "We've been maintaining Para and Scoold with minor dependency upgrades and bug fixes. Scoold also received translation contributions and now supports 12 languages."
 img: "img14"
 ---
 

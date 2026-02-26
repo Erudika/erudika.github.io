@@ -3,7 +3,7 @@ title: "Building a full stack application from scratch with Angular"
 date: 2016-06-09
 tags: ["angular", "para", "tutorial", "typescript"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "This article and its code were updated for Angular 8.x. A React version is also available."
 img: "img7"
 ---
 

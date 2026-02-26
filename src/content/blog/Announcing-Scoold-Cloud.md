@@ -3,7 +3,7 @@ title: "Announcing Scoold Cloud"
 date: 2020-09-22
 tags: ["scoold", "saas", "hosting"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "Scoold Cloud is the official hosting for Scoold Pro, offering easy deployment with scaling and upgrades handled for you. Combined with Para, it provides a low-maintenance knowledge-sharing solution for organizations."
 img: "img17"
 ---
 

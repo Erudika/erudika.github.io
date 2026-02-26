@@ -3,7 +3,7 @@ title: "Building a full stack application from scratch with React"
 date: 2019-08-14
 tags: ["react", "para", "tutorial", "jsx"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "This React article is a clone of the Angular version. Read the Angular post for the original content."
 img: "img7"
 ---
 

@@ -3,7 +3,7 @@ title: "Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Pa
 date: 2015-10-21
 tags: ["backend", "baas", "frameworks", "para", "API"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "This post compares modern open-source backend frameworks that handle server-side app operations. It focuses only on open-source options and not the broader backend services market."
 img: "img2"
 ---
 

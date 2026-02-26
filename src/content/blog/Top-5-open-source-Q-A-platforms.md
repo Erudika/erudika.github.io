@@ -3,7 +3,7 @@ title: "Top 5 open source Q&A platforms for 2021"
 date: 2018-12-30
 tags: ["scoold", "open-source", "stackoverflow"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "This post lists top open-source Q&A platforms that are actively developed and have working demos. The projects are inspired by Stack Overflow and the list is unordered."
 img: "img13"
 ---
 

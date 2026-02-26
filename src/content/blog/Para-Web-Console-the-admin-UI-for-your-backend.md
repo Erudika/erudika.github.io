@@ -3,7 +3,7 @@ title: "Para Web Console - the admin UI for your backend"
 date: 2016-03-25
 tags: ["para", "ng-admin", "angular", "frontend"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "We released an open-source, client-side web console for managing Para servers. Built with AngularJS, it connects to local or remote Para instances and is open to contributions."
 img: "img5"
 ---
 

@@ -3,7 +3,7 @@ title: "An open source backend for the Internet of Things"
 date: 2016-08-12
 tags: ["release", "para", "iot", "devices"]
 author: "alex@erudika.com"
-excerpt: "excerpt-123"
+excerpt: "IoT devices are becoming everyday, and reliable open-source backends are increasingly needed as focus shifts beyond mobile. We accelerated adding IoT support to Para after realizing the demand from real-world use cases."
 img: "img8"
 ---
 
