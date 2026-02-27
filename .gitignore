@@ -41,5 +41,5 @@ bun.lock
 old_website/
 dist/
 
-.astro/content-assets.mjs
-.astro/content-modules.mjs
+content-assets.mjs
+content-modules.mjs
