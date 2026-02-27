@@ -8,7 +8,7 @@ img: "img10"
 thumb: "blogpost_media19"
 ---
 
-**Static site generators are great** because they allow us to ship quickly, deploy to a CDN, and forget about infrastructure. For blogs, documentation portals, and marketing sites, this model is hard to beat. However, once you need proper search, things get complicated. We’ve always felt that the search box on our static website could be improved and sending users off to Google was not an ideal solution. 
+**Static site generators are great** because they allow us to ship quickly, deploy to a CDN, and forget about infrastructure. For blogs, documentation portals, and marketing sites, this model is hard to beat. However, once you need proper search, things get complicated. We’ve always felt that the search box on our static website could be improved and sending users off to Google was not an ideal solution.
 
 Many teams choose Algolia. It’s powerful, mature, and has many features, but not everyone is satisfied with it. Pricing can become unpredictable as traffic increases. The setup adds complexity to your stack. In some cases, it feels like overkill for a small or medium-sized static website.
 
@@ -19,10 +19,9 @@ Many teams choose Algolia. It’s powerful, mature, and has many features, but n
 Sometimes, we need simple solutions for static websites.
 
 In this tutorial, I’ll show you how you can add a simple and free search widget as an alternative to Algolia and TypeSense.
-The solution is modern, lightweight and offers full-text search capability without the operational and financial burden. 
-The content will be indexed at build time, not crawled after deployment. That difference matters. 
-Instead of depending on an external crawler to discover and parse your pages, we push the generated HTML directly to the search backend as part of the build process. 
-The index always reflects exactly what was deployed.
+The solution is modern, lightweight and offers full-text search capability without the operational and financial burden.
+The content will be indexed at build time, not crawled after deployment. That difference matters.
+Instead of depending on an external crawler to discover and parse your pages, we push the generated HTML directly to the search backend as part of the build process. The index always reflects exactly what was deployed.
 
 There are JavaScript-only alternatives like TypeSense or Pagefind.js that work entirely in the browser. They are solid tools, but they usually require generating and sending a search index to the client. As your content grows, that index also grows, affecting the bundle size and initial load speed. Our approach keeps the browser lightweight by querying a backend search API, while still maintaining the static nature of the site.
 
@@ -51,11 +50,9 @@ So what if we want:
 - Real full-text search  
 - Proper indexing and ranking  
 - Zero servers to manage  
-- Minimal cost  
+- Minimal cost (free if possible)
 
 We can build that using Para as a backend search API, while keeping the frontend 100% static.
-
----
 
 ## Architecture overview
 
@@ -68,50 +65,47 @@ The idea is straightforward:
 
 Your site remains static. Para becomes your search engine.
 
----
-
 ## Step 1: Install the Para CLI
 
-We’ll use the Para CLI to ingest the generated HTML files.
+We’ll use the Para CLI to ingest the generated HTML files. If you don't have a Para app or the Para server running locally, go to [Para Cloud](https://paraio.com) and create a free account, then create a new app.
 
 ```bash
 $ npm install -g para-cli
-# run setup and set endpoint to either 'http://localhost:8080' or 'https://paraio.com'
 $ para-cli setup
 ```
 
-During setup, configure your endpoint. You can point to your own Para instance or use the hosted version at https://paraio.com.
+During setup, configure your Para endpoint to be either `http://localhost:8080` for local testing or a public URL. You can point it to your own Para instance or use the hosted service at `https://paraio.com`.
 
 ## Step 2: Index your generated HTML
 
 After your static site is built (for example into a dist/ directory), we can index the HTML files directly.
 
-Create a simple shell script:
+Create a simple shell script and execute the `para-cli create` command for every directory that you wish to be indexed:
+
 ```bash
 #!/bin/bash
 para-cli create './dist/about/*.html' --type 'blogpost' --sanitize
 para-cli create './dist/projects/**/*.html' --type 'blogpost' --sanitize
-para-cli create './dist/support/*.html' --type 'blogpost' --sanitize
-para-cli create './dist/contact/*.html' --type 'blogpost' --sanitize
+para-cli create './dist/blog/*.html' --type 'blogpost' --sanitize
 ```
 
 What this does:
 
-- Reads each HTML file
-- Extracts meaningful content
-- Sanitizes markup
-- Sends it to Para
-- Stores it as objects of type `blogpost`
+1. Reads each HTML file
+2. Extracts meaningful content
+3. Sanitizes markup
+4. Sends it to Para
+5. Stores it as objects of type `blogpost`
 
 Now your static pages are fully indexed and searchable. You can automate this step in CI after each deployment.
 
 ## Step 3: Add the search modal UI
 
-Next, we need a search interface. Below is a minimal modal-based search dialog with keyboard shortcuts (`/`` or `Ctrl+K`).
+Next, we need a search interface. Below is a minimal modal-based search dialog with keyboard shortcuts - `/` or `Ctrl + K`.
 
 ```html
 <button class="btn btn-ghost btn-sm" onclick="site_search_modal.showModal()" aria-label="Open search" title="Search '/' or Ctrl+K">
-<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
   <circle cx="11" cy="11" r="7"></circle>
   <path d="M20 20l-3.5-3.5"></path>
 </svg>
@@ -121,7 +115,7 @@ Next, we need a search interface. Below is a minimal modal-based search dialog w
   <div class="top-24 absolute xs:w-full sm:w-10/12 md:w-6/12 max-w-3xl modal-box">
     <div class="mt-1">
       <div class="flex items-center gap-2 w-full input input-bordered">
-        <svg xmlns="http://www.w3.org/2000/svg" class="opacity-70 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="opacity-70 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7"></circle>
           <path d="M20 20l-3.5-3.5"></path>
         </svg>
@@ -137,9 +131,7 @@ Next, we need a search interface. Below is a minimal modal-based search dialog w
         <kbd class="kbd kbd-sm">Esc</kbd> to close
       </span>
       <strong class="justify-end text-right">
-        <a href="https://paraio.com" target="_blank" class="text-base-content">
-          Search powered by <Image src={paraLogo} class="inline-block max-w-16" alt="Para" loading="eager">
-        </a>
+        Search powered by <img src="https://erudika.com/para_logo.svg" class="inline-block max-w-16" alt="Para" loading="eager">
       </strong>
     </div>
   </div>
@@ -151,9 +143,12 @@ Next, we need a search interface. Below is a minimal modal-based search dialog w
 
 ## Step 4: Query Para from the client side
 
-Here is the client-side logic:
+Here is the client-side logic (note: replace `app:myapp` with an actual app ID from Para):
 
 ```js
+  const appID = "app:myapp";
+  const isLocal = false;
+  const paraEndpoint = isLocal ? "http://localhost:8000" : "https://paraio.com";
   const searchToggle = document.getElementById("site_search_modal");
   const searchInput = document.getElementById("site-search-input");
   const resultsList = document.getElementById("site-search-results");
@@ -208,10 +203,10 @@ Here is the client-side logic:
     }
     searchAbortController = new AbortController();
     try {
-      const response = await fetch(`https://paraio.com/v1/blogposts?limit=6&q=${encodeURIComponent(trimmed || "*")}`, {
+      const response = await fetch(`${paraEndpoint}/v1/blogposts?limit=6&q=${encodeURIComponent(trimmed || "*")}`, {
         signal: searchAbortController.signal,
         headers: {
-          "Authorization": 'Anonymous app:albogdano'
+          "Authorization": 'Anonymous ' + appID
         }
       });
       if (!response.ok) return;
@@ -263,10 +258,13 @@ Here is the client-side logic:
   });
 ```
 
-
 ## Final result
 
-*That’s it!* You can try out the finished thing at the top of this page, above the title.
+*That’s it!* You can try out the search bar by pressing `/` or `Ctrl + K` on this page.
 
-*If you liked this post, you can also follow us [on Twitter](https://twitter.com/erudika) or chat with us
+The full code for the search widget is available [on JSFiddle](https://jsfiddle.net/b310mqoj/7/).
+
+<script async src="//jsfiddle.net/b310mqoj/8/embed/html,js,css,result/dark/"></script>
+
+*If you liked this post, you can try out Para at [ParaIO.com](https://paraio.com) or chat with me
 [on Gitter](https://gitter.im/Erudika/para).*
