@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectPage from "../../components/ProjectPage.astro";
+import marketing from "../../data/site-data.json";
+
+const { project } = Astro.props;
+// const project = marketing.site.pages.projectsIndex.items.find((item) => item.id == "scoold-pro");
+const baseUrl = marketing.site.organization.url;
+
+export async function getStaticPaths() {
+  const projects = marketing.site.pages.projectsIndex.items;
+  return projects.map((proj) => ({
+    params: { project: proj.id },
+    props: { project: proj }
+  }));
+}
+
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: project.name,
+  description: project.description,
+  url: project.website,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Any',
+  offers: {
+    '@type': 'Offer',
+    price: '0'
+  },
+  author: {
+    '@type': 'Organization',
+    name: marketing.site.organization.name,
+    url: marketing.site.organization.url,
+  }
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: marketing.site.components.breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.projects, item: `${baseUrl}/projects` },
+    { "@type": "ListItem", position: 3, name: project.name, item: `${baseUrl}/projects/${project.id}` }
+  ]
+};
+---
+
+<BaseLayout
+  title={project.title}
+  description={project.description}
+  jsonLd={[productJsonLd, breadcrumbJsonLd]}
+>
+  <ProjectPage project={project} />
+</BaseLayout>

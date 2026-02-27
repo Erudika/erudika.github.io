@@ -275,7 +275,9 @@
           {
             "id": "scoold",
             "name": "Scoold",
+            "title": "Scoold | Erudika",
             "tagline": "Knowledge sharing for your team, inspired by the Stack Exchange platform",
+            "description": "Scoold is open source and works great as a questions-and-answer platform, forum, knowledge base or customer support system. Self-hosted and open source.",
             "category": "Open Source",
             "cta": {
               "label": "Explore Scoold",
@@ -307,7 +309,9 @@
           {
             "id": "para",
             "name": "Para",
+            "title": "Para | Erudika",
             "tagline": "The open-source backend server for busy developers",
+            "description": "Para helps teams prototype rapidly and ship internal tools and CRUD applications by providing a full-featured backend service.",
             "category": "Open Source",
             "cta": {
               "label": "Explore Para",
@@ -338,7 +342,9 @@
           {
             "id": "para-cloud",
             "name": "Para Cloud",
+            "title": "Para Cloud | Erudika",
             "tagline": "Fully managed Backend-as-a-Service (BaaS) with global availability.",
+            "description": "Para Cloud is fully managed backend service with global availability and failover. It provides Para backend hosting with a generous free tier.",
             "category": "Cloud",
             "cta": {
               "label": "Explore Para BaaS",
@@ -368,7 +374,9 @@
           {
             "id": "scoold-cloud",
             "name": "Scoold Cloud",
+            "title": "Scoold Cloud | Erudika",
             "tagline": "The easiest way to deploy a Scoold Pro instance. Fully managed service, with pre-configured email, storage and automatic backup & upgrades.",
+            "description": "Scoold Cloud is the fully managed hosting service for Scoold Pro - the premium version of the popular q-and-a platform Scoold.",
             "category": "Cloud",
             "cta": {
               "label": "Explore Scoold Cloud",
@@ -399,7 +407,9 @@
           {
             "id": "scoold-pro",
             "name": "Scoold Pro",
+            "title": "Scoold Pro | Erudika",
             "tagline": "Enterprise-ready Scoold with premium features and advanced auth flows (SAML, LDAP, OAuth2).",
+            "description": "Scoold Pro is the premium version of Scoold - a popular q-and-a platform and knowledge base for teams.",
             "category": "Self-Hosted",
             "cta": {
               "label": "Explore Scoold Pro",
@@ -430,7 +440,9 @@
           {
             "id": "robo-translator",
             "name": "Robo Translator",
+            "title": "Robo Translator | Erudika",
             "tagline": "Human-friendly content localization workflows for busy content creators.",
+            "description": "Robo Translator is a cloud service tool for content localization, translation and transcription. It does text-to-speech, speech-to-text and closed captions.",
             "category": "Cloud",
             "cta": {
               "label": "Explore Robo Translator",
@@ -728,32 +740,6 @@
       "terms": {
         "title": "Terms of Service | Erudika",
         "description": "Erudika terms of service and usage guidelines."
-      },
-      "projects": {
-        "para": {
-          "title": "Para | Erudika",
-          "description": "Para helps teams prototype rapidly and ship internal tools and CRUD applications by providing a full-featured backend service."
-        },
-        "scoold": {
-          "title": "Scoold | Erudika",
-          "description": "Scoold is open source and works great as a questions-and-answer platform, forum, knowledge base or customer support system. Self-hosted and open source."
-        },
-        "paraCloud": {
-          "title": "Para Cloud | Erudika",
-          "description": "Para Cloud is fully managed backend service with global availability and failover. It provides Para backend hosting with a generous free tier."
-        },
-        "scooldCloud": {
-          "title": "Scoold Cloud | Erudika",
-          "description": "Scoold Cloud is the fully managed hosting service for Scoold Pro - the premium version of the popular q-and-a platform Scoold."
-        },
-        "scooldPro": {
-          "title": "Scoold Pro | Erudika",
-          "description": "Scoold Pro is the premium version of Scoold - a popular q-and-a platform and knowledge base for teams."
-        },
-        "roboTranslator": {
-          "title": "Robo Translator | Erudika",
-          "description": "Robo Translator is a cloud service tool for content localization, translation and transcription. It does text-to-speech, speech-to-text and closed captions."
-        }
       },
       "blogPage": {
         "titleTemplate": "Erudika Blog Page {page}",
