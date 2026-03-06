@@ -264,7 +264,7 @@ Here is the client-side logic (note: replace `app:myapp` with an actual app ID f
 
 The full code for the search widget is available [on JSFiddle](https://jsfiddle.net/b310mqoj/7/).
 
-<script async src="//jsfiddle.net/b310mqoj/8/embed/html,js,css,result/dark/"></script>
+<script async src="//jsfiddle.net/9jfn1tcd/5/embed/result,html,js,css/dark/"></script>
 
 *If you liked this post, you can try out Para at [ParaIO.com](https://paraio.com) or chat with me
 [on Gitter](https://gitter.im/Erudika/para).*
