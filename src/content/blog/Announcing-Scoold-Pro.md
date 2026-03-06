@@ -74,7 +74,7 @@ With image uploads, people can upload screenshots and embed them in their posts.
 
 Scoold has had a strict Content Security Policy and reports since the very beginning. In Pro we've taken this a step further and added email notifications for admins. Administrators and moderators will receive an email when a new report comes in. They can also receive an email report each time the Content Security Policy (CSP) gets violated.
 
-Scoold Pro is available for purchase from [scoold.com](https://scoold.com). It's *299 EUR, one-time fee* so you can buy it once and host it on one of your servers indefinitely. You're also eligible for free updates and fixes for a period of 1 year. Buying Pro would also support the development of Scoold in general. Cheers!
+Scoold Pro is available for purchase from [scoold.com](https://scoold.com). It's *499 EUR, one-time fee* so you can buy it once and host it on one of your servers indefinitely. You're also eligible for free updates and fixes for a period of 1 year. Buying Pro would also support the development of Scoold in general. Cheers!
 
 
 *Want to give Scoold a try? Go to [demo.scoold.com](https://demo.scoold.com)*

@@ -35,7 +35,7 @@ const navLinks = header.nav;
           <path d="M20 20l-3.5-3.5"></path>
         </svg>
       </button>
-      <a href="mailto:contact@erudika.com" class="hidden md:flex text-white btn btn-primary btn-sm">{header.ctaLabel}</a>
+      <a href={`mailto:${marketing.site.organization.email}`} class="hidden md:flex text-white btn btn-primary btn-sm">{header.ctaLabel}</a>
       <div class="md:hidden dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-sm">
           {header.menuLabel}

@@ -40,6 +40,19 @@
   }
 }
 
+/* Typography prose overrides */
+.prose a {
+  @apply text-sky-500 hover:underline no-underline;
+}
+
+.prose code {
+  @apply bg-slate-100 px-1.5 py-0.5 rounded font-mono text-sm;
+}
+
+.prose pre {
+  @apply bg-slate-900 rounded-xl;
+}
+
 .logo-light {
   display: block;
 }

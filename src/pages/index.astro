@@ -23,7 +23,7 @@ const blogTeasers = (await getCollection("blog"))
     }),
     img: post.data.img,
     tags: post.data.tags,
-    href: `/blog/${post.slug}`
+    href: `/blog/${post.slug}/`
   }));
 
 const orgJsonLd = {
@@ -162,7 +162,7 @@ const websiteJsonLd = {
         <p class="mt-3 text-base-content">{home.supportBody}</p>
         <div class="flex flex-wrap gap-4 mt-6">
           <a href="/support" class="text-white btn btn-primary">{home.supportCtaPrimary}</a>
-          <a href="mailto:contact@erudika.com" class="border border-slate-300 btn btn-ghost">{home.supportCtaSecondary}</a>
+          <a href={`mailto:${marketing.site.organization.email}`} class="border border-slate-300 btn btn-ghost">{home.supportCtaSecondary}</a>
         </div>
       </div>
       <div class="p-1 border border-base-300 rounded-[3px]">
