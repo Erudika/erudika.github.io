@@ -269,7 +269,7 @@
       },
       "projectsIndex": {
         "eyebrow": "Projects",
-        "title": "Open source, cloud services, self-hosted.",
+        "title": "Open source, self-hosted & cloud services",
         "body": "Powered by the battle-tested Java Virtual Machine, our products deliver proven reliability and are straightforward to deploy.",
         "items": [
           {
@@ -435,7 +435,8 @@
                     "Knowledge Base",
                     "Internal Support"
                 ]
-            }
+            },
+            "signal": "self-hosted"
           },
           {
             "id": "robo-translator",
@@ -466,8 +467,8 @@
                     "Translation",
                     "Content Creation"
                 ]
-            },
-            "signal": "self-hosted"
+            }
+            
           }
         ]
       },
