@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import marketing from "../../data/site-data.json";
 import Prose from '../../components/Prose.astro';
 import PersonCard from "../../components/PersonCard.astro";
@@ -11,19 +11,17 @@ import erudikaBlogThumb from "../../images/erudika_blog.png";
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
 
-const toSlug = (tag) => tag.toLowerCase().replace(/\s+/g, "-");
-
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: { post }
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
-const postUrl = `${baseUrl}/blog/${post.slug}/`;
+const { Content } = await render(post);
+const postUrl = `${baseUrl}/blog/${post.id}`;
 const heroImageUrl = (await getImage({src: import(`../../images/${post.data.img}.jpg`)}));
 const blogImageUrl = post.data.thumb ? (await getImage({src: import(`../../images/${post.data.thumb}.png`)})) : heroImageUrl;
 
@@ -91,7 +89,7 @@ const breadcrumbJsonLd = {
       <div class="flex flex-wrap gap-3 mt-4 pb-10 text-slate-500 text-sm">
         <div class="flex flex-wrap gap-2">
           {post.data.tags.map((tag) => (
-            <a href={`/blog/tags/${toSlug(tag)}`} class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content">
+            <a href={`/blog/tags/${tag}`} class="bg-base-200 px-3 py-1 rounded-[3px] font-medium text-xs text-base-content">
               {tag}
             </a>
           ))}

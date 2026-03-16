@@ -9,13 +9,12 @@ const { blogTags } = marketing.site.pages;
 const { breadcrumbs } = marketing.site.components;
 const baseUrl = marketing.site.organization.url;
 
-const toSlug = (tag) => tag.toLowerCase().replace(/\s+/g, "-");
 const posts = await getCollection("blog");
 const tagMap = new Map();
 
 posts.forEach((post) => {
   post.data.tags.forEach((tag) => {
-    const slug = toSlug(tag);
+    const slug = tag;
     if (!tagMap.has(slug)) {
       tagMap.set(slug, { label: tag, count: 0 });
     }
@@ -50,7 +49,7 @@ const breadcrumbJsonLd = {
       <p class="mt-4 max-w-2xl text-base-content text-lg">{blogTags.body}</p>
       <div class="flex flex-wrap gap-3 mt-10">
         {tags.map((tag) => (
-          <a href={`/blog/tags/${tag.slug}`} class="chip">
+          <a href={`/blog/tags/${tag.label}`} class="chip">
             {tag.label} <span class="ml-2 text-xs">{tag.count}</span>
           </a>
         ))}
