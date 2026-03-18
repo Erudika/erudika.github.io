@@ -3,10 +3,11 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import BlogCard from "../../../components/BlogCard.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import { getCollection } from "astro:content";
-import marketing from "../../../data/site-data.json";
-const { breadcrumbs } = marketing.site.components;
-const baseUrl = marketing.site.organization.url;
+import { site } from "../../../data/site-data.json";
 import erudikaBlogThumb from "../../../images/erudika_blog.png";
+
+const { breadcrumbs } = site.components;
+const baseUrl = site.organization.url;
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -28,7 +29,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { blogTag } = marketing.site.pages;
+const { blogTag } = site.pages;
 const { tag, posts } = Astro.props;
 const cards = posts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
@@ -42,7 +43,7 @@ const cards = posts
     }),
     img: post.data.img,
     tags: post.data.tags,
-    href: `/blog/${post.id}`
+    href: `/blog/${post.id}/`
   }));
 
 const breadcrumbJsonLd = {
@@ -57,8 +58,8 @@ const breadcrumbJsonLd = {
 ---
 
 <BaseLayout
-  title={marketing.site.meta.blogTag.titleTemplate.replace("{tag}", tag)}
-  description={marketing.site.meta.blogTag.descriptionTemplate.replace("{tag}", tag)}
+  title={site.meta.blogTag.titleTemplate.replace("{tag}", tag)}
+  description={site.meta.blogTag.descriptionTemplate.replace("{tag}", tag)}
   image={erudikaBlogThumb.src}
   jsonLd={breadcrumbJsonLd}
 >

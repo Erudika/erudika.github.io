@@ -38,7 +38,7 @@ const pagePosts = posts.slice(start, start + pageSize).map((post) => ({
   }),
   img: post.data.img,
   tags: post.data.tags,
-  href: `/blog/${post.id}`
+  href: `/blog/${post.id}/`
 }));
 
 const breadcrumbJsonLd = {

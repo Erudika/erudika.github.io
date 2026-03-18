@@ -19,12 +19,12 @@
     ],
     "primaryCta": {
       "label": "Explore projects",
-      "href": "/projects",
+      "href": "/projects/",
       "tone": "primary"
     },
     "secondaryCta": {
       "label": "Read the blog",
-      "href": "/blog",
+      "href": "/blog/",
       "tone": "ghost"
     }
   },
@@ -67,23 +67,23 @@
       "nav": [
         {
           "label": "Projects",
-          "href": "/projects"
+          "href": "/projects/"
         },
         {
           "label": "Blog",
-          "href": "/blog"
+          "href": "/blog/"
         },
         {
           "label": "Support",
-          "href": "/support"
+          "href": "/support/"
         },
         {
           "label": "Contact",
-          "href": "/contact"
+          "href": "/contact/"
         },
         {
           "label": "About",
-          "href": "/about"
+          "href": "/about/"
         }
       ],
       "tagsLabel": "Tags",
@@ -107,27 +107,27 @@
       "links": [
         {
           "label": "Projects",
-          "href": "/projects"
+          "href": "/projects/"
         },
         {
           "label": "Blog",
-          "href": "/blog"
+          "href": "/blog/"
         },
         {
           "label": "Support",
-          "href": "/support"
+          "href": "/support/"
         },
         {
           "label": "Contact",
-          "href": "/contact"
+          "href": "/contact/"
         },
         {
           "label": "About",
-          "href": "/about"
+          "href": "/about/"
         },
         {
           "label": "Privacy",
-          "href": "/privacy"
+          "href": "/privacy/"
         },
         {
           "label": "\ud83d\udfe2 Status Page",
@@ -281,7 +281,7 @@
             "category": "Open Source",
             "cta": {
               "label": "Explore Scoold",
-              "href": "/projects/scoold"
+              "href": "/projects/scoold/"
             },
             "website": "https://scoold.com",
             "logo": "scoold",
@@ -315,7 +315,7 @@
             "category": "Open Source",
             "cta": {
               "label": "Explore Para",
-              "href": "/projects/para"
+              "href": "/projects/para/"
             },
             "website": "https://paraio.org",
             "logo": "para",
@@ -348,7 +348,7 @@
             "category": "Cloud",
             "cta": {
               "label": "Explore Para BaaS",
-              "href": "/projects/para-cloud"
+              "href": "/projects/para-cloud/"
             },
             "website": "https://paraio.com",
             "logo": "para_cloud",
@@ -380,7 +380,7 @@
             "category": "Cloud",
             "cta": {
               "label": "Explore Scoold Cloud",
-              "href": "/projects/scoold-cloud"
+              "href": "/projects/scoold-cloud/"
             },
             "website": "https://cloud.scoold.com",
             "logo": "scoold_cloud",
@@ -413,7 +413,7 @@
             "category": "Self-Hosted",
             "cta": {
               "label": "Explore Scoold Pro",
-              "href": "/projects/scoold-pro"
+              "href": "/projects/scoold-pro/"
             },
             "website": "https://scoold.com",
             "logo": "scoold_pro",
@@ -447,7 +447,7 @@
             "category": "Cloud",
             "cta": {
               "label": "Explore Robo Translator",
-              "href": "/projects/robo-translator"
+              "href": "/projects/robo-translator/"
             },
             "website": "https://robotranslator.ai",
             "logo": "robotranslator",
