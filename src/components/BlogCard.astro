@@ -2,6 +2,15 @@
 import marketing from "../data/site-data.json";
 import { Image } from "astro:assets";
 
+interface Props {
+  title: string;
+  excerpt: string;
+  date: string;
+  tags: string[];
+  img?: string;
+  href: string;
+}
+
 const { blogCard } = marketing.site.components;
 const { title, excerpt, date, tags, img, href } = Astro.props;
 ---
@@ -12,8 +21,8 @@ const { title, excerpt, date, tags, img, href } = Astro.props;
       <Image
         src={import(`../images/${img}.jpg`)} 
         alt={title}
-        width={350}
-        height={125}
+        width={530}
+        height={120}
         class="w-full h-30 object-cover"
         loading="lazy"
       />

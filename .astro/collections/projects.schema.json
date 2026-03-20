@@ -5,6 +5,5 @@
     "$schema": {
       "type": "string"
     }
-  },
-  "additionalProperties": false
+  }
 }

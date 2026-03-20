@@ -5,10 +5,10 @@ const { pagination } = marketing.site.components;
 const { currentPage = 1, totalPages = 1, basePath = "/blog/page" } = Astro.props;
 
 const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
-const pageLink = (page) => (page === 1 ? "/blog" : `${basePath}/${page}`);
+const pageLink = (page:Number) => (page === 1 ? "/blog/" : `${basePath}/${page}/`);
 ---
 
-<nav class="mt-10 flex flex-wrap items-center gap-2 text-sm">
+<nav class="flex flex-wrap items-center gap-2 mt-10 text-sm">
   {currentPage > 1 && (
     <a class="btn btn-ghost btn-sm" href={pageLink(currentPage - 1)}>
       {pagination.previous}

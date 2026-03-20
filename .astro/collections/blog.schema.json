@@ -35,9 +35,7 @@
   "required": [
     "title",
     "date",
-    "tags",
     "author",
     "excerpt"
-  ],
-  "additionalProperties": false
+  ]
 }

@@ -34,7 +34,7 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: marketing.site.components.breadcrumbs.home, item: baseUrl },
-    { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.blog, item: `${baseUrl}/blog` }
+    { "@type": "ListItem", position: 2, name: marketing.site.components.breadcrumbs.blog, item: `${baseUrl}/blog/` }
   ]
 };
 ---
@@ -53,13 +53,13 @@ const breadcrumbJsonLd = {
           <h1 class="font-semibold text-base-content text-4xl">{blogIndex.title}</h1>
           <p class="text-base-content text-lg">{blogIndex.body}</p>
           <div>
-            <a href="/blog/tags" class="font-semibold text-sky-700 text-sm">{blogIndex.tagsCta}</a>
+            <a href="/blog/tags/" class="font-semibold text-sky-700 text-sm">{blogIndex.tagsCta}</a>
           </div>
         </div>
       </div>
     </div>
     <div class="section-shell">
-      <div class="gap-6 grid md:grid-cols-2 xl:grid-cols-3 mt-10">
+      <div class="gap-6 grid md:grid-cols-2 mt-10">
         {pagePosts.map((post) => (
           <BlogCard {...post} />
         ))}

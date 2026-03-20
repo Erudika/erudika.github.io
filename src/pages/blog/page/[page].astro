@@ -46,7 +46,7 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: breadcrumbs.home, item: baseUrl },
-    { "@type": "ListItem", position: 2, name: breadcrumbs.blog, item: `${baseUrl}/blog` },
+    { "@type": "ListItem", position: 2, name: breadcrumbs.blog, item: `${baseUrl}/blog/` },
     { "@type": "ListItem", position: 3, name: `${breadcrumbs.pagePrefix} ${page}`, item: `${baseUrl}/blog/page/${page}` }
   ]
 };
@@ -63,15 +63,15 @@ const breadcrumbJsonLd = {
     <div class="section-shell">
       <Breadcrumbs items={[
         { label: breadcrumbs.home, href: "/" },
-        { label: breadcrumbs.blog, href: "/blog" },
+        { label: breadcrumbs.blog, href: "/blog/" },
         { label: `${breadcrumbs.pagePrefix} ${page}`, href: `/blog/page/${page}` }
       ]} />
       <h1 class="mt-6 font-semibold text-base-content text-4xl">{blogPage.title}</h1>
       <p class="mt-4 max-w-2xl text-base-content text-lg">{blogPage.body}</p>
       <div class="mt-4">
-        <a href="/blog/tags" class="font-semibold text-sky-700 text-sm">{blogPage.tagsCta}</a>
+        <a href="/blog/tags/" class="font-semibold text-sky-700 text-sm">{blogPage.tagsCta}</a>
       </div>
-      <div class="gap-6 grid md:grid-cols-2 xl:grid-cols-3 mt-10">
+      <div class="gap-6 grid md:grid-cols-2 mt-10">
         {pagePosts.map((post) => (
           <BlogCard {...post} />
         ))}

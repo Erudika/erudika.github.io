@@ -51,8 +51,9 @@ const breadcrumbJsonLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: breadcrumbs.home, item: baseUrl },
-    { "@type": "ListItem", position: 2, name: breadcrumbs.tags, item: `${baseUrl}/blog/tags` },
-    { "@type": "ListItem", position: 3, name: tag, item: `${baseUrl}/blog/tags/${tag}` }
+    { "@type": "ListItem", position: 2, name: breadcrumbs.blog, item: `${baseUrl}/blog/` },
+    { "@type": "ListItem", position: 2, name: breadcrumbs.tags, item: `${baseUrl}/blog/tags/` },
+    { "@type": "ListItem", position: 3, name: tag, item: `${baseUrl}/blog/tags/${tag}/` }
   ]
 };
 ---
@@ -67,14 +68,15 @@ const breadcrumbJsonLd = {
     <div class="section-shell">
       <Breadcrumbs items={[
         { label: breadcrumbs.home, href: "/" },
-        { label: breadcrumbs.tags, href: "/blog/tags" },
-        { label: tag, href: `/blog/tags/${tag}` }
+        { label: breadcrumbs.blog, href: "/blog/" },
+        { label: breadcrumbs.tags, href: "/blog/tags/" },
+        { label: tag, href: `/blog/tags/${tag}/` }
       ]} />
       <h1 class="mt-6 font-semibold text-base-content text-4xl">{tag}</h1>
       <p class="mt-4 max-w-2xl text-base-content text-lg">
         {blogTag.body.replace("{tag}", tag)}
       </p>
-      <div class="gap-6 grid md:grid-cols-2 xl:grid-cols-3 mt-10">
+      <div class="gap-6 grid md:grid-cols-2 mt-10">
         {cards.map((post) => (
           <BlogCard {...post} />
         ))}
