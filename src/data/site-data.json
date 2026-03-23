@@ -506,6 +506,10 @@
       },
       "contact": {
         "eyebrow": "Contact",
+        "form_action": "http://localhost:8080/v1/_forms/scoold2/1946266213852123136",
+        "captcha_key": "6Ldp7-kdAAAAALn1WuUtBGblIQJ9KvqbzoedDVLG",
+        "thanks": "Thank you!",
+        "thanks_msg": "We've received your message and will get back to you soon.",
         "title": "Get in touch with us",
         "body": "We respond quickly across GMT/EET hours. Reach out for product questions, trials, or support.",
         "address": "4 Lelinska chuka Street, Sofia 1618, Bulgaria",
