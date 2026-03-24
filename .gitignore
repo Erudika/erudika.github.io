@@ -40,6 +40,7 @@ bun.lock
 .vscode
 old_website/
 dist/
+.astro
 
 content-assets.mjs
 content-modules.mjs
