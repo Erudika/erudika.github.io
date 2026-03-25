@@ -19,3 +19,4 @@ para-cli create './dist/blog/scoold-*/*.html' --type 'blogpost' --sanitize
 para-cli create './dist/blog/status-*/*.html' --type 'blogpost' --sanitize
 para-cli create './dist/blog/top-*/*.html' --type 'blogpost' --sanitize
 para-cli create './dist/blog/webhooks-*/*.html' --type 'blogpost' --sanitize
+para-cli create './dist/blog/how-*/*.html' --type 'blogpost' --sanitize
