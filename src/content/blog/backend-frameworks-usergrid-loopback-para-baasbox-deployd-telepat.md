@@ -1,7 +1,7 @@
 ---
 title: "Modern backend (BaaS) frameworks - an overview of Usergrid, LoopBack, Para, BaasBox, Deployd and Telepat"
 date: 2015-10-21
-tags: ["backend", "baas", "frameworks", "para", "API"]
+tags: ["backend", "baas", "frameworks", "para", "api"]
 author: "alex@erudika.com"
 excerpt: "This post compares modern open-source backend frameworks that handle server-side app operations. It focuses only on open-source options and not the broader backend services market."
 img: "img2"

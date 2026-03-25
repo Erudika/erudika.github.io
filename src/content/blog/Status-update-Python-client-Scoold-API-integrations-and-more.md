@@ -1,7 +1,7 @@
 ---
 title: "Status update - Python client, Scoold API, integrations and more"
 date: 2020-03-22
-tags: ["scoold", "para", "API", "slack", "mattermost", "python"]
+tags: ["scoold", "para", "api", "slack", "mattermost", "python"]
 author: "alex@erudika.com"
 excerpt: "Over the last year, Scoold and Para gained many features, bug fixes, and community contributions. Scoold Pro revenue is rising with several large enterprise deployments."
 img: "img16"
