@@ -2,11 +2,11 @@
   "name": "erudika-website",
   "version": "2.1.0",
   "dependencies": {
-    "@astrojs/rss": "^4.0.17",
-    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.0.8",
+    "astro": "^6.1.1",
     "daisyui": "^5.5.19",
     "tailwindcss": "^4.2.2"
   },

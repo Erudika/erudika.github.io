@@ -4,7 +4,7 @@ date: 2026-02-26
 tags: ["search", "frontend", "open-source", "para"]
 author: "alex@erudika.com"
 excerpt: "Let's build a new version of our simple search box which uses our Para backend for indexing documents. The content is first ingested and processed by Para, then we use clientside code to query the data."
-img: "img10"
+img: "img20"
 thumb: "blogpost_media19"
 ---
 

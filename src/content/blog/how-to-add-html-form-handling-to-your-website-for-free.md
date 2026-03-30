@@ -4,8 +4,8 @@ date: 2026-03-23
 tags: ["forms", "backend", "open-source", "para"]
 author: "alex@erudika.com"
 excerpt: "Para now supports handling HTML form submissions directly, including email notifications, CAPTCHA verification, and optional message storage - all without writing a single line of backend code."
-img: "img11"
-thumb: "blogpost_media19"
+img: "img21"
+thumb: "blogpost_media20"
 ---
 
 **Static websites are cool, until they need a contact form.** The moment you add one, you have to wire up a backend service, pay for a third-party form provider, or send users to a mailto link and hope for the best. So recently, we rolled out a new feature in Para - **HTML form handling**.
