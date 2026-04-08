@@ -95,13 +95,12 @@
       "companyBlurb": "A tiny EU-based software company, building backend and serverless solutions.",
       "mapLabel": "Location",
       "addressLabel": "Address",
+      "imprint": "Imprint",
       "addressLines": [
         "Erudika LTD.",
         "4 Lelinska chuka Street",
         "Sofia 1618, Bulgaria",
-        "VAT# BG-200368755",
-        "Phone: +359 886 000 995",
-        "support@erudika.com"
+        "Imprint"
       ],
       "linksLabel": "Links",
       "links": [
@@ -212,6 +211,7 @@
         "body2": "We focus on security, performance, privacy, and shipping quality products. We're open to collaboration and we'd love to hear from you!",
         "detailsTitle": "Company details",
         "emailMe": "Email me directly!",
+        "imprint": "Imprint / Impressum",
         "details": [
           {
             "label": "Legal Entity",
@@ -226,7 +226,7 @@
             "value": "BG-200368755"
           },
           {
-            "label": "Founder",
+            "label": "Legal representative (МОЛ)",
             "value": "Alexander Bogdanovski"
           }
         ],

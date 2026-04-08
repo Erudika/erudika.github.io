@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import marketing from "../data/site-data.json";
+import { Image } from 'astro:assets';
+import PersonCard from "../components/PersonCard.astro";
+import optimizedBackground from "../images/img7.jpg";
+
+const { about } = marketing.site.pages;
+---
+
+<BaseLayout
+  title={marketing.site.meta.about.title}
+  description={marketing.site.meta.about.description}
+>
+  <div class="text-center">
+    <div class="py-24 section-shell">
+      <div class="inline-flex flex-col gap-3 bg-base-100/85 shadow-soft p-6 rounded-[3px] ring-base-300/60 max-w-3xl">
+        <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{about.imprint}</p>
+        <h1 class="font-semibold text-base-content text-4xl">{about.detailsTitle}</h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-16 text-center">
+    <div class="section-shell">
+      
+      <div class="bg-base-100 shadow-soft p-8 rounded-[3px]">
+        <h2 class="font-semibold text-base-content text-xl">{about.detailsTitle}</h2>
+        <dl class="space-y-3 mt-4 text-sm text-base-content">
+          {about.details.map((detail) => (
+            <div>
+              <dt class="font-semibold text-base-content">{detail.label}</dt>
+              <dd>{detail.value}</dd>
+            </div>
+          ))}
+        </dl>
+        <a href="mailto:alex@erudika.com?subject=Hey%2C%20I%20visited%20your%20site...&body=Hello%20Alex%21" class="text-sky-600 hover:text-sky-800 text-xs">☝️{about.emailMe}</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

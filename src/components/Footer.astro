@@ -37,7 +37,9 @@ const socialLinks = footer.social;
         <div class="text-slate-100 text-xs uppercase tracking-widest">{footer.addressLabel}</div>
         {footer.addressLines.map((line, index) => (
           index === footer.addressLines.length - 1 ? (
-            <div><a class="underline" href={`mailto:${line}`}>{line}</a></div>
+            <div><a href="/imprint/" class="text-sky-300 hover:text-white">{line}</a></div>
+            //   <div><a class="underline" href={`mailto:${line}`}>{line}</a></div>
+            // line.indexOf("@") > 0 ? (
           ) : (
             <div>{line}</div>
           )
