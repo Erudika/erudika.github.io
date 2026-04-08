@@ -15,7 +15,7 @@
 
 # THANKS
 
-    blacktie.co - themes
+    Astro - the best static site generator
 	GitHub.com - hosting
     NewOldStock - images
 
