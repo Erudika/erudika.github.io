@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Prose from '@/components/Prose.astro';
+import { site } from '@/data/site-data.json';
+import DPA from '@/data/dpa.md';
+const { dpa } = site.pages;
+---
+
+<BaseLayout
+  title={site.meta.privacy.title}
+  description={site.meta.privacy.description}
+>
+  <section class="py-16">
+    <div class="section-shell">
+      <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{dpa.eyebrow}</p>
+      <h1 class="mt-3 font-semibold text-base-content text-4xl">{dpa.title}</h1>
+      <p class="mt-3 text-sm text-base-content/60">Effective date: {dpa.effectiveDate}</p>
+      
+      <div class="space-y-8 mt-8 text-sm text-base-content/70">
+        <Prose klass="prose-sm">
+          <DPA/>
+        </Prose>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
