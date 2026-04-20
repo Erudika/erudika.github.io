@@ -1,5 +1,5 @@
 #!/bin/bash
-
+bun run build
 para-cli create './dist/about/*.html' --type 'blogpost' --sanitize
 para-cli create './dist/projects/**/*.html' --type 'blogpost' --sanitize
 para-cli create './dist/support/*.html' --type 'blogpost' --sanitize
