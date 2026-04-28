@@ -1,5 +1,5 @@
 ---
-title: "Introducing the Para MCP Server — your AI-powered backend"
+title: "Introducing the Para MCP Server - your AI-powered backend"
 date: 2026-04-16
 tags: ["ai", "mcp", "para"]
 author: "alex@erudika.com"

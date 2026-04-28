@@ -53,7 +53,7 @@ Replace the existing Erudika website (https://erudika.com) with a modern, SEO-fi
 - Styling: Tailwind CSS + daisyUI plugin.
 - Markdown support: Astro content collections or integrations to read Markdown files.
 - Bun as runtime for local dev and build: use `bun` to run dev server and `bun run build` for production build. Prefer Bun-native scripts in package.json.
-- tsdown: consider for TypeScript to JS output if components use TypeScript — mark as optional and include fallbacks to Bun's transpilation if tsdown not viable.
+- tsdown: consider for TypeScript to JS output if components use TypeScript - mark as optional and include fallbacks to Bun's transpilation if tsdown not viable.
 - CI: GitHub Actions configured to run Bun, cache Bun dependencies, run BuildAgent, run Lighthouse audits (optional), and deploy to GitHub Pages.
 
 ### Constraints
@@ -68,7 +68,7 @@ Replace the existing Erudika website (https://erudika.com) with a modern, SEO-fi
 4. QA for broken links, images, and metadata.
 
 ### SEO Migration
-- Preserve URLs where feasible; where changing, add 301 redirects (GitHub Pages supports redirects via meta-refresh or client-side? Note: GitHub Pages can't easily do server 301—if redirects change, consider preserving URL structure).
+- Preserve URLs where feasible; where changing, add 301 redirects (GitHub Pages supports redirects via meta-refresh or client-side? Note: GitHub Pages can't easily do server 301-if redirects change, consider preserving URL structure).
 - Generate sitemap and submit to Google Search Console.
 
 ### CI/CD & Deployment
@@ -77,7 +77,7 @@ Replace the existing Erudika website (https://erudika.com) with a modern, SEO-fi
   - `build`: runs bun install, bun run build
   - `audit`: optional Lighthouse run
   - `deploy`: push dist/ to gh-pages branch
-- Use GitHub Pages with custom domain (CNAME). Configure cache headers (where possible) in hosting layer (GitHub Pages has default cache behavior—consider optional CDN in front if strict caching needed).
+- Use GitHub Pages with custom domain (CNAME). Configure cache headers (where possible) in hosting layer (GitHub Pages has default cache behavior - consider optional CDN in front if strict caching needed).
 
 ### Success Metrics
 - Organic sessions, average position for target keywords, Core Web Vitals metrics, build time, deployment frequency, number of SEO errors reported in monthly audit.

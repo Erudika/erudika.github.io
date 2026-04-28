@@ -38,7 +38,7 @@ Scoold now comes in a WAR package as well. This makes it easy to deploy on a ser
 The JAR package is more appropriate for deploying Scoold to hosts without a servlet container, as it includes an
 instance of the embedded Jetty server. This is the case for Heroku, for example.
 
-Apart from Heroku, we've added support and documentation for lots of other deployment options — AWS, Azure, 
+Apart from Heroku, we've added support and documentation for lots of other deployment options - AWS, Azure, 
 DigitalOcean and Google App Engine. Not only that, but we've added a new `helm/` folder with a Helm chart for those
 of you who want to deploy Scoold to a Kubernetes cluster with a single command:
 

@@ -8,8 +8,8 @@ img: "img10"
 thumb: "blogpost_media8"
 ---
 
-**Static site generators are great** — they get the job done quickly for our blogs, landing pages and project websites.
-They make it easy to build something, deploy it and forget it — free hosting, nothing to maintain, a sort of “serverless”
+**Static site generators are great** - they get the job done quickly for our blogs, landing pages and project websites.
+They make it easy to build something, deploy it and forget it - free hosting, nothing to maintain, a sort of “serverless”
 technology. Static sites are perfect for content which rarely changes. They lack dynamic features, but the main problem
 is that you can’t search quickly for a piece of content without leaving the site, which hinders the user experience.
 
@@ -22,7 +22,7 @@ you can also upgrade the search box on your blog or static site.
 ![Blog media](../../images/blogpost_media8.png)
 
 So we have a bunch of HTML files generated for our site and we need them indexed somewhere so we can query them later.
-The search box will send AJAX requests to the search API and presents the results to the user — very simple setup.
+The search box will send AJAX requests to the search API and presents the results to the user - very simple setup.
 So we’ll need three things:
 
 1. a tool for quickly indexing our content;
@@ -32,11 +32,11 @@ So we’ll need three things:
 Currently, there are several solutions for implementing full-text search. Depending on the time and money you are
 willing to spend, you could either host your own search server, like Elasticsearch or Solr, or pay for a service like
 Algolia. Now, for something as simple as a blog with ten articles in it, paying for servers or a monthly subscription
-fee is a bit excessive. This is where [Para](https://paraio.com) comes in — our flexible, open-source backend service.
-It’s absolutely free for developers and the search functionality inside of it is **powered by Elasticsearch** — *sweet!*
+fee is a bit excessive. This is where [Para](https://paraio.com) comes in - our flexible, open-source backend service.
+It’s absolutely free for developers and the search functionality inside of it is **powered by Elasticsearch** - *sweet!*
 
 Initially, when we started with this task we didn’t have the tool for indexing our blog posts and this lead to us
-writing [para-cli](https://github.com/Erudika/para-cli) — a command-line tool for working with our Para backend server.
+writing [para-cli](https://github.com/Erudika/para-cli) - a command-line tool for working with our Para backend server.
 It’s written in JavaScript for Node.js and it’s really simple to use. Let’s go ahead and install it:
 
 ```
@@ -84,7 +84,7 @@ the `blogposts` resource.
 ![Blog media](../../images/ftsearch3.png)
 
 The search box in our case is implemented with good old jQuery and a plugin called
-[typehead.js](https://twitter.github.io/typeahead.js/). The code is very simple — it calls the search API and queries
+[typehead.js](https://twitter.github.io/typeahead.js/). The code is very simple - it calls the search API and queries
 objects of type `blogpost`. The results are in the form of a JSON object with several properties but we’re only
 interested in the objects found so we transform it into an `Array`.
 

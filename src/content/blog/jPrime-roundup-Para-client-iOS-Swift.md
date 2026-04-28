@@ -8,7 +8,7 @@ img: "img6"
 thumb: "blogpost_media4"
 ---
 
-Last week was [jPrime 2016](https://jprime.io), the biggest Java conference on the Balkans. It was a huge success — more than 500 visitors, two tracks in two days. The slogan was *"Java - 21 and legally drunk"* and the two main themes were **microservices** and **reactive programming** with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.
+Last week was [jPrime 2016](https://jprime.io), the biggest Java conference on the Balkans. It was a huge success - more than 500 visitors, two tracks in two days. The slogan was *"Java - 21 and legally drunk"* and the two main themes were **microservices** and **reactive programming** with RxJava. This was the second year in a row for the conference which is organized by the community, i.e. fellow Java developers from the BGJUG. By being silver sponsors, we made a humble contribution which helped the community organize this great event.
 
 <!-- more -->
 

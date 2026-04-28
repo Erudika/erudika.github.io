@@ -1,6 +1,6 @@
 Below is an **SEO-optimized page and information architecture** tailored specifically for **Erudika**, its existing content, products, and target audience (developers, CTOs, SaaS buyers). This structure is designed for **Astro static generation**, **GitHub Pages**, and strong **topical authority** without unnecessary pages.
 
-I’m not generating copy yet—this is the **structural blueprint** you should implement as Astro pages and Markdown collections.
+I’m not generating copy yet-this is the **structural blueprint** you should implement as Astro pages and Markdown collections.
 
 ---
 
@@ -20,7 +20,7 @@ These pages target **high-intent commercial and branded queries**.
 └─ /status/ (external link)
 ```
 
-### `/` — Homepage (Core Authority Page)
+### `/` - Homepage (Core Authority Page)
 
 **SEO role:** Brand + broad commercial intent
 
@@ -47,7 +47,7 @@ Schema:
 
 ---
 
-### `/about/` — Company & Trust Page
+### `/about/` - Company & Trust Page
 
 **SEO role:** E-E-A-T (Experience, Expertise, Authority, Trust)
 
@@ -73,7 +73,7 @@ Schema:
 
 ## 2. Product & Solution Pages (Most Important SEO Cluster)
 
-### `/projects/` — Products Overview (Hub Page)
+### `/projects/` - Products Overview (Hub Page)
 
 **SEO role:** Internal linking hub + commercial discovery
 
@@ -126,7 +126,7 @@ Schema:
 
 ## 3. Support & Commercial Pages
 
-### `/support/` — Support & Pricing
+### `/support/` - Support & Pricing
 
 **SEO role:** Transactional intent
 
@@ -150,7 +150,7 @@ Schema:
 
 ---
 
-### `/contact/` — Contact Page
+### `/contact/` - Contact Page
 
 **SEO role:** Conversion + trust
 
@@ -175,7 +175,7 @@ Schema:
 
 ## 4. Blog & Content Marketing (Topical Authority)
 
-### `/blog/` — Blog Index
+### `/blog/` - Blog Index
 
 **SEO role:** Long-tail organic traffic
 
@@ -194,7 +194,7 @@ Features:
 
 ---
 
-### `/blog/[slug]/` — Blog Post Pages (Markdown)
+### `/blog/[slug]/` - Blog Post Pages (Markdown)
 
 Each post:
 

@@ -63,7 +63,7 @@ boolean createSharedTable(String sharedTableName, long readCapacity, long writeC
 }
 ```
 
-First we make a GSI request object by specifying its throughput — 1 read/1 write is sufficient as a starting point. This setting is determined by the number of queries (per second) to the database. Then we specify the attributes which will be copied over to the secondary index (all in this case). This allows us to retrieve the data from the index directly instead of getting just the `id` from the index then reading the actual object from the `shared` table as a second request. Finally, and most importantly, we need to set the attributes on which the index is defined — these will be `tableID` and `timestamp`. Going back to the first diagram, each table name will correspond to a `tableID` in the `shared` table. This will be the attribute which splits up the big table into smaller subtables (i.e. views). The `timestamp` field is used for sorting and is the so called "range" component of our index.
+First we make a GSI request object by specifying its throughput - 1 read/1 write is sufficient as a starting point. This setting is determined by the number of queries (per second) to the database. Then we specify the attributes which will be copied over to the secondary index (all in this case). This allows us to retrieve the data from the index directly instead of getting just the `id` from the index then reading the actual object from the `shared` table as a second request. Finally, and most importantly, we need to set the attributes on which the index is defined - these will be `tableID` and `timestamp`. Going back to the first diagram, each table name will correspond to a `tableID` in the `shared` table. This will be the attribute which splits up the big table into smaller subtables (i.e. views). The `timestamp` field is used for sorting and is the so called "range" component of our index.
 
 The result of the above request is going to be the table `shared` and the index `shared-index`.
 
@@ -94,7 +94,7 @@ The result of the above request is going to be the table `shared` and the index 
 
 </pre>
 
-The next important decision will be the format of the primary key in the `shared` table. We've decided to go for `tableID_objectID` — each object key is prefixed by the name of the table it belongs to. It's a simple and effective way to avoid key collisions and make sure that a request coming from "table1" cannot read the objects in "table2", for example.
+The next important decision will be the format of the primary key in the `shared` table. We've decided to go for `tableID_objectID` - each object key is prefixed by the name of the table it belongs to. It's a simple and effective way to avoid key collisions and make sure that a request coming from "table1" cannot read the objects in "table2", for example.
 
 Now, we have to modify our code to be able to make requests to the new shared table and to do that we wrote a simple "routing" function which gives us the correct key to an object in a shared table:
 
@@ -135,6 +135,6 @@ String readPageFromSharedTable(String tableID, String fromKey, List<Page<Item, Q
 
 ## Conclusion
 
-Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs **$0.66/month**. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay **(100 * 0.66) = $66 per month**. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere **$1.32/month** for the minimum capacity of 1 read/s and 1 write/s. That's a *50x* cost reduction — good job!
+Alright, we have combined several tables into one, but how is that going to affect our AWS bill at the end of the month? Let's do some simple calculations. At the time of writing, a table with 1/1 throughput costs **$0.66/month**. This is the minimum cost of a table per month. If we had 100 small tables in the beginning, we'd have to pay **(100 * 0.66) = $66 per month**. That's a lot, especially if our tables were underutilized. The shared table with a global secondary index would cost a mere **$1.32/month** for the minimum capacity of 1 read/s and 1 write/s. That's a *50x* cost reduction - good job!
 
 *If you liked this post, you should check out [Para](https://paraio.com) - our backend service for busy developers. Also, chat with us [on Gitter](https://gitter.im/Erudika/para)!*
