@@ -71,9 +71,9 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
     </div>
     <div id="cookie-consent" class="cookie-consent" role="dialog" aria-label="Privacy notice">
       <p class="text-sm">This site uses cookieless Matomo analytics that respects your <a href="/privacy/" class="text-sky-300 hover:text-white underline">privacy</a>. No personal data is stored.</p>
-      <button id="cookie-consent-close" class="btn btn-xs btn-primary text-white" type="button">Got it</button>
+      <button id="cookie-consent-close" class="text-white btn btn-xs btn-primary" type="button">Got it</button>
     </div>
-    <script define:vars={{ theme, optimizedLightBackground, optimizedDarkBackground }}>
+    <script define:vars={{ theme, optimizedLightBackground, optimizedDarkBackground, isDev: import.meta.env.DEV }}>
       const themeConfig = theme;
       const themeToggle = document.getElementById("theme-toggle");
       const hero = document.getElementById("hero-section");
@@ -143,9 +143,14 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
           consentBanner.classList.remove("cookie-consent--visible");
         });
       }
-
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js");
+        if (isDev) {
+          navigator.serviceWorker.getRegistrations().then((regs) =>
+            regs.forEach((r) => r.unregister())
+          );
+        } else {
+          navigator.serviceWorker.register("/sw.js");
+        }
       }
     </script>
   </body>
