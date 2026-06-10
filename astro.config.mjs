@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [sitemap()],
   trailingSlash: 'always', // if hosted on GitHub: always !
   output: 'static',
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover',
+  },
   site: site.organization.url,
   vite: {
     plugins: [tailwindcss()]

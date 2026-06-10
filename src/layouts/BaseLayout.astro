@@ -7,7 +7,7 @@ import "../styles/global.css";
 import optimizedLightBackground from "../images/bannerbg.jpg";
 import optimizedDarkBackground from "../images/bannerbgdark.jpg";
 
-const { title, description, canonicalUrl, image, jsonLd } = Astro.props;
+const { title, description, canonicalUrl, image, jsonLd, noindex } = Astro.props;
 const { theme } = site;
 const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.url).toString();
 ---
@@ -17,19 +17,61 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="global-privacy-control" content="true" />
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://matomo.fixproperty.eu;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https://matomo.fixproperty.eu;
+      connect-src 'self' https://paraio.com https://matomo.fixproperty.eu;
+      frame-ancestors 'self';
+      form-action 'self' https://paraio.com;
+      font-src 'self' data:;
+    " />
     <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" title="Erudika Blog" href="/rss.xml" />
+    <link rel="alternate" type="application/feed+json" title="Erudika Blog" href="/feed.json" />
+    <link rel="preconnect" href="//matomo.fixproperty.eu" />
+    <link rel="preconnect" href="//paraio.com" />
+    <script type="speculationrules">
+    {
+      "prefetch": [{
+        "source": "document",
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": ["/cdn-cgi/*", "/404/*", "/500/*"] } }
+          ]
+        }
+      }]
+    }
+    </script>
   </head>
   <body class="bg-base-100 min-h-screen text-base-content">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="flex flex-col min-h-screen">
       <Header />
-      <main class="flex-1">
+      <main id="main-content" class="flex-1">
         <slot />
       </main>
       <Footer />
+    </div>
+    <div id="cookie-consent" class="cookie-consent" role="dialog" aria-label="Privacy notice">
+      <p class="text-sm">This site uses cookieless Matomo analytics that respects your <a href="/privacy/" class="text-sky-300 hover:text-white underline">privacy</a>. No personal data is stored.</p>
+      <button id="cookie-consent-close" class="btn btn-xs btn-primary text-white" type="button">Got it</button>
     </div>
     <script define:vars={{ theme, optimizedLightBackground, optimizedDarkBackground }}>
       const themeConfig = theme;
@@ -88,6 +130,22 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
           localStorage.setItem(themeConfig.storageKey, nextTheme);
           applyTheme(nextTheme, nextTheme === themeConfig.dark ? themeConfig.labelDark : themeConfig.labelLight);
         });
+      }
+
+      const consentBanner = document.getElementById("cookie-consent");
+      const consentClose = document.getElementById("cookie-consent-close");
+      if (consentBanner && !localStorage.getItem("erudika-consent")) {
+        consentBanner.classList.add("cookie-consent--visible");
+      }
+      if (consentClose) {
+        consentClose.addEventListener("click", () => {
+          localStorage.setItem("erudika-consent", "dismissed");
+          consentBanner.classList.remove("cookie-consent--visible");
+        });
+      }
+
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
       }
     </script>
   </body>

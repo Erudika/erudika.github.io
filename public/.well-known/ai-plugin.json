@@ -1,0 +1,14 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Erudika",
+  "name_for_model": "erudika",
+  "description_for_human": "Search Erudika blog posts and explore open-source projects.",
+  "description_for_model": "Plugin for searching and retrieving Erudika blog content, project information, and company details.",
+  "api": {
+    "type": "openapi",
+    "url": "https://erudika.com/openapi.json"
+  },
+  "logo_url": "https://erudika.com/logo.svg",
+  "contact_email": "contact@erudika.com",
+  "legal_info_url": "https://erudika.com/privacy/"
+}

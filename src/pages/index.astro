@@ -68,9 +68,9 @@ const websiteJsonLd = {
         </div>
         <div class="flex flex-wrap justify-center gap-3 mt-6">
           {hero.badges.map((badge) => (
-            <div class="px-4 py-2 border border-sky-100 rounded-[3px] font-semibold text-sky-700 bg-accent-content">
+            <div class="px-4 py-2 border border-sky-100 rounded-[3px] font-semibold bg-accent-content">
               {badge.label}
-              <span class="block font-normal text-[12px] text-sky-700">{badge.description}</span>
+              <span class="block font-normal text-[12px] text-sky-700 dark:text-amber-100">{badge.description}</span>
             </div>
           ))}
         </div>
@@ -167,6 +167,7 @@ const websiteJsonLd = {
       <div class="p-1 border border-base-300 rounded-[3px]">
         <div class="overflow-x-auto">
           <table class="table table-md">
+            <caption class="sr-only">Support plan comparison</caption>
             <thead>
               <tr class="text-xs text-center">
                 <th scope="col"></th>
