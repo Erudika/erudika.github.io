@@ -4,10 +4,10 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
-    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.8",
-    "daisyui": "^5.5.20",
+    "astro": "^6.4.5",
+    "daisyui": "^5.5.23",
     "tailwindcss": "^4.3.0"
   },
   "private": true,
