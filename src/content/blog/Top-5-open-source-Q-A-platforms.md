@@ -1,5 +1,5 @@
 ---
-title: "Top 5 open source Q&A platforms for 2021"
+title: "Top 5 open source Q&A platforms"
 date: 2018-12-30
 tags: ["scoold", "open-source", "stackoverflow"]
 author: "alex@erudika.com"

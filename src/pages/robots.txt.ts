@@ -6,7 +6,7 @@ Allow: /
 Disallow: /cdn-cgi/
 Disallow: /blog/archives/
 
-# AI crawlers — explicitly allowed
+# AI crawlers - explicitly allowed
 User-agent: GPTBot
 Allow: /
 

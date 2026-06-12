@@ -5,11 +5,22 @@ import optimizedBackground from "../images/img5.jpg";
 
 const { support } = marketing.site.pages;
 const plans = support.plans;
+const baseUrl = marketing.site.organization.url;
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+    { "@type": "ListItem", position: 2, name: "Support", item: `${baseUrl}/support/` }
+  ]
+};
 ---
 
 <BaseLayout
   title={marketing.site.meta.support.title}
   description={marketing.site.meta.support.description}
+  jsonLd={breadcrumbJsonLd}
 >
   <div class="bg-cover bg-center" style={`background-image: url(${optimizedBackground.src});`}>
     <div class="py-24 section-shell">

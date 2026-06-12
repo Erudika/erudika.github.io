@@ -7,7 +7,9 @@ const {
   description = site.meta.home.description,
   canonical,
   image,
-  jsonLd = []
+  jsonLd = [],
+  ogType = "website",
+  articleMeta,
 } = Astro.props;
 
 const jsonLdList = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
@@ -18,7 +20,16 @@ const imageUrl = new URL(image ? image : erudikaThumb.src, site.organization.url
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content={ogType} />
+{ogType === "article" && articleMeta?.publishedTime && (
+  <meta property="article:published_time" content={articleMeta.publishedTime} />
+)}
+{ogType === "article" && articleMeta?.author && (
+  <meta property="article:author" content={articleMeta.author} />
+)}
+{ogType === "article" && articleMeta?.tags?.map((tag) => (
+  <meta property="article:tag" content={tag} />
+))}
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />

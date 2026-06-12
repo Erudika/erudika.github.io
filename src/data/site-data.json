@@ -187,7 +187,7 @@
     "pages": {
       "home": {
         "projectsLabel": "Projects",
-        "projectsTitle": "Flagship products, avaliable on-premises.",
+        "projectsTitle": "Flagship products, available on-premises.",
         "projectsBody": "Deploy on-premises or choose a fully managed cloud solution - we support both models seamlessly.",
         "projectsCta": "View all projects \u2192",
         "proofLabel": "Meta Data",
@@ -207,7 +207,7 @@
       "about": {
         "eyebrow": "About Erudika",
         "title": "A tiny software company, based in the EU",
-        "body1": "Erudika is an independent software shop, based in Sofia, Bulgaria. As Eastern Europeans, we are capable of acheiving optimal results with limited resources and that's reflected in our software. We work with the latest software stacks and we know clould infrastructure well.",
+        "body1": "Erudika is an independent software shop, based in Sofia, Bulgaria. As Eastern Europeans, we are capable of achieving optimal results with limited resources and that's reflected in our software. We work with the latest software stacks and we know cloud infrastructure well.",
         "body2": "We focus on security, performance, privacy, and shipping quality products. We're open to collaboration and we'd love to hear from you!",
         "detailsTitle": "Company details",
         "emailMe": "Email me directly!",
@@ -262,7 +262,11 @@
               "name": "Alexander Bogdanovski",
               "role": "Founder & Indie Hacker",
               "email": "alex@erudika.com",
-              "avatar": "ab"
+              "avatar": "ab",
+              "linkedin": "https://bg.linkedin.com/in/albogdano",
+              "github": "https://github.com/albogdano",
+              "bio": "17+ years building backend infrastructure. Creator of Para and Scoold. 5M+ Docker Hub downloads.",
+              "yearsExperience": 17
             }
           ]
         }
@@ -409,7 +413,7 @@
             "name": "Scoold Pro",
             "title": "Scoold Pro | Erudika",
             "tagline": "Enterprise-ready Scoold with premium features and advanced auth flows (SAML, LDAP, OAuth2).",
-            "description": "Scoold Pro is the premium version of Scoold - a popular q-and-a platform and knowledge base for teams.",
+            "description": "Scoold Pro - enterprise Q&A platform with SAML 2.0, LDAP, SCIM, and OAuth2 SSO. Advanced analytics, custom branding, and priority support. Self-hosted for full data control.",
             "category": "Self-Hosted",
             "cta": {
               "label": "Explore Scoold Pro",
@@ -629,12 +633,20 @@
         "title": "Privacy Policy | Erudika",
         "description": "Erudika privacy policy and data handling practices."
       },
+      "gdprDpa": {
+        "title": "Data Processing Agreement | Erudika",
+        "description": "Erudika GDPR Data Processing Agreement - compliant with EU data protection regulations for cloud and self-hosted deployments."
+      },
+      "imprint": {
+        "title": "Imprint | Erudika",
+        "description": "Legal imprint for Erudika EOOD, an EU-based software company in Sofia, Bulgaria."
+      },
       "terms": {
         "title": "Terms of Service | Erudika",
         "description": "Erudika terms of service and usage guidelines."
       },
       "blogPage": {
-        "titleTemplate": "Erudika Blog Page {page}",
+        "titleTemplate": "Erudika Blog | Page {page} | Backend & DevOps Insights",
         "description": "Release notes, architecture deep dives, and backend insights from Erudika."
       },
       "blogTags": {
@@ -643,7 +655,7 @@
       },
       "blogTag": {
         "titleTemplate": "{tag} Articles | Erudika",
-        "descriptionTemplate": "Posts tagged {tag}."
+        "descriptionTemplate": "Browse all Erudika blog posts tagged {tag}. Engineering notes on {tag} from the team behind Para and Scoold."
       }
     },
     "organization": {

@@ -4,7 +4,40 @@ import { site } from "./src/data/site-data.json"
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  integrations: [sitemap()],
+  integrations: [sitemap({
+    filter: (page) => {
+      if (page.includes('/503/')) return false;
+      if (page === 'https://erudika.com/blog/page/1/') return false;
+      return true;
+    },
+    serialize(item) {
+      if (item.url === 'https://erudika.com/') {
+        item.priority = 1.0; item.changefreq = 'weekly'; return item;
+      }
+      if (/\/projects\/[^/]+\/$/.test(item.url)) {
+        item.priority = 0.9; item.changefreq = 'monthly'; return item;
+      }
+      if (/\/blog\/[^/]+\/$/.test(item.url) && !item.url.includes('/tags/') && !item.url.includes('/page/')) {
+        item.priority = 0.8; item.changefreq = 'yearly'; return item;
+      }
+      if (item.url === 'https://erudika.com/blog/') {
+        item.priority = 0.8; item.changefreq = 'weekly'; return item;
+      }
+      if (/\/blog\/page\//.test(item.url)) {
+        item.priority = 0.4; item.changefreq = 'weekly'; return item;
+      }
+      if (item.url === 'https://erudika.com/blog/tags/') {
+        item.priority = 0.5; item.changefreq = 'monthly'; return item;
+      }
+      if (/\/blog\/tags\/[^/]+\/$/.test(item.url)) {
+        item.priority = 0.3; item.changefreq = 'monthly'; return item;
+      }
+      if (['/privacy/', '/imprint/', '/gdpr-dpa/'].some(p => item.url.includes(p))) {
+        item.priority = 0.2; item.changefreq = 'yearly'; return item;
+      }
+      item.priority = 0.6; item.changefreq = 'monthly'; return item;
+    }
+  })],
   trailingSlash: 'always', // if hosted on GitHub: always !
   output: 'static',
   prefetch: {
@@ -16,6 +49,8 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   redirects: {
+    "/blog/page/1/": "/blog/",
+    "/blog/page/1": "/blog/",
     "/blog/2015/10/16/hello-world/": "/blog/hello-world/",
     "/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/": "/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/",
     "/blog/2016/01/05/para-1-17-released/": "/blog/para-1-17-released/",

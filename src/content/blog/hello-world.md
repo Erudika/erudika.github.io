@@ -5,6 +5,7 @@ excerpt: "Welcome to the Erudika blog where we'll share project updates and deve
 img: "img1"
 date: 2015-10-16
 author: "alex@erudika.com"
+noindex: true
 ---
 
 Hey there! We are Erudika and this is our blog. Here, we'll share information about our current projects and

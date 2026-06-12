@@ -24,6 +24,10 @@ const { Content } = await render(post);
 const postUrl = `${baseUrl}/blog/${post.id}/`;
 const heroImageUrl = (await getImage({src: import(`../../images/${post.data.img}.jpg`)}));
 const blogImageUrl = post.data.thumb ? (await getImage({src: import(`../../images/${post.data.thumb}.png`)})) : heroImageUrl;
+const authorPerson = marketing.site.pages.about.keyPeople.people.find(
+  (p) => p.email === post.data.author
+);
+const absoluteImageUrl = new URL(blogImageUrl.src ?? erudikaBlogThumb.src, baseUrl).toString();
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -31,10 +35,16 @@ const articleJsonLd = {
   headline: post.data.title,
   description: post.data.excerpt,
   datePublished: post.data.date.toISOString(),
-  dateModified: post.data.date.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.date).toISOString(),
   author: {
-    "@type": "Organization",
-    name: marketing.site.organization.name
+    "@type": "Person",
+    "name": authorPerson?.name ?? "Alexander Bogdanovski",
+    "url": "https://erudika.com/about/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Erudika",
+      "url": "https://erudika.com"
+    }
   },
   publisher: {
     "@type": "Organization",
@@ -45,8 +55,9 @@ const articleJsonLd = {
     }
   },
   mainEntityOfPage: postUrl,
-  image: [blogImageUrl.src ?? erudikaBlogThumb.src],
-  url: postUrl
+  image: [absoluteImageUrl],
+  url: postUrl,
+  keywords: post.data.tags.join(", ")
 };
 
 const breadcrumbJsonLd = {
@@ -65,6 +76,13 @@ const breadcrumbJsonLd = {
   description={post.data.excerpt}
   image={blogImageUrl.src}
   jsonLd={[articleJsonLd, breadcrumbJsonLd]}
+  noindex={post.data.noindex}
+  ogType="article"
+  articleMeta={{
+    publishedTime: post.data.date.toISOString(),
+    author: `${baseUrl}/about/`,
+    tags: post.data.tags
+  }}
 >
   <div class="bg-cover bg-center" style={`background-image: url('${heroImageUrl.src}')`}>
     <div class="py-24 text-center section-shell">

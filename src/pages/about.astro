@@ -6,11 +6,41 @@ import PersonCard from "../components/PersonCard.astro";
 import optimizedBackground from "../images/img7.jpg";
 
 const { about } = marketing.site.pages;
+const baseUrl = marketing.site.organization.url;
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+    { "@type": "ListItem", position: 2, name: "About", item: `${baseUrl}/about/` }
+  ]
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${baseUrl}/about/#alexander-bogdanovski`,
+  name: "Alexander Bogdanovski",
+  jobTitle: "Founder & Indie Hacker",
+  email: "alex@erudika.com",
+  url: `${baseUrl}/about/`,
+  worksFor: {
+    "@type": "Organization",
+    name: "Erudika",
+    url: baseUrl
+  },
+  sameAs: [
+    "https://github.com/albogdano",
+    "https://bg.linkedin.com/in/albogdano"
+  ]
+};
 ---
 
 <BaseLayout
   title={marketing.site.meta.about.title}
   description={marketing.site.meta.about.description}
+  jsonLd={[breadcrumbJsonLd, personJsonLd]}
 >
 
   <div class="bg-cover bg-center" style={`background-image: url(${optimizedBackground.src});`}>

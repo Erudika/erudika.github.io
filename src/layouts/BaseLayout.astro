@@ -7,7 +7,7 @@ import "../styles/global.css";
 import optimizedLightBackground from "../images/bannerbg.jpg";
 import optimizedDarkBackground from "../images/bannerbgdark.jpg";
 
-const { title, description, canonicalUrl, image, jsonLd, noindex } = Astro.props;
+const { title, description, canonicalUrl, image, jsonLd, noindex, ogType, articleMeta } = Astro.props;
 const { theme } = site;
 const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.url).toString();
 ---
@@ -34,12 +34,10 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
       form-action 'self' https://paraio.com;
       font-src 'self' data:;
     " />
-    <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} />
+    <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} ogType={ogType} articleMeta={articleMeta} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
-    <link rel="alternate" hreflang="en" href={canonical} />
-    <link rel="alternate" hreflang="x-default" href={canonical} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="alternate" type="application/rss+xml" title="Erudika Blog" href="/rss.xml" />
@@ -53,7 +51,7 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
         "where": {
           "and": [
             { "href_matches": "/*" },
-            { "not": { "href_matches": ["/cdn-cgi/*", "/404/*", "/500/*"] } }
+            { "not": { "href_matches": ["/cdn-cgi/*", "/404/*", "/500/*", "/503/*"] } }
           ]
         }
       }]
