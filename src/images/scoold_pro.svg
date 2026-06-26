@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" width="550" height="550" viewBox="16.833 25.324 550 550" xmlns:bx="https://boxy-svg.com">
   <defs id="defs6">
-    <bx:export>
-      <bx:file format="svg" href="#g10" normalization="{&quot;resetTransformOrigins&quot;:true}"/>
-      <bx:file format="svg" path="Untitled 2.svg"/>
-    </bx:export>
+    <bx-export>
+      <bx-file format="svg" href="#g10" normalization="{&quot;resetTransformOrigins&quot;:true}"/>
+      <bx-file format="svg" path="Untitled 2.svg"/>
+    </bx-export>
   </defs>
   <g id="g10" transform="matrix(1.333333, 0, 0, -1.333333, 14.833002, 637.476154)">
     <g>

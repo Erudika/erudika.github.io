@@ -8,6 +8,8 @@ img: "img13"
 thumb: "blogpost_media11"
 ---
 
+***This is an older article, please read the [new article for 2026 here](https://scoold.com/blog/best-self-hosted-q-a-platforms-2026/).***
+
 I've assembled a list of the top open source Q&A platforms that are currently available. The list contains
 only projects which are in **active development** and have a working demo site. There are a few similar blog
 posts out there but they're quite outdated. Most of the projects listed below are inspired by Stack Overflow
