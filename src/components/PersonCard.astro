@@ -14,17 +14,31 @@ const { person = marketing.site.pages.about.keyPeople.people.filter((p) => p.ema
         loading="lazy"
         class="flex justify-center items-center bg-indigo-600 rounded-full w-16 h-16 font-semibold text-white text-sm"/>
     </div>
-    <div class="font-semibold text-sm text-base-content">{person.name}
+    <div class="w-56 font-semibold text-sm text-base-content">{person.name}
         <br>
-        <span class="text-xs font-normal">{person.role}</span>
-        {person.bio && <p class="mt-1 text-xs font-normal text-base-content/70">{person.bio}</p>}
+        <span class="font-normal text-xs">{person.role}</span>
+        {person.bio && <p class="hidden mt-1 font-normal text-xs text-base-content/70">{person.bio}</p>}
         {(person.linkedin || person.github) && (
-          <div class="flex gap-2 mt-1">
+          <div class="hidden flex justify-center gap-2 mt-1">
             {person.linkedin && (
-              <a href={person.linkedin} target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-800 text-xs" aria-label="LinkedIn">in</a>
+              <a 
+                href={person.linkedin} 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sky-600 hover:text-sky-800 text-xs"
+                aria-label="LinkedIn">
+                in
+              </a>
             )}
             {person.github && (
-              <a href={person.github} target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:text-sky-800 text-xs" aria-label="GitHub">gh</a>
+              <a
+                href={person.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-sky-600 hover:text-sky-800 text-xs" 
+                aria-label="GitHub">
+                  gh
+              </a>
             )}
           </div>
         )}

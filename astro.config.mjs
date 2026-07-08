@@ -7,7 +7,6 @@ export default defineConfig({
   integrations: [sitemap({
     filter: (page) => {
       if (page.includes('/503/')) return false;
-      if (page === 'https://erudika.com/blog/page/1/') return false;
       return true;
     },
     serialize(item) {
@@ -49,8 +48,6 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   redirects: {
-    "/blog/page/1/": "/blog/",
-    "/blog/page/1": "/blog/",
     "/blog/2015/10/16/hello-world/": "/blog/hello-world/",
     "/blog/2015/10/21/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/": "/blog/backend-frameworks-usergrid-loopback-para-baasbox-deployd-telepat/",
     "/blog/2016/01/05/para-1-17-released/": "/blog/para-1-17-released/",

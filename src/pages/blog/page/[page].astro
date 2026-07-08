@@ -16,9 +16,9 @@ export async function getStaticPaths() {
   const pageSize = 6;
   const totalPages = Math.max(1, Math.ceil(posts.length / pageSize));
 
-  return Array.from({ length: totalPages }, (_, i) => ({
-    params: { page: String(i + 1) },
-    props: { page: i + 1, totalPages, pageSize }
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({
+    params: { page: String(i + 2) },
+    props: { page: i + 2, totalPages, pageSize }
   }));
 }
 
