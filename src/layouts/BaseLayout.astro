@@ -26,11 +26,12 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()" />
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
-      script-src 'self' 'unsafe-inline' matomo.fixproperty.eu/matomo.js www.google.com/recaptcha/api.js https://www.gstatic.com;
+      script-src 'self' 'unsafe-inline' matomo.fixproperty.eu/matomo.js www.google.com/recaptcha/api.js www.gstatic.com;
       style-src 'self' 'unsafe-inline';
-      img-src 'self' data: https://matomo.fixproperty.eu;
-      connect-src 'self' https://paraio.com https://matomo.fixproperty.eu;
+      img-src 'self' data: matomo.fixproperty.eu;
+      connect-src 'self' https://paraio.com matomo.fixproperty.eu;
       frame-ancestors 'self';
+      frame-src 'self' www.google.com;
       form-action 'self' https://paraio.com;
       font-src 'self' data:;
     " />
