@@ -29,10 +29,9 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
       script-src 'self' 'unsafe-inline' matomo.fixproperty.eu/matomo.js www.google.com/recaptcha/api.js www.gstatic.com;
       style-src 'self' 'unsafe-inline';
       img-src 'self' data: matomo.fixproperty.eu;
-      connect-src 'self' https://paraio.com matomo.fixproperty.eu;
+      connect-src 'self' paraio.com matomo.fixproperty.eu www.google.com;
       frame-ancestors 'self';
       frame-src 'self' www.google.com;
-      form-action 'self' https://paraio.com;
       font-src 'self' data:;
     " />
     <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} ogType={ogType} articleMeta={articleMeta} />
