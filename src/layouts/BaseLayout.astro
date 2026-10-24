@@ -4,11 +4,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { site } from "../data/site-data.json";
 import "../styles/global.css";
-import optimizedLightBackground from "../images/bannerbg.jpg";
-import optimizedDarkBackground from "../images/bannerbgdark.jpg";
+
 
 const { title, description, canonicalUrl, image, jsonLd, noindex, ogType, articleMeta } = Astro.props;
-const { theme } = site;
 const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.url).toString();
 ---
 
@@ -67,80 +65,8 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, site.organization.
       </main>
       <Footer />
     </div>
-    <div id="cookie-consent" class="cookie-consent" role="dialog" aria-label="Privacy notice">
-      <p class="text-sm">This site uses cookieless Matomo analytics that respects your <a href="/privacy/" class="text-sky-300 hover:text-white underline">privacy</a>. No personal data is stored.</p>
-      <button id="cookie-consent-close" class="text-white btn btn-xs btn-primary" type="button">Got it</button>
-    </div>
-    <script define:vars={{ theme, optimizedLightBackground, optimizedDarkBackground, isDev: import.meta.env.DEV }}>
-      const themeConfig = theme;
-      const themeToggle = document.getElementById("theme-toggle");
-      const hero = document.getElementById("hero-section");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-      const switchHeroBG = (selectedTheme) => {
-        if (hero) {
-          if (selectedTheme === themeConfig.light || !prefersDark) {
-            hero.style = "background-image: url(" + optimizedLightBackground.src + ");";
-          } else if (selectedTheme === themeConfig.dark || prefersDark) {
-            hero.style = "background-image: url(" + optimizedDarkBackground.src + ");";
-          }
-        }
-      };
-
-      const getPreferredTheme = () => {
-        const stored = localStorage.getItem(themeConfig.storageKey);
-        if (stored === themeConfig.light || stored === themeConfig.dark) {
-          return stored;
-        }
-        return prefersDark ? themeConfig.dark : themeConfig.light;
-      };
-
-      const applyTheme = (nextTheme, label) => {
-        switchHeroBG(nextTheme);
-        document.documentElement.setAttribute("data-theme", nextTheme);
-        if (themeToggle) {
-          themeToggle.textContent = label;
-        }
-      };
-
-      const syncTheme = () => {
-        const nextTheme = getPreferredTheme();
-        const label = localStorage.getItem(themeConfig.storageKey)
-          ? nextTheme === themeConfig.dark
-            ? themeConfig.labelDark
-            : themeConfig.labelLight
-          : themeConfig.labelSystem;
-        applyTheme(nextTheme, label);
-      };
-
-      syncTheme();
-
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-        if (!localStorage.getItem(themeConfig.storageKey)) {
-          syncTheme();
-        }
-      });
-
-      if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-          const current = document.documentElement.getAttribute("data-theme") || themeConfig.light;
-          const nextTheme = current === themeConfig.dark ? themeConfig.light : themeConfig.dark;
-          localStorage.setItem(themeConfig.storageKey, nextTheme);
-          applyTheme(nextTheme, nextTheme === themeConfig.dark ? themeConfig.labelDark : themeConfig.labelLight);
-        });
-      }
-
-      const consentBanner = document.getElementById("cookie-consent");
-      const consentClose = document.getElementById("cookie-consent-close");
-      if (consentBanner && !localStorage.getItem("erudika-consent")) {
-        consentBanner.classList.add("cookie-consent--visible");
-      }
-      if (consentClose) {
-        consentClose.addEventListener("click", () => {
-          localStorage.setItem("erudika-consent", "dismissed");
-          consentBanner.classList.remove("cookie-consent--visible");
-        });
-      }
+    
+    <script define:vars={{ isDev: import.meta.env.DEV }}>
       if ("serviceWorker" in navigator) {
         if (isDev) {
           navigator.serviceWorker.getRegistrations().then((regs) =>

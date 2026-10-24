@@ -1,0 +1,99 @@
+---
+import siteData from "@/data/site-data.json";
+const { site } = siteData;
+const { footer, theme } = site;
+import optimizedLightBackground from "@/images/bannerbg.jpg";
+import optimizedDarkBackground from "@/images/bannerbgdark.jpg";
+---
+
+<div class="flex items-center gap-3">
+  <span class="text-slate-100 text-xs uppercase tracking-widest"
+    >{footer.themeLabel}</span
+  >
+  <button
+    id="theme-toggle"
+    class="bg-slate-900 border border-slate-700 hover:border-slate-100 text-slate-200 btn btn-xs"
+    type="button"
+    aria-label="Toggle theme"
+  >
+    {footer.themeDefault}
+  </button>
+</div>
+
+<script
+  define:vars={{
+    theme,
+    optimizedLightBackground,
+    optimizedDarkBackground,
+  }}
+>
+  const themeConfig = theme;
+  const themeToggle = document.getElementById("theme-toggle");
+  const hero = document.getElementById("hero-section");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const switchHeroBG = (selectedTheme) => {
+    if (hero) {
+      if (selectedTheme === themeConfig.light || !prefersDark) {
+        hero.style =
+          "background-image: url(" + optimizedLightBackground.src + ");";
+      } else if (selectedTheme === themeConfig.dark || prefersDark) {
+        hero.style =
+          "background-image: url(" + optimizedDarkBackground.src + ");";
+      }
+    }
+  };
+
+  const getPreferredTheme = () => {
+    const stored = localStorage.getItem(themeConfig.storageKey);
+    if (stored === themeConfig.light || stored === themeConfig.dark) {
+      return stored;
+    }
+    return prefersDark ? themeConfig.dark : themeConfig.light;
+  };
+
+  const applyTheme = (nextTheme, label) => {
+    switchHeroBG(nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    if (themeToggle) {
+      themeToggle.textContent = label;
+    }
+  };
+
+  const syncTheme = () => {
+    const nextTheme = getPreferredTheme();
+    const label = localStorage.getItem(themeConfig.storageKey)
+      ? nextTheme === themeConfig.dark
+        ? themeConfig.labelDark
+        : themeConfig.labelLight
+      : themeConfig.labelSystem;
+    applyTheme(nextTheme, label);
+  };
+
+  syncTheme();
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (!localStorage.getItem(themeConfig.storageKey)) {
+        syncTheme();
+      }
+    });
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current =
+        document.documentElement.getAttribute("data-theme") ||
+        themeConfig.light;
+      const nextTheme =
+        current === themeConfig.dark ? themeConfig.light : themeConfig.dark;
+      localStorage.setItem(themeConfig.storageKey, nextTheme);
+      applyTheme(
+        nextTheme,
+        nextTheme === themeConfig.dark
+          ? themeConfig.labelDark
+          : themeConfig.labelLight,
+      );
+    });
+  }
+</script>

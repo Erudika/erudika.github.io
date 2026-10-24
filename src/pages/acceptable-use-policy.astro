@@ -1,0 +1,41 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Prose from '@/components/Prose.astro';
+import { site } from '@/data/site-data.json';
+import AcceptableUsePolicy from '@/data/aup.md';
+const { aup } = site.pages;
+
+const { breadcrumbs } = site.components;
+const baseUrl = site.organization.url;
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: breadcrumbs.home, item: baseUrl },
+    { "@type": "ListItem", position: 2, name: aup.title, item: `${baseUrl}/acceptable-use-policy/` }
+  ]
+};
+---
+
+<BaseLayout
+  title={aup.title}
+  description={aup.title}
+  jsonLd={[breadcrumbJsonLd]}
+>
+
+  <section class="py-16">
+    <div class="section-shell">
+      <p class="font-semibold text-slate-500 text-xs uppercase tracking-[0.3em]">{aup.eyebrow}</p>
+      <h1 class="mt-3 font-semibold text-base-content text-4xl">{aup.title}</h1>
+      <p class="mt-3 text-sm text-base-content/60">Effective date: {aup.effectiveDate}</p>
+
+      <div class="space-y-8 mt-8 text-sm text-base-content">
+        <Prose klass="prose-sm">
+          <AcceptableUsePolicy/>
+        </Prose>
+      </div>
+    </div>
+  </section>
+  
+</BaseLayout>

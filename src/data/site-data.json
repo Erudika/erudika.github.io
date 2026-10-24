@@ -363,7 +363,8 @@
                 "pricing": "Paid Subscription",
                 "supportLinks":
                 {
-                    "pricing": "https://paraio.com/#pricing"
+                    "pricing": "https://paraio.com/#pricing",
+                    "aup": "/acceptable-use-policy/"
                 },
                 "categories":
                 [
@@ -395,7 +396,8 @@
                 "pricing": "Paid",
                 "supportLinks":
                 {
-                    "pricing": "https://cloud.scoold.com/#pricing"
+                    "pricing": "https://cloud.scoold.com/#pricing",
+                    "aup": "/acceptable-use-policy/"
                 },
                 "categories":
                 [
@@ -567,6 +569,11 @@
         "title": "Data Processing Agreement",
         "effectiveDate": "2026-03-10"
       },
+      "aup": {
+        "eyebrow": "",
+        "title": "Acceptable Use Policy",
+        "effectiveDate": "2026-10-24"
+      },
       "terms": {
         "eyebrow": "Terms",
         "title": "Terms of Service",
@@ -599,6 +606,10 @@
           {
             "label": "See pricing",
             "type": "pricing"
+          },
+          {
+            "label": "Acceptable Use Policy",
+            "type": "aup"
           }
         ],
         "categoriesLabel": "Keywords"

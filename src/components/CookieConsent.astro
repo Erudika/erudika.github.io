@@ -1,0 +1,33 @@
+<div
+  id="cookie-consent"
+  class="cookie-consent"
+  role="dialog"
+  aria-label="Privacy notice"
+>
+  <p class="text-sm">
+    This site uses cookieless Matomo analytics that respects your <a
+      href="/privacy/"
+      class="text-sky-300 hover:text-white underline">privacy</a
+    >. No personal data is stored.
+  </p>
+  <button
+    id="cookie-consent-close"
+    class="text-white btn btn-xs btn-primary"
+    type="button">Got it</button
+  >
+</div>
+
+<script>
+  const itemId = "erudika-consent";
+  const consentBanner = document.getElementById("cookie-consent");
+  const consentClose = document.getElementById("cookie-consent-close");
+  if (consentBanner && !localStorage.getItem(itemId)) {
+    consentBanner.classList.add("cookie-consent--visible");
+  }
+  if (consentClose) {
+    consentClose.addEventListener("click", () => {
+      localStorage.setItem(itemId, "dismissed");
+      consentBanner.classList.remove("cookie-consent--visible");
+    });
+  }
+</script>

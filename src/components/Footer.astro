@@ -3,6 +3,8 @@ import marketing from "../data/site-data.json";
 import { Image } from 'astro:assets';
 import erudikaMap from "../images/erudika_map_dark.png"
 import erudikaDark from "../images/erudika-dark.svg"
+import CookieConsent from './CookieConsent.astro';
+import ThemeToggle from "./ThemeToggle.astro";
 
 const { footer } = marketing.site;
 const links = footer.links;
@@ -55,17 +57,9 @@ const socialLinks = footer.social;
     </div>
 
     <div class="flex flex-wrap justify-between items-center gap-4 py-6 border-slate-800 border-t text-slate-400 text-sm">
-      <div class="flex items-center gap-3">
-        <span class="text-slate-100 text-xs uppercase tracking-widest">{footer.themeLabel}</span>
-        <button
-          id="theme-toggle"
-          class="bg-slate-900 border border-slate-700 hover:border-slate-100 text-slate-200 btn btn-xs"
-          type="button"
-          aria-label="Toggle theme"
-        >
-          {footer.themeDefault}
-        </button>
-      </div>
+      
+      <ThemeToggle />
+      
       <div class="flex flex-wrap items-center gap-4">
         {socialLinks.map((link) => (
           <a href={link.href} class="text-slate-300 hover:text-white">{link.label}</a>
@@ -74,3 +68,5 @@ const socialLinks = footer.social;
     </div>
   </div>
 </footer>
+
+<CookieConsent />
